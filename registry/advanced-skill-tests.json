@@ -1,0 +1,662 @@
+[
+  {
+    "id": "create-a-deployment-pipeline",
+    "trigger": "Our app deploys from a laptop and we need a repeatable path to production.",
+    "must_cover": ["immutable artifact", "promotion", "rollback", "deployment evidence"],
+    "expected_evidence": ["pipeline run", "rollback rehearsal", "release record"]
+  },
+  {
+    "id": "debug-a-production-incident",
+    "trigger": "Checkout errors rose after the last release and customers are affected now.",
+    "must_cover": ["incident timeline", "containment", "rollback", "post-incident review"],
+    "expected_evidence": ["impact window", "recovery proof", "follow-up owner"]
+  },
+  {
+    "id": "design-a-production-system",
+    "trigger": "We need an architecture for a service that will have real users and on-call support.",
+    "must_cover": ["quality attributes", "failure modes", "capacity assumptions", "decision record"],
+    "expected_evidence": ["system diagram", "trade-off record", "failure walkthrough"]
+  },
+  {
+    "id": "design-an-api-contract",
+    "trigger": "Two teams need to integrate without coordinating every code change.",
+    "must_cover": ["compatibility", "error model", "idempotency", "contract tests"],
+    "expected_evidence": ["versioned schema", "consumer examples", "compatibility check"]
+  },
+  {
+    "id": "design-observability",
+    "trigger": "The service is live, but we cannot tell whether users are succeeding or why requests fail.",
+    "must_cover": ["service level indicator", "structured logs", "trace", "runbook"],
+    "expected_evidence": ["dashboard", "alert test", "diagnostic trail"]
+  },
+  {
+    "id": "evaluate-an-ai-system",
+    "trigger": "The assistant looks good in demos, but we do not know whether a new version is actually better.",
+    "must_cover": ["evaluation set", "baseline", "failure slices", "human review"],
+    "expected_evidence": ["versioned cases", "scorecard", "release decision"]
+  },
+  {
+    "id": "migrate-a-database",
+    "trigger": "We must change a live table without losing writes or taking the product offline.",
+    "must_cover": ["expand and contract", "backup", "restore", "rollback threshold"],
+    "expected_evidence": ["staging rehearsal", "reconciliation query", "rollback proof"]
+  },
+  {
+    "id": "run-a-load-test",
+    "trigger": "We need evidence that the service can survive the expected launch traffic.",
+    "must_cover": ["workload model", "safe environment", "saturation", "abort threshold"],
+    "expected_evidence": ["baseline run", "bottleneck record", "capacity decision"]
+  },
+  {
+    "id": "run-an-agent-swarm",
+    "trigger": "Three Codex agents and three Claude Code agents need to work one repository overnight without colliding.",
+    "must_cover": ["AGENTS.md", "README.md", "tool map", "model roster", "work queue", "isolation", "build contention", "stalled claim", "saturation"],
+    "expected_evidence": ["roster record", "queue snapshot", "supervision log", "merge record"]
+  },
+  {
+    "id": "ship-a-data-pipeline",
+    "trigger": "A daily data job must handle retries, late records, and backfills without corrupting reports.",
+    "must_cover": ["source contract", "idempotent", "backfill", "data quality"],
+    "expected_evidence": ["replay test", "reconciliation report", "operating runbook"]
+  },
+  {
+    "id": "threat-model-a-feature",
+    "trigger": "The feature crosses a trust boundary and handles data we would regret exposing.",
+    "must_cover": ["assets", "trust boundaries", "abuse cases", "residual risk"],
+    "expected_evidence": ["threat diagram", "mitigation check", "accepted risk owner"]
+  },
+  {
+    "id": "design-a-disaster-recovery-plan",
+    "trigger": "A regional outage and corrupted replica could remove our primary service and newest customer data at the same time.",
+    "must_cover": ["recovery time", "recovery point", "failover", "reconciliation"],
+    "expected_evidence": ["recovery architecture", "tabletop record", "recovery rehearsal"]
+  },
+  {
+    "id": "verify-a-backup-restore",
+    "trigger": "Backup jobs are green, but nobody has proved that they can restore a usable system.",
+    "must_cover": ["encryption", "checksum", "recovery point", "reconciliation"],
+    "expected_evidence": ["backup inventory", "restore transcript", "reconciliation report"]
+  },
+  {
+    "id": "plan-capacity-and-staffing",
+    "trigger": "Demand is rising, service is slipping, and leadership wants a hiring number without separating nominal headcount from skill-constrained effective capacity.",
+    "must_cover": ["demand segmentation", "shrinkage", "skill constraints", "sustainable load"],
+    "expected_evidence": ["reconciled demand model", "capacity scenarios", "staffing trigger record"]
+  },
+  {
+    "id": "design-an-on-call-rotation",
+    "trigger": "A small global team needs round-the-clock response, but pages are noisy, compensation differs by country, and current coverage depends on one exhausted expert.",
+    "must_cover": ["page burden", "training", "compensation", "recovery time"],
+    "expected_evidence": ["rotation design", "failed-primary rehearsal", "sustainability review"]
+  },
+  {
+    "id": "run-a-root-cause-analysis",
+    "trigger": "A consequential failure crossed technical and operational boundaries, evidence is incomplete, and leadership wants one person named as the root cause.",
+    "must_cover": ["evidence provenance", "causal hypotheses", "contributing conditions", "control improvement"],
+    "expected_evidence": ["synchronized chronology", "hypothesis ledger", "effectiveness verification"]
+  },
+  {
+    "id": "rotate-a-compromised-secret",
+    "trigger": "A broadly privileged production credential appeared in source history and build logs, but its consumers, active sessions, downstream credentials, and safe revocation order are incomplete.",
+    "must_cover": ["evidence preservation", "dependency inventory", "sequenced revocation", "residual exposure"],
+    "expected_evidence": ["exposure record", "consumer cutover evidence", "old-secret rejection proof"]
+  },
+  {
+    "id": "define-service-reliability-objectives",
+    "trigger": "Teams want a ninety-nine-point-nine availability target, but retries, partial checkout failures, low traffic, maintenance, telemetry gaps, and contract language make the convenient metric misleading.",
+    "must_cover": ["user journey", "numerator and denominator", "telemetry limits", "decision consequences"],
+    "expected_evidence": ["versioned indicator definition", "historical backtest", "alert and breach rehearsal"]
+  },
+  {
+    "id": "perform-a-business-impact-analysis",
+    "trigger": "Leaders need recovery priorities across public safety, revenue, customer records, suppliers, facilities, and scarce specialists, but interviews conflict and proposed recovery objectives ignore shared dependencies.",
+    "must_cover": ["impact provenance", "time-dependent harm", "dependency constraints", "minimum service"],
+    "expected_evidence": ["sourced impact model", "dependency-tested objectives", "recovery priority record"]
+  },
+  {
+    "id": "plan-a-content-migration",
+    "trigger": "A public help center must move domains and content models while preserving multilingual URLs, access controls, analytics, forms, search equity, active edits, and an independently usable rollback.",
+    "must_cover": ["content inventory", "deterministic transformation", "redirect integrity", "rollback"],
+    "expected_evidence": ["migration reconciliation", "parity report", "rollback rehearsal"]
+  },
+  {
+    "id": "respond-to-public-criticism",
+    "trigger": "A widely shared criticism mixes a verified organizational failure, disputed allegations, private employee information, an active investigation, customer harm, and pressure for an immediate combative response.",
+    "must_cover": ["claim ledger", "affected people", "proportionate response", "action verification"],
+    "expected_evidence": ["claim evidence record", "response decision", "correction and follow-through proof"]
+  },
+  {
+    "id": "assess-reputation-risk",
+    "trigger": "A proposed partnership may create operational, labor, environmental, and public-trust harms, but evidence is incomplete and leaders want a single sentiment score to approve it.",
+    "must_cover": ["stakeholder expectations", "underlying harm", "scenario uncertainty", "decision triggers"],
+    "expected_evidence": ["sourced risk assessment", "response option record", "effectiveness review"]
+  },
+  {
+    "id": "govern-a-design-system",
+    "trigger": "A shared system serves twelve product teams, but contribution decisions are informal, accessibility fixes can break consumers, exceptions never expire, maintainers are overloaded, and adoption metrics count package installs as success.",
+    "must_cover": ["consumer inventory", "contribution governance", "exception expiry", "failure rehearsal"],
+    "expected_evidence": ["governance charter", "release evidence package", "consumer health review"]
+  },
+  {
+    "id": "plan-a-design-system-migration",
+    "trigger": "A major design-system release changes tokens, semantics, component APIs, focus behavior, and themes across unknown consumers that carry local overrides and cannot all migrate at once.",
+    "must_cover": ["consumer inventory", "compatibility strategy", "migration waves", "rollback"],
+    "expected_evidence": ["migration inventory", "wave verification", "rollback rehearsal"]
+  },
+  {
+    "id": "audit-accessibility-at-scale",
+    "trigger": "An organization wants a portfolio-wide accessibility claim from automated scans even though it has hundreds of templates, authenticated journeys, documents, custom widgets, sparse ownership, and unresolved user complaints.",
+    "must_cover": ["coverage inventory", "risk-based sampling", "manual testing", "participant evidence"],
+    "expected_evidence": ["coverage report", "barrier register", "remediation verification"]
+  },
+  {
+    "id": "investigate-a-payment-discrepancy",
+    "trigger": "A large supplier payment went to a changed bank account after an email request, but approval, beneficiary, settlement, ledger, access, and recovery evidence conflict while another payment is queued.",
+    "must_cover": ["evidence preservation", "transaction reconciliation", "access boundary", "recovery decision"],
+    "expected_evidence": ["payment chronology", "reconciliation ledger", "containment and recovery record"]
+  },
+  {
+    "id": "create-a-fraud-response-plan",
+    "trigger": "An organization needs to respond to suspected payment, supplier, customer, and insider fraud when authority is fragmented, a senior leader may be involved, evidence spans systems, and affected people face continuing harm.",
+    "must_cover": ["triage boundary", "evidence preservation", "coordinated containment", "affected-party protection"],
+    "expected_evidence": ["response authority map", "evidence and decision log", "recovery verification"]
+  },
+  {
+    "id": "assess-third-party-concentration-risk",
+    "trigger": "A critical service appears diversified across vendors, but contracts and architecture may hide common cloud, geographic, platform, capacity, specialist, and subcontractor dependencies with untested exits.",
+    "must_cover": ["dependency inventory", "common-mode exposure", "substitutability test", "exit feasibility"],
+    "expected_evidence": ["concentration map", "scenario stress test", "mitigation verification"]
+  },
+  {
+    "id": "run-an-event-command-center",
+    "trigger": "A three-day city festival spans four venues and an online stream when severe weather, a rail shutdown, an access failure, a missing child report, a medical surge, supplier delays, and false social posts create simultaneous decisions under fragmented authority.",
+    "must_cover": ["common operating picture", "decision authority", "incident triage", "operational handoff"],
+    "expected_evidence": ["command structure record", "live decision log", "recovery and closeout report"]
+  },
+  {
+    "id": "plan-crowd-safety-and-egress",
+    "trigger": "An outdoor concert expects eighteen thousand people through two approaches, but ticket arrival assumptions conflict, one exit is narrowed by construction, rain changes ground conditions, the step-free route shares emergency access, transport capacity drops after closing, and leadership still wants full capacity.",
+    "must_cover": ["crowd profile", "capacity and flow model", "accessible egress", "emergency decision authority"],
+    "expected_evidence": ["crowd safety plan", "route and capacity verification", "evacuation exercise record"]
+  },
+  {
+    "id": "govern-event-data-and-consent",
+    "trigger": "A global conference combines registration, payments, accessibility requests, child attendees, facial recognition, sponsor lead capture, networking profiles, Wi-Fi analytics, livestream chat, photography, recordings, surveys, and six vendors across jurisdictions while organizers want one bundled consent.",
+    "must_cover": ["data lifecycle map", "purpose and authority", "consent separation", "deletion verification"],
+    "expected_evidence": ["event data register", "consent and sharing record", "retention and deletion report"]
+  },
+  {
+    "id": "audit-an-automated-hiring-system",
+    "trigger": "A vendor screening system rejects most applicants before human review using resume history, assessment, inferred traits, device signals, and interview analysis, but the employer has no role-specific validity study, subgroup results conflict, accommodation failures are reported, and recruiters rarely override rankings.",
+    "must_cover": ["decision inventory", "job-related validity", "disparate impact analysis", "human appeal"],
+    "expected_evidence": ["system and decision register", "validity and subgroup report", "remediation and monitoring record"]
+  },
+  {
+    "id": "conduct-a-workplace-investigation",
+    "trigger": "A senior executive is accused of harassment and retaliation by several employees while the normal HR lead reports to the executive, messages may be deleted within days, one reporter fears immediate scheduling retaliation, accounts conflict, and leadership wants a quick confidential conclusion before a board meeting.",
+    "must_cover": ["independent authority", "evidence preservation", "procedural fairness", "affected-person protection"],
+    "expected_evidence": ["investigation mandate", "evidence and allegation matrix", "findings and follow-through report"]
+  },
+  {
+    "id": "plan-a-workforce-reorganization",
+    "trigger": "Leadership wants to remove fifteen percent of roles in six weeks using manager rankings after an automation forecast, but work demand, critical skills, contractor dependencies, jurisdictional duties, disability accommodations, redeployment options, service continuity, and the claimed savings are unreconciled.",
+    "must_cover": ["work and capacity model", "option comparison", "selection controls", "transition and residual risk"],
+    "expected_evidence": ["organization design case", "people-impact and decision register", "continuity and effectiveness review"]
+  },
+  {
+    "id": "design-multitenant-authorization",
+    "trigger": "A growing project-management SaaS is consolidating separate customer databases into shared regional storage, but API routes, search, cache keys, exports, background jobs, signed file URLs, support impersonation, and recovery tools derive tenant context differently while enterprise launch is six weeks away.",
+    "must_cover": ["tenant boundary model", "authorization decision point", "cross-tenant test matrix", "administrative recovery"],
+    "expected_evidence": ["authorization architecture record", "isolation test report", "abuse and recovery rehearsal"]
+  },
+  {
+    "id": "migrate-an-authentication-system",
+    "trigger": "A live business application must move two million accounts from a legacy username and password store to an external identity provider, but duplicate emails, shared mailboxes, local MFA, dormant administrators, service identities, active sessions, and conflicting recovery data make automatic linking unsafe.",
+    "must_cover": ["identity inventory", "account linking", "session transition", "rollback"],
+    "expected_evidence": ["identity reconciliation report", "cutover verification", "rollback rehearsal"]
+  },
+  {
+    "id": "respond-to-account-takeover",
+    "trigger": "A workspace owner reports password-reset messages and an authenticator they did not add while logs show a new location, API token, bulk export, forwarding-rule change, and ownership transfer attempt, but the registered email and phone may both be controlled by the attacker.",
+    "must_cover": ["victim protection", "session and token containment", "evidence preservation", "identity recovery"],
+    "expected_evidence": ["account exposure timeline", "containment and recovery log", "control effectiveness review"]
+  },
+  {
+    "id": "design-a-telemetry-pipeline",
+    "trigger": "A company wants one telemetry pipeline for logs, metrics, traces, security detections, and required audit events from three regions, but burst volume exceeds network capacity, customer data appears in attributes, downstream storage fails unpredictably, and nobody can quantify drops or restore the collectors.",
+    "must_cover": ["coverage model", "backpressure and loss", "data governance", "disaster recovery"],
+    "expected_evidence": ["telemetry architecture record", "loss and overload test report", "recovery and reconciliation rehearsal"]
+  },
+  {
+    "id": "migrate-an-observability-platform",
+    "trigger": "A company must leave its observability vendor in four months, but thousands of producers, custom parsing, incompatible histograms, sampled traces, security searches, rarely used incident queries, dashboards, paging rules, retention duties, and source export limits make apparent data parity unreliable.",
+    "must_cover": ["signal inventory", "semantic equivalence", "dual-write validation", "rollback"],
+    "expected_evidence": ["migration coverage register", "query and alert parity report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "respond-to-monitoring-blindness",
+    "trigger": "After a collector configuration deploy, regional dashboards remain green while request and error volumes collapse toward zero, one alert route stops paging, buffered telemetry may expire within hours, and operators cannot tell whether a customer-facing failure is hidden inside the monitoring outage.",
+    "must_cover": ["blind-spot scope", "alternate evidence", "risk-based operating mode", "visibility restoration"],
+    "expected_evidence": ["monitoring exposure timeline", "compensating-control log", "restoration and backfill report"]
+  },
+  {
+    "id": "migrate-a-web-frontend-framework",
+    "trigger": "A global commerce site must move from a client-only frontend to a server-rendered framework while preserving checkout, account state, saved carts, URLs, search indexing, analytics, accessibility, localized content, performance, and releases across hundreds of routes.",
+    "must_cover": ["route and feature inventory", "compatibility architecture", "migration waves", "rollback"],
+    "expected_evidence": ["migration architecture record", "behavior parity report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "design-a-global-web-delivery-architecture",
+    "trigger": "A subscription service is adding two regional origins behind a global edge, but authenticated pages, country pricing, sessions, replicated data, cache variants, attack traffic, cold-cache failover, residency rules, and origin recovery have not been reconciled.",
+    "must_cover": ["traffic and data map", "cache correctness", "regional failure isolation", "origin recovery"],
+    "expected_evidence": ["delivery architecture record", "failure and cache test report", "regional recovery rehearsal"]
+  },
+  {
+    "id": "respond-to-a-frontend-supply-chain-incident",
+    "trigger": "A hosted analytics script begins serving obfuscated code after its vendor account is compromised, and the script ran on login and billing pages while build credentials, cached assets, user sessions, form data, downstream calls, and affected browser versions remain uncertain.",
+    "must_cover": ["exposure inventory", "browser containment", "evidence preservation", "trusted rebuild"],
+    "expected_evidence": ["exposure timeline and asset manifest", "containment and notification log", "clean rebuild and recovery report"]
+  },
+  {
+    "id": "restore-a-corrupted-media-project",
+    "trigger": "A documentary project stops opening after a drive error, the newest autosaves disagree, source files and proxies share names, two plugins are unavailable, backups have unknown dates, the review export contains edits missing from the last readable timeline, and delivery is due in three days.",
+    "must_cover": ["damage inventory", "source preservation", "dependency reconstruction", "recovery validation"],
+    "expected_evidence": ["recovery manifest", "restored project verification", "preservation and handoff report"]
+  },
+  {
+    "id": "migrate-a-media-archive",
+    "trigger": "A broadcaster must move two petabytes of masters, sources, projects, proxies, captions, transcripts, and rights records from tape and object storage into a media asset system, but filenames collide, checksums are incomplete, metadata schemas conflict, licenses expire, and source retirement is contractually scheduled.",
+    "must_cover": ["asset and rights inventory", "metadata mapping", "fixity validation", "rollback"],
+    "expected_evidence": ["archive migration register", "fixity and rights report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "respond-to-a-live-broadcast-failure",
+    "trigger": "During a global medical conference, the primary encoder freezes, platform preview shows a stale frame, captions continue without video, one region reports silence, the backup network is unverified, a sensitive backstage feed is available, and the keynote cannot be repeated.",
+    "must_cover": ["failure scope", "audience safety", "alternate transmission", "recovery communications"],
+    "expected_evidence": ["broadcast incident timeline", "continuity and decision log", "recovery and post-event report"]
+  },
+  {
+    "id": "migrate-an-accounting-system",
+    "trigger": "A multi-entity company is migrating live general ledger, payables, receivables, payroll, inventory, fixed assets, tax, and multi-currency reporting from inconsistent account charts before year-end, while duplicate suppliers, open historical periods, manual overrides, missing audit attachments, and a looming source-retirement date make a direct cutover unsafe.",
+    "must_cover": ["ledger and control inventory", "data and balance mapping", "parallel close", "rollback"],
+    "expected_evidence": ["accounting migration register", "reconciliation and control report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "respond-to-a-business-cash-crisis",
+    "trigger": "A company has payroll due in twelve days, a major customer is late, a lender covenant is near breach, tax and critical supplier payments are due, inventory orders are noncancelable, and the founder wants to delay wages and move restricted client funds into operations.",
+    "must_cover": ["cash position and runway", "payment priority and authority", "liquidity actions", "stakeholder communications"],
+    "expected_evidence": ["daily cash and obligation register", "liquidity decision log", "stabilization and recovery plan"]
+  },
+  {
+    "id": "investigate-a-financial-reporting-error",
+    "trigger": "Closed quarterly statements double-count revenue after an integration replay, affecting tax, a lender covenant, board reports, and bonuses, while logs are near expiry, some entries were manually overridden, and management wants to correct the amount quietly in the next period.",
+    "must_cover": ["error scope and materiality", "evidence preservation", "correction and disclosure", "control remediation"],
+    "expected_evidence": ["reporting error chronology", "reconciliation and correction package", "control effectiveness review"]
+  },
+  {
+    "id": "conduct-research-with-human-participants",
+    "trigger": "A multi-site adolescent mental-health study recruits through schools, records video, collects optional specimens, and encounters an immediate self-harm disclosure while assent and guardian processes differ by site, one participant wants to withdraw, and an unapproved procedure plus privacy incident may have occurred.",
+    "must_cover": ["approval and role boundary", "consent and ongoing choice", "participant safety", "deviation and withdrawal handling"],
+    "expected_evidence": ["participant protection register", "consent and study conduct log", "safety and deviation report"]
+  },
+  {
+    "id": "respond-to-a-research-integrity-concern",
+    "trigger": "A junior researcher reports manipulated microscopy images, duplicated data, disputed authorship, and retaliation by a principal investigator who controls the evidence systems, while logs will expire before a sponsor deadline and institutional leaders want the figures replaced informally.",
+    "must_cover": ["independent authority", "evidence preservation", "allegation assessment", "affected-person protection"],
+    "expected_evidence": ["integrity concern chronology", "evidence and allegation matrix", "findings and corrective action record"]
+  },
+  {
+    "id": "migrate-a-research-data-repository",
+    "trigger": "A multi-institution repository must move genomic data, Indigenous-governed collections, licensed surveys, embargoed theses, software, versions, and DOI landing pages before source shutdown, but checksums are incomplete and the target uses different metadata, identity, access, and preservation models.",
+    "must_cover": ["data and rights inventory", "metadata and identifier mapping", "fixity and access validation", "rollback"],
+    "expected_evidence": ["repository migration register", "integrity and governance report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "manage-a-laboratory-safety-incident",
+    "trigger": "A graduate researcher collapses after an unknown solvent release while ventilation alarms activate, another worker may have contaminated clothing, the laboratory contents and neighboring rooms are uncertain, and the principal investigator wants staff to clean up before emergency responders arrive.",
+    "must_cover": ["life safety and incident command", "hazard isolation", "exposure and evidence preservation", "recovery authorization"],
+    "expected_evidence": ["laboratory incident timeline", "exposure and containment log", "recovery and corrective action report"]
+  },
+  {
+    "id": "prepare-an-executive-transition-package",
+    "trigger": "A public-company chief executive is leaving after a merger while a nonpublic restructuring, active employment dispute, disclosure timetable, confidential board material, stale public biographies, company-system access, competing accounts of performance, and a future board search overlap.",
+    "must_cover": ["authority and disclosure boundary", "evidence and reputation inventory", "coordinated transition materials", "release and revocation control"],
+    "expected_evidence": ["executive transition register", "claim and disclosure review", "release and access closeout report"]
+  },
+  {
+    "id": "respond-to-resume-identity-theft",
+    "trigger": "An employer receives a resume using a professional's name, photo, certifications, portfolio, and references from a lookalike email domain, while fake interviews are collecting identity documents, a career account has a new recovery method, and nobody knows how many employers or candidates were contacted.",
+    "must_cover": ["victim protection and authentication", "impersonation scope", "evidence preservation and containment", "correction and recovery"],
+    "expected_evidence": ["impersonation exposure timeline", "containment and notification log", "identity recovery and monitoring report"]
+  },
+  {
+    "id": "migrate-a-professional-portfolio",
+    "trigger": "A consultant must leave a hosted portfolio builder before a custom domain expires, but indexed case URLs, client assets with different permissions, private PDFs, dynamic embeds, contact forms, email delivery, analytics consent, accessibility, and incomplete backups must survive the move.",
+    "must_cover": ["content and rights inventory", "URL and behavior mapping", "migration waves and parity", "rollback"],
+    "expected_evidence": ["portfolio migration register", "content and behavior parity report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "decompose-a-production-monolith",
+    "trigger": "A commerce monolith shares one database across checkout, inventory, billing, support, reporting, sessions, caches, and jobs, while undocumented cross-module transactions, release bottlenecks, cascading incidents, and a six-month demand for four new services make a direct split unsafe.",
+    "must_cover": ["domain and dependency inventory", "data and transaction ownership", "extraction waves", "rollback"],
+    "expected_evidence": ["decomposition architecture record", "wave parity and isolation report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "migrate-a-critical-api",
+    "trigger": "A billing API must move hundreds of internal and partner consumers to a new provider, but response shapes, authentication scopes, idempotency, rate limits, webhook signatures, SDK defaults, and error behavior differ, while scheduled clients may be absent from recent telemetry.",
+    "must_cover": ["consumer inventory", "compatibility contract", "dual-run validation", "rollback"],
+    "expected_evidence": ["API migration register", "consumer compatibility report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "respond-to-a-failed-database-migration",
+    "trigger": "A production migration adding a nonnull column and backfill times out behind a lock while old and new application versions keep writing, some shards committed DDL, replicas disagree, and the down migration would drop values already written by the new version.",
+    "must_cover": ["incident scope and write safety", "data and schema preservation", "recovery decision", "reconciliation and restart"],
+    "expected_evidence": ["database migration incident timeline", "schema and data reconciliation report", "recovery and restart record"]
+  },
+  {
+    "id": "recover-from-a-corrupted-software-release",
+    "trigger": "One software release version has different artifact hashes across regions, registry metadata was overwritten, build provenance is incomplete, edge caches contain mixed files, the prior release used the same runner, and a database migration already committed new records.",
+    "must_cover": ["release trust boundary", "containment and evidence", "trusted rebuild", "state-compatible recovery"],
+    "expected_evidence": ["release corruption timeline", "artifact and runtime integrity report", "clean recovery and recurrence report"]
+  },
+  {
+    "id": "migrate-a-global-domain",
+    "trigger": "A global account-based web service must move from an old domain to a new one while preserving DNS, email, certificates, authentication cookies, OAuth and SAML callbacks, passkeys, API clients, mobile deep links, indexed URLs, regional origins, security policies, and millions of saved links without creating an open-redirect or account-takeover path.",
+    "must_cover": ["domain and DNS inventory", "URL and identity mapping", "staged cutover", "rollback"],
+    "expected_evidence": ["domain migration register", "resolution and behavior parity report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "respond-to-a-web-cache-poisoning-incident",
+    "trigger": "Users in several regions receive attacker-controlled redirects and headers from a shared web cache only for certain languages and devices, while origin responses appear clean, cache keys and normalization are undocumented, multiple CDN layers are involved, purge results disagree, and authenticated pages may share cacheable fragments.",
+    "must_cover": ["poisoned variant scope", "cache containment", "origin and key analysis", "trusted restoration"],
+    "expected_evidence": ["cache poisoning incident timeline", "variant and exposure reconciliation", "restoration and control effectiveness report"]
+  },
+  {
+    "id": "redesign-a-critical-checkout-flow",
+    "trigger": "A global retailer must redesign checkout across guest and account users, multiple currencies, taxes, discounts, inventory holds, saved addresses, wallets, cards, subscriptions, accessibility needs, fraud controls, and regional legal terms while legacy and new flows overlap and duplicate orders or lost payments are unacceptable.",
+    "must_cover": ["checkout state and money model", "accessibility and customer protection", "migration and experiment controls", "recovery and reconciliation"],
+    "expected_evidence": ["checkout architecture and journey record", "payment and accessibility verification", "rollout and recovery rehearsal"]
+  },
+  {
+    "id": "audit-a-hiring-process-for-fairness",
+    "trigger": "A company hires one role family in eight countries through referrals, resume screening, a timed test, panel interviews, and a vendor ranking, but disabled candidates report barriers, one location applies an unwritten degree rule, overrides favor referrals, demographic data is missing unevenly, and leaders want one overall hiring-rate comparison to declare the process fair.",
+    "must_cover": ["decision and data inventory", "job-related criteria and validity", "subgroup and outcome analysis", "remediation and monitoring"],
+    "expected_evidence": ["hiring process and decision register", "validity and fairness analysis", "remediation and monitoring report"]
+  },
+  {
+    "id": "respond-to-a-recruitment-fraud-incident",
+    "trigger": "Candidates receive job offers from a lookalike careers domain after convincing video interviews, then are asked to pay for equipment and upload identity documents, while fake postings copy real roles, a recruiter mailbox has an unexplained forwarding rule, payment destinations span countries, and nobody knows how many people were contacted.",
+    "must_cover": ["victim protection", "incident scope", "evidence preservation", "containment and recovery"],
+    "expected_evidence": ["recruitment fraud incident timeline", "impersonation and victim exposure register", "containment, notification, and recovery report"]
+  },
+  {
+    "id": "design-a-global-hiring-process",
+    "trigger": "A technology company wants one hiring process for employees, interns, employer-of-record staff, and contractors in twelve countries, but employing entities, worker classification, salary disclosures, work authorization, background checks, works-council duties, data transfers, accessibility, benefits, and offer terms differ while one ATS and two agencies handle every candidate.",
+    "must_cover": ["jurisdiction and worker model", "fair assessment", "candidate data lifecycle", "offer and onboarding control"],
+    "expected_evidence": ["global hiring control map", "selection validity and fairness report", "candidate-to-worker handoff rehearsal"]
+  },
+  {
+    "id": "manage-a-conflicted-executive-search",
+    "trigger": "A listed company must replace its chief executive quickly while the board chair favors a longtime associate, one search partner has a referral-fee connection, the incumbent controls internal-candidate information, a pending acquisition makes names market-sensitive, and the board lacks an agreed recusal or interim-succession process.",
+    "must_cover": ["independent mandate and governance", "conflict management", "candidate assessment and decision", "confidentiality and disclosure"],
+    "expected_evidence": ["search mandate and conflict register", "candidate assessment and decision record", "appointment, disclosure, and transition report"]
+  },
+  {
+    "id": "redesign-a-clinical-workflow-interface",
+    "trigger": "A hospital must redesign medication ordering and administration across emergency, inpatient, pharmacy, and nursing workflows while alert fatigue, unit confusion, duplicate orders, hidden pending states, local safety workarounds, legacy devices, unreliable integrations, accessibility needs, and downtime procedures create patient risk.",
+    "must_cover": ["clinical workflow and hazard analysis", "safety controls and human factors", "phased validation and migration", "downtime and recovery"],
+    "expected_evidence": ["clinical workflow and hazard register", "simulated-use and safety validation report", "cutover, downtime, and recovery rehearsal"]
+  },
+  {
+    "id": "govern-design-for-a-regulated-product",
+    "trigger": "A regulated service operates in several markets using a shared design system, identity checks, automated recommendations, customer notices, and a third-party workflow when a design refresh changes errors, navigation, thresholds, and accessibility while an urgent field issue requires a patch and existing traceability is incomplete.",
+    "must_cover": ["regulatory and design control map", "traceability and change control", "validation and release evidence", "post-release surveillance and corrective action"],
+    "expected_evidence": ["design governance and traceability register", "validation and release evidence package", "surveillance and corrective-action report"]
+  },
+  {
+    "id": "migrate-a-product-interface-without-disruption",
+    "trigger": "A global project platform must replace navigation, record pages, bulk actions, keyboard shortcuts, filters, saved views, and its component system while enterprise users rely on bookmarks, screen readers, training guides, support scripts, integrations, and long-running sessions and cannot lose state during coexistence or rollback.",
+    "must_cover": ["behavior and user inventory", "compatibility and migration mapping", "staged dual experience", "rollback and adoption"],
+    "expected_evidence": ["interface migration register", "behavior and accessibility parity report", "rollout and rollback rehearsal"]
+  },
+  {
+    "id": "respond-to-a-media-rights-dispute",
+    "trigger": "A global campaign receives a platform claim and a lawyer's notice alleging that one music recording, an archival image, and a contributor's likeness exceed their licenses, while contracts conflict, localized edits use different durations, paid ads are live, partners downloaded masters, and response deadlines are short.",
+    "must_cover": ["dispute scope and rights inventory", "evidence preservation", "containment and use decisions", "resolution and remediation"],
+    "expected_evidence": ["media rights dispute timeline", "rights chain and usage reconciliation", "resolution and corrective-action report"]
+  },
+  {
+    "id": "migrate-a-live-production-platform",
+    "trigger": "A live events network must move remote contribution, switching, graphics, captions, ads, DRM, chat, analytics, players, recordings, and archives from a mixed legacy stack to a new production platform across venues and regions without double publishing, losing accessibility, or disrupting protected events.",
+    "must_cover": ["workflow and dependency inventory", "output and control compatibility", "parallel validation and cutover", "rollback and event recovery"],
+    "expected_evidence": ["platform migration register", "signal, accessibility, and control parity report", "cutover and event recovery rehearsal"]
+  },
+  {
+    "id": "recover-from-a-published-media-error",
+    "trigger": "A documentary excerpt identifies the wrong person and a translated caption changes the allegation after the clip has been embedded, syndicated, downloaded, cached, promoted, and adapted into accessible and social versions, while the affected person reports escalating harm.",
+    "must_cover": ["error and harm assessment", "evidence preservation", "claim, version, and distribution reconciliation", "correction and recovery"],
+    "expected_evidence": ["published media error timeline", "claim, version, and distribution reconciliation", "correction, harm, and recovery report"]
+  },
+  {
+    "id": "manage-a-sensitive-documentary-production",
+    "trigger": "A cross-border documentary involves whistleblowers, young participants, trauma survivors, and a confidential source while a powerful subject threatens legal and physical retaliation, crews use fixers and remote editors, footage contains identity and geolocation clues, translations are contested, and a distributor wants aggressive promotion.",
+    "must_cover": ["participant and source protection", "source and evidence governance", "production security and duty of care", "editorial and release harm review"],
+    "expected_evidence": ["participant and source protection register", "secure production and evidence log", "editorial, release, and follow-through report"]
+  },
+  {
+    "id": "redesign-a-global-billing-process",
+    "trigger": "A global subscription company must redesign billing across contracts, usage, seats, multiple currencies, taxes, discounts, credits, invoices, collections, revenue schedules, payment methods, refunds, and regional legal terms while legacy and new engines overlap and duplicate invoices, lost credits, or misstated balances are unacceptable.",
+    "must_cover": ["billing state and financial model", "contract, tax, and customer controls", "migration and dual-run reconciliation", "cutover and rollback"],
+    "expected_evidence": ["billing architecture and control register", "invoice, ledger, and customer parity report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "respond-to-a-payroll-fraud-incident",
+    "trigger": "Payroll detects bank-account changes and off-cycle payments for employees in several countries after a payroll administrator account gained a new MFA method, while files were sent to banks, some payments settled, employee identities may be compromised, and the next payroll run is hours away.",
+    "must_cover": ["employee protection and payment containment", "access and evidence preservation", "payroll and beneficiary reconciliation", "recovery and next-run control"],
+    "expected_evidence": ["payroll fraud incident timeline", "employee, payment, and access reconciliation", "containment, recovery, and control-effectiveness report"]
+  },
+  {
+    "id": "migrate-a-payment-processor",
+    "trigger": "A marketplace must migrate card, wallet, bank-debit, subscription, refund, dispute, token, webhook, payout, reserve, fraud, and reconciliation flows to a new payment processor across countries while old and new transactions overlap and no customer may be charged twice or lose a refund.",
+    "must_cover": ["payment flow and consumer inventory", "token and authorization migration", "financial dual-run reconciliation", "rollback"],
+    "expected_evidence": ["payment migration register", "transaction, payout, and customer parity report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "migrate-a-global-cdn",
+    "trigger": "A global commerce platform must move web pages, APIs, images, downloads, signed links, checkout, login, redirects, WAF, bot controls, rate limits, certificates, DNS, cache invalidation, logs, and origin shielding from one CDN to another while both edges overlap across regions and no private response may leak through a bad cache key.",
+    "must_cover": ["delivery and dependency inventory", "cache and security behavior parity", "staged traffic migration", "rollback and origin protection"],
+    "expected_evidence": ["CDN migration register", "regional delivery, cache, and security parity report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "respond-to-a-client-side-data-leak",
+    "trigger": "After a tag-manager release, a session-replay and analytics chain sends form values, account identifiers, password-reset tokens in URLs, and browser-storage fields to several third parties, while CDN and vendor logs retain requests and consent behavior differs by country.",
+    "must_cover": ["exposure scope and user protection", "evidence preservation", "containment", "recovery and remediation"],
+    "expected_evidence": ["client-side data leak timeline", "data flow and affected-record reconciliation", "containment, notification, and remediation report"]
+  },
+  {
+    "id": "recover-from-a-broken-web-deployment",
+    "trigger": "A frontend release publishes HTML that references missing hashed assets while a new service worker caches an incompatible application shell, an API schema changed, CDN regions hold different manifests, feature flags vary by session, and some customers report duplicate checkout attempts.",
+    "must_cover": ["impact and containment", "version and dependency reconciliation", "recovery or rollback", "verification"],
+    "expected_evidence": ["deployment incident timeline", "release version and user-state reconciliation", "recovery and prevention report"]
+  },
+  {
+    "id": "redesign-a-high-risk-account-recovery-flow",
+    "trigger": "A global financial platform redesigns recovery for users who lost devices while attackers use SIM swaps, compromised email, stolen identity documents, help-desk social engineering, and coerced access, and legitimate users include displaced people, changed names, disabled users, survivors, enterprise administrators, and accounts holding high-value assets.",
+    "must_cover": ["identity and threat analysis", "recovery proof and inclusive access", "high-risk action protection", "rollout and monitoring"],
+    "expected_evidence": ["recovery threat and control register", "identity and account-state validation report", "abuse, accessibility, and rollout report"]
+  },
+  {
+    "id": "respond-to-a-data-poisoning-incident",
+    "trigger": "A fraud and eligibility platform discovers that an upstream partner feed was compromised, labels were altered through a feedback tool, suspect records entered training and test sets, shared features reached several models, and deployed decisions have affected customers for weeks.",
+    "must_cover": ["scope and containment", "provenance and evidence", "decision and model impact", "recovery and verification"],
+    "expected_evidence": ["data poisoning incident timeline", "provenance, dataset, model, and decision reconciliation", "recovery and control-effectiveness report"]
+  },
+  {
+    "id": "migrate-a-critical-data-warehouse",
+    "trigger": "A multinational company must move finance, product, risk, customer, and machine-learning data from a legacy warehouse to a new platform while batch and streaming ingestion continue, transformations and semantic metrics change engines, dashboards and regulatory extracts share tables, regions impose residency rules, and both warehouses must overlap without double ingestion or silent historical drift.",
+    "must_cover": ["inventory and data contracts", "historical and current parity", "consumer cutover", "rollback and coexistence"],
+    "expected_evidence": ["warehouse migration register", "historical, incremental, and consumer parity report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "govern-a-high-stakes-machine-learning-dataset",
+    "trigger": "A lender wants one dataset for credit eligibility and fraud models across countries, combining historical approvals, repayment, manual investigations, bureau data, device signals, customer appeals, and prior-model scores, while past policies differed, rejected applicants lack outcome labels, identity and disability proxies may exist, vendor rights vary, and downstream teams want to reuse the data.",
+    "must_cover": ["purpose, rights, and provenance", "population, label, and quality analysis", "versioning and access control", "release and monitoring"],
+    "expected_evidence": ["dataset governance register", "provenance, quality, and fairness report", "release and monitoring evidence package"]
+  },
+  {
+    "id": "recover-from-a-failed-data-backfill",
+    "trigger": "A transaction-pipeline backfill intended to correct six months of history overwrites current partitions, duplicates retries, drops tombstones, misreads old schemas, and propagates changes into revenue dashboards, customer statements, risk features, experiments, and regulatory extracts while normal ingestion continues.",
+    "must_cover": ["containment and lineage", "affected-output reconciliation", "repair or rollback", "verification and prevention"],
+    "expected_evidence": ["failed backfill incident timeline", "source-to-output and consumer reconciliation", "recovery and recurrence report"]
+  },
+  {
+    "id": "respond-to-a-major-vendor-failure",
+    "trigger": "A critical vendor providing payroll, identity, cloud hosting, customer messaging, and regional logistics suffers a cyber incident while financial distress limits staffing, subcontractors stop work, data exports are incomplete, some transactions are pending, contractual notices conflict, and the next payroll plus customer delivery cycle is hours away.",
+    "must_cover": ["customer and safety continuity", "evidence and obligation scope", "alternate service and exit coordination", "recovery and reconciliation"],
+    "expected_evidence": ["vendor failure timeline and control register", "impact, transaction, data, and obligation reconciliation", "continuity, recovery, and exit report"]
+  },
+  {
+    "id": "migrate-a-global-operating-model",
+    "trigger": "A multinational company is moving finance, support, procurement, technology operations, compliance, and customer administration from country teams into regional hubs and global shared services while entities, works councils, unions, languages, licenses, tax, data residency, vendors, systems, peak periods, and customer obligations differ.",
+    "must_cover": ["current and target operating model", "legal, workforce, and customer controls", "transition waves", "rollback and stabilization"],
+    "expected_evidence": ["global operating-model register", "workforce, legal, customer, and service validation report", "transition, rollback, and stabilization report"]
+  },
+  {
+    "id": "manage-a-high-stakes-organizational-crisis",
+    "trigger": "A company faces a product-safety event, cyber compromise, liquidity shock, vendor outage, executive conflict, whistleblower allegations, customer harm, regulator deadlines, and intense media attention at the same time, while internal communications and facts are unreliable.",
+    "must_cover": ["unified command and human protection", "facts, evidence, and decisions", "stakeholder and legal communication", "recovery and accountability"],
+    "expected_evidence": ["crisis timeline and command register", "impact, obligation, and action reconciliation", "recovery, accountability, and reform report"]
+  },
+  {
+    "id": "respond-to-a-publication-ethics-crisis",
+    "trigger": "An investigative series is accused of fabricated quotes, unsafe identification of vulnerable sources, undisclosed funder and author conflicts, manipulated images, unmarked AI-generated material, incorrect data analysis, and misleading translations after the work was syndicated, excerpted, downloaded, and cited in several countries.",
+    "must_cover": ["immediate harm and evidence control", "claim and source audit", "independence and conflict review", "correction, retraction, and recovery"],
+    "expected_evidence": ["publication ethics crisis timeline", "claim, source, version, and derivative reconciliation", "correction, accountability, and reform report"]
+  },
+  {
+    "id": "migrate-a-global-content-operation",
+    "trigger": "A global organization must move public sites, authenticated help, policies, product documentation, media, downloads, forms, search, structured data, localized pages, feeds, newsletters, and app content from several legacy CMS platforms to one operation while URLs, rights, accessibility, workflows, scheduled releases, user permissions, and regional obligations differ.",
+    "must_cover": ["content and identity inventory", "content, access, and workflow parity", "staged migration and cutover", "rollback and retirement"],
+    "expected_evidence": ["global content migration register", "content, rights, accessibility, link, and workflow parity report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "audit-an-executive-resume-for-public-disclosure",
+    "trigger": "A listed company is appointing a senior executive when the submitted resume, biographies, prior filings, media profiles, and board questionnaire conflict about degree completion, employer dates, titles, board service, advisory work, licenses, awards, related-party interests, and confidential projects, while market disclosure and press deadlines are near.",
+    "must_cover": ["claim and identity inventory", "independent verification", "conflict, privacy, and disclosure review", "approved release and correction"],
+    "expected_evidence": ["executive claim verification register", "source and discrepancy report", "approved disclosure and correction package"]
+  },
+  {
+    "id": "respond-to-a-research-misconduct-allegation",
+    "trigger": "A multicenter medical paper is challenged after duplicated images, impossible timestamps, missing consent records, unexplained patient exclusions, inconsistent raw files, a disputed author contribution, and alleged retaliation against a junior reporter.",
+    "must_cover": ["intake and human protection", "independent evidence inquiry", "fair investigation and findings", "record correction and reform"],
+    "expected_evidence": ["research integrity case timeline", "evidence, study, result, and publication reconciliation", "record-correction and reform report"]
+  },
+  {
+    "id": "migrate-a-university-learning-platform",
+    "trigger": "A university moves active courses, submissions, quizzes, grades, accommodations, videos, discussions, integrations, and archives between platforms across campuses with different calendars while final assessments continue.",
+    "must_cover": ["academic and technical inventory", "identity, content, and record parity", "term-aware cutover", "rollback and retirement"],
+    "expected_evidence": ["learning-platform migration register", "accessibility, identity, content, submission, grade, and workflow parity report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "audit-an-academic-cv-for-public-appointment",
+    "trigger": "A university is appointing a president when the candidate’s CV, biographies, indexes, and forms conflict about a completed degree, professorial dates, corresponding authorship, retracted work, grant totals, principal-investigator roles, doctoral completions, teaching, patents, board service, consulting, awards, and citation counts.",
+    "must_cover": ["identity and claim inventory", "independent scholarly verification", "conflict and disclosure review", "approved release and correction"],
+    "expected_evidence": ["academic claim verification register", "scholarly source and discrepancy report", "approved public-appointment and correction package"]
+  },
+  {
+    "id": "respond-to-a-software-supply-chain-compromise",
+    "trigger": "A popular library discovers a maintainer token theft, malicious release, mutable CI action, poisoned shared cache, stolen signing key, and auto-update distribution into developer tools and production services.",
+    "must_cover": ["trust and evidence containment", "provenance and impact reconstruction", "clean recovery and customer protection", "trust reestablishment"],
+    "expected_evidence": ["software supply-chain incident timeline", "source, dependency, builder, artifact, signature, deployment, and consumer reconciliation", "clean recovery and trust report"]
+  },
+  {
+    "id": "migrate-a-global-event-streaming-platform",
+    "trigger": "A global marketplace moves orders, payments, inventory, identity, notifications, and analytics streams between platforms while producers and consumers span regions, transactions and ordering differ, historical replay is incomplete, and both brokers must overlap.",
+    "must_cover": ["stream and dependency inventory", "semantic and security parity", "regional migration and authority transfer", "rollback and retirement"],
+    "expected_evidence": ["global streaming migration register", "event, offset, schema, transaction, security, and business-outcome parity report", "cutover and rollback rehearsal"]
+  },
+  {
+    "id": "recover-from-a-catastrophic-source-control-failure",
+    "trigger": "An attacker compromises the central Git service, rewrites protected branches and tags, deletes repositories and backups, steals signing and deploy keys, while mirrors replicate damage and teams retain divergent clones plus unpushed work.",
+    "must_cover": ["containment and distributed preservation", "object and trust reconciliation", "authoritative reconstruction", "verified service restoration"],
+    "expected_evidence": ["source-control failure timeline", "repository object, ref, signature, clone, artifact, release, and unique-work reconciliation", "restoration and trust report"]
+  },
+  {
+    "id": "redesign-a-multitenant-authorization-system",
+    "trigger": "A SaaS platform replaces inconsistent role checks while enterprise groups sync externally, users belong to several tenants, projects can be shared, support can impersonate, jobs and exports outlive sessions, caches omit tenant identity, and a prior bug exposed search results across customers.",
+    "must_cover": ["current authority reconstruction", "target policy and isolation design", "safe migration and enforcement", "abuse and recovery verification"],
+    "expected_evidence": ["authorization decision register", "enforcement, migration, and isolation report", "abuse, revocation, rollback, and recovery report"]
+  },
+  {
+    "id": "respond-to-a-container-orchestration-control-plane-compromise",
+    "trigger": "A stolen cluster-admin credential installs a malicious admission webhook, captures secrets, mutates payment workloads, creates privileged daemon processes, and uses workload identity to access cloud storage across regions while audit retention is incomplete.",
+    "must_cover": ["independent containment", "cluster and workload reconstruction", "clean recovery", "trust reestablishment"],
+    "expected_evidence": ["control-plane compromise timeline", "cluster, workload, artifact, credential, storage, network, and downstream reconciliation", "clean-cluster and trust report"]
+  },
+  {
+    "id": "migrate-a-global-identity-platform",
+    "trigger": "A multinational business moves employees, contractors, customers, service accounts, social logins, enterprise federation, passkeys, recovery, groups, and application tokens from several regional providers while names, identifiers, residency, accessibility, fraud risk, and labor obligations differ.",
+    "must_cover": ["identity and trust inventory", "authentication and dependency parity", "staged authority transfer", "recovery and retirement"],
+    "expected_evidence": ["global identity migration register", "identity, authentication, claim, provisioning, accessibility, privacy, and authorization parity report", "cutover, recovery, and retirement report"]
+  },
+  {
+    "id": "recover-from-a-cross-region-data-consistency-failure",
+    "trigger": "A network partition and automated failover leave two regions accepting orders, payments, inventory reservations, account changes, and refunds under different clocks; replication later overwrites some newer records while external payment and shipping systems retain both effects.",
+    "must_cover": ["containment and evidence preservation", "causal and business reconciliation", "authoritative repair", "safe restart"],
+    "expected_evidence": ["cross-region consistency incident timeline", "causal, entity, business-invariant, and downstream reconciliation", "repair and restart report"]
+  },
+  {
+    "id": "respond-to-a-hiring-process-data-breach",
+    "trigger": "An applicant-tracking vendor exposes resumes, interview notes, disability accommodations, reference contacts, background-check links, salary history, and rejection scores through a stolen recruiter session and public export URL across several countries.",
+    "must_cover": ["human protection and containment", "data and decision reconstruction", "notification and remediation", "safe recovery"],
+    "expected_evidence": ["hiring data incident timeline", "candidate, field, purpose, recipient, identity, and hiring-decision reconciliation", "candidate protection and recovery report"]
+  },
+  {
+    "id": "design-a-cross-border-executive-search",
+    "trigger": "A listed infrastructure company seeks a chief executive across eight countries while board members sponsor candidates, search firms share opaque profiles, biographies conflict, mobility and tax differ, public-safety duties are material, and an announcement deadline precedes complete diligence.",
+    "must_cover": ["mandate and governance", "lawful sourcing and assessment", "independent diligence and decision", "appointment and transition"],
+    "expected_evidence": ["executive search governance register", "candidate assessment, identity, diligence, mobility, fairness, and disclosure report", "appointment and transition package"]
+  },
+  {
+    "id": "audit-a-resume-after-identity-fraud",
+    "trigger": "A professional discovers fake job applications and profiles using their name, photo, altered employment dates, fabricated degrees, false references, and a copied portfolio, while one real recruiter merged the fraud with an authentic application.",
+    "must_cover": ["identity and safety containment", "claim and surface reconstruction", "correction and stakeholder action", "trusted resume recovery"],
+    "expected_evidence": ["identity-fraud resume timeline", "claimant, claim, version, source, recipient, and hiring-record reconciliation", "verified resume and identity recovery package"]
+  },
+  {
+    "id": "respond-to-a-critical-open-source-maintainer-compromise",
+    "trigger": "A widely used cryptographic library loses two maintainer accounts to a targeted takeover while one maintainer is being extorted, a malicious version reaches package registries and Linux distributions, release signing is compromised, project chat is impersonated, and downstream vendors demand an immediate safe release.",
+    "must_cover": ["human and project containment", "source and release reconstruction", "ecosystem protection and clean recovery", "governance reestablishment"],
+    "expected_evidence": ["maintainer compromise timeline", "project, source, review, builder, artifact, signature, registry, channel, and downstream reconciliation", "ecosystem recovery and governance report"]
+  },
+  {
+    "id": "migrate-a-global-master-data-platform",
+    "trigger": "A multinational manufacturer moves customer, supplier, product, location, legal-entity, tax, and account masters from regional systems while identifiers collide, corporate hierarchies change over time, sanctions and residency differ, local stewards override values, and finance, logistics, ecommerce, service, and analytics depend on conflicting golden records.",
+    "must_cover": ["entity and authority inventory", "identity and semantic parity", "staged mastership transfer", "rollback and retirement"],
+    "expected_evidence": ["global master-data migration register", "identity, match, survivorship, semantic, policy, hierarchy, reference, and downstream parity report", "cutover, rollback, and retirement report"]
+  },
+  {
+    "id": "redesign-a-safety-critical-control-interface",
+    "trigger": "A regional water utility redesigns a control-room interface after a mode-confusion event: stale sensor values looked current, two operators issued conflicting pump commands, alarms flooded, remote and local authority were unclear, color alone signaled contamination risk, and rollback could not blindly restore prior valve commands.",
+    "must_cover": ["work and hazard reconstruction", "control and state redesign", "human and system validation", "safe rollout and recovery"],
+    "expected_evidence": ["safety-critical interaction register", "human-factors, accessibility, system, security, simulation, and safety validation report", "rollout and recovery report"]
+  },
+  {
+    "id": "respond-to-a-live-broadcast-integrity-crisis",
+    "trigger": "A global awards stream is hijacked through a remote graphics account while a synthetic presenter clip, false emergency caption, altered translation, and edited social excerpt spread before the clean program recording is recovered.",
+    "must_cover": ["human and public protection", "source, signal, and version reconstruction", "truthful distribution correction", "clean recovery and governance"],
+    "expected_evidence": ["live broadcast integrity crisis timeline", "source, contribution, edit, signal, credential, platform, recording, derivative, and audience reconciliation", "audience correction, recovery, and accountability report"]
+  },
+  {
+    "id": "recover-from-a-global-treasury-control-failure",
+    "trigger": "A stolen treasury workstation adds a beneficiary, alters two payment files, releases a duplicate batch, disrupts sanctions screening, and leaves banks reporting inconsistent settlement while payroll and a debt payment approach.",
+    "must_cover": ["independent containment and human protection", "account, instruction, and effect reconstruction", "liquidity and obligation recovery", "trust reestablishment"],
+    "expected_evidence": ["global treasury control failure timeline", "account, mandate, credential, instruction, approval, bank, ledger, beneficiary, hedge, and liquidity reconciliation", "payment recovery and control-reestablishment report"]
+  },
+  {
+    "id": "manage-a-multijurisdiction-corporate-separation",
+    "trigger": "A regulated group separates operations in twelve countries on one close date while works-council consultation, banking mandates, pension assets, shared customer contracts, cloud identities, data residency, licenses, and transition services mature at different times.",
+    "must_cover": ["legal and human perimeter", "asset, obligation, data, and control reconstruction", "Day 1 authority transfer", "disentanglement and assurance"],
+    "expected_evidence": ["corporate separation command register", "entity, people, contract, asset, liability, data, system, control, license, and dependency reconciliation", "Day 1, disentanglement, and separation assurance report"]
+  }
+]

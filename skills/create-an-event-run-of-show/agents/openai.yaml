@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create an Event Run of Show"
+  short_description: "Sequence cues, owners, timing, and fallbacks"
+  default_prompt: "Use $create-an-event-run-of-show to turn this program into an executable cue sheet."

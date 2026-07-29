@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate-a-message-queue"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $migrate-a-message-queue to complete and verify this task."

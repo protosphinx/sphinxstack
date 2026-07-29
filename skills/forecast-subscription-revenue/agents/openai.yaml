@@ -1,0 +1,4 @@
+interface:
+  display_name: "forecast subscription revenue"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $forecast-subscription-revenue to complete and verify this finance task."

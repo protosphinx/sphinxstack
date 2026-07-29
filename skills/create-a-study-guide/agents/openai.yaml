@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Study Guide"
+  short_description: "Build a source-linked guide for retrieval practice"
+  default_prompt: "Use $create-a-study-guide to make a study guide from these course materials."

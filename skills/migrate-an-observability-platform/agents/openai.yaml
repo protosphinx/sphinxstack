@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrate an Observability Platform"
+  short_description: "Move operational evidence without blind spots"
+  default_prompt: "Use $migrate-an-observability-platform to plan and verify this observability migration."

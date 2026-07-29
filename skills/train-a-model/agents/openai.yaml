@@ -1,0 +1,4 @@
+interface:
+  display_name: "Train A Model"
+  short_description: "Train and evaluate a model without leakage"
+  default_prompt: "Use $train-a-model to help me complete this workflow with verified evidence."

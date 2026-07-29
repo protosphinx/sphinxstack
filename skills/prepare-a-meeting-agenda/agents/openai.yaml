@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Meeting Agenda"
+  short_description: "Build a focused agenda around decisions and outcomes"
+  default_prompt: "Use $prepare-a-meeting-agenda to prepare an outcome-focused agenda for this meeting."

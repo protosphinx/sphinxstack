@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build an Academic Portfolio"
+  short_description: "Curate academic work with evidence and reflection"
+  default_prompt: "Use $build-an-academic-portfolio to create a focused portfolio from my real work."

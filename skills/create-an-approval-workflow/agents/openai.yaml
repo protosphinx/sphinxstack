@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create an Approval Workflow"
+  short_description: "Route decisions with clear authority and evidence"
+  default_prompt: "Use $create-an-approval-workflow to design an accountable approval path for this process."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design an On-Call Rotation"
+  short_description: "Design a sustainable, testable incident-response rotation"
+  default_prompt: "Use $design-an-on-call-rotation to design and validate this support rotation."

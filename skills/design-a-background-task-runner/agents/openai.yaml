@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-background-task-runner"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $design-a-background-task-runner to complete and verify this task."

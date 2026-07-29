@@ -1,0 +1,4 @@
+interface:
+  display_name: "inspect-a-csp-report"
+  short_description: "Inspect and classify a browser CSP report"
+  default_prompt: "Use $inspect-a-csp-report to complete and verify this task."

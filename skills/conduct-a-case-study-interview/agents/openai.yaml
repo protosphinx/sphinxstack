@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conduct a Case Study Interview"
+  short_description: "Gather attributable customer evidence with consent"
+  default_prompt: "Use $conduct-a-case-study-interview to prepare, conduct, and document this evidence interview."

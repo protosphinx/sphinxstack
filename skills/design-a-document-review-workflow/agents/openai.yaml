@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a document review workflow"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $design-a-document-review-workflow to complete and verify this writing task."

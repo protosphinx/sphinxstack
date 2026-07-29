@@ -1,0 +1,4 @@
+interface:
+  display_name: "validate-a-sql-query-plan"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $validate-a-sql-query-plan to complete and verify this task."

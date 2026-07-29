@@ -1,0 +1,113 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the terminal part. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> how do I put my page online?</div>
+<div class="cm cm-agent">With a GitHub account, git working on your machine, and GitHub Pages
+serving your files at a URL. You'll run every command yourself; before each one I'll
+say what to type and what it does, in one line.</div>
+<div class="cm cm-user cd-hide">the terminal honestly scares me. what if I type something wrong</div>
+<div class="cm cm-agent cd-hide">Then we read the error together and fix it. Error messages are
+the curriculum here. And nothing in this skill rewrites history or force-pushes, so
+there is no command in it that quietly destroys your work.</div>
+<div class="cm cm-user cd-hide">do I have to pay for any of this</div>
+<div class="cm cm-agent cd-hide">No. The account, git, and Pages hosting are all free. You do the
+signup yourself in your own browser; I never handle your password.</div>
+<div class="cm cm-user cd-hide">ok, account made. now what</div>
+<div class="cm cm-agent cd-hide">First repo, first commit, push, then turn Pages on and watch
+your URL load. After that we run the loop three times: edit, commit, push, see the live
+page change. By the third round it stops feeling like a ritual and starts feeling like
+saving a file.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Scared of the terminal?</h2>
+<p>Reasonable, and this skill is built for it. You type every command with your own
+hands, but never blind: each one gets a one-line explanation first, and every error
+gets read and fixed together instead of pasted into a panic. The skill also bans the
+scary stuff outright: no history rewriting, no force pushes, no committing as anyone
+but you. Projects that exist mostly to practice this loop:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/real-folder-repo/"><img src="/assets/project-img/real-folder-repo.jpg" alt=""><span>Put a real folder under version control</span></a>
+<a class="mini" href="/ideas/repo-action/"><img src="/assets/project-img/repo-action.jpg" alt=""><span>A repo that runs an action</span></a>
+<a class="mini" href="/ideas/real-site/"><img src="/assets/project-img/real-site.jpg" alt=""><span>A real site, shipped</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>The edit-to-live loop, owned. This is the whole thing, and by the end of the session
+you will have run it at least three times yourself:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example terminal session showing the commit and deploy loop">
+<div class="sheet-tag">Example</div>
+<pre>
+$ git add index.html
+$ git commit -m "add opening hours to the top"  <span class="anno-badge">1</span>
+[main 4f2a91c] add opening hours to the top
+ 1 file changed, 3 insertions(+)
+
+$ git push  <span class="anno-badge">2</span>
+To github.com:username/username.github.io.git
+   9d1e0b2..4f2a91c  main -> main
+
+about a minute later:  <span class="anno-badge">3</span>
+https://username.github.io shows the change
+</pre>
+</div>
+<ol class="anno-notes">
+<li><b>Commits in your own words.</b> The message says what changed, plainly, because
+future you is the reader. The skill has you committing small from the very first file
+so the rhythm is automatic before it matters.</li>
+<li><b>Push is the publish button.</b> The repo on GitHub is the copy that counts, and
+push is how your machine's changes get there. That one sentence is most of what
+"deploy" means here.</li>
+<li><b>The URL is yours.</b> Repo named username.github.io, Pages turned on, and
+anything you push appears at that address. Every other web skill on this site builds on
+this exact loop.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is GitHub free?</summary>
+<p>For everything this skill uses, yes: the account, unlimited public repos, and Pages
+hosting. Paid plans exist for teams and private-repo extras, and nothing here needs
+them.</p></details>
+<details class="faq"><summary>Do I need to already know git?</summary>
+<p>No. You will use about four commands, and you learn them by running them on a real
+repo with the agent narrating. By the end you can say what commit, push, and deploy
+mean in your own words, which is the skill's actual exit test.</p></details>
+<details class="faq"><summary>What if I push something I shouldn't have?</summary>
+<p>Public repo means public, and since this skill doesn't rewrite history, the honest
+answer is care up front: the agent checks with you before anything sensitive would be
+committed, and secrets like passwords or keys never belong in a repo at all.</p></details>
+<details class="faq"><summary>Can I break the live site?</summary>
+<p>Not in a way that lasts. Every version is kept, so a bad push is fixed by the next
+push. That is most of the point of version control, and it is why the loop is safe to
+practice on a real URL.</p></details>
+<details class="faq"><summary>Why not just use Google Drive or a site builder?</summary>
+<p>Drive stores files but doesn't serve a website or keep meaningful history. Site
+builders serve a website but lock the loop away from you. A repo plus Pages gives you
+hosting, history, and a workflow that employers recognize, and every other sphinxstack
+web skill assumes it is in place.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is GitHub free?","acceptedAnswer":{"@type":"Answer","text":"For everything this skill uses, yes: account, public repos, and Pages hosting. Paid plans exist for teams and nothing here needs them."}},
+{"@type":"Question","name":"Do I need to already know git?","acceptedAnswer":{"@type":"Answer","text":"No. You use about four commands and learn them by running them on a real repo with the agent narrating each one."}},
+{"@type":"Question","name":"What if I push something I shouldn't have?","acceptedAnswer":{"@type":"Answer","text":"Public means public, so the skill leans on care up front: it checks before anything sensitive is committed, and secrets never belong in a repo."}},
+{"@type":"Question","name":"Can I break the live site?","acceptedAnswer":{"@type":"Answer","text":"Not in a way that lasts. Every version is kept, so a bad push is fixed by the next push."}},
+{"@type":"Question","name":"Why not just use Google Drive or a site builder?","acceptedAnswer":{"@type":"Answer","text":"A repo plus Pages gives hosting, history, and a workflow employers recognize, and every other sphinxstack web skill assumes it is in place."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Loop working?</b> Put it to work on something real:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/build-website/"><img src="/assets/skill-img/build-website.jpg" alt=""><span>Build a website</span></a>
+<a class="mini" href="/skills/build-web-app/"><img src="/assets/skill-img/build-web-app.jpg" alt=""><span>Build a web app</span></a>
+<a class="mini" href="/skills/deploy-anywhere/"><img src="/assets/skill-img/deploy-anywhere.jpg" alt=""><span>Deploy anywhere</span></a>
+</div>
+<p><b>Want commit practice with a payoff?</b> Small repos that go somewhere:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/start-page/"><img src="/assets/project-img/start-page.jpg" alt=""><span>Your own browser start page</span></a>
+<a class="mini" href="/ideas/qr-one-pager/"><img src="/assets/project-img/qr-one-pager.jpg" alt=""><span>A one-pager behind a QR code</span></a>
+<a class="mini" href="/ideas/speedrun-leaderboard/"><img src="/assets/project-img/speedrun-leaderboard.jpg" alt=""><span>A leaderboard for your group</span></a>
+</div>

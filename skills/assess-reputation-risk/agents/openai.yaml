@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assess Reputation Risk"
+  short_description: "Assess stakeholder harm, evidence, and response options"
+  default_prompt: "Use $assess-reputation-risk to evaluate this issue without amplifying unsupported claims."

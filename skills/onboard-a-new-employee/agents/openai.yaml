@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onboard a New Employee"
+  short_description: "Build a safe, role-specific path to independent work"
+  default_prompt: "Use $onboard-a-new-employee to design and verify this employee onboarding plan."

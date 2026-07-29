@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare for Office Hours"
+  short_description: "Turn course confusion into useful questions"
+  default_prompt: "Use $prepare-for-office-hours to prepare for this office-hours conversation."

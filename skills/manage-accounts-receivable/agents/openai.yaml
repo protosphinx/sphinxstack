@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Accounts Receivable"
+  short_description: "Track receivables, collections, disputes, and cash timing"
+  default_prompt: "Use $manage-accounts-receivable to reconcile and manage this receivables portfolio."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Negotiate First Offer"
+  short_description: "Prepare and conduct a first job-offer negotiation"
+  default_prompt: "Use $negotiate-first-offer to help me complete this workflow with verified evidence."

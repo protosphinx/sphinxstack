@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Modal Dialog"
+  short_description: "Design a focused dialog with safe entry and exit"
+  default_prompt: "Use $design-a-modal-dialog to decide whether a modal fits and specify its accessible interaction."

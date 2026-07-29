@@ -1,0 +1,4 @@
+interface:
+  display_name: "check for duplicate records"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $check-for-duplicate-records to complete and verify this data task."

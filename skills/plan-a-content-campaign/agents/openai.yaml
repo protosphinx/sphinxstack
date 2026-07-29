@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Content Campaign"
+  short_description: "Coordinate content around an audience outcome and measure"
+  default_prompt: "Use $plan-a-content-campaign to design a focused, measurable multi-channel campaign."

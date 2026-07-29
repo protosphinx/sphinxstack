@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Candidate Debrief"
+  short_description: "Reach an evidence-based hiring decision consistently"
+  default_prompt: "Use $run-a-candidate-debrief to facilitate this evidence-based hiring decision."

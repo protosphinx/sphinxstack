@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document a UI Component"
+  short_description: "Record component behavior, states, and usage"
+  default_prompt: "Use $document-a-ui-component to create practical documentation for this component."

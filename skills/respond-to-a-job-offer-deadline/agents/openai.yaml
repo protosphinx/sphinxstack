@@ -1,0 +1,4 @@
+interface:
+  display_name: "respond-to-a-job-offer-deadline"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $respond-to-a-job-offer-deadline to complete and verify this task."

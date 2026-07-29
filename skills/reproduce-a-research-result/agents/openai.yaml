@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reproduce a Research Result"
+  short_description: "Rebuild a claim from data, code, and methods"
+  default_prompt: "Use $reproduce-a-research-result to test whether this research result reproduces."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Record a Work Decision"
+  short_description: "Preserve a decision, rationale, evidence, and revisit trigger"
+  default_prompt: "Use $record-a-work-decision to document this decision and its consequences."

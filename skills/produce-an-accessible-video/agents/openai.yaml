@@ -1,0 +1,4 @@
+interface:
+  display_name: "produce an accessible video"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $produce-an-accessible-video to complete and verify this media task."

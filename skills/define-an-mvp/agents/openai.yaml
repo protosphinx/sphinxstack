@@ -1,0 +1,4 @@
+interface:
+  display_name: "Define an MVP"
+  short_description: "Choose the smallest product that tests a risky assumption"
+  default_prompt: "Use $define-an-mvp to cut this idea to one testable outcome and a clear release boundary."

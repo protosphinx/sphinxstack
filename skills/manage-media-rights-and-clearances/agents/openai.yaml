@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Media Rights and Clearances"
+  short_description: "Track permissions, restrictions, and evidence"
+  default_prompt: "Use $manage-media-rights-and-clearances to clear and document this production media."

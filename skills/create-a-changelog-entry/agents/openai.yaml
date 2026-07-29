@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Changelog Entry"
+  short_description: "Record one software change with precise scope"
+  default_prompt: "Use $create-a-changelog-entry to help me complete this workflow with verifiable evidence."

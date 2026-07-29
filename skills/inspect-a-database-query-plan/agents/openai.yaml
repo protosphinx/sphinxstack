@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspect a Database Query Plan"
+  short_description: "Read query operators, estimates, and costs"
+  default_prompt: "Use $inspect-a-database-query-plan to diagnose this query from its execution plan."

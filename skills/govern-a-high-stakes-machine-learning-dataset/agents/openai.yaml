@@ -1,0 +1,4 @@
+interface:
+  display_name: "govern a high stakes machine learning dataset"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $govern-a-high-stakes-machine-learning-dataset to complete and verify this data task."

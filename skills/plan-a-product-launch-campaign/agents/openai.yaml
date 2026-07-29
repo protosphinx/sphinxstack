@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Product Launch Campaign"
+  short_description: "Coordinate a truthful product launch across teams"
+  default_prompt: "Use $plan-a-product-launch-campaign to build this launch campaign and its readiness gates."

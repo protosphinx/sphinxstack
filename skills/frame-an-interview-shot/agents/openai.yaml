@@ -1,0 +1,4 @@
+interface:
+  display_name: "frame an interview shot"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $frame-an-interview-shot to complete and verify this media task."

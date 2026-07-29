@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a data retention policy"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $design-a-data-retention-policy to complete and verify this data task."

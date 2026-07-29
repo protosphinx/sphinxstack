@@ -1,0 +1,4 @@
+interface:
+  display_name: "redesign-a-multitenant-authorization-system"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $redesign-a-multitenant-authorization-system to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Semester Workload"
+  short_description: "Map deadlines, effort, and recovery time"
+  default_prompt: "Use $plan-a-semester-workload to plan this semester realistically."

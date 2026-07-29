@@ -1,0 +1,4 @@
+interface:
+  display_name: "respond to a web cache poisoning incident"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $respond-to-a-web-cache-poisoning-incident to complete and verify this web task."

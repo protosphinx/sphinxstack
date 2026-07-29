@@ -1,0 +1,34 @@
+<h2>Worked case: migrate a commerce frontend without a rewrite outage</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A global commerce site must move from a client-only frontend to a server-rendered framework while preserving checkout, account state, saved carts, URLs, search indexing, analytics, accessibility, localized content, performance, and releases across hundreds of routes.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we rebuild every route and switch over in one release?</div>
+<div class="cm cm-agent">No. Inventory routes and outcomes, create a compatibility boundary, and migrate independently reversible vertical slices.</div>
+<div class="cm cm-user cd-hide">Matching screenshots should prove parity.</div>
+<div class="cm cm-agent cd-hide">Screenshots miss state, focus, URLs, analytics, server rendering, performance, security, and assistive-technology behavior.</div>
+<div class="cm cm-user cd-hide">Can both runtimes update the saved cart?</div>
+<div class="cm cm-agent cd-hide">Use one authoritative contract. Dual mutation creates divergence that rollback cannot safely resolve.</div>
+<div class="cm cm-user">What blocks a migration wave?</div>
+<div class="cm cm-agent">Any unexplained behavior, accessibility, URL, analytics, security, or performance regression.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Move outcomes in reversible slices.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The frontend migration evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Migration architecture record</td><td>Route and feature inventory, compatibility architecture, contracts, migration waves, owners, and rollback</td><td>Every slice has one state owner and independent route</td></tr>
+<tr><td>Behavior parity report</td><td>Function, accessibility, URLs, SEO, localization, browser, performance, security, analytics, and user outcomes</td><td>Baseline differences are explained and approved</td></tr>
+<tr><td>Cutover and rollback rehearsal</td><td>Traffic movement, old-asset restoration, cache behavior, evidence preservation, and server-state boundary</td><td>Frontend rollback never claims to reverse committed orders</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A product-route canary resets keyboard focus and records purchase analytics twice. The wave pauses, traffic returns to the old route, and completed server orders remain untouched. Shared navigation and event ownership are repaired before the same parity suite runs again.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Should migration start with shared components?</summary><p>Start with representative vertical slices so shared boundaries are proven by real behavior.</p></details>
+<details class="faq"><summary>Can old and new routers coexist?</summary><p>Yes, through one explicit ownership and URL contract with independent rollback.</p></details>
+<details class="faq"><summary>What counts as parity?</summary><p>Equivalent user outcomes and approved quality attributes, not identical implementation.</p></details>
+<details class="faq"><summary>When can old code be removed?</summary><p>After traffic, references, support needs, observation, and rollback gates expire.</p></details>
+<details class="faq"><summary>How should irreversible data be handled?</summary><p>Keep server effects authoritative and make frontend rollback independent of data reversal.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should migration start with shared components?","acceptedAnswer":{"@type":"Answer","text":"Start with representative vertical slices."}},{"@type":"Question","name":"Can old and new routers coexist?","acceptedAnswer":{"@type":"Answer","text":"Yes, with explicit ownership and routing."}},{"@type":"Question","name":"What counts as parity?","acceptedAnswer":{"@type":"Answer","text":"Equivalent outcomes and approved quality attributes."}},{"@type":"Question","name":"When can old code be removed?","acceptedAnswer":{"@type":"Answer","text":"After evidence and rollback gates expire."}},{"@type":"Question","name":"How should irreversible data be handled?","acceptedAnswer":{"@type":"Answer","text":"Keep server effects authoritative."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Map behavior with <a href="/skills/document-a-software-architecture/">Document a software architecture</a>,
+test browsers with <a href="/skills/test-cross-browser-compatibility/">Test cross-browser compatibility</a>, and
+plan reversibility with <a href="/skills/prepare-a-rollback-plan/">Prepare a rollback plan</a>.</p>

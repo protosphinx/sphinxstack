@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mockup in Figma"
+  short_description: "Create a focused website mockup in Figma"
+  default_prompt: "Use $mockup-in-figma to help me complete this workflow with verified evidence."

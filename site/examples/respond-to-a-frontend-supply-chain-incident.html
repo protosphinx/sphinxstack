@@ -1,0 +1,34 @@
+<h2>Worked case: contain a compromised browser script</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A hosted analytics script begins serving obfuscated code after its vendor account is compromised, and the script ran on login and billing pages while build credentials, cached assets, user sessions, form data, downstream calls, and affected browser versions remain uncertain.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we replace the script and purge the CDN?</div>
+<div class="cm cm-agent">Contain execution, but preserve served variants, manifests, caches, logs, and credentials first so exposure can still be reconstructed.</div>
+<div class="cm cm-user cd-hide">The vendor says only analytics was affected.</div>
+<div class="cm cm-agent cd-hide">Browser code had page-origin access. Scope routes, data, sessions, network actions, versions, and time from independent evidence.</div>
+<div class="cm cm-user cd-hide">Can we rebuild on the usual CI runner?</div>
+<div class="cm cm-agent cd-hide">Not until its source, credentials, dependencies, and integrity are trusted. Use a clean controlled build path.</div>
+<div class="cm cm-user">When can the site return?</div>
+<div class="cm cm-agent">After a verified minimal path or clean canary proves asset hashes, headers, critical journeys, and monitoring.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Preserve evidence before trusted recovery.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The supply-chain incident evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Exposure timeline and asset manifest</td><td>Versions, hashes, routes, regions, browsers, time, data, sessions, network actions, users, and uncertainty</td><td>Facts, indicators, and hypotheses remain distinct</td></tr>
+<tr><td>Containment and notification log</td><td>Browser containment, cache action, credentials, evidence preservation, user protection, legal decisions, and verification</td><td>No containment step silently destroys required evidence</td></tr>
+<tr><td>Clean rebuild and recovery report</td><td>Trusted source, runner, dependencies, credentials, reproducible assets, canary, hashes, headers, journeys, and monitoring</td><td>No suspected build plane is reused</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>Disabling the tag breaks authentication because an unrelated loader depends on it. Responders serve a minimal verified login path, preserve cached malicious variants, and block the vendor origin through CSP. A clean build separates the dependency before controlled traffic returns.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Should caches be purged immediately?</summary><p>Contain delivery while preserving representative malicious assets and metadata under controlled evidence custody.</p></details>
+<details class="faq"><summary>Must every session be revoked?</summary><p>Scope the script's access and actions, then apply proportionate session and token containment.</p></details>
+<details class="faq"><summary>Is a vendor statement enough?</summary><p>No. Use independent asset, browser, network, build, and deployment evidence.</p></details>
+<details class="faq"><summary>What makes a rebuild trusted?</summary><p>Verified source, clean runners, pinned reviewed inputs, new credentials, and reproducible artifacts.</p></details>
+<details class="faq"><summary>When is the incident complete?</summary><p>After recovery, exposure decisions, affected-party follow-through, recurrence monitoring, and control verification.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should caches be purged immediately?","acceptedAnswer":{"@type":"Answer","text":"Contain delivery while preserving required evidence."}},{"@type":"Question","name":"Must every session be revoked?","acceptedAnswer":{"@type":"Answer","text":"Use scoped proportionate containment."}},{"@type":"Question","name":"Is a vendor statement enough?","acceptedAnswer":{"@type":"Answer","text":"No. Verify through independent evidence."}},{"@type":"Question","name":"What makes a rebuild trusted?","acceptedAnswer":{"@type":"Answer","text":"Clean infrastructure and verified reproducible inputs."}},{"@type":"Question","name":"When is the incident complete?","acceptedAnswer":{"@type":"Answer","text":"After recovery and verified control follow-through."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Inventory browser code with <a href="/skills/audit-third-party-scripts/">Audit third-party scripts</a>,
+contain execution with <a href="/skills/configure-a-content-security-policy/">Configure a content security policy</a>, and
+rotate access with <a href="/skills/rotate-a-compromised-secret/">Rotate a compromised secret</a>.</p>

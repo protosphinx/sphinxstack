@@ -1,0 +1,4 @@
+interface:
+  display_name: "edit a documentary scene"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $edit-a-documentary-scene to complete and verify this media task."

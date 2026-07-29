@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adapt a Resume for an International Market"
+  short_description: "Localize resume conventions without guessing rules"
+  default_prompt: "Use $adapt-a-resume-for-an-international-market to adapt this resume safely."

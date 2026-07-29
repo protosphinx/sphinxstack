@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review a Data Processing Agreement"
+  short_description: "Map processing terms to operational privacy controls"
+  default_prompt: "Use $review-a-data-processing-agreement to review operational gaps and escalation questions."

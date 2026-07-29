@@ -1,0 +1,4 @@
+interface:
+  display_name: "build-a-secret-rotation-workflow"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $build-a-secret-rotation-workflow to complete and verify this task."

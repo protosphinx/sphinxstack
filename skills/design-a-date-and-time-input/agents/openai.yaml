@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a date and time input"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $design-a-date-and-time-input to complete and verify this design task."

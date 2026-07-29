@@ -1,0 +1,4 @@
+interface:
+  display_name: "set a project milestone"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $set-a-project-milestone to complete and verify this operations task."

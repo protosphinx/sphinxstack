@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Hiring Process"
+  short_description: "Design a fair, consistent, evidence-based hiring process"
+  default_prompt: "Use $plan-a-hiring-process to design this role's hiring workflow."

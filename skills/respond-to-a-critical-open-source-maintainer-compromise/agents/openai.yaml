@@ -1,0 +1,4 @@
+interface:
+  display_name: "respond-to-a-critical-open-source-maintainer-compromise"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $respond-to-a-critical-open-source-maintainer-compromise to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Read an Income Statement"
+  short_description: "Interpret revenue, costs, and profit evidence"
+  default_prompt: "Use $read-an-income-statement to explain and verify this income statement."

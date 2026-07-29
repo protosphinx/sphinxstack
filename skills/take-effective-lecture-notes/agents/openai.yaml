@@ -1,0 +1,4 @@
+interface:
+  display_name: "Take Effective Lecture Notes"
+  short_description: "Capture usable lecture evidence and questions"
+  default_prompt: "Use $take-effective-lecture-notes to turn this lecture material into effective notes."

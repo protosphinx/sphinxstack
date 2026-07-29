@@ -1,0 +1,21 @@
+<h2>Worked case: rebuild trust after a malicious release</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A popular library discovers a maintainer token theft, malicious release, mutable CI action, poisoned shared cache, stolen signing key, and auto-update distribution into developer tools and production services.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we publish a patched build now?</div><div class="cm cm-agent">Only after source, builder, inputs, caches, signing, artifact differences, and consumer scope are independently trusted.</div>
+<div class="cm cm-user cd-hide">Does removing the package end exposure?</div><div class="cm cm-agent cd-hide">No. Trace execution, credentials, deployments, downstream builds, data, and persistent effects.</div>
+<div class="cm cm-user cd-hide">Can the old signing key announce recovery?</div><div class="cm cm-agent cd-hide">Use an independently authenticated channel and establish new signing trust.</div>
+<div class="cm cm-user">What proves recovery?</div><div class="cm cm-agent">Clean provenance, compared artifacts, precise advisories, adopted replacements, revoked trust, rotated secrets, and monitoring.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Recovery cannot reuse the compromised trust path.</span></p></div>
+<div class="advanced-case"><h2>The supply-chain evidence package</h2><table class="plain-table"><thead><tr><th>Artifact</th><th>Gate</th></tr></thead><tbody>
+<tr><td>software supply-chain incident timeline</td><td>Trust, custody, distribution, and decisions are timed</td></tr>
+<tr><td>source, dependency, builder, artifact, signature, deployment, and consumer reconciliation</td><td>Every affected path has a disposition</td></tr>
+<tr><td>clean recovery and trust report</td><td>New build and signing trust are independently proven</td></tr></tbody></table></div>
+<h2>Failure rehearsal</h2><p>The rebuild matches source but uses the poisoned shared cache. The team discards it, rebuilds with empty controlled caches, and analyzes differences before release.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can telemetry prove no execution?</summary><p>No. State sampling and coverage limits.</p></details>
+<details class="faq"><summary>Should all releases be revoked?</summary><p>Scope by independently reconstructed provenance and exposure.</p></details>
+<details class="faq"><summary>Can a checksum prove safety?</summary><p>It proves identity, not benign behavior or trusted origin.</p></details>
+<details class="faq"><summary>Who receives an advisory?</summary><p>Affected consumers and downstream distributors need actionable verified guidance.</p></details>
+<details class="faq"><summary>When can releases resume?</summary><p>After clean trust, artifact comparison, independent approval, and protective guidance.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can telemetry prove no execution?","acceptedAnswer":{"@type":"Answer","text":"No."}},{"@type":"Question","name":"Should all releases be revoked?","acceptedAnswer":{"@type":"Answer","text":"Scope by provenance."}},{"@type":"Question","name":"Can a checksum prove safety?","acceptedAnswer":{"@type":"Answer","text":"No."}},{"@type":"Question","name":"Who receives an advisory?","acceptedAnswer":{"@type":"Answer","text":"Affected consumers."}},{"@type":"Question","name":"When can releases resume?","acceptedAnswer":{"@type":"Answer","text":"After trust is proven."}}]}</script>
+<h2>Where to go from here</h2><p>Audit builders with <a href="/skills/audit-a-build-pipeline/">Audit a build pipeline</a>, check dependencies with <a href="/skills/perform-a-dependency-audit/">Perform a dependency audit</a>, and rotate trust with <a href="/skills/rotate-a-compromised-secret/">Rotate a compromised secret</a>.</p>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "negotiate-a-remote-work-offer"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $negotiate-a-remote-work-offer to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Paper Workshop"
+  short_description: "Develop a source-grounded research paper"
+  default_prompt: "Use $research-paper-workshop to help me complete this workflow with verified evidence."

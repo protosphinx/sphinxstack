@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evaluate a Job Offer"
+  short_description: "Compare an offer across role, value, and risk"
+  default_prompt: "Use $evaluate-a-job-offer to evaluate this offer and surface questions before I decide."

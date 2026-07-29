@@ -1,0 +1,4 @@
+interface:
+  display_name: "First Freelance Gig"
+  short_description: "Find and deliver a bounded first freelance project"
+  default_prompt: "Use $first-freelance-gig to help me complete this workflow with verified evidence."

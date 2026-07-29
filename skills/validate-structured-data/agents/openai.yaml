@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate Structured Data"
+  short_description: "Test structured markup and visible claims"
+  default_prompt: "Use $validate-structured-data to verify this page structured markup and evidence."

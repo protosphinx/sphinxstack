@@ -1,0 +1,4 @@
+interface:
+  display_name: "inspect-a-request-correlation-id"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $inspect-a-request-correlation-id to complete and verify this task."

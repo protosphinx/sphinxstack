@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Networking Introduction"
+  short_description: "Introduce your work and goal without a pitch"
+  default_prompt: "Use $prepare-a-networking-introduction to draft a natural introduction for this setting."

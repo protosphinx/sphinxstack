@@ -1,0 +1,4 @@
+interface:
+  display_name: "Captions and Subtitles"
+  short_description: "Create accurate, readable captions for a video"
+  default_prompt: "Use $captions-and-subtitles to help me complete this workflow with verified evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "secure a file download"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $secure-a-file-download to complete and verify this web task."

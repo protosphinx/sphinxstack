@@ -1,0 +1,4 @@
+interface:
+  display_name: "check-a-citation-format"
+  short_description: "Run a verified check a citation format workflow"
+  default_prompt: "Use $check-a-citation-format to complete and verify this task."

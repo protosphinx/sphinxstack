@@ -1,0 +1,21 @@
+<h2>Worked case: prove tenant isolation across every surface</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A SaaS platform replaces inconsistent role checks while enterprise groups sync externally, users belong to several tenants, projects can be shared, support can impersonate, jobs and exports outlive sessions, caches omit tenant identity, and a prior bug exposed search results across customers.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we centralize every check?</div><div class="cm cm-agent">Centralize semantics, but ensure each enforcement point fails safely and carries tenant plus policy identity.</div>
+<div class="cm cm-user cd-hide">Should old or new policy win in shadow disagreement?</div><div class="cm cm-agent cd-hide">Never choose the more permissive result automatically; classify and approve the change.</div>
+<div class="cm cm-user cd-hide">Does session revocation stop exports?</div><div class="cm cm-agent cd-hide">Not alone. Revoke jobs, caches, webhooks, subscriptions, tokens, and stored capabilities.</div>
+<div class="cm cm-user">What proves migration?</div><div class="cm cm-agent">Every enforcement surface, denial, revocation path, audit decision, exception, rollback, and support route is tested.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Tenant identity belongs in every decision and cache key.</span></p></div>
+<div class="advanced-case"><h2>The authorization evidence package</h2><table class="plain-table"><thead><tr><th>Artifact</th><th>Gate</th></tr></thead><tbody>
+<tr><td>authorization decision register</td><td>Each decision is reconstructable</td></tr>
+<tr><td>enforcement, migration, and isolation report</td><td>Every surface has an accepted disposition</td></tr>
+<tr><td>abuse, revocation, rollback, and recovery report</td><td>Isolation and capability recovery are proven</td></tr></tbody></table></div>
+<h2>Failure rehearsal</h2><p>A revoked administrator retains a queued export and cached search token. The system quarantines both capabilities until separate reauthorization proves tenant and policy state.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Are roles enough?</summary><p>Often not; resources, relationships, tenant, context, and policy version matter.</p></details>
+<details class="faq"><summary>Can support impersonate users?</summary><p>Only through bounded, attributable, authorized, and reviewable controls.</p></details>
+<details class="faq"><summary>Should ambiguous ownership allow access?</summary><p>No. Deny and route to authorized resolution.</p></details>
+<details class="faq"><summary>Can caches omit policy version?</summary><p>No. Stale grants must not survive policy change.</p></details>
+<details class="faq"><summary>What about false denials?</summary><p>Provide safe appeal and support without bypassing isolation.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are roles enough?","acceptedAnswer":{"@type":"Answer","text":"Often not."}},{"@type":"Question","name":"Can support impersonate users?","acceptedAnswer":{"@type":"Answer","text":"Only through bounded controls."}},{"@type":"Question","name":"Should ambiguous ownership allow access?","acceptedAnswer":{"@type":"Answer","text":"No."}},{"@type":"Question","name":"Can caches omit policy version?","acceptedAnswer":{"@type":"Answer","text":"No."}},{"@type":"Question","name":"What about false denials?","acceptedAnswer":{"@type":"Answer","text":"Provide safe appeal."}}]}</script>
+<h2>Where to go from here</h2><p>Model risks with <a href="/skills/threat-model-a-feature/">Threat model a feature</a>, test contracts with <a href="/skills/design-a-contract-testing-strategy/">Design a contract testing strategy</a>, and inspect incidents with <a href="/skills/respond-to-account-takeover/">Respond to account takeover</a>.</p>

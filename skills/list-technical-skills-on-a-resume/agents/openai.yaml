@@ -1,0 +1,4 @@
+interface:
+  display_name: "List Technical Skills on a Resume"
+  short_description: "Organize current technical skills with evidence"
+  default_prompt: "Use $list-technical-skills-on-a-resume to organize and verify these technical skills."

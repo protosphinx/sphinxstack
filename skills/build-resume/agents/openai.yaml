@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Resume"
+  short_description: "Build a truthful one-page resume from real work"
+  default_prompt: "Use $build-resume to help me complete this workflow with verified evidence."

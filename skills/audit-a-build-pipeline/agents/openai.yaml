@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit-a-build-pipeline"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $audit-a-build-pipeline to complete and verify this task."

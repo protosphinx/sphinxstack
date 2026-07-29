@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investigate Memory Growth"
+  short_description: "Distinguish leaks, caches, load, and limits"
+  default_prompt: "Use $investigate-memory-growth to diagnose this service memory pattern safely."

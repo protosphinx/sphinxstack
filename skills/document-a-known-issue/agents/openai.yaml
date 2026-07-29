@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document a Known Issue"
+  short_description: "Publish a clear and maintainable issue record"
+  default_prompt: "Use $document-a-known-issue to help me complete this workflow with verifiable evidence."

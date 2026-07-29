@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate-a-university-learning-platform"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $migrate-a-university-learning-platform to complete and verify this task."

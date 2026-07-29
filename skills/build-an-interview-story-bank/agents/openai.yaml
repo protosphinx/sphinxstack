@@ -1,0 +1,4 @@
+interface:
+  display_name: "build an interview story bank"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $build-an-interview-story-bank to complete and verify this hiring task."

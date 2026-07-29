@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage a cross functional dependency"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $manage-a-cross-functional-dependency to complete and verify this operations task."

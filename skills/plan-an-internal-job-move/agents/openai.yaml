@@ -1,0 +1,4 @@
+interface:
+  display_name: "plan-an-internal-job-move"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $plan-an-internal-job-move to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "write a release announcement"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $write-a-release-announcement to complete and verify this writing task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evaluate A Vendor"
+  short_description: "Compare vendors using requirements, evidence, and risk"
+  default_prompt: "Use $evaluate-a-vendor to compare these suppliers against evidence-backed requirements."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Address and Contact Records"
+  short_description: "Track address changes across accounts and institutions"
+  default_prompt: "Use $update-address-and-contact-records to plan and verify this contact-detail change."

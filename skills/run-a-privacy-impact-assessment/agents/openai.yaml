@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Privacy Impact Assessment"
+  short_description: "Assess privacy risk before a consequential change"
+  default_prompt: "Use $run-a-privacy-impact-assessment to assess this change and define privacy controls."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Case Study"
+  short_description: "Turn real project evidence into a credible case study"
+  default_prompt: "Use $write-a-case-study to write a concise case study from these project artifacts."

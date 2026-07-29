@@ -1,0 +1,4 @@
+interface:
+  display_name: "Follow up After Applying"
+  short_description: "Send a useful follow-up after a job application"
+  default_prompt: "Use $follow-up-after-applying to help me complete this workflow with verified evidence."

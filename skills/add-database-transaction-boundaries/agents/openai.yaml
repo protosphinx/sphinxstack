@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Database Transaction Boundaries"
+  short_description: "Protect invariants across database changes"
+  default_prompt: "Use $add-database-transaction-boundaries to define and test transaction safety."

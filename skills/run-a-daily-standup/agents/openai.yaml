@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Daily Standup"
+  short_description: "Run a brief coordination check without status theater"
+  default_prompt: "Use $run-a-daily-standup to structure a useful daily coordination check."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit an executive resume for public disclosure"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $audit-an-executive-resume-for-public-disclosure to complete and verify this writing task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit a Website"
+  short_description: "Prioritize website problems across real user journeys"
+  default_prompt: "Use $audit-a-website to produce an evidence-based website audit and repair backlog."

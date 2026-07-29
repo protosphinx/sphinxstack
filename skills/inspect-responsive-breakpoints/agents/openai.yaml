@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspect Responsive Breakpoints"
+  short_description: "Check layout behavior across viewport changes"
+  default_prompt: "Use $inspect-responsive-breakpoints to diagnose this responsive layout."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Software Release"
+  short_description: "Coordinate scope risk evidence and ownership"
+  default_prompt: "Use $plan-a-software-release to help me complete this workflow with verifiable evidence."

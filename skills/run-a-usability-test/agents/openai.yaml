@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Usability Test"
+  short_description: "Test real tasks with participants and synthesize evidence"
+  default_prompt: "Use $run-a-usability-test to plan sessions, observe task attempts, and prioritize findings."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "define a project assumption"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $define-a-project-assumption to complete and verify this operations task."

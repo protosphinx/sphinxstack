@@ -1,0 +1,4 @@
+interface:
+  display_name: "build an accessible data table"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $build-an-accessible-data-table to complete and verify this web task."

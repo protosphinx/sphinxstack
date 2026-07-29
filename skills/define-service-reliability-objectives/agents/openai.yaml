@@ -1,0 +1,4 @@
+interface:
+  display_name: "Define Service Reliability Objectives"
+  short_description: "Turn user journeys into measurable reliability commitments"
+  default_prompt: "Use $define-service-reliability-objectives to define evidence-backed service objectives."

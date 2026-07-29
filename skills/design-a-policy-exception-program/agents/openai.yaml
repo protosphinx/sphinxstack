@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-policy-exception-program"
+  short_description: "Govern bounded, expiring policy exceptions"
+  default_prompt: "Use $design-a-policy-exception-program to complete and verify this task."

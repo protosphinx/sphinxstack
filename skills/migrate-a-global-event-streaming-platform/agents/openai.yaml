@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate-a-global-event-streaming-platform"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $migrate-a-global-event-streaming-platform to complete and verify this task."

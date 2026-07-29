@@ -1,0 +1,4 @@
+interface:
+  display_name: "review-a-modal-dialog"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $review-a-modal-dialog to complete and verify this task."

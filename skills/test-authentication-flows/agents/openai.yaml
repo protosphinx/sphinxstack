@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Authentication Flows"
+  short_description: "Test sign-in, recovery, session, and abuse paths"
+  default_prompt: "Use $test-authentication-flows to build a realistic test matrix for this identity journey."

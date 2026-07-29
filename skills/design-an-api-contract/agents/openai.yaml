@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design An API Contract"
+  short_description: "Design and test a stable API contract"
+  default_prompt: "Use $design-an-api-contract to help me complete this workflow with verified evidence."

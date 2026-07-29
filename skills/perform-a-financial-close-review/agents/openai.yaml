@@ -1,0 +1,4 @@
+interface:
+  display_name: "perform a financial close review"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $perform-a-financial-close-review to complete and verify this finance task."

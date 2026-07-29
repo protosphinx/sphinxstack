@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write an Operations Runbook"
+  short_description: "Document dependable diagnosis and recovery"
+  default_prompt: "Use $write-an-operations-runbook to help me complete this workflow with verifiable evidence."

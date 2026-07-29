@@ -1,0 +1,4 @@
+interface:
+  display_name: "Map a Business Process"
+  short_description: "Map real work, decisions, evidence, and failure paths"
+  default_prompt: "Use $map-a-business-process to document how this process actually operates."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chart The Truth"
+  short_description: "Design a chart that represents the data honestly"
+  default_prompt: "Use $chart-the-truth to help me complete this workflow with verified evidence."

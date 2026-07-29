@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-cross-border-executive-search"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $design-a-cross-border-executive-search to complete and verify this task."

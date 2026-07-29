@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-an-accessible-command-palette"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $design-an-accessible-command-palette to complete and verify this task."

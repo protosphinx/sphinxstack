@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design A Purchase Approval Process"
+  short_description: "Create proportionate purchasing controls and evidence"
+  default_prompt: "Use $design-a-purchase-approval-process to design an auditable purchasing workflow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "check a page title and description"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $check-a-page-title-and-description to complete and verify this web task."

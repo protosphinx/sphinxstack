@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Fraud Response Plan"
+  short_description: "Coordinate a safe and evidence-led fraud response"
+  default_prompt: "Use $create-a-fraud-response-plan to create a bounded fraud response and recovery plan."

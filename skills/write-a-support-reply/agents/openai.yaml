@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Support Reply"
+  short_description: "Draft an accurate and useful customer reply"
+  default_prompt: "Use $write-a-support-reply to help me complete this workflow with verifiable evidence."

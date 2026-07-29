@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Refund Checklist"
+  short_description: "Turn refund policy into a safe processing checklist"
+  default_prompt: "Use $create-a-refund-checklist to help me complete this workflow with verifiable evidence."

@@ -1,0 +1,126 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a decision session goes, including the moment most people try to cheat.
+Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> help me decide between two laptops. i've been stuck for three weeks</div>
+<div class="cm cm-agent">Happy to, with one thing stated up front: the sheet we build
+organizes the decision and exposes your hidden assumptions. It will not make the
+choice, and a spreadsheet that claims to is lying.</div>
+<div class="cm cm-user cd-hide">fine. so i list the specs?</div>
+<div class="cm cm-agent cd-hide">You list your criteria, which is different. What would make you
+regret this purchase in a year? And what are you quietly already deciding on?</div>
+<div class="cm cm-user cd-hide">honestly: price, battery, weight, and whether it runs my games</div>
+<div class="cm cm-agent cd-hide">Those four, each with a direction and a unit. Then real numbers
+per cell: today's actual prices, published battery tests, a benchmark for your
+specific games, with a source noted beside each. And you set the weights before you
+see any totals. That order is what keeps the sheet honest.</div>
+<div class="cm cm-user cd-hide">done. A wins 7.7 to 7.2... but i wanted B. can i bump the gaming weight?</div>
+<div class="cm cm-agent cd-hide">You just learned something better than the total: you want B. We
+also stress-tested the weights, and B does win if gaming matters even a bit more than
+you first said. So the write-up says exactly that, and the last inch of the decision
+stays yours.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Can't I just nudge the weights until my favorite wins?</h2>
+<p>You can, and the skill watches for it. Nudging weights after seeing totals is
+called score-fitting, and when it happens the agent names it kindly, because it is a
+legitimate result: the sheet just told you which option you actually want. That gets
+written down as the finding instead of being laundered through fake weights. The
+protections are structural: weights are set before totals are visible, every formula
+is inspectable, and a sensitivity check shows whether the winner survives moving the
+biggest weight up and down. Decision-shaped projects, if you want practice on a
+smaller stake:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/same-keyboard-versus/"><img src="/assets/project-img/same-keyboard-versus.jpg" alt=""><span>Same keyboard, versus</span></a>
+<a class="mini" href="/ideas/which-bus/"><img src="/assets/project-img/which-bus.jpg" alt=""><span>Which bus is actually faster</span></a>
+<a class="mini" href="/ideas/commute-experiment/"><img src="/assets/project-img/commute-experiment.jpg" alt=""><span>Commute experiment</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A comparison sheet you can defend cell by cell, and a half-page recommendation in
+your own words. Here is the laptop version.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example decision sheet and recommendation">
+<div class="sheet-tag">Example</div>
+<div class="rz-name">LAPTOP DECISION</div>
+<div class="rz-contact">options as rows, criteria as columns, sources noted per number</div>
+<div class="rz-h">SCORED COMPARISON <span class="anno-badge">1</span></div>
+<pre style="font-size:0.7rem; line-height:1.55; margin:0.3rem 0 0;">criterion   wt   A (Zephyr 14)     B (Swift X)
+price       35   $1,049 -&gt; 8.1     $1,299 -&gt; 6.6
+battery     25   9.5 h  -&gt; 7.0     11.2 h -&gt; 9.0
+weight      15   1.6 kg -&gt; 8.0     1.4 kg -&gt; 9.3
+my games    25   58 fps -&gt; 9.0     41 fps -&gt; 6.5
+WEIGHTED TOTAL   7.7               7.2</pre>
+<div class="rz-sub" style="margin-top:0.2rem;">sources: retailer prices 5/12, published battery
+test, benchmark video for both chips <span class="anno-badge">2</span></div>
+<div class="rz-h">SENSITIVITY CHECK <span class="anno-badge">3</span></div>
+<div class="rz-item"><div class="rz-line">Raising "my games" from 25 to 35 flips the
+winner to B (7.6 vs 7.5). The options are genuinely close on my stated weights.</div></div>
+<div class="rz-h">RECOMMENDATION &nbsp;·&nbsp; HALF PAGE <span class="anno-badge">4</span></div>
+<div class="rz-item"><div class="rz-line">"A wins by 0.5 on the weights I set before
+seeing totals, but the ranking flips on a small nudge to gaming, so the numbers call
+this close. What the sheet cannot settle: B's keyboard felt better in the store, and
+that matters daily. I'm taking a week to try A's keyboard in person; if it's fine,
+A."</div></div>
+</div>
+<ol class="anno-notes">
+<li><b>Normalized so units stop mattering.</b> Each column maps to a 0 to 10 score
+with the direction flipped where lower is better, in formulas you can inspect.</li>
+<li><b>Every number has a source or a label.</b> Measured facts cite where they came
+from; subjective calls like "I like the campus" get scored 1 to 5 and marked as
+judgment. Both belong in the sheet, labeled as what they are.</li>
+<li><b>The stress test is the honest part.</b> A winner that survives weight nudges
+means a robust decision; a winner that flips means the options are close and the
+sheet has hit its limit. Either answer is progress.</li>
+<li><b>The write-up names what never fit in a column.</b> Gut feel about people,
+family factors, fear of missing out. Saying what the sheet excludes is what makes
+the rest of it trustworthy.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Will the sheet tell me what to choose?</summary>
+<p>No, and the skill says so in its first breath. It organizes the options, exposes
+hidden assumptions, and shows how robust the ranking is. The final call stays yours,
+including everything that never fit in a column.</p></details>
+<details class="faq"><summary>What if the totals come out nearly tied?</summary>
+<p>Then the finding is "either is defensible; decide on the unquantified part", and
+that is a successful analysis. Knowing the options are genuinely close ends the
+agonizing over which spec sheet to reread.</p></details>
+<details class="faq"><summary>What counts as a criterion?</summary>
+<p>Whatever you would regret ignoring in a year, in your words. Five to eight of
+them, each with a direction and a unit, and overlapping ones get merged because two
+criteria measuring the same thing act as a hidden double weight.</p></details>
+<details class="faq"><summary>Some things I can't put a number on.</summary>
+<p>They still go in. Genuinely subjective criteria get a 1 to 5 score labeled as your
+judgment, and whatever resists even that goes in the write-up as a named factor the
+numbers could not settle.</p></details>
+<details class="faq"><summary>Does this work for big decisions like college?</summary>
+<p>Yes, with real tuition and aid figures rather than sticker prices, and "do
+nothing" or "gap year" in the sheet as a real option with its own row. For the
+major itself, choose-a-major-with-data goes deeper.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Will the sheet tell me what to choose?","acceptedAnswer":{"@type":"Answer","text":"No. It organizes the options, exposes assumptions, and shows how robust the ranking is. The final call stays yours."}},
+{"@type":"Question","name":"What if the totals come out nearly tied?","acceptedAnswer":{"@type":"Answer","text":"Then the finding is that either is defensible and the decision rests on the unquantified part. That is a successful analysis."}},
+{"@type":"Question","name":"What counts as a criterion?","acceptedAnswer":{"@type":"Answer","text":"Whatever you would regret ignoring in a year. Five to eight, each with a direction and a unit, with overlapping ones merged."}},
+{"@type":"Question","name":"Some things I can't put a number on.","acceptedAnswer":{"@type":"Answer","text":"Subjective criteria get a 1 to 5 score labeled as judgment; the rest is named in the write-up as what the numbers could not settle."}},
+{"@type":"Question","name":"Does this work for big decisions like college?","acceptedAnswer":{"@type":"Answer","text":"Yes, with real tuition and aid figures and do-nothing as a real option. choose-a-major-with-data goes deeper on the major itself."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Decision made?</b> Adjacent skills that use the same muscles:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/chart-the-truth/"><img src="/assets/skill-img/chart-the-truth.jpg" alt=""><span>Chart the truth</span></a>
+<a class="mini" href="/skills/choose-a-major-with-data/"><img src="/assets/skill-img/choose-a-major-with-data.jpg" alt=""><span>Choose a major with data</span></a>
+<a class="mini" href="/skills/budget-basics/"><img src="/assets/skill-img/budget-basics.jpg" alt=""><span>Budget basics</span></a>
+</div>
+<p><b>Thin on data for your options?</b> Go collect some:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/run-a-survey/"><img src="/assets/skill-img/run-a-survey.jpg" alt=""><span>Run a survey</span></a>
+<a class="mini" href="/skills/track-anything/"><img src="/assets/skill-img/track-anything.jpg" alt=""><span>Track anything</span></a>
+<a class="mini" href="/ideas/beat-the-forecast/"><img src="/assets/project-img/beat-the-forecast.jpg" alt=""><span>Beat the forecast</span></a>
+</div>

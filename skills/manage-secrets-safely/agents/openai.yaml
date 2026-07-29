@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Secrets Safely"
+  short_description: "Inventory, store, rotate, and verify application secrets"
+  default_prompt: "Use $manage-secrets-safely to audit the secrets in this project and create a safe handling plan."

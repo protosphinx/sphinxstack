@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a community based research project"
+  short_description: "Design accountable community based research"
+  default_prompt: "Use $design-a-community-based-research-project to design and verify this research project."

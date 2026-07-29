@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate a global cdn"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $migrate-a-global-cdn to complete and verify this web task."

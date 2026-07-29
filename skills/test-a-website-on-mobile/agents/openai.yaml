@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test a Website on Mobile"
+  short_description: "Test real mobile layout and interaction paths"
+  default_prompt: "Use $test-a-website-on-mobile to test this site on representative mobile conditions."

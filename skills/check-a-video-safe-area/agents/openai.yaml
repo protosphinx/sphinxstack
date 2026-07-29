@@ -1,0 +1,4 @@
+interface:
+  display_name: "check-a-video-safe-area"
+  short_description: "Check essential video content against safe areas"
+  default_prompt: "Use $check-a-video-safe-area to complete and verify this task."

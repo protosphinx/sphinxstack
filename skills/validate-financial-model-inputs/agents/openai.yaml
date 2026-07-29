@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate Financial Model Inputs"
+  short_description: "Verify model sources, units, and assumptions"
+  default_prompt: "Use $validate-financial-model-inputs to test and document these model inputs."

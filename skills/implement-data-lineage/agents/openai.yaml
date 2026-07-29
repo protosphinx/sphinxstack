@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement data lineage"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $implement-data-lineage to complete and verify this data task."

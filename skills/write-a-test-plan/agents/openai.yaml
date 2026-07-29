@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Test Plan"
+  short_description: "Turn product risks into focused, repeatable checks"
+  default_prompt: "Use $write-a-test-plan to create a risk-based test plan for this change."

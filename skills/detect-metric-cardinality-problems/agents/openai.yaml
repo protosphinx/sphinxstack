@@ -1,0 +1,4 @@
+interface:
+  display_name: "Detect Metric Cardinality Problems"
+  short_description: "Find and contain expensive metric dimensions"
+  default_prompt: "Use $detect-metric-cardinality-problems to diagnose and repair this metric growth."

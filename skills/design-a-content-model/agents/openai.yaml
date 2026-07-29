@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Content Model"
+  short_description: "Model structured content around meaning and reuse"
+  default_prompt: "Use $design-a-content-model to define this content structure, rules, ownership, and migration checks."

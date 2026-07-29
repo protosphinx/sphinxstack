@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Job Search Plan"
+  short_description: "Build a focused and sustainable search system"
+  default_prompt: "Use $create-a-job-search-plan to create a weekly search plan around my constraints and target."

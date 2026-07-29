@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Business Case"
+  short_description: "Compare an investment with credible alternatives"
+  default_prompt: "Use $create-a-business-case to evaluate this proposal, alternatives, costs, and evidence."

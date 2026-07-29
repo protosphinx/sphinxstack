@@ -1,0 +1,4 @@
+interface:
+  display_name: "research-an-interviewer"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $research-an-interviewer to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate a global operating model"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $migrate-a-global-operating-model to complete and verify this operations task."

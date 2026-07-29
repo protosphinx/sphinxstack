@@ -1,0 +1,4 @@
+interface:
+  display_name: "evaluate-a-global-mobility-offer"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $evaluate-a-global-mobility-offer to complete and verify this task."

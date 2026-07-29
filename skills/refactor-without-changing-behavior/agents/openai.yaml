@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refactor Without Changing Behavior"
+  short_description: "Improve code structure while preserving observable behavior"
+  default_prompt: "Use $refactor-without-changing-behavior to restructure this code with proof that behavior stays stable."

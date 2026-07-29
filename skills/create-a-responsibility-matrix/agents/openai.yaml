@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Responsibility Matrix"
+  short_description: "Clarify ownership, authority, and consultation paths"
+  default_prompt: "Use $create-a-responsibility-matrix to map responsibility for this work."

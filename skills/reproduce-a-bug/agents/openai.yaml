@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reproduce a Bug"
+  short_description: "Build a minimal and repeatable defect reproduction"
+  default_prompt: "Use $reproduce-a-bug to help me complete this workflow with verifiable evidence."

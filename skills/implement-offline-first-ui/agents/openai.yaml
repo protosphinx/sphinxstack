@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement an Offline-First UI"
+  short_description: "Design honest offline reads, writes, and sync"
+  default_prompt: "Use $implement-offline-first-ui to implement and test this offline workflow."

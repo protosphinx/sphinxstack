@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage a Laboratory Safety Incident"
+  short_description: "Protect people, contain hazards, and preserve evidence"
+  default_prompt: "Use $manage-a-laboratory-safety-incident to structure this laboratory incident response."

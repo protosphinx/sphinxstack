@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conduct an Access Offboarding Review"
+  short_description: "Verify departing access is removed without losing evidence"
+  default_prompt: "Use $conduct-an-access-offboarding-review to verify this offboarding and close access gaps."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply In Person"
+  short_description: "Prepare a respectful walk-in job application"
+  default_prompt: "Use $apply-in-person to help me complete this workflow with verified evidence."

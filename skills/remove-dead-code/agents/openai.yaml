@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remove Dead Code"
+  short_description: "Delete unused code with behavioral evidence"
+  default_prompt: "Use $remove-dead-code to help me complete this workflow with verifiable evidence."

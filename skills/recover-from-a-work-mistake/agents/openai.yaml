@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recover from a Work Mistake"
+  short_description: "Contain, communicate, repair, and learn from a mistake"
+  default_prompt: "Use $recover-from-a-work-mistake to respond responsibly to this workplace error."

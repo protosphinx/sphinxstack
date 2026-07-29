@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a media ingest workflow"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $design-a-media-ingest-workflow to complete and verify this media task."

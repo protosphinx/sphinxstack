@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrate a Web Frontend Framework"
+  short_description: "Move frontend architecture without regressions"
+  default_prompt: "Use $migrate-a-web-frontend-framework to plan and prove this production frontend migration."

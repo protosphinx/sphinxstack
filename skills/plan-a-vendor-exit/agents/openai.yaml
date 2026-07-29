@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Vendor Exit"
+  short_description: "Exit a supplier without losing service or data"
+  default_prompt: "Use $plan-a-vendor-exit to create a controlled transition and exit plan."

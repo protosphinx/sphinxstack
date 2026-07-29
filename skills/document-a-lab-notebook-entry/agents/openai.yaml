@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document a Lab Notebook Entry"
+  short_description: "Record reproducible observations and changes"
+  default_prompt: "Use $document-a-lab-notebook-entry to structure this lab record."

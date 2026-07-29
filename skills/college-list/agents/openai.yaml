@@ -1,0 +1,4 @@
+interface:
+  display_name: "College List"
+  short_description: "Build a balanced college list from verified constraints"
+  default_prompt: "Use $college-list to help me complete this workflow with verified evidence."

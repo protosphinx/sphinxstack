@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Vendor Security Questionnaire"
+  short_description: "Ask risk-based vendor questions and track evidence"
+  default_prompt: "Use $create-a-vendor-security-questionnaire to build a scoped evidence-based assessment."

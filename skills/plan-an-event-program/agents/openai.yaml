@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan an Event Program"
+  short_description: "Shape sessions around outcomes and audience needs"
+  default_prompt: "Use $plan-an-event-program to design a coherent program for this audience and outcome."

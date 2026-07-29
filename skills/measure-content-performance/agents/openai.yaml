@@ -1,0 +1,4 @@
+interface:
+  display_name: "Measure Content Performance"
+  short_description: "Measure content outcomes without vanity-metric shortcuts"
+  default_prompt: "Use $measure-content-performance to build a decision-ready content measurement model."

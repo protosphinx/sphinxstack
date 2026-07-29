@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Data Deletion Runbook"
+  short_description: "Define safe, complete, and verifiable data deletion"
+  default_prompt: "Use $create-a-data-deletion-runbook to design deletion steps, safeguards, and evidence."

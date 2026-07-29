@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Target Employer List"
+  short_description: "Prioritize employers with sourced fit signals"
+  default_prompt: "Use $create-a-target-employer-list to create and rank an evidence-based employer list."

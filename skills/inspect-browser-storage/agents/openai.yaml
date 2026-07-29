@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspect Browser Storage"
+  short_description: "Audit client storage, scope, and lifecycle"
+  default_prompt: "Use $inspect-browser-storage to review this application client-side storage safely."

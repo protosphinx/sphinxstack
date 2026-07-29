@@ -1,0 +1,4 @@
+interface:
+  display_name: "Calculate Total Cost of Ownership"
+  short_description: "Model full lifecycle cost and uncertainty"
+  default_prompt: "Use $calculate-total-cost-of-ownership to compare the full lifecycle cost of these options."

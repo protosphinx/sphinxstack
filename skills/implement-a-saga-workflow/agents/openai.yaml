@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement-a-saga-workflow"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $implement-a-saga-workflow to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrate a Professional Portfolio"
+  short_description: "Move portfolio evidence, URLs, and permissions safely"
+  default_prompt: "Use $migrate-a-professional-portfolio to migrate this portfolio with verified parity."

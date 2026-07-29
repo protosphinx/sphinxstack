@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create an Error Budget Policy"
+  short_description: "Connect reliability evidence to release decisions"
+  default_prompt: "Use $create-an-error-budget-policy to design governed reliability and release triggers."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Debug a Bug"
+  short_description: "Reproduce, isolate, fix, and verify a software bug"
+  default_prompt: "Use $debug-a-bug to reproduce this issue, find the smallest cause, and verify the fix."

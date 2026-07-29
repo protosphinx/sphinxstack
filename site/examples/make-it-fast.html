@@ -1,0 +1,105 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, measurement first. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> my site scored 43 on that speed test and I don't know why</div>
+<div class="cm cm-agent">Then you already did the right first thing: you measured. Send me the
+live URL and we'll run PageSpeed Insights, mobile result, and screenshot the "before"
+with the score, LCP, CLS, and page weight.</div>
+<div class="cm cm-user cd-hide">do we have to rewrite it? people online say you need a framework or a CDN</div>
+<div class="cm cm-agent cd-hide">Almost never at this size. A static site usually has one or
+two real problems and the report names them. Reading your Opportunities list now:
+the top item by savings is images.</div>
+<div class="cm cm-user cd-hide">yeah I put my phone photos straight on the page</div>
+<div class="cm cm-agent cd-hide">There's the whole afternoon's win. A 4 MB phone photo can
+become around 80 KB once it's resized to the size actually displayed and re-encoded
+as WebP. Width and height attributes stop the page jumping while it loads, and images
+below the fold get loading="lazy".</div>
+<div class="cm cm-user cd-hide">how will I know it worked</div>
+<div class="cm cm-agent cd-hide">We deploy and re-measure after each fix so you see cause and
+effect, and both screenshots go in the repo. When the mobile score is around 90 we
+stop. Chasing 100 on a static site is an afternoon you don't owe anyone.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Think a slow site means a rewrite?</h2>
+<p>It almost never does. Guessing at performance work wastes an afternoon, so this
+skill refuses to touch anything before the report runs. On a static site the culprits
+come from a short list: images that are far larger than the size they display at,
+webfonts loaded carelessly, and scripts that block rendering. The report says which of
+those you actually have and roughly what fixing each would save, and you fix in that
+order, re-measuring as you go.</p>
+
+<h2>What you end up with</h2>
+<p>Before and after screenshots of the same report, saved in the repo, and the ability
+to say which fix bought what:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example before and after performance report">
+<div class="sheet-tag">Example</div>
+<pre>
+PageSpeed Insights · mobile · example.com
+
+              BEFORE     AFTER
+performance   43         96      <span class="anno-badge">1</span>
+LCP           6.8 s      1.9 s   <span class="anno-badge">2</span>
+CLS           0.31       0.02
+page weight   4.6 MB     310 KB
+
+what each fix bought:            <span class="anno-badge">3</span>
+photos resized + WebP     most of the weight
+width/height on images    the jumping stopped
+script tags deferred      faster first paint
+</pre>
+</div>
+<ol class="anno-notes">
+<li><b>Numbers, twice.</b> One report before touching anything, one after. The pair is
+the receipt, and it belongs in the repo next to the code that earned it.</li>
+<li><b>The two that matter get one-line meanings.</b> LCP is how long the biggest
+thing on screen takes to show. CLS is how much the page jumps around while loading.
+The skill explains each as it comes up, so the report stops being alphabet
+soup.</li>
+<li><b>Cause mapped to effect.</b> Because you re-measured after every fix, you can
+say which change bought which improvement. That sentence is resume-grade: build-resume
+turns it into a line like "cut page load from 7 seconds to 2".</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Do I need to score 100?</summary>
+<p>No. The skill's own stopping rule is that a static site scoring 90 or so on mobile
+is done. The last few points cost the most effort and buy visitors the least, so it
+tells you to stop rather than chase them.</p></details>
+<details class="faq"><summary>What is usually the problem?</summary>
+<p>Images, almost always. Full-size phone photos on a page that displays them small
+account for most of a bad score on a first site. Fonts and render-blocking scripts are
+the usual runners-up, and the report ranks your specific list.</p></details>
+<details class="faq"><summary>Do the tools cost anything?</summary>
+<p>No. PageSpeed Insights runs in the browser, Lighthouse ships inside Chrome
+DevTools, and squoosh.app re-encodes images for free. There is nothing to buy in this
+skill.</p></details>
+<details class="faq"><summary>Will the fixes change how my site looks?</summary>
+<p>Mostly no. An image resized to the size it displays at looks identical where it
+sits. The one visible decision is fonts, and it stays yours: keeping a webfont with
+two weights and font-display swap is fine, and system fonts are a real option the
+skill offers rather than imposes.</p></details>
+<details class="faq"><summary>How often should I re-run the report?</summary>
+<p>Whenever the site meaningfully changes, especially when it gains images, since
+that is how most sites get slow again. You'll know how by then: re-running it yourself
+is part of this skill's definition of done.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do I need to score 100?","acceptedAnswer":{"@type":"Answer","text":"No. A static site scoring 90 or so on mobile is done. The last points cost the most and buy visitors the least."}},
+{"@type":"Question","name":"What is usually the problem?","acceptedAnswer":{"@type":"Answer","text":"Images, almost always. Fonts and render-blocking scripts are the usual runners-up, and the report ranks your specific list."}},
+{"@type":"Question","name":"Do the tools cost anything?","acceptedAnswer":{"@type":"Answer","text":"No. PageSpeed Insights, Lighthouse in Chrome DevTools, and squoosh.app are all free."}},
+{"@type":"Question","name":"Will the fixes change how my site looks?","acceptedAnswer":{"@type":"Answer","text":"Mostly no. Resized images look identical at their displayed size. Fonts are the one visible decision, and it stays yours."}},
+{"@type":"Question","name":"How often should I re-run the report?","acceptedAnswer":{"@type":"Answer","text":"Whenever the site meaningfully changes, especially when it gains images. Re-running it yourself is part of the skill's definition of done."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Report habit formed?</b> It carries directly into these:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/accessibility-pass/"><img src="/assets/skill-img/accessibility-pass.jpg" alt=""><span>Accessibility pass, same report</span></a>
+<a class="mini" href="/skills/seo-basics/"><img src="/assets/skill-img/seo-basics.jpg" alt=""><span>Get found by name</span></a>
+<a class="mini" href="/skills/build-resume/"><img src="/assets/skill-img/build-resume.jpg" alt=""><span>Turn the receipts into a resume line</span></a>
+</div>

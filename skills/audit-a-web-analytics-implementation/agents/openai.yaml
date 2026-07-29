@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit a web analytics implementation"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $audit-a-web-analytics-implementation to complete and verify this web task."

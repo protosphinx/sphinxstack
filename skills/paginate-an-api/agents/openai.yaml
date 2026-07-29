@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paginate an API"
+  short_description: "Retrieve complete collections without loops or gaps"
+  default_prompt: "Use $paginate-an-api to implement and verify complete pagination for this endpoint."

@@ -1,0 +1,45 @@
+<h2>Worked case: make checkout diagnosable</h2>
+<p class="case-trigger"><strong>Trigger:</strong> The service is live, but we cannot tell whether users are succeeding or why requests fail.</p>
+<div class="chatdemo">
+<div class="cm cm-user">We have CPU graphs and thousands of logs, but support finds checkout failures first.</div>
+<div class="cm cm-agent">Start with the user outcome. What exactly counts as a successful checkout, and within what time?</div>
+<div class="cm cm-user cd-hide">An accepted order ID within three seconds. Payment declines are expected, system errors are not.</div>
+<div class="cm cm-agent cd-hide">Good. We can define the indicator without counting valid declines as service failure.</div>
+<div class="cm cm-user cd-hide">Should we alert when CPU reaches 80 percent?</div>
+<div class="cm cm-agent cd-hide">Only if that condition requires a known action. The primary alert should be the failed user outcome.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">User success determines the first signal.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The operating view</h2>
+<table class="plain-table">
+<tbody>
+<tr><th>Indicator</th><td>accepted orders divided by eligible checkout attempts</td></tr>
+<tr><th>Objective</th><td>99.5 percent over 28 days; p95 response below 3 seconds</td></tr>
+<tr><th>Alert</th><td>fast and slow error-budget burn with checkout runbook</td></tr>
+<tr><th>Correlation</th><td>checkout_id joins gateway event, order event, and provider span</td></tr>
+</tbody>
+</table>
+<h3>Evidence set</h3>
+<ul>
+<li><strong>Dashboard:</strong> user success, scope, provider health, queues, resources, and recent releases.</li>
+<li><strong>Alert test:</strong> a safe injected provider error pages once and links the correct runbook.</li>
+<li><strong>Diagnostic trail:</strong> one checkout ID connects the safe structured events and trace.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>The metrics pipeline is delayed during an incident. Operators compare a synthetic checkout and
+payment-provider acceptance counts before trusting the dashboard. A telemetry volume spike triggers
+sampling for low-value events while errors and state changes remain complete.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>What is a service level indicator?</summary><p>A measured ratio or distribution that represents a user outcome, such as successful eligible checkouts or message delivery delay.</p></details>
+<details class="faq"><summary>Do we need logs, metrics, and traces?</summary><p>Use each only for a named question. Metrics show scope, logs record events, and traces connect work across boundaries.</p></details>
+<details class="faq"><summary>What should trigger a page?</summary><p>A symptom that needs timely human action and has a runbook. Informational conditions belong on a dashboard or report.</p></details>
+<details class="faq"><summary>May we log request bodies?</summary><p>Not by default. Log safe named fields and decisions. Personal data, credentials, and tokens require explicit need and handling rules.</p></details>
+<details class="faq"><summary>How do we know the design works?</summary><p>Inject a safe failure and prove the indicator changes, the alert routes once, and the runbook leads to verified recovery.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a service level indicator?","acceptedAnswer":{"@type":"Answer","text":"A measure that represents a user outcome."}},{"@type":"Question","name":"Do we need logs, metrics, and traces?","acceptedAnswer":{"@type":"Answer","text":"Use each for a named diagnostic or operating question."}},{"@type":"Question","name":"What should trigger a page?","acceptedAnswer":{"@type":"Answer","text":"A symptom needing timely action with a runbook."}},{"@type":"Question","name":"May we log request bodies?","acceptedAnswer":{"@type":"Answer","text":"Not by default. Record safe fields and protect sensitive data."}},{"@type":"Question","name":"How do we know the design works?","acceptedAnswer":{"@type":"Answer","text":"Inject a safe failure and verify signal, routing, diagnosis, and recovery."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Exercise the operating view with <a href="/skills/debug-a-production-incident/">Debug a production incident</a> and verify capacity with <a href="/skills/run-a-load-test/">Run a load test</a>.</p>

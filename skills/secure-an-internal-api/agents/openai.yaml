@@ -1,0 +1,4 @@
+interface:
+  display_name: "secure-an-internal-api"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $secure-an-internal-api to complete and verify this task."

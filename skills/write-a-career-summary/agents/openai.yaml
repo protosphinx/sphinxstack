@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Career Summary"
+  short_description: "Summarize a career with evidence and direction"
+  default_prompt: "Use $write-a-career-summary to write a truthful summary for my target role."

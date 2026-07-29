@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check Audio Levels"
+  short_description: "Measure recording and delivery audio levels"
+  default_prompt: "Use $check-audio-levels to inspect and verify these audio levels."

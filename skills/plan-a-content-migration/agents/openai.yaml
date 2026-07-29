@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Content Migration"
+  short_description: "Migrate a content estate with parity and rollback evidence"
+  default_prompt: "Use $plan-a-content-migration to inventory, transform, redirect, validate, and recover this migration."

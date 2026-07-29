@@ -1,0 +1,4 @@
+interface:
+  display_name: "write a lower third"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $write-a-lower-third to complete and verify this media task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Sales Discovery Call"
+  short_description: "Learn needs and constraints without forcing a pitch"
+  default_prompt: "Use $run-a-sales-discovery-call to help me complete this workflow with verifiable evidence."

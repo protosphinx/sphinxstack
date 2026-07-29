@@ -1,0 +1,4 @@
+interface:
+  display_name: "Threat Model A Feature"
+  short_description: "Threat-model a feature and verify mitigations"
+  default_prompt: "Use $threat-model-a-feature to help me complete this workflow with verified evidence."

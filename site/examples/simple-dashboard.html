@@ -1,0 +1,113 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a dashboard session goes when someone keeps recomputing the same
+numbers by hand. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> i run our club's bake sales and every week i recompute the same numbers from the sheet</div>
+<div class="cm cm-agent">Recomputing the same numbers weekly is the tell that you need a
+dashboard. Which numbers would you want at a glance on a random Tuesday?</div>
+<div class="cm cm-user cd-hide">cash raised this term, what the last sale made, and who still owes dues</div>
+<div class="cm cm-agent cd-hide">Good picks, all three change decisions. Now write exact definitions
+before we build: what counts as "cash this term", which date range, what "owes" means.
+Vague definitions are how dashboards drift into lying.</div>
+<div class="cm cm-user cd-hide">defined. so now we build some big fancy page with graphs?</div>
+<div class="cm cm-agent cd-hide">We build a tab in the sheet you already have. Three big cells
+computed by formula from the data tab, one small trend chart, and a "last updated"
+cell derived from the newest row, so a stale dashboard confesses.</div>
+<div class="cm cm-user cd-hide">done. it says $284 this term, $61 last sale, 3 unpaid</div>
+<div class="cm cm-agent cd-hide">Now the test that makes it real: add one actual row to the data
+tab and watch all three numbers. If one sits still when it should move, the formula
+or the definition is wrong, and we fix it before you trust it.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Three numbers doesn't sound like a dashboard</h2>
+<p>Three is the count that survives being checked next Tuesday. The skill's filter is
+blunt: for each number, say what you would do differently if it looked bad. A number
+with no answer gets cut, which is how "total rows logged" dies and "sign-ups still
+unconfirmed" survives. Big dashboards with twenty tiles get admired once and never
+opened again. If you run anything with data worth watching, you have the raw
+material:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/club-dues-tracker/"><img src="/assets/project-img/club-dues-tracker.jpg" alt=""><span>Club dues tracker</span></a>
+<a class="mini" href="/ideas/team-stats-board/"><img src="/assets/project-img/team-stats-board.jpg" alt=""><span>Team stats board</span></a>
+<a class="mini" href="/ideas/game-night-standings/"><img src="/assets/project-img/game-night-standings.jpg" alt=""><span>Game night standings</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A dashboard tab computed live from the data tab. For many people this tab is the
+finished product; a URL comes later only if a team should see it.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example dashboard tab">
+<div class="sheet-tag">Example</div>
+<div class="rz-name">BAKE SALE DASHBOARD</div>
+<div class="rz-contact">reads from the sales tab &nbsp;·&nbsp; nothing on this tab is typed by hand <span class="anno-badge">1</span></div>
+<div style="display:flex; gap:1.4rem; margin:0.8rem 0 0.4rem;">
+  <div><div style="font-size:1.5rem; font-weight:700;">$284</div><div class="rz-sub">cash this term</div></div>
+  <div><div style="font-size:1.5rem; font-weight:700;">$61</div><div class="rz-sub">last sale</div></div>
+  <div><div style="font-size:1.5rem; font-weight:700;">3</div><div class="rz-sub">unpaid dues</div></div>
+</div>
+<div class="rz-h">DEFINITIONS <span class="anno-badge">2</span></div>
+<pre style="font-size:0.72rem; line-height:1.5; white-space:pre-wrap; margin:0.3rem 0 0;">cash this term = SUMIFS(amount, date &gt;= Jan 20)
+last sale      = SUM of amounts on newest sale date
+unpaid dues    = COUNTIF(members.paid, "no")</pre>
+<div class="rz-h">TREND <span class="anno-badge">3</span></div>
+<div class="rz-item"><div class="rz-line">Per-sale totals as a small line chart:
+$38, $52, $47, $61 over four sales, axis labeled, drawn beside the numbers</div></div>
+<div class="rz-item" style="margin-top:0.6rem;"><div class="rz-line"><b>Last updated:</b>
+2026-05-14 &nbsp;·&nbsp; derived from the newest data row <span class="anno-badge">4</span></div></div>
+</div>
+<ol class="anno-notes">
+<li><b>Formulas only.</b> A hand-typed dashboard number is a lie waiting to age.
+SUMIF, COUNTIF, and a date window cover almost everything.</li>
+<li><b>Definitions written down.</b> "Cash this term" means one exact thing. When a
+number surprises you later, the definition is what you check first.</li>
+<li><b>One trend, honest.</b> The number with a direction gets a small chart, drawn
+under chart-the-truth rules: labeled axis, honest baseline.</li>
+<li><b>Staleness confesses.</b> The last-updated cell comes from the data itself. An
+abandoned dashboard announces that it is old instead of quietly showing stale truth.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Does it have to be a website?</summary>
+<p>No. For many people the sheet tab is the finished product. A URL is worth it only
+when a team, a club, or your own phone home screen should see it; then the skill
+publishes the sheet and reads it from one static page on GitHub Pages.</p></details>
+<details class="faq"><summary>What about privacy if I publish it?</summary>
+<p>A public URL means public data. If rows contain other people's names or money
+details, keep it as a tab or publish only the aggregated numbers. The skill checks
+this before anything goes live.</p></details>
+<details class="faq"><summary>How do I pick the right numbers?</summary>
+<p>Ask what you would check on a random Tuesday, then ask what you would do
+differently if the number looked bad. No answer means the number gets cut, however
+impressive it sounds.</p></details>
+<details class="faq"><summary>Does it update automatically?</summary>
+<p>Every number is computed by formula from the data tab, so adding a row updates
+everything with no manual step. The session ends by testing exactly that loop.</p></details>
+<details class="faq"><summary>What if my data is too thin to be worth watching?</summary>
+<p>Then the dashboard is premature and the skill says so. Run track-anything for a
+few weeks first; a dashboard over seven rows has nothing to show you yet.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Does it have to be a website?","acceptedAnswer":{"@type":"Answer","text":"No. The sheet tab is often the finished product. A URL is worth it only when others should see it; then the sheet publishes and one static page reads it."}},
+{"@type":"Question","name":"What about privacy if I publish it?","acceptedAnswer":{"@type":"Answer","text":"A public URL means public data. If rows contain other people's names or money details, keep it as a tab or publish only aggregates."}},
+{"@type":"Question","name":"How do I pick the right numbers?","acceptedAnswer":{"@type":"Answer","text":"For each candidate, say what you would do differently if it looked bad. A number with no answer gets cut."}},
+{"@type":"Question","name":"Does it update automatically?","acceptedAnswer":{"@type":"Answer","text":"Every number is computed by formula from the data tab, so adding a row updates everything. The session ends by testing that loop."}},
+{"@type":"Question","name":"What if my data is too thin?","acceptedAnswer":{"@type":"Answer","text":"Then the dashboard is premature. Run track-anything for a few weeks first."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Dashboard live?</b> Deepen the pipeline behind it:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/track-anything/"><img src="/assets/skill-img/track-anything.jpg" alt=""><span>Track anything</span></a>
+<a class="mini" href="/skills/first-sql/"><img src="/assets/skill-img/first-sql.jpg" alt=""><span>First SQL</span></a>
+<a class="mini" href="/skills/ship-on-github/"><img src="/assets/skill-img/ship-on-github.jpg" alt=""><span>Ship on GitHub</span></a>
+</div>
+<p><b>Want a dashboard-shaped project?</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/personal-tracker/"><img src="/assets/project-img/personal-tracker.jpg" alt=""><span>Personal tracker</span></a>
+<a class="mini" href="/ideas/speedrun-leaderboard/"><img src="/assets/project-img/speedrun-leaderboard.jpg" alt=""><span>Speedrun leaderboard</span></a>
+<a class="mini" href="/ideas/volunteer-hours/"><img src="/assets/project-img/volunteer-hours.jpg" alt=""><span>Volunteer hours</span></a>
+</div>

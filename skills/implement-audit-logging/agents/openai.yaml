@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement Audit Logging"
+  short_description: "Record consequential actions for accountability"
+  default_prompt: "Use $implement-audit-logging to design a secure and useful audit trail for this system."

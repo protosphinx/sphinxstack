@@ -1,0 +1,4 @@
+interface:
+  display_name: "Map Your Business Operating Model"
+  short_description: "Write down how a business actually runs"
+  default_prompt: "Use $map-your-business-operating-model to help me complete this workflow with verified evidence."

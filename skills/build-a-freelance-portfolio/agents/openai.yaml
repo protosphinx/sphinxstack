@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a Freelance Portfolio"
+  short_description: "Show client work with permission and proof"
+  default_prompt: "Use $build-a-freelance-portfolio to build a focused evidence-based portfolio."

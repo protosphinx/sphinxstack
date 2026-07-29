@@ -1,0 +1,4 @@
+interface:
+  display_name: "Direct a Voice Recording"
+  short_description: "Guide a safe, consistent voice recording session"
+  default_prompt: "Use $direct-a-voice-recording to plan and direct this recording session."

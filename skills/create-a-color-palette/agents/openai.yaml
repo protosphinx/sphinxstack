@@ -1,0 +1,4 @@
+interface:
+  display_name: "create a color palette"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $create-a-color-palette to complete and verify this design task."

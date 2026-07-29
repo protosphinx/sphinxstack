@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate a product interface without disruption"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $migrate-a-product-interface-without-disruption to complete and verify this design task."

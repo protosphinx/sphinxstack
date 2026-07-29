@@ -1,0 +1,4 @@
+interface:
+  display_name: "run a pre mortem"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $run-a-pre-mortem to complete and verify this operations task."

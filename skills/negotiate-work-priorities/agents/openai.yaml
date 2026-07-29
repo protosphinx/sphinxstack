@@ -1,0 +1,4 @@
+interface:
+  display_name: "Negotiate Work Priorities"
+  short_description: "Resolve competing work through explicit tradeoffs"
+  default_prompt: "Use $negotiate-work-priorities to turn these demands into an agreed priority plan."

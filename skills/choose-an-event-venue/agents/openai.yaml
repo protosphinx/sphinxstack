@@ -1,0 +1,4 @@
+interface:
+  display_name: "Choose an Event Venue"
+  short_description: "Compare venues against access, risk, and cost"
+  default_prompt: "Use $choose-an-event-venue to evaluate these venues against the event requirements."

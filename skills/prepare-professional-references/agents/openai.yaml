@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare professional references"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $prepare-professional-references to complete and verify this hiring task."

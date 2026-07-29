@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a Controls Evidence Map"
+  short_description: "Connect control claims to owners, tests, and evidence"
+  default_prompt: "Use $build-a-controls-evidence-map to map these controls to current verifiable evidence."

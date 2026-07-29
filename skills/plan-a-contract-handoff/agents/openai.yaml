@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Contract Handoff"
+  short_description: "Transfer contract duties into operations"
+  default_prompt: "Use $plan-a-contract-handoff to turn this signed agreement into an owned operating plan."

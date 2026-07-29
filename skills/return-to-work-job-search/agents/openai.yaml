@@ -1,0 +1,4 @@
+interface:
+  display_name: "return to work job search"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $return-to-work-job-search to complete and verify this hiring task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Budget Summary"
+  short_description: "Explain budget position and key decisions"
+  default_prompt: "Use $prepare-a-budget-summary to turn these figures into a decision-ready budget summary."

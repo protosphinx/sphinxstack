@@ -1,0 +1,4 @@
+interface:
+  display_name: "create a content governance guide"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $create-a-content-governance-guide to complete and verify this writing task."

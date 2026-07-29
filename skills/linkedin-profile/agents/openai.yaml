@@ -1,0 +1,4 @@
+interface:
+  display_name: "LinkedIn Profile"
+  short_description: "Build a truthful, focused LinkedIn profile"
+  default_prompt: "Use $linkedin-profile to help me complete this workflow with verified evidence."

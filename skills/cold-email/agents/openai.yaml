@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cold Email"
+  short_description: "Write a relevant, respectful cold email"
+  default_prompt: "Use $cold-email to help me complete this workflow with verified evidence."

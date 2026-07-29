@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Financial Control"
+  short_description: "Create a proportionate preventive or detective check"
+  default_prompt: "Use $design-a-financial-control to design and test a control for this financial risk."

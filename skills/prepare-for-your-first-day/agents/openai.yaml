@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare for Your First Day"
+  short_description: "Prepare a calm, practical first-day work plan"
+  default_prompt: "Use $prepare-for-your-first-day to get ready for my first day in this role."

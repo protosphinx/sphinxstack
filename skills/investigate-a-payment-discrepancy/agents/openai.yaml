@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investigate a Payment Discrepancy"
+  short_description: "Trace a payment anomaly without corrupting evidence"
+  default_prompt: "Use $investigate-a-payment-discrepancy to investigate this payment mismatch safely and traceably."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate-a-container-runtime"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $migrate-a-container-runtime to complete and verify this task."

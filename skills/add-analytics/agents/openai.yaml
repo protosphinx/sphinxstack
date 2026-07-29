@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Analytics"
+  short_description: "Add privacy-respecting traffic measurement to a site"
+  default_prompt: "Use $add-analytics to help me complete this workflow with verified evidence."

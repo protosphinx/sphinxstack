@@ -1,0 +1,4 @@
+interface:
+  display_name: "respond to a media rights dispute"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $respond-to-a-media-rights-dispute to complete and verify this media task."

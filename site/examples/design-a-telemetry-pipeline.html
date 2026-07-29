@@ -1,0 +1,34 @@
+<h2>Worked case: make telemetry loss an explicit system behavior</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A company wants one telemetry pipeline for logs, metrics, traces, security detections, and required audit events from three regions, but burst volume exceeds network capacity, customer data appears in attributes, downstream storage fails unpredictably, and nobody can quantify drops or restore the collectors.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can every service just export everything to one central collector?</div>
+<div class="cm cm-agent">Not safely. Classify signals, failure domains, data rules, and permissible loss before choosing topology.</div>
+<div class="cm cm-user cd-hide">Should applications block when storage is down?</div>
+<div class="cm cm-agent cd-hide">Only where an approved critical evidence contract requires it. Ordinary serving paths need bounded buffers and explicit shedding.</div>
+<div class="cm cm-user cd-hide">Could we drop the noisiest stream during a burst?</div>
+<div class="cm cm-agent cd-hide">Yes, if priority is defined in advance, loss is counted, required evidence is protected, and coverage degradation is visible.</div>
+<div class="cm cm-user">What proves recovery?</div>
+<div class="cm cm-agent">Restore configuration and critical flow, drain valid buffers, and reconcile produced, dropped, duplicated, and delivered records.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Design loss before overload chooses it.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The telemetry pipeline evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Telemetry architecture record</td><td>Coverage model, signal contracts, topology, schemas, tenancy, data governance, backpressure and loss, and disaster recovery</td><td>Every signal has an owned delivery and loss contract</td></tr>
+<tr><td>Loss and overload test report</td><td>Burst, partition, downstream outage, buffer exhaustion, shedding priority, serving isolation, and drop visibility</td><td>Required evidence survives and all loss is measurable</td></tr>
+<tr><td>Recovery and reconciliation rehearsal</td><td>Clean restoration, configuration, keys, buffers, duplicates, source counts, destination counts, and declared gaps</td><td>Coverage is not restored until counts reconcile</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A regional storage outage fills disk buffers during a traffic burst. Debug logs shed first, security detections and audit events use their protected path, and every drop counter remains available. The team restores a gateway from controlled configuration, drains retained batches, marks duplicates, and publishes the bounded unrecoverable gap before consumers resume normal claims.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Must telemetry be lossless?</summary><p>No. Loss tolerance depends on signal purpose, but it must be explicit, prioritized, measured, and governed.</p></details>
+<details class="faq"><summary>Can telemetry block a request?</summary><p>Usually not indefinitely. Use a separately approved path for evidence whose durability justifies stronger coupling.</p></details>
+<details class="faq"><summary>Where should redaction happen?</summary><p>As close to the producer as practical, with defense-in-depth checks before shared storage.</p></details>
+<details class="faq"><summary>How are tenants isolated?</summary><p>Enforce authenticated routing, bounded attributes, storage separation, access controls, and tested queries.</p></details>
+<details class="faq"><summary>What should a restore test include?</summary><p>Configuration, credentials, routing, buffers, critical signals, counts, duplicates, gaps, and consumer acceptance.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Must telemetry be lossless?","acceptedAnswer":{"@type":"Answer","text":"No, but loss must be explicit and measurable."}},{"@type":"Question","name":"Can telemetry block a request?","acceptedAnswer":{"@type":"Answer","text":"Only through an approved bounded contract."}},{"@type":"Question","name":"Where should redaction happen?","acceptedAnswer":{"@type":"Answer","text":"As close to the producer as practical."}},{"@type":"Question","name":"How are tenants isolated?","acceptedAnswer":{"@type":"Answer","text":"Use authenticated routing and tested storage controls."}},{"@type":"Question","name":"What should a restore test include?","acceptedAnswer":{"@type":"Answer","text":"Restore the path and reconcile all evidence."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Instrument producers with <a href="/skills/instrument-an-application/">Instrument an application</a>,
+control volume with <a href="/skills/manage-telemetry-sampling/">Manage telemetry sampling</a>, and
+rehearse recovery with <a href="/skills/verify-a-backup-restore/">Verify a backup restore</a>.</p>

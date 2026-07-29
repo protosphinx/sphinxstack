@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Filtering Interface"
+  short_description: "Make filters understandable and reversible"
+  default_prompt: "Use $design-a-filtering-interface to design and test filters for this collection."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Calculate Gross Margin"
+  short_description: "Calculate comparable product margin correctly"
+  default_prompt: "Use $calculate-gross-margin to calculate and verify this gross margin."

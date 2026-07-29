@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build A Source Log"
+  short_description: "Track research sources, claims, and retrieval details"
+  default_prompt: "Use $build-a-source-log to create a traceable source ledger for my research."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Management Accounts Pack"
+  short_description: "Report operating financial performance clearly"
+  default_prompt: "Use $create-a-management-accounts-pack to prepare this decision-ready finance pack."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Design Workshop"
+  short_description: "Facilitate a design decision with clear evidence"
+  default_prompt: "Use $run-a-design-workshop to prepare and facilitate this bounded design decision."

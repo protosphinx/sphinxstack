@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement webhook signature verification"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $implement-webhook-signature-verification to complete and verify this web task."

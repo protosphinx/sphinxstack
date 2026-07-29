@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare an Internal Job Application"
+  short_description: "Apply internally with evidence and good boundaries"
+  default_prompt: "Use $prepare-an-internal-job-application to prepare a fair and evidence-based internal application."

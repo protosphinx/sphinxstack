@@ -1,0 +1,4 @@
+interface:
+  display_name: "Triage a Security Alert"
+  short_description: "Assess security signals and choose safe next actions"
+  default_prompt: "Use $triage-a-security-alert to evaluate this signal and preserve investigation evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a revenue recognition checklist"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $design-a-revenue-recognition-checklist to complete and verify this finance task."

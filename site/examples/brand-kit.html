@@ -1,0 +1,122 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the moment most people realize why the kit exists. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> my portfolio, my resume and my slides all look like three different people made them</div>
+<div class="cm cm-agent">That's the exact job of this skill. First step is an audit: I list every
+font and every color actually in use across all three, pulling real hex values from the
+files instead of guessing. Send links or files.</div>
+<div class="cm cm-user cd-hide">here [links]. how bad can it be</div>
+<div class="cm cm-agent cd-hide">Five fonts and eleven distinct grays. Nobody chose those; they
+accumulated, one small decision at a time. We'll cut down to two fonts and about four
+colors, your pick at every step with a one-line trade-off from me.</div>
+<div class="cm cm-user cd-hide">eleven grays?? ok. but i have no idea which ones to keep</div>
+<div class="cm cm-agent cd-hide">You don't need to know in advance. Your site's dark blue is already
+on your logo, so that's the honest accent candidate. For text and background we check
+the contrast and I'll show you the checker. Everything that doesn't make the list is
+banned by default; that's what makes the kit useful.</div>
+<div class="cm cm-user cd-hide">what stops me from drifting back in a month</div>
+<div class="cm cm-agent cd-hide">Two things. The kit lives in your repo as one page you can reread in
+thirty seconds, and the same values ship as CSS custom properties you paste into your
+site, so the kit runs instead of just sitting there. And we prove it today: we restyle
+whichever artifact strays furthest, probably the slides.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Will I actually use a brand guidelines doc?</h2>
+<p>Fair suspicion: most brand documents are written once and never opened again. This
+one is built against that failure. It is a single page, readable in thirty seconds, and
+where your project has CSS the kit also ships as custom properties, so your site
+enforces it whether or not you reread it. The do and don't list has at most five
+entries, all drawn from real mistakes found in your current artifacts rather than
+generic advice. And the session doesn't end at the document: one real artifact gets
+restyled to match, which is the proof the kit works.</p>
+
+<h2>What you end up with</h2>
+<p>One page that ends the re-deciding. Here is a real-shaped kit for a student
+portfolio project.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example one-page brand kit">
+<div class="sheet-tag">Example</div>
+<div class="rz-name">SAM OKAFOR: BRAND KIT (brand.md)</div>
+<div class="rz-h">FONTS <span class="anno-badge">1</span></div>
+<div class="rz-item"><div class="rz-line"><b>Headings:</b> Inter, weights 600 and 700
+only</div></div>
+<div class="rz-item"><div class="rz-line"><b>Body:</b> Source Serif 4, weights 400 and
+700 only</div></div>
+<div class="rz-h">COLORS <span class="anno-badge">2</span></div>
+<div class="rz-item"><div class="rz-line"><b>Background:</b> #FAFAF7, warm
+near-white</div></div>
+<div class="rz-item"><div class="rz-line"><b>Text:</b> #1C1C1A, near-black (contrast
+15.9:1 on the background, WCAG AA checked)</div></div>
+<div class="rz-item"><div class="rz-line"><b>Accent:</b> #0B5FA5, the blue from the
+logo. Links, buttons, nothing else</div></div>
+<div class="rz-item"><div class="rz-line"><b>Secondary gray:</b> #6B7068, captions and
+metadata only</div></div>
+<div class="rz-h">LOGO <span class="anno-badge">3</span></div>
+<div class="rz-item"><div class="rz-line">Minimum 24px tall, clear space of one letter
+height, black and white variants in assets/. Never on photos.</div></div>
+<div class="rz-h">VOICE</div>
+<div class="rz-item"><div class="rz-line">"Plain sentences, first person, no
+exclamation points."</div></div>
+<div class="rz-h">DO / DON'T <span class="anno-badge">4</span></div>
+<div class="rz-item"><div class="rz-line rz-sub">Don't reintroduce the old teal (it
+was #17A2B8, it is retired). Don't center body text. Don't add a fifth gray. Do use
+the accent for every link. Do keep headings in sentence case.</div></div>
+</div>
+<ol class="anno-notes">
+<li><b>Two fonts, exact weights named.</b> Naming the allowed weights is what stops
+the slow slide back to five fonts.</li>
+<li><b>Colors as text, with the contrast stated.</b> Anyone, including future you, can
+copy the hex and see that the text passes AA without opening a picker.</li>
+<li><b>Logo rules only because a logo exists.</b> No logo, no section; the kit records
+decisions that are real.</li>
+<li><b>Every don't is a real past mistake.</b> The retired teal was found in the
+audit. Rules with a history get followed.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is this free?</summary>
+<p>The skill is free, no account, no catch. Fonts come from free sources like Google
+Fonts. The agent you paste it into may or may not be free; Gemini has the widest free
+tier, and ChatGPT, Claude, and Copilot free plans can also run it.</p></details>
+<details class="faq"><summary>I haven't picked fonts or colors yet. Can I still start?</summary>
+<p>If you have truly nothing, the skill itself says to run pick-fonts-and-colors first
+and come back. The kit's job is writing decisions down and enforcing them; it assumes
+some decisions exist or get made during the session.</p></details>
+<details class="faq"><summary>How is this different from pick-fonts-and-colors?</summary>
+<p>That skill makes the choices. This one turns choices into rules: exact weights,
+usage lines, a do and don't list from your real mistakes, a CSS block, and a proof
+step where one straying artifact gets restyled to match.</p></details>
+<details class="faq"><summary>Can I change the kit later?</summary>
+<p>Yes, by editing the page. The kit doesn't freeze your style; it makes drift visible.
+When you want a new accent next year, you change one line and one custom property, and
+everything that uses the kit follows.</p></details>
+<details class="faq"><summary>What does "done" mean for this?</summary>
+<p>Three things, from the skill: the kit page exists in your repo, one real artifact
+matches it exactly, and you can answer "what color is a button" without opening a
+color picker.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this free?","acceptedAnswer":{"@type":"Answer","text":"The skill is free, no account, and it uses free font sources. The agent you paste it into may have a free tier; Gemini's is the widest."}},
+{"@type":"Question","name":"I haven't picked fonts or colors yet. Can I still start?","acceptedAnswer":{"@type":"Answer","text":"With truly nothing chosen, the skill says to run pick-fonts-and-colors first and come back. The kit records and enforces decisions."}},
+{"@type":"Question","name":"How is this different from pick-fonts-and-colors?","acceptedAnswer":{"@type":"Answer","text":"That skill makes the choices. This one turns them into rules: exact weights, usage lines, a do/don't list from your real mistakes, a CSS block, and one artifact restyled as proof."}},
+{"@type":"Question","name":"Can I change the kit later?","acceptedAnswer":{"@type":"Answer","text":"Yes, by editing the page. The kit makes drift visible; a deliberate change is one line plus one custom property."}},
+{"@type":"Question","name":"What does done mean for this?","acceptedAnswer":{"@type":"Answer","text":"The kit page exists in your repo, one real artifact matches it exactly, and you can answer what color a button is without opening a color picker."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Missing a piece the kit needs?</b></p>
+<div class="cardrow">
+<a class="mini" href="/skills/pick-fonts-and-colors/"><img src="/assets/skill-img/pick-fonts-and-colors.jpg" alt=""><span>Pick fonts and colors</span></a>
+<a class="mini" href="/skills/logo-basics/"><img src="/assets/skill-img/logo-basics.jpg" alt=""><span>Logo basics</span></a>
+<a class="mini" href="/skills/design-basics/"><img src="/assets/skill-img/design-basics.jpg" alt=""><span>Design basics</span></a>
+</div>
+<p><b>Put the kit to work:</b></p>
+<div class="cardrow">
+<a class="mini" href="/skills/portfolio-page/"><img src="/assets/skill-img/portfolio-page.jpg" alt=""><span>Portfolio page</span></a>
+<a class="mini" href="/skills/slide-deck/"><img src="/assets/skill-img/slide-deck.jpg" alt=""><span>Slide deck</span></a>
+<a class="mini" href="/skills/social-post/"><img src="/assets/skill-img/social-post.jpg" alt=""><span>Social post</span></a>
+</div>

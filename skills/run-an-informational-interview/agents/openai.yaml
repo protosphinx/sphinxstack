@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run an Informational Interview"
+  short_description: "Learn from a career conversation without extracting"
+  default_prompt: "Use $run-an-informational-interview to prepare and conduct a respectful career conversation."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "check a site search result"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $check-a-site-search-result to complete and verify this web task."

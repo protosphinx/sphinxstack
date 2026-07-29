@@ -1,0 +1,4 @@
+interface:
+  display_name: "investigate a data freshness incident"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $investigate-a-data-freshness-incident to complete and verify this data task."

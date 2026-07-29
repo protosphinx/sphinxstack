@@ -1,0 +1,4 @@
+interface:
+  display_name: "build-a-durable-idempotency-store"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $build-a-durable-idempotency-store to complete and verify this task."

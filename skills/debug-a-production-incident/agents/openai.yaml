@@ -1,0 +1,4 @@
+interface:
+  display_name: "Debug A Production Incident"
+  short_description: "Investigate and contain a production incident"
+  default_prompt: "Use $debug-a-production-incident to help me complete this workflow with verified evidence."

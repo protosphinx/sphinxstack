@@ -1,0 +1,4 @@
+interface:
+  display_name: "recover from a published media error"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $recover-from-a-published-media-error to complete and verify this media task."

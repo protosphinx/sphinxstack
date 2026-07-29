@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a service transition"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $design-a-service-transition to complete and verify this operations task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to Peer Review"
+  short_description: "Resolve review comments with traceable revisions"
+  default_prompt: "Use $respond-to-peer-review to prepare a response and revision plan."

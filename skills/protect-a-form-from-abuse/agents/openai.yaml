@@ -1,0 +1,4 @@
+interface:
+  display_name: "Protect a Form from Abuse"
+  short_description: "Reduce automated abuse without blocking people"
+  default_prompt: "Use $protect-a-form-from-abuse to layer accessible anti-abuse controls around this form."

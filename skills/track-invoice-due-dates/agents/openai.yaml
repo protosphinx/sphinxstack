@@ -1,0 +1,4 @@
+interface:
+  display_name: "track invoice due dates"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $track-invoice-due-dates to complete and verify this finance task."

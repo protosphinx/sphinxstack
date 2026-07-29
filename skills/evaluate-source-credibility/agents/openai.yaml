@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evaluate Source Credibility"
+  short_description: "Assess a source through evidence, context, and incentives"
+  default_prompt: "Use $evaluate-source-credibility to assess whether this source is fit for my claim."

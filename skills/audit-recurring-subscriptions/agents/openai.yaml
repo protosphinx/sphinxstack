@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Recurring Subscriptions"
+  short_description: "Find, classify, and act on recurring charges safely"
+  default_prompt: "Use $audit-recurring-subscriptions to reconcile and review my recurring charges."

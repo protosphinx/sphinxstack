@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare Artwork for Delivery"
+  short_description: "Package final artwork with verified production specs"
+  default_prompt: "Use $prepare-artwork-for-delivery to preflight and package these final assets."

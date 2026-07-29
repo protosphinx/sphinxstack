@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare for an Audit"
+  short_description: "Organize audit scope, evidence, owners, and responses"
+  default_prompt: "Use $prepare-for-an-audit to coordinate this audit without overstating control evidence."

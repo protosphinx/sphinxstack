@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Documentary Treatment"
+  short_description: "Turn evidence and access into a film plan"
+  default_prompt: "Use $write-a-documentary-treatment to develop this truthful documentary plan."

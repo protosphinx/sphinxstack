@@ -1,0 +1,4 @@
+interface:
+  display_name: "Database Basics"
+  short_description: "Design and deploy a small, durable database"
+  default_prompt: "Use $database-basics to help me complete this workflow with verified evidence."

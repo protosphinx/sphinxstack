@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Global Web Delivery Architecture"
+  short_description: "Design resilient global routing and caching"
+  default_prompt: "Use $design-a-global-web-delivery-architecture to design and verify this global delivery system."

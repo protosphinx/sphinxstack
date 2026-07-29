@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blog Post"
+  short_description: "Write and publish a truthful blog post"
+  default_prompt: "Use $blog-post to help me complete this workflow with verified evidence."

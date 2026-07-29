@@ -1,0 +1,4 @@
+interface:
+  display_name: "coordinate a multi vendor project"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $coordinate-a-multi-vendor-project to complete and verify this operations task."

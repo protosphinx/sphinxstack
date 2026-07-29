@@ -1,0 +1,4 @@
+interface:
+  display_name: "create a multilingual site"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $create-a-multilingual-site to complete and verify this web task."

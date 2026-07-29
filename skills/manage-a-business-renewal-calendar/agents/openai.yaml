@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage A Business Renewal Calendar"
+  short_description: "Track renewals, notice windows, owners, and decisions"
+  default_prompt: "Use $manage-a-business-renewal-calendar to build and verify our renewal schedule."

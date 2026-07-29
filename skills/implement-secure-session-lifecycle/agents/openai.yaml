@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement secure session lifecycle"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $implement-secure-session-lifecycle to complete and verify this web task."

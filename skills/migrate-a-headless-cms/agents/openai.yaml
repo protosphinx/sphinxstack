@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate-a-headless-cms"
+  short_description: "Migrate structured content with parity proof"
+  default_prompt: "Use $migrate-a-headless-cms to complete and verify this task."

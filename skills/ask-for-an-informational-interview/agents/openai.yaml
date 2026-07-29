@@ -1,0 +1,4 @@
+interface:
+  display_name: "ask-for-an-informational-interview"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $ask-for-an-informational-interview to complete and verify this task."

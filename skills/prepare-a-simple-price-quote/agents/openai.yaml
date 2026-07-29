@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare a simple price quote"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $prepare-a-simple-price-quote to complete and verify this finance task."

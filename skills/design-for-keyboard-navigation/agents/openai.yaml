@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design for Keyboard Navigation"
+  short_description: "Design predictable keyboard focus and operation"
+  default_prompt: "Use $design-for-keyboard-navigation to map, implement, and test keyboard behavior for this interface."

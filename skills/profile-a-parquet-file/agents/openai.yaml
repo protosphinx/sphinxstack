@@ -1,0 +1,4 @@
+interface:
+  display_name: "profile-a-parquet-file"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $profile-a-parquet-file to complete and verify this task."

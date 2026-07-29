@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Accessibility at Scale"
+  short_description: "Audit accessibility coverage, severity, and repair"
+  default_prompt: "Use $audit-accessibility-at-scale to combine automated and human evidence into a verified remediation program."

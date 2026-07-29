@@ -1,0 +1,4 @@
+interface:
+  display_name: "Exam Prep Plan"
+  short_description: "Build a focused, evidence-based exam preparation plan"
+  default_prompt: "Use $exam-prep-plan to help me complete this workflow with verified evidence."

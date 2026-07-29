@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Notification System"
+  short_description: "Design timely notifications with clear user control"
+  default_prompt: "Use $design-a-notification-system to define events, channels, priorities, consent, and failure behavior."

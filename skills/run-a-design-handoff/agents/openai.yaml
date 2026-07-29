@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Design Handoff"
+  short_description: "Make an approved design implementable and testable"
+  default_prompt: "Use $run-a-design-handoff to package this design for implementation and verification."

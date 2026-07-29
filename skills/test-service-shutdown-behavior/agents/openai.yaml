@@ -1,0 +1,4 @@
+interface:
+  display_name: "test-service-shutdown-behavior"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $test-service-shutdown-behavior to complete and verify this task."

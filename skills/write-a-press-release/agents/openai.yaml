@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Press Release"
+  short_description: "Write a factual release with a defensible news angle"
+  default_prompt: "Use $write-a-press-release to draft this announcement without unsupported claims."

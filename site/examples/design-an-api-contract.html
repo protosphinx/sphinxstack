@@ -1,0 +1,43 @@
+<h2>Worked case: an orders API for two teams</h2>
+<p class="case-trigger"><strong>Trigger:</strong> Two teams need to integrate without coordinating every code change.</p>
+<div class="chatdemo">
+<div class="cm cm-user">The storefront needs to create orders in the warehouse service.</div>
+<div class="cm cm-agent">Give me the two consumer workflows, caller identity, retry behavior, and fields the warehouse can safely expose.</div>
+<div class="cm cm-user cd-hide">Create an order and read its status. The storefront retries when requests time out.</div>
+<div class="cm cm-agent cd-hide">Then create must be idempotent. A timeout after commit cannot create a second order.</div>
+<div class="cm cm-user cd-hide">Can we just return database errors while we build it?</div>
+<div class="cm cm-agent cd-hide">No. Consumers need stable error codes and retry rules. Internal messages can change and may expose private details.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Failure behavior is part of the interface.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The contract excerpt</h2>
+<pre>POST /v1/orders
+Idempotency-Key: 3ee1...
+
+201 { "id": "ord_42", "status": "accepted" }
+409 { "code": "ITEM_UNAVAILABLE", "retryable": false, "trace_id": "..." }
+429 { "code": "RATE_LIMITED", "retryable": true, "retry_after_s": 5 }</pre>
+<h3>Evidence set</h3>
+<ul>
+<li><strong>Versioned schema:</strong> request, response, limits, null rules, and errors in source control.</li>
+<li><strong>Consumer examples:</strong> success, duplicate, validation, permission, rate limit, and timeout.</li>
+<li><strong>Compatibility check:</strong> CI rejects removal or narrowing of a published field.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>The provider makes a formerly optional field required. The schema comparison blocks promotion.
+If an incompatible version reaches staging, consumer contract tests fail before production. If it
+reaches production, the team rolls back the provider and notifies both named consumer owners.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is an OpenAPI file the whole contract?</summary><p>No. The schema is central, but retry, authorization, compatibility, deprecation, ordering, and operational behavior also need explicit rules.</p></details>
+<details class="faq"><summary>What does idempotent mean here?</summary><p>Repeating the same intended operation has the same effect as doing it once, including when the first response was lost.</p></details>
+<details class="faq"><summary>Should every change create a new version?</summary><p>No. Prefer compatible additive changes. Create a new version when semantics must break and migration cannot preserve the old behavior.</p></details>
+<details class="faq"><summary>What makes an error useful?</summary><p>A stable code, safe human explanation, retry rule, relevant field where appropriate, and trace ID for support.</p></details>
+<details class="faq"><summary>Who owns contract tests?</summary><p>Provider and consumer owners share them. The provider proves compatibility while consumers prove the workflows they depend on.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is an OpenAPI file the whole contract?","acceptedAnswer":{"@type":"Answer","text":"No. Operational and compatibility rules also belong in the contract."}},{"@type":"Question","name":"What does idempotent mean here?","acceptedAnswer":{"@type":"Answer","text":"Repeating one intended operation has the same effect as doing it once."}},{"@type":"Question","name":"Should every change create a new version?","acceptedAnswer":{"@type":"Answer","text":"No. Prefer compatible additive changes."}},{"@type":"Question","name":"What makes an error useful?","acceptedAnswer":{"@type":"Answer","text":"A stable code, safe explanation, retry rule, and trace ID."}},{"@type":"Question","name":"Who owns contract tests?","acceptedAnswer":{"@type":"Answer","text":"Provider and consumer owners share them."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Implement the first consumer with <a href="/skills/use-an-api/">Use an API</a>, review authorization with <a href="/skills/threat-model-a-feature/">Threat model a feature</a>, and add signals with <a href="/skills/design-observability/">Design observability</a>.</p>

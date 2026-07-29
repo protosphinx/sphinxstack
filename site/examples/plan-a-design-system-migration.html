@@ -1,0 +1,34 @@
+<h2>Worked case: migrate a major shared UI release</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A major design-system release changes tokens, semantics, component APIs, focus behavior, and themes across unknown consumers that carry local overrides and cannot all migrate at once.</p>
+<div class="chatdemo">
+<div class="cm cm-user">The codemod passes. Can we deprecate the old package next sprint?</div>
+<div class="cm cm-agent">Not until the consumer inventory, compatibility strategy, migration waves, behavior tests, exceptions, and rollback are reconciled.</div>
+<div class="cm cm-user cd-hide">Can teams visually spot any regressions?</div>
+<div class="cm cm-agent cd-hide">Visual review misses semantics, focus, screen-reader behavior, local overrides, themes, and critical journeys. Each wave needs broader verification.</div>
+<div class="cm cm-user cd-hide">Some repositories have no owner.</div>
+<div class="cm cm-agent cd-hide">Unknown or unowned consumers block retirement. We can isolate them, assign authority, or extend compatibility, but cannot silently abandon them.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">A codemod proves transformation, not consumer safety.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The migration evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Migration inventory</td><td>Consumer, owner, version, overrides, themes, criticality, dependencies, and state</td><td>Unknown consumers remain visible</td></tr>
+<tr><td>Wave verification</td><td>API, visuals, semantics, access, performance, localization, journeys, and exceptions</td><td>Representative customized consumers pass</td></tr>
+<tr><td>Rollback rehearsal</td><td>Trigger, authority, source package, data or state compatibility, elapsed time, and proof</td><td>Recovery works within the support horizon</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A focus fix passes the component story but traps keyboard users in a consumer's customized overlay. The wave stops,
+the affected product rolls back to the supported source, the compatibility strategy changes, and the consumer joins
+the next wave only after semantic, focus, and journey verification.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is installation a completed migration?</summary><p>No. The rendered consumer must preserve behavior, semantics, accessibility, themes, and critical journeys.</p></details>
+<details class="faq"><summary>How should waves be ordered?</summary><p>By risk, representativeness, dependency, readiness, capacity, and reversibility.</p></details>
+<details class="faq"><summary>When are compatibility layers useful?</summary><p>When they create a bounded, testable bridge rather than indefinite hidden divergence.</p></details>
+<details class="faq"><summary>What blocks retirement?</summary><p>Unknown consumers, unresolved critical exceptions, failed verification, or unavailable rollback.</p></details>
+<details class="faq"><summary>Should local overrides be removed?</summary><p>Only after their purpose and impact are understood and the target system meets the need.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is installation a completed migration?","acceptedAnswer":{"@type":"Answer","text":"No. Consumer behavior and journeys must be verified."}},{"@type":"Question","name":"How should waves be ordered?","acceptedAnswer":{"@type":"Answer","text":"By risk, readiness, dependency, capacity, and reversibility."}},{"@type":"Question","name":"When are compatibility layers useful?","acceptedAnswer":{"@type":"Answer","text":"As a bounded and tested bridge."}},{"@type":"Question","name":"What blocks retirement?","acceptedAnswer":{"@type":"Answer","text":"Unknown consumers, critical exceptions, failed tests, or missing rollback."}},{"@type":"Question","name":"Should local overrides be removed?","acceptedAnswer":{"@type":"Answer","text":"Only after their purpose and impact are understood."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Inventory reality with <a href="/skills/create-a-component-inventory/">Create a component inventory</a>,
+test shared parts with <a href="/skills/validate-a-design-system-component/">Validate a design system component</a>, and
+govern the target with <a href="/skills/govern-a-design-system/">Govern a design system</a>.</p>

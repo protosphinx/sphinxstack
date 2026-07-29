@@ -1,0 +1,4 @@
+interface:
+  display_name: "test a file download"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $test-a-file-download to complete and verify this web task."

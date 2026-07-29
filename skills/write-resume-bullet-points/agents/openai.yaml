@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Resume Bullet Points"
+  short_description: "Turn work evidence into concise outcome bullets"
+  default_prompt: "Use $write-resume-bullet-points to write verified bullets from this work evidence."

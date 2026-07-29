@@ -1,0 +1,4 @@
+interface:
+  display_name: "verify-a-final-media-conform"
+  short_description: "Verify a final conform against approved sources"
+  default_prompt: "Use $verify-a-final-media-conform to complete and verify this task."

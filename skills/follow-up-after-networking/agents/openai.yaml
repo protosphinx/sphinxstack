@@ -1,0 +1,4 @@
+interface:
+  display_name: "Follow Up After Networking"
+  short_description: "Turn a conversation into a useful next step"
+  default_prompt: "Use $follow-up-after-networking to write a relevant follow-up from these notes."

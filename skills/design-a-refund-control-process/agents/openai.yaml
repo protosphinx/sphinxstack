@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-refund-control-process"
+  short_description: "Design controlled, reconciled customer refunds"
+  default_prompt: "Use $design-a-refund-control-process to complete and verify this task."

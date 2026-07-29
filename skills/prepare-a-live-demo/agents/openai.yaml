@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Live Demo"
+  short_description: "Rehearse a resilient product demo with a backup path"
+  default_prompt: "Use $prepare-a-live-demo to build and rehearse a concise demo for this audience."

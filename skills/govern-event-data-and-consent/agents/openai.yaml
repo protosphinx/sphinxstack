@@ -1,0 +1,4 @@
+interface:
+  display_name: "Govern Event Data and Consent"
+  short_description: "Control event data, consent, sharing, and deletion"
+  default_prompt: "Use $govern-event-data-and-consent to map and control data across this event lifecycle."

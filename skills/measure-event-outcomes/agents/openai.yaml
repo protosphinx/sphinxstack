@@ -1,0 +1,4 @@
+interface:
+  display_name: "Measure Event Outcomes"
+  short_description: "Connect event evidence to intended outcomes"
+  default_prompt: "Use $measure-event-outcomes to evaluate what this event changed and what remains unknown."

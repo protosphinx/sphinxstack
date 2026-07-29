@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a high density workspace"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $design-a-high-density-workspace to complete and verify this design task."

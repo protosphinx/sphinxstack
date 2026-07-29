@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Meeting Notes"
+  short_description: "Capture decisions, evidence, and owned follow-up"
+  default_prompt: "Use $write-meeting-notes to turn this meeting record into actionable notes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Professional Bio"
+  short_description: "Write a truthful bio fitted to audience and length"
+  default_prompt: "Use $write-a-professional-bio to draft a credible bio from my verified background."

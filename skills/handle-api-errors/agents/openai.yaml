@@ -1,0 +1,4 @@
+interface:
+  display_name: "Handle API Errors"
+  short_description: "Turn API failures into safe useful behavior"
+  default_prompt: "Use $handle-api-errors to design error handling for this API integration."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze a Support Backlog"
+  short_description: "Find backlog risk and produce a recovery plan"
+  default_prompt: "Use $analyze-a-support-backlog to help me complete this workflow with verifiable evidence."

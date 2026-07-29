@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Job Description"
+  short_description: "Define a fair role from real work and requirements"
+  default_prompt: "Use $write-a-job-description to draft an evidence-based job description."

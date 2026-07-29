@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Pricing Scenarios"
+  short_description: "Compare price, volume, mix, and retention"
+  default_prompt: "Use $model-pricing-scenarios to compare and stress-test these pricing options."

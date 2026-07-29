@@ -1,0 +1,4 @@
+interface:
+  display_name: "test-a-deep-link"
+  short_description: "Test a deep link across expected entry states"
+  default_prompt: "Use $test-a-deep-link to complete and verify this task."

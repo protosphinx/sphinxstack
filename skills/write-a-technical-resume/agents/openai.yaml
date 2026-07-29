@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Technical Resume"
+  short_description: "Present technical scope, decisions, and outcomes"
+  default_prompt: "Use $write-a-technical-resume to build a verified technical resume for this role."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Review"
+  short_description: "Review a resume for truth, relevance, and usability"
+  default_prompt: "Use $resume-review to help me complete this workflow with verified evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "reconcile source and warehouse records"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $reconcile-source-and-warehouse-records to complete and verify this data task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit-a-third-party-web-script"
+  short_description: "Audit an external script across user risks"
+  default_prompt: "Use $audit-a-third-party-web-script to complete and verify this task."

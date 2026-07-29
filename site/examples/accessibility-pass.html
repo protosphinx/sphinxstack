@@ -1,0 +1,113 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the test that surprises everyone. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> is my site accessible? someone asked and I honestly have no idea</div>
+<div class="cm cm-agent">Let's find out instead of guessing. Two tools plus two human tests.
+Start with the tools: run Lighthouse's accessibility audit in Chrome DevTools on every
+page and save the score as your "before".</div>
+<div class="cm cm-user cd-hide">it says 71. is that bad</div>
+<div class="cm cm-agent cd-hide">It's a to-do list, and yours is short: low-contrast text in
+the footer, six images without alt text, and a search box without a label. All small
+fixes. The skill is finding them systematically rather than assuming the site is
+fine.</div>
+<div class="cm cm-user cd-hide">it looks completely fine to me though</div>
+<div class="cm cm-agent cd-hide">To its author, on a good screen, with a mouse. Here is the
+first human test: unplug the mouse and Tab through the page. If you can't tell where
+you are, someone styled away the focus outline. Machines don't catch how that
+feels.</div>
+<div class="cm cm-user cd-hide">ok that was genuinely unusable. what do we fix first</div>
+<div class="cm cm-agent cd-hide">Focus outline back first, since you just felt it. Then
+contrast: we nudge the flagged text in the WebAIM checker until it passes 4.5 to 1,
+and you pick the shade. Then alt text, written by you, because you know why each image
+is there. Decorative ones get alt="" so screen readers skip them.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Looks fine on your screen?</h2>
+<p>That is the trap this skill exists for. A site gets built on one good monitor by
+one person with a mouse, and then real visitors read it on a dim phone in daylight,
+tab through it from a keyboard, or hear it through a screen reader. Most of what
+breaks for them is machine-checkable and cheap to fix, which is why the pass starts
+with free tools and ends with two tests no tool can run: your own eyes at arm's
+length, and your own hands without a mouse.</p>
+
+<h2>What you end up with</h2>
+<p>A before and after you can show, and a short list of habits that make the next
+site ship clean. A typical pass:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example before and after accessibility audit results">
+<div class="sheet-tag">Example</div>
+<pre>
+Lighthouse · accessibility
+
+before  71        after  98      <span class="anno-badge">1</span>
+
+fixed on the way:
+contrast   footer text nudged to
+           4.7:1, shade they chose  <span class="anno-badge">2</span>
+alt text   6 images described,
+           2 marked decorative
+focus      outline restored,
+           styled to fit the site   <span class="anno-badge">3</span>
+labels     search box labeled
+headings   one h1, h2s in order
+           (shared with seo-basics)
+
+keyboard   full Tab run-through,
+           focus visible throughout
+</pre>
+</div>
+<ol class="anno-notes">
+<li><b>95 or better, on every page.</b> That is the skill's bar, with both screenshots
+saved. The remaining points usually live in judgment calls the tools can't score,
+which is what the human tests are for.</li>
+<li><b>Fixes keep the design.</b> Contrast almost always passes by darkening the text
+a step, with the author picking the new shade. Nothing about the pass makes a site
+look "accessible"; it makes it readable.</li>
+<li><b>Focus was never optional.</b> If Tab makes the highlight vanish, someone wrote
+outline: none. Restoring or restyling it is a one-line fix that makes the whole page
+usable without a mouse.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Does a small personal site really need this?</summary>
+<p>Yes, for a plain reason: the people it helps are already in your small audience,
+reading on bright screens and imperfect eyes and sometimes no mouse. And the pass
+pays you back, since the habits it builds mean your next site ships clean without
+one.</p></details>
+<details class="faq"><summary>Do the tools cost anything?</summary>
+<p>No. Lighthouse ships inside Chrome DevTools, the axe DevTools browser extension
+has a free version that covers this pass, and the WebAIM contrast checker is a free
+web page. The two human tests cost a mouse unplugged and a walk into daylight.</p></details>
+<details class="faq"><summary>Will the fixes ruin my design?</summary>
+<p>Almost never. The most common fix is darkening a text color one step, chosen by
+you. Alt text is invisible, labels can be styled, and a focus outline can be designed
+to match the site instead of the browser default.</p></details>
+<details class="faq"><summary>What counts as done?</summary>
+<p>Lighthouse accessibility at 95 or better on every page with before and after
+saved, a full keyboard run-through with visible focus, and every image either
+deliberately described or deliberately skipped with an empty alt.</p></details>
+<details class="faq"><summary>What is a screen reader, actually?</summary>
+<p>Software that reads the page aloud or renders it as braille, used by blind and
+low-vision visitors. It navigates by your headings, announces your alt text, and
+names inputs by their labels, which is why those three fixes carry most of this
+pass.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Does a small personal site really need this?","acceptedAnswer":{"@type":"Answer","text":"Yes. The people it helps are already in your audience, and the habits the pass builds mean your next site ships clean without one."}},
+{"@type":"Question","name":"Do the tools cost anything?","acceptedAnswer":{"@type":"Answer","text":"No. Lighthouse, the free axe DevTools extension, and the WebAIM contrast checker cover the whole pass."}},
+{"@type":"Question","name":"Will the fixes ruin my design?","acceptedAnswer":{"@type":"Answer","text":"Almost never. The most common fix is darkening a text color one step, and you pick the shade."}},
+{"@type":"Question","name":"What counts as done?","acceptedAnswer":{"@type":"Answer","text":"95 or better on every page with before and after saved, a full keyboard run-through with visible focus, and every image deliberately described or deliberately skipped."}},
+{"@type":"Question","name":"What is a screen reader, actually?","acceptedAnswer":{"@type":"Answer","text":"Software that reads the page aloud or as braille. It navigates by headings, announces alt text, and names inputs by their labels."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Pass done?</b> These share tools and habits with it:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/make-it-fast/"><img src="/assets/skill-img/make-it-fast.jpg" alt=""><span>Make it fast, same report</span></a>
+<a class="mini" href="/skills/seo-basics/"><img src="/assets/skill-img/seo-basics.jpg" alt=""><span>Headings do double duty</span></a>
+<a class="mini" href="/skills/forms-that-work/"><img src="/assets/skill-img/forms-that-work.jpg" alt=""><span>Forms with labels from day one</span></a>
+</div>

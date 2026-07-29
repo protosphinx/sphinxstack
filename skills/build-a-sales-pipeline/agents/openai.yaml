@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a Sales Pipeline"
+  short_description: "Create a trustworthy opportunity tracking system"
+  default_prompt: "Use $build-a-sales-pipeline to help me complete this workflow with verifiable evidence."

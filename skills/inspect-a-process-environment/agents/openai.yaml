@@ -1,0 +1,4 @@
+interface:
+  display_name: "inspect-a-process-environment"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $inspect-a-process-environment to complete and verify this task."

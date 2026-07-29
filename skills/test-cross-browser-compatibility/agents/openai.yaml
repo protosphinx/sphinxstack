@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Cross-Browser Compatibility"
+  short_description: "Test critical paths across browser engines"
+  default_prompt: "Use $test-cross-browser-compatibility to build and run a representative browser matrix."

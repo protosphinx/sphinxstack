@@ -1,0 +1,4 @@
+interface:
+  display_name: "translate-academic-experience-for-industry"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $translate-academic-experience-for-industry to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Leadership Portfolio"
+  short_description: "Prove leadership judgment through real cases"
+  default_prompt: "Use $create-a-leadership-portfolio to turn my leadership evidence into a reviewable portfolio."

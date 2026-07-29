@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a Contract Test Suite"
+  short_description: "Verify provider and consumer compatibility"
+  default_prompt: "Use $build-a-contract-test-suite to define compatibility tests for this interface."

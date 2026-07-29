@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Multitenant Authorization"
+  short_description: "Enforce tenant isolation across every access path"
+  default_prompt: "Use $design-multitenant-authorization to design and prove authorization for this multitenant system."

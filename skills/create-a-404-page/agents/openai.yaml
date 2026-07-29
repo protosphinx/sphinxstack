@@ -1,0 +1,4 @@
+interface:
+  display_name: "create a 404 page"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $create-a-404-page to complete and verify this web task."

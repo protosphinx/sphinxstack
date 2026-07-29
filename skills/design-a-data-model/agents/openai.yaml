@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Data Model"
+  short_description: "Turn business rules into durable entities and constraints"
+  default_prompt: "Use $design-a-data-model to create a normalized model and validate it against real workflows."

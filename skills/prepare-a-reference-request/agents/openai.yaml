@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare-a-reference-request"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $prepare-a-reference-request to complete and verify this task."

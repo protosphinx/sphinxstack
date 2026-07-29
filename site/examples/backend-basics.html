@@ -1,0 +1,116 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the part everyone is afraid of. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> my weather page needs to hide its API key. do i need a backend?</div>
+<div class="cm cm-agent">You do, and it's smaller than the word makes it sound. First: what does
+the page do today, and where does the key live right now?</div>
+<div class="cm cm-user cd-hide">it's a static page and the key is just sitting in the js file. honestly
+"server" scares me, i've never touched one</div>
+<div class="cm cm-agent cd-hide">A server here is a small function on a free host that answers HTTP.
+You'll write maybe thirty lines. The shape: browser calls your API, your API calls the
+weather service with the hidden key, JSON comes back. That's the whole job.</div>
+<div class="cm cm-user cd-hide">don't i have to pay for hosting?</div>
+<div class="cm cm-agent cd-hide">No. Free tiers cover this, and I'll name their limits before you sign
+up: request caps, and instances that sleep when idle. No card details anywhere; if a host
+demands a card even for the free plan, we pick another host.</div>
+<div class="cm cm-user cd-hide">ok, where do we start</div>
+<div class="cm cm-agent cd-hide">One hello endpoint that returns JSON, running locally, hit with curl
+and with the browser so both feel the same. Then we deploy that before writing anything
+else. A live URL in the first half hour keeps the rest honest.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>I've never touched a server</h2>
+<p>Nobody has until the first one. The skill makes "server" concrete: code that runs on
+a machine that is always on, holds secrets the browser can't see, and answers HTTP
+requests. You build two or three endpoints that serve a real need from your existing
+project, you run every deploy and every curl yourself, and the agent narrates what each
+command does in one line before you run it. These projects each hide a real backend
+behind them:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/speedrun-leaderboard/"><img src="/assets/project-img/speedrun-leaderboard.jpg" alt=""><span>Speedrun game with a real leaderboard</span></a>
+<a class="mini" href="/ideas/online-turn-based/"><img src="/assets/project-img/online-turn-based.jpg" alt=""><span>Turn-based game two browsers can play</span></a>
+<a class="mini" href="/ideas/session-booker/"><img src="/assets/project-img/session-booker.jpg" alt=""><span>Booking system for a tutor or coach</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>An API of your own at a live URL, with your frontend calling it. Here is a finished
+one for the weather page above: two endpoints, secrets server-side.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example deployed backend">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">YOUR API, DEPLOYED AND ANSWERING</div>
+<pre>$ curl https://maya-api.example.com/api/weather
+{"temp_f":74,"condition":"clear","cached":true}</pre>
+<div class="rz-h">THE ROUTE BEHIND IT (EXCERPT)</div>
+<pre>app.get("/api/weather", async (req, res) =&gt; {
+  const r = await fetch(UPSTREAM_URL, {
+    headers: { "X-Api-Key": process.env.WEATHER_KEY },
+  });
+  if (!r.ok) return res.status(502).json({ error: "weather source down" });
+  res.json(await pickFields(r));
+});</pre>
+<div class="rz-h">THE UNHAPPY PATH, TESTED WITH CURL</div>
+<pre>$ curl "https://maya-api.example.com/api/weather?city=%20"
+HTTP 400 {"error":"city must be a non-empty name"}</pre>
+</div>
+<ol class="anno-notes">
+<li><b>The key never reaches the browser.</b> It lives in the host's env-var settings
+and a gitignored local <code>.env</code>. Open dev tools on the frontend and there is
+nothing to find.</li>
+<li><b>Bad input gets a 400 with a message.</b> You test the failure yourself with
+curl, so the first user to type garbage isn't the tester.</li>
+<li><b>Two endpoints, complete.</b> The skill holds the line at two or three. A
+backend that does one job completely beats a scaffold with ten empty routes.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is a server a machine I have to buy or rent?</summary>
+<p>Not here. You deploy to a free tier: serverless functions or a small Node app on a
+free host. It runs on someone else's always-on machine, and the free tier's limits are
+named honestly before you commit to one.</p></details>
+<details class="faq"><summary>What is CORS and why did the browser block my request?</summary>
+<p>Browsers refuse to let a page call an API on a different domain unless that API says
+it's allowed. Your API sends a header granting your frontend permission. The skill
+expects CORS to bite during wiring and has you fix it and explain why the browser
+blocked the call in two sentences.</p></details>
+<details class="faq"><summary>What happens when the free tier sleeps?</summary>
+<p>Some free hosts idle your instance after inactivity, so the first request after a
+quiet spell is slow while it wakes. That's the honest price of free, and the skill says
+so up front. For a personal project it is usually fine; serverless functions mostly
+avoid it.</p></details>
+<details class="faq"><summary>Can people hack my API?</summary>
+<p>Anyone can send it requests, which is why the skill treats unhappy paths as part of
+the build: bad input gets a 400, a down upstream gets caught, secrets stay in env vars
+on the server. With two endpoints doing one job, the surface stays small enough to
+reason about.</p></details>
+<details class="faq"><summary>Do I have to know Node?</summary>
+<p>You need the JavaScript you already have from building a frontend. The endpoint code
+is short, and the agent explains each piece as you write it. If you have no frontend
+yet, run <a href="/skills/build-web-app/">build a web app</a> first or build the pair
+together.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is a server a machine I have to buy or rent?","acceptedAnswer":{"@type":"Answer","text":"Not here. You deploy to a free tier: serverless functions or a small Node app on a free host, with the tier's limits named honestly first."}},
+{"@type":"Question","name":"What is CORS and why did the browser block my request?","acceptedAnswer":{"@type":"Answer","text":"Browsers block a page from calling an API on another domain unless the API allows it via a header. You add the header and learn why the block exists."}},
+{"@type":"Question","name":"What happens when the free tier sleeps?","acceptedAnswer":{"@type":"Answer","text":"Some free hosts idle your instance after inactivity, so the first request after a quiet spell is slow. That is the honest price of free; serverless functions mostly avoid it."}},
+{"@type":"Question","name":"Can people hack my API?","acceptedAnswer":{"@type":"Answer","text":"Anyone can send it requests, so unhappy paths are part of the build: 400s for bad input, caught upstream failures, secrets in server-side env vars only."}},
+{"@type":"Question","name":"Do I have to know Node?","acceptedAnswer":{"@type":"Answer","text":"The JavaScript you have from frontend work is enough. Endpoint code is short and explained as you write it."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Your API works. Now give it memory and users:</b></p>
+<div class="cardrow">
+<a class="mini" href="/skills/database-basics/"><img src="/assets/skill-img/database-basics.jpg" alt=""><span>Database basics: survive a redeploy</span></a>
+<a class="mini" href="/skills/auth-basics/"><img src="/assets/skill-img/auth-basics.jpg" alt=""><span>Auth basics: who sees what</span></a>
+<a class="mini" href="/skills/use-an-api/"><img src="/assets/skill-img/use-an-api.jpg" alt=""><span>Use an API: richer upstream data</span></a>
+</div>
+<p><b>Or build something with a backend at its heart:</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/order-desk/"><img src="/assets/project-img/order-desk.jpg" alt=""><span>Order desk</span></a>
+<a class="mini" href="/ideas/quiz-battle/"><img src="/assets/project-img/quiz-battle.jpg" alt=""><span>Quiz battle</span></a>
+<a class="mini" href="/ideas/league-office/"><img src="/assets/project-img/league-office.jpg" alt=""><span>League office</span></a>
+</div>

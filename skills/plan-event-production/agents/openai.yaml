@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Event Production"
+  short_description: "Design the technical production and operating plan"
+  default_prompt: "Use $plan-event-production to plan the technical systems, crew, cues, and recovery paths."

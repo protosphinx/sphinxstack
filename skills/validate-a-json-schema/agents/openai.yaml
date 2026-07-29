@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate a JSON Schema"
+  short_description: "Test JSON structure, boundaries, and examples"
+  default_prompt: "Use $validate-a-json-schema to verify this schema and its instances."

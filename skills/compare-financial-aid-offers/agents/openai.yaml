@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compare Financial Aid Offers"
+  short_description: "Compare college aid offers and true costs consistently"
+  default_prompt: "Use $compare-financial-aid-offers to compare these offers without hiding uncertainty."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "build a networking strategy"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $build-a-networking-strategy to complete and verify this hiring task."

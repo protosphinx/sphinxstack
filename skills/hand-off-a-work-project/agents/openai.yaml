@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hand Off a Work Project"
+  short_description: "Transfer ownership with context and acceptance checks"
+  default_prompt: "Use $hand-off-a-work-project to create a complete, testable project handoff."

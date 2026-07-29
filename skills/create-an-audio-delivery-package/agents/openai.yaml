@@ -1,0 +1,4 @@
+interface:
+  display_name: "create an audio delivery package"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $create-an-audio-delivery-package to complete and verify this media task."

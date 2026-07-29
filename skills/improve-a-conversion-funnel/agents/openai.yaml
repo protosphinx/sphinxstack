@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improve a Conversion Funnel"
+  short_description: "Diagnose and improve an ethical user conversion path"
+  default_prompt: "Use $improve-a-conversion-funnel to find the highest-confidence friction and test a repair."

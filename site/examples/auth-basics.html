@@ -1,0 +1,108 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the part everyone is afraid of. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> i want people to log into my study tracker so everyone has their own entries</div>
+<div class="cm cm-agent">Good reason for auth: there's real per-user data to protect. First
+question: do you have a GitHub account?</div>
+<div class="cm cm-user cd-hide">yeah. but storing people's passwords honestly freaks me out</div>
+<div class="cm cm-agent cd-hide">It should, and you never will. That's the one rule from this session
+that lasts forever: identity comes from a provider that does it for a living. With
+GitHub OAuth, no password ever touches your code.</div>
+<div class="cm cm-user cd-hide">then how does my app know who someone is?</div>
+<div class="cm cm-agent cd-hide">The login button sends them to GitHub, GitHub asks them, and they
+come back with a session: a cookie your server uses to remember them between requests.
+We'll log the user object once so you see exactly what the provider returns.</div>
+<div class="cm cm-user cd-hide">and how do i stop one user from reading another's entries?</div>
+<div class="cm cm-agent cd-hide">Every check runs server-side. Each row gets a user id, each query
+filters by it, and a request for someone else's data gets a 401 or 403. At the end we
+attack it together with curl and dev tools, and every attempt has to fail before we're
+done.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>I don't want to be responsible for people's passwords</h2>
+<p>You won't be, and the skill enforces it: you never build your own password storage.
+Sign-in goes through OAuth with a provider your users already have (GitHub is ideal for
+this audience) or a managed auth free tier. If email and password is truly needed, the
+managed provider stores the passwords and your code never touches one. What you are
+responsible for is the part you can actually verify: per-user rules enforced on the
+server and tested by trying to break them. These projects all needed exactly that:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/club-hq/"><img src="/assets/project-img/club-hq.jpg" alt=""><span>Club HQ with member accounts</span></a>
+<a class="mini" href="/ideas/tool-lending-library/"><img src="/assets/project-img/tool-lending-library.jpg" alt=""><span>Tool lending library</span></a>
+<a class="mini" href="/ideas/order-desk/"><img src="/assets/project-img/order-desk.jpg" alt=""><span>Order desk</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>Sign-in that works live, sessions that survive a refresh, and rules you verified by
+attacking them. The last step of the skill produces a log like this one.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example break-in test log">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">ATTEMPT 1: READ ENTRIES WHILE SIGNED OUT</div>
+<pre>$ curl https://tracker.example.com/api/entries
+HTTP 401 {"error":"sign in required"}</pre>
+<div class="rz-h">ATTEMPT 2: SIGNED IN, READ YOUR OWN ENTRIES</div>
+<pre>$ curl -b session.txt https://tracker.example.com/api/entries
+HTTP 200 [{"id":311,"subject":"calc","minutes":45}, ...]</pre>
+<div class="rz-h">ATTEMPT 3: SIGNED IN, READ SOMEONE ELSE'S ROW</div>
+<pre>$ curl -b session.txt https://tracker.example.com/api/entries/298
+HTTP 403 {"error":"forbidden"}</pre>
+</div>
+<ol class="anno-notes">
+<li><b>The 401 and the 403 are the deliverable.</b> Sign-in working is the easy half;
+requests for other people's data being refused is what makes the app trustworthy.</li>
+<li><b>You ran these attacks yourself.</b> curl while signed out, ids edited in dev
+tools, another account's row requested directly. The step isn't done until every
+attempt fails.</li>
+<li><b>Row 298 exists and belongs to someone else.</b> Ownership lives in the
+database (a user id on every row) and in every query, where the browser can't
+change it.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Will my code ever store a password?</summary>
+<p>No, and that's the rule the whole skill is built around. OAuth means the provider
+does identity; managed auth means the provider stores any passwords. Your code handles
+sessions and permissions, never a password.</p></details>
+<details class="faq"><summary>What if my users don't have GitHub?</summary>
+<p>Then you use a managed auth service's free tier, which gives you email and password
+sign-in where the service does the storing. The skill names the free tier's limits
+honestly before you pick one.</p></details>
+<details class="faq"><summary>What's the difference between authentication and authorization?</summary>
+<p>Authentication is who you are; authorization is what you may do. A session is how
+the server remembers you between requests. The skill introduces each word at the
+moment the code makes it concrete, so they stick.</p></details>
+<details class="faq"><summary>Isn't hiding the button enough?</summary>
+<p>No. Anything the browser hides, dev tools can un-hide, and the skill demonstrates
+that on your own app. Every who-sees-what check runs on the server or in the
+database's row-level security, where the client can't reach it.</p></details>
+<details class="faq"><summary>Does auth cost anything?</summary>
+<p>GitHub OAuth is free, and managed auth providers have free tiers that cover a
+personal app. As always in this catalog, the limits get said out loud before you sign
+up, and no card details go anywhere.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Will my code ever store a password?","acceptedAnswer":{"@type":"Answer","text":"No. OAuth means the provider does identity; managed auth means the provider stores any passwords. Your code handles sessions and permissions only."}},
+{"@type":"Question","name":"What if my users don't have GitHub?","acceptedAnswer":{"@type":"Answer","text":"Use a managed auth service's free tier for email and password sign-in, where the service does the storing. Free-tier limits are named honestly first."}},
+{"@type":"Question","name":"What's the difference between authentication and authorization?","acceptedAnswer":{"@type":"Answer","text":"Authentication is who you are; authorization is what you may do. A session is how the server remembers you between requests."}},
+{"@type":"Question","name":"Isn't hiding the button enough?","acceptedAnswer":{"@type":"Answer","text":"No. Dev tools can un-hide anything the browser hides. Checks run on the server or in row-level security, where the client can't reach them."}},
+{"@type":"Question","name":"Does auth cost anything?","acceptedAnswer":{"@type":"Answer","text":"GitHub OAuth is free, and managed providers have free tiers that cover a personal app, with limits stated before you sign up."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Accounts unlock every multi-user idea in the bank:</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/alumni-directory/"><img src="/assets/project-img/alumni-directory.jpg" alt=""><span>Alumni directory</span></a>
+<a class="mini" href="/ideas/club-election/"><img src="/assets/project-img/club-election.jpg" alt=""><span>Club election</span></a>
+<a class="mini" href="/ideas/school-swap/"><img src="/assets/project-img/school-swap.jpg" alt=""><span>School swap marketplace</span></a>
+</div>
+<p><b>Shore up the layers auth sits on:</b></p>
+<div class="cardrow">
+<a class="mini" href="/skills/database-basics/"><img src="/assets/skill-img/database-basics.jpg" alt=""><span>Database basics: rows to own</span></a>
+<a class="mini" href="/skills/backend-basics/"><img src="/assets/skill-img/backend-basics.jpg" alt=""><span>Backend basics: the server side</span></a>
+<a class="mini" href="/skills/build-web-app/"><img src="/assets/skill-img/build-web-app.jpg" alt=""><span>Build a web app: the frontend</span></a>
+</div>

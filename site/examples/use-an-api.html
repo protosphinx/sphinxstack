@@ -1,0 +1,132 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the part everyone is afraid of. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> can my site show the actual weather for my city?</div>
+<div class="cm cm-agent">Yes, with a weather API. First: which city, and is the site already
+in a repo I can build on?</div>
+<div class="cm cm-user cd-hide">austin, and yeah it's on github pages. but i keep reading about people
+leaking API keys and getting huge bills</div>
+<div class="cm cm-agent cd-hide">Real worry, and the skill is built around it. Two habits: the ignore
+rule goes into git before the key even exists, and we start on an API that needs no key at
+all. Plenty of good weather APIs are free and keyless, so your first request risks
+nothing.</div>
+<div class="cm cm-user cd-hide">how would a key even leak?</div>
+<div class="cm cm-agent cd-hide">You commit it once and push. Then it lives in your git history even
+if you delete the line later. So: ignore rule first, key second, and we check both
+<code>git status</code> and <code>git log -p</code> to prove it never landed.</div>
+<div class="cm cm-user cd-hide">ok. where do we start</div>
+<div class="cm cm-agent cd-hide">Docs before code. Find four facts on the API's docs page: base URL,
+one endpoint, the auth method, the rate limit. Then we hit the endpoint with curl and read
+the raw JSON together. Seeing it raw demystifies the whole thing.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Won't I leak my key and get a giant bill?</h2>
+<p>This is the fear the skill takes most seriously. It only uses free tiers, and it says
+out loud what each free tier allows before you sign up. The key goes in an environment
+variable or an untracked config file from the first minute, with the ignore rule added
+before the key exists. Then you prove it: <code>git status</code> shows nothing secret
+staged, and a spot-check of <code>git log -p</code> shows nothing secret in history.
+These projects all run on APIs handled exactly that way:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/price-drop-alert/"><img src="/assets/project-img/price-drop-alert.jpg" alt=""><span>Price-drop watcher on a schedule</span></a>
+<a class="mini" href="/ideas/morning-digest/"><img src="/assets/project-img/morning-digest.jpg" alt=""><span>One email instead of three apps</span></a>
+<a class="mini" href="/ideas/discord-server-bot/"><img src="/assets/project-img/discord-server-bot.jpg" alt=""><span>Discord bot your server uses</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A live feature on your own page, fed by real outside data, plus the four facts that
+make the next API easier than this one. Here is the shape of the finished thing.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example API request and response">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">FIRST CONTACT, BEFORE ANY CODE</div>
+<pre>$ curl "https://api.example.com/v1/forecast?city=austin"
+{
+  "city": "Austin",
+  "temp_f": 74,
+  "condition": "clear",
+  "updated": "2026-07-20T14:00:00Z"
+}</pre>
+<div class="rz-h">THE FOUR FACTS, WRITTEN AS A COMMENT</div>
+<pre>// base URL:   https://api.example.com
+// endpoint:   /v1/forecast?city=...
+// auth:       key in X-Api-Key header (free tier)
+// rate limit: 1000 requests/day, cache accordingly</pre>
+<div class="rz-h">WHERE THE KEY LIVES</div>
+<pre>$ cat .gitignore
+config.js
+$ git status
+nothing secret staged</pre>
+</div>
+<ol class="anno-notes">
+<li><b>The feature uses two fields.</b> The response has a dozen; the page renders
+<code>temp_f</code> and <code>condition</code>. Picking the few fields you need from
+real JSON is most of the work.</li>
+<li><b>The comment is the durable part.</b> Every API you ever use reduces to these
+four facts. Finding them in the docs yourself is the skill; this API is just the
+first one.</li>
+<li><b>The proof is a command, and you run it.</b> Nothing secret in
+<code>git status</code>, nothing secret in history.</li>
+</ol>
+</div>
+
+<h2>Anatomy of an API request</h2>
+<p>Every request you'll ever make breaks into the same parts:</p>
+<div class="anatomy">
+<div class="an-line"><span class="an-seg an-a">https://api.example.com</span><span class="an-seg an-b">/v1/forecast</span><span class="an-seg an-c">?city=austin</span> ·
+<span class="an-seg an-d">X-Api-Key: $WEATHER_KEY</span></div>
+<ul class="an-legend">
+<li><span class="an-key an-a">A</span> Base URL: which service you're talking to.</li>
+<li><span class="an-key an-b">B</span> Endpoint: which question you're asking it.</li>
+<li><span class="an-key an-c">C</span> Params: the specifics of your question.</li>
+<li><span class="an-key an-d">D</span> The key, read from an env var, never written into the URL or the code.</li>
+</ul>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Do APIs cost money?</summary>
+<p>The ones this skill picks don't. Free tier only, and the skill states what the free
+tier actually allows (requests per day, attribution rules) before you sign up, so the
+limit is never a surprise.</p></details>
+<details class="faq"><summary>What if I leak a key anyway?</summary>
+<p>You revoke it in the provider's dashboard and issue a new one; free-tier keys make
+this cheap to survive. Then the workflow that prevented it runs for real: ignore rule
+before key, and a <code>git log -p</code> spot-check to confirm history is clean.</p></details>
+<details class="faq"><summary>Do I need a backend for this?</summary>
+<p>Not to start. But a key shipped in frontend code is visible to anyone who opens dev
+tools, and the skill says that plainly. When the key must be truly hidden, the next
+step is <a href="/skills/backend-basics/">backend basics</a>, where your own small
+server holds it.</p></details>
+<details class="faq"><summary>What is a rate limit and will I hit it?</summary>
+<p>The number of requests the API allows you per minute or per day. You'll find yours
+in the docs and design around it: cache the response, or fetch on a button press
+instead of on every keystroke. Hitting it politely is part of the skill.</p></details>
+<details class="faq"><summary>Which API should I pick?</summary>
+<p>One that feeds something you care about: weather for your city, transit near you,
+game or music data, a public dataset from your country. If it needs no key, even
+better for a first run; the skill has you meet both keyless and keyed APIs.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do APIs cost money?","acceptedAnswer":{"@type":"Answer","text":"The ones this skill picks don't. Free tier only, with the tier's real limits stated before you sign up."}},
+{"@type":"Question","name":"What if I leak a key anyway?","acceptedAnswer":{"@type":"Answer","text":"Revoke it in the provider's dashboard and issue a new one. The workflow prevents it: ignore rule before the key exists, then git status and git log -p to prove history is clean."}},
+{"@type":"Question","name":"Do I need a backend for this?","acceptedAnswer":{"@type":"Answer","text":"Not to start. A key shipped in frontend code is visible in dev tools though; when it must be truly hidden, backend-basics is the next step."}},
+{"@type":"Question","name":"What is a rate limit and will I hit it?","acceptedAnswer":{"@type":"Answer","text":"The number of requests the API allows per minute or day. You find yours in the docs and design around it by caching or fetching on demand."}},
+{"@type":"Question","name":"Which API should I pick?","acceptedAnswer":{"@type":"Answer","text":"One that feeds something you care about: weather, transit, game or music data, or a public dataset from your country. Keyless APIs are a good first run."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Put the API to work</b> in a project that earns a resume line:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/price-drop-alert/"><img src="/assets/project-img/price-drop-alert.jpg" alt=""><span>Price-drop watcher on a schedule</span></a>
+<a class="mini" href="/ideas/beat-the-forecast/"><img src="/assets/project-img/beat-the-forecast.jpg" alt=""><span>Beat the forecast</span></a>
+<a class="mini" href="/ideas/deadline-aggregator/"><img src="/assets/project-img/deadline-aggregator.jpg" alt=""><span>Deadline aggregator</span></a>
+</div>
+<p><b>Ready for the next layer?</b> These chain directly:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/backend-basics/"><img src="/assets/skill-img/backend-basics.jpg" alt=""><span>Backend basics: truly hide the key</span></a>
+<a class="mini" href="/skills/automate-a-task/"><img src="/assets/skill-img/automate-a-task.jpg" alt=""><span>Automate a task on a schedule</span></a>
+<a class="mini" href="/skills/database-basics/"><img src="/assets/skill-img/database-basics.jpg" alt=""><span>Database basics: keep the data</span></a>
+</div>

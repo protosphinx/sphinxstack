@@ -1,0 +1,4 @@
+interface:
+  display_name: "respond-to-a-live-broadcast-integrity-crisis"
+  short_description: "Contain and correct a compromised broadcast"
+  default_prompt: "Use $respond-to-a-live-broadcast-integrity-crisis to complete and verify this task."

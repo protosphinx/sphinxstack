@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investigate a Flaky Test"
+  short_description: "Find nondeterminism without hiding the failure"
+  default_prompt: "Use $investigate-a-flaky-test to help me complete this workflow with verifiable evidence."

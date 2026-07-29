@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write an Interview Brief"
+  short_description: "Prepare focused ethical interview guidance"
+  default_prompt: "Use $write-an-interview-brief to prepare this interview and its evidence needs."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Team Retrospective"
+  short_description: "Turn team experience into owned improvement experiments"
+  default_prompt: "Use $run-a-team-retrospective to facilitate a safe, evidence-based retrospective."

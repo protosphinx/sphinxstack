@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-feature-rollout-controller"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $design-a-feature-rollout-controller to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "create-a-study-timetable"
+  short_description: "Run a verified create a study timetable workflow"
+  default_prompt: "Use $create-a-study-timetable to complete and verify this task."

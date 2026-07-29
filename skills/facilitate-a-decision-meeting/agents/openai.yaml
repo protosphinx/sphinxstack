@@ -1,0 +1,4 @@
+interface:
+  display_name: "Facilitate a Decision Meeting"
+  short_description: "Move a prepared decision to explicit resolution"
+  default_prompt: "Use $facilitate-a-decision-meeting to structure and record this decision."

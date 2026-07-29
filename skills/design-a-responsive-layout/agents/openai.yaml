@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Responsive Layout"
+  short_description: "Design resilient layouts across content and viewports"
+  default_prompt: "Use $design-a-responsive-layout to define and test this layout across real content and devices."

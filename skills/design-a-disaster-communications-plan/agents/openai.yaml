@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Disaster Communications Plan"
+  short_description: "Plan resilient communications for major disruption"
+  default_prompt: "Use $design-a-disaster-communications-plan to define channels, roles, messages, and tests."

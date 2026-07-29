@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement-a-rate-limiter"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $implement-a-rate-limiter to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document Confidential Work on a Resume"
+  short_description: "Show impact without exposing protected details"
+  default_prompt: "Use $document-confidential-work-on-a-resume to describe this work within disclosure rules."

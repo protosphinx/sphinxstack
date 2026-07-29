@@ -1,0 +1,4 @@
+interface:
+  display_name: "respond to a job rejection"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $respond-to-a-job-rejection to complete and verify this hiring task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement http security headers"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $implement-http-security-headers to complete and verify this web task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Custom Domain"
+  short_description: "Connect and verify a custom domain safely"
+  default_prompt: "Use $custom-domain to help me complete this workflow with verified evidence."

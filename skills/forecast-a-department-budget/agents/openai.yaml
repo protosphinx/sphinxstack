@@ -1,0 +1,4 @@
+interface:
+  display_name: "Forecast a Department Budget"
+  short_description: "Model spending with drivers and scenarios"
+  default_prompt: "Use $forecast-a-department-budget to build a driver-based forecast for this department."

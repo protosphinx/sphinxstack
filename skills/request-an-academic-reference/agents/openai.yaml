@@ -1,0 +1,4 @@
+interface:
+  display_name: "Request an Academic Reference"
+  short_description: "Prepare a respectful, evidence-rich reference request"
+  default_prompt: "Use $request-an-academic-reference to prepare this academic recommendation request."

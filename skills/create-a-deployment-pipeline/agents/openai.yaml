@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create A Deployment Pipeline"
+  short_description: "Build a controlled, testable deployment pipeline"
+  default_prompt: "Use $create-a-deployment-pipeline to help me complete this workflow with verified evidence."

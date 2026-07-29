@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Hybrid Event"
+  short_description: "Design one event for in-room and remote people"
+  default_prompt: "Use $plan-a-hybrid-event to create a coherent and accessible hybrid experience."

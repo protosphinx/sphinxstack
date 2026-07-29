@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement Graceful Shutdown"
+  short_description: "Drain work and preserve state during termination"
+  default_prompt: "Use $implement-graceful-shutdown to make termination safe and testable."

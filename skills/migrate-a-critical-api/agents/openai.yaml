@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrate a Critical API"
+  short_description: "Move critical consumers with contract proof"
+  default_prompt: "Use $migrate-a-critical-api to plan compatibility, cutover, and rollback."

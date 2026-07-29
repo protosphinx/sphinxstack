@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design an Access Review"
+  short_description: "Review access decisions with owners and evidence"
+  default_prompt: "Use $design-an-access-review to create a scoped and auditable access review."

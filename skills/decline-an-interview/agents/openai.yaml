@@ -1,0 +1,4 @@
+interface:
+  display_name: "decline an interview"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $decline-an-interview to complete and verify this hiring task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to a Frontend Supply Chain Incident"
+  short_description: "Contain compromised browser dependencies"
+  default_prompt: "Use $respond-to-a-frontend-supply-chain-incident to contain and recover this browser supply chain incident."

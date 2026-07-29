@@ -1,0 +1,112 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the part where the app sounds too hard. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> build me an app</div>
+<div class="cm cm-agent">On it. The best first app is one you'll open twice. What do you
+already track, collect, or work out on paper or in your notes app?</div>
+<div class="cm cm-user cd-hide">I keep score for my family's game nights on paper. but real apps need servers and databases and I know none of that</div>
+<div class="cm cm-agent cd-hide">This one doesn't. One data type, stored in your browser with
+localStorage, live at a URL on a free host. If you ever outgrow that, servers are a
+later skill. So: what is one entry? A game night has a date and then what?</div>
+<div class="cm cm-user cd-hide">date, which game, who won, and everyone's points</div>
+<div class="cm cm-agent cd-hide">That's the whole data model, and you just did the hard part.
+We ship add and list first so it's live today, then edit, delete, and making it survive
+a reload.</div>
+<div class="cm cm-user cd-hide">can it also do achievements and player profiles and a season mode?</div>
+<div class="cm cm-agent cd-hide">Those go in the README under "later", in writing, so they stop
+nagging you. Scope stays at one thing done completely. The payoff feature we do build:
+an all-time standings table, which is the reason anyone opens it twice.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Think an app needs a server and a login?</h2>
+<p>The smallest real app needs neither. It needs one data type handled completely: you
+can add an entry, see it, change it, delete it, and it is still there after a reload.
+The browser's own localStorage covers persistence, a free host covers the URL, and bad
+input gets rejected with a message instead of breaking things. People ship apps like
+these with this skill:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/score-keeper/"><img src="/assets/project-img/score-keeper.jpg" alt=""><span>Score keeper for game nights</span></a>
+<a class="mini" href="/ideas/collection-manager/"><img src="/assets/project-img/collection-manager.jpg" alt=""><span>Manager for a real collection</span></a>
+<a class="mini" href="/ideas/signup-sheet/"><img src="/assets/project-img/signup-sheet.jpg" alt=""><span>Sign-up sheet a group will use</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A working app at a URL, and a repo that shows restraint. Here is the shape of a
+finished first app:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example of a finished first web app project">
+<div class="sheet-tag">Example</div>
+<pre>
+game-nights/
+├── index.html
+├── app.js       the whole app, ~150 lines  <span class="anno-badge">1</span>
+└── README.md    what it is + "later" list  <span class="anno-badge">2</span>
+
+one entry:  { date, game, winner, points }
+lives in:   localStorage, survives reload
+live at:    username.github.io/game-nights
+
+the loop, all working:
+  add entry     validated, bad input refused
+  list          designed empty state
+  edit / delete both there
+  standings     all-time table   <span class="anno-badge">3</span>
+</pre>
+</div>
+<ol class="anno-notes">
+<li><b>Small enough to read.</b> You modeled the data out loud before any code, so you
+can point at the line that stores an entry and the line that sorts the standings.</li>
+<li><b>The README holds the cut features.</b> Achievements, profiles, season mode: all
+written down under "later". Writing them down is how the version that exists got
+finished.</li>
+<li><b>One payoff feature.</b> The derived view that makes the app worth opening: a
+streak, a total, a standings table. This skill picks it with you and builds it
+last.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is this free?</summary>
+<p>Yes. The skill is free, hosting on GitHub Pages is free at this scale, and
+localStorage costs nothing because it ships inside the browser. The agent you paste the
+skill into may have a free tier; Gemini's is the widest.</p></details>
+<details class="faq"><summary>Do I need to know how to code?</summary>
+<p>No, but you will learn some by watching. The agent implements in visible steps and
+explains each one in a sentence, and your choices decide the names, the fields, and
+what the app shows first.</p></details>
+<details class="faq"><summary>Will my data disappear?</summary>
+<p>localStorage lives in one browser on one device, and clearing that browser's site
+data clears it. For a first app that trade is fine, and the skill says so up front. An
+export button is a reasonable "later" item if the data starts to matter.</p></details>
+<details class="faq"><summary>Will it work on my phone?</summary>
+<p>Yes, and the skill treats that as part of done. Session five is unhappy paths plus a
+phone pass, because a tracker you can't use in the moment doesn't get used.</p></details>
+<details class="faq"><summary>What happens when I want accounts and shared data?</summary>
+<p>That is the honest boundary of this skill: everything lives in one browser. When a
+real second user shows up, backend-basics and auth-basics are the next skills, and the
+app you built here is the right starting point for them.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The skill, GitHub Pages hosting at this scale, and localStorage are all free. The agent you paste it into may have a free tier; Gemini's is the widest."}},
+{"@type":"Question","name":"Do I need to know how to code?","acceptedAnswer":{"@type":"Answer","text":"No. The agent implements in visible steps and explains each in a sentence; your choices decide names, fields, and what the app shows first."}},
+{"@type":"Question","name":"Will my data disappear?","acceptedAnswer":{"@type":"Answer","text":"localStorage lives in one browser on one device; clearing site data clears it. For a first app that trade is fine, and an export button is a reasonable later feature."}},
+{"@type":"Question","name":"Will it work on my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. A phone pass is part of the skill's definition of done."}},
+{"@type":"Question","name":"What happens when I want accounts and shared data?","acceptedAnswer":{"@type":"Answer","text":"That is beyond this skill on purpose. backend-basics and auth-basics pick up when a real second user shows up."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Need an idea you'd actually open twice?</b> Start from your real life:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/pantry-inventory/"><img src="/assets/project-img/pantry-inventory.jpg" alt=""><span>Pantry inventory</span></a>
+<a class="mini" href="/ideas/reading-list/"><img src="/assets/project-img/reading-list.jpg" alt=""><span>Reading list with a verdict</span></a>
+<a class="mini" href="/ideas/study-group-hub/"><img src="/assets/project-img/study-group-hub.jpg" alt=""><span>Study group hub</span></a>
+</div>
+<p><b>App live?</b> Build on it:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/build-resume/"><img src="/assets/skill-img/build-resume.jpg" alt=""><span>Turn it into a resume line</span></a>
+<a class="mini" href="/skills/database-basics/"><img src="/assets/skill-img/database-basics.jpg" alt=""><span>Database basics</span></a>
+<a class="mini" href="/skills/backend-basics/"><img src="/assets/skill-img/backend-basics.jpg" alt=""><span>Backend basics</span></a>
+</div>

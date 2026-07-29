@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspect an API Response"
+  short_description: "Check status, headers, body, and contract"
+  default_prompt: "Use $inspect-an-api-response to analyze this API response precisely."

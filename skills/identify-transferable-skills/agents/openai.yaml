@@ -1,0 +1,4 @@
+interface:
+  display_name: "Identify Transferable Skills"
+  short_description: "Translate real experience into portable evidence"
+  default_prompt: "Use $identify-transferable-skills to find and evidence skills from my actual experience."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "tailor a resume for a leadership role"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $tailor-a-resume-for-a-leadership-role to complete and verify this writing task."

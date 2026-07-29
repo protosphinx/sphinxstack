@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Technical Tutorial"
+  short_description: "Create and verify a reproducible hands-on technical guide"
+  default_prompt: "Use $write-a-technical-tutorial to turn this working process into a tested tutorial."

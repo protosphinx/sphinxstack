@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cover Letter"
+  short_description: "Write a job-specific cover letter from verified experience"
+  default_prompt: "Use $cover-letter to help me complete this workflow with verified evidence."

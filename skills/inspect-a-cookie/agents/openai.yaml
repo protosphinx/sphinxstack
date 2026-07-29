@@ -1,0 +1,4 @@
+interface:
+  display_name: "inspect a cookie"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $inspect-a-cookie to complete and verify this web task."

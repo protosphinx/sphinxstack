@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Event Accessibility"
+  short_description: "Build accessible participation into event delivery"
+  default_prompt: "Use $plan-event-accessibility to plan equitable access across this event journey."

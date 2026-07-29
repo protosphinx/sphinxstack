@@ -1,0 +1,4 @@
+interface:
+  display_name: "respond-to-a-hiring-process-data-breach"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $respond-to-a-hiring-process-data-breach to complete and verify this task."

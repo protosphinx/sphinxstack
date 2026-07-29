@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Feature Flags"
+  short_description: "Find stale unsafe and ownerless rollout controls"
+  default_prompt: "Use $audit-feature-flags to help me complete this workflow with verifiable evidence."

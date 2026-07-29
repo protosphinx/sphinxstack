@@ -1,0 +1,4 @@
+interface:
+  display_name: "instrument-a-distributed-trace"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $instrument-a-distributed-trace to complete and verify this task."

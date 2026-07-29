@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a CLI"
+  short_description: "Design a command-line interface people can learn and script"
+  default_prompt: "Use $design-a-cli to define commands, arguments, errors, and compatibility for this tool."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brand Kit"
+  short_description: "Create usable brand rules and test them on real work"
+  default_prompt: "Use $brand-kit to help me complete this workflow with verified evidence."

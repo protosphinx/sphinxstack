@@ -1,0 +1,4 @@
+interface:
+  display_name: "choose a type scale"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $choose-a-type-scale to complete and verify this design task."

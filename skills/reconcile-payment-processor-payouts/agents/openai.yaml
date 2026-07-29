@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reconcile Payment Processor Payouts"
+  short_description: "Match charges, fees, refunds, and deposits"
+  default_prompt: "Use $reconcile-payment-processor-payouts to reconcile these processor settlements."

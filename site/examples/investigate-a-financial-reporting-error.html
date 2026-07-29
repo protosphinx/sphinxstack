@@ -1,0 +1,34 @@
+<h2>Worked case: investigate duplicated quarterly revenue</h2>
+<p class="case-trigger"><strong>Trigger:</strong> Closed quarterly statements double-count revenue after an integration replay, affecting tax, a lender covenant, board reports, and bonuses, while logs are near expiry, some entries were manually overridden, and management wants to correct the amount quietly in the next period.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we reverse the duplicate amount next month and avoid disruption?</div>
+<div class="cm cm-agent">No. Preserve evidence, determine the full affected population, and route correction and disclosure through authorized reviewers.</div>
+<div class="cm cm-user cd-hide">Should we restart the integration to see if it happens again?</div>
+<div class="cm cm-agent cd-hide">Place retention holds and capture configuration, code, queues, and logs before any change can overwrite evidence.</div>
+<div class="cm cm-user cd-hide">Are the manual overrides suspicious?</div>
+<div class="cm cm-agent cd-hide">They are evidence to classify, not proof of misconduct. Test authorization and accounting effect without accusing anyone.</div>
+<div class="cm cm-user">What proves the correction is complete?</div>
+<div class="cm cm-agent">Population reconciliation, reviewed entries and downstream effects, approved disclosures, versioned outputs, and tested control remediation.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Preserve first, then reproduce and correct.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The reporting-error evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Reporting error chronology</td><td>Error scope and materiality, evidence preservation, custody, source events, overrides, reports, recipients, and decisions</td><td>The complete affected period and population are bounded</td></tr>
+<tr><td>Reconciliation and correction package</td><td>Correct treatment, population tests, entries, tax, covenant, bonus, board, correction and disclosure approvals, and versioned outputs</td><td>Every downstream figure and recipient has a disposition</td></tr>
+<tr><td>Control effectiveness review</td><td>Control remediation, historical replay, new-data tests, monitoring, owners, residual risk, and closeout</td><td>The cause is blocked and recurrence would be detected</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>Initial analysis finds duplicated automated entries, but a total reversal would also remove valid manual corrections. The team preserves all source keys and approvals, classifies the complete population, and calculates entry-level corrections. Independent review verifies tax, lender, board, and bonus effects before authorized recipients receive versioned corrections.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Does every reporting error require a restatement?</summary><p>No. Authorized accounting and legal reviewers determine correction and disclosure from scope, materiality, recipients, and applicable requirements.</p></details>
+<details class="faq"><summary>When should logs be preserved?</summary><p>Immediately when they may expire, rotate, or be changed by remediation or system testing.</p></details>
+<details class="faq"><summary>Can an unsupported journal fix the total?</summary><p>No. The correction must trace to the complete affected population and the correct accounting treatment.</p></details>
+<details class="faq"><summary>How should suspected misconduct be handled?</summary><p>Protect evidence and reporter confidentiality, avoid tipping off implicated parties, and use the approved independent investigation route.</p></details>
+<details class="faq"><summary>When is the investigation done?</summary><p>After correction, disclosure, recipient handling, control testing, recurrence monitoring, and residual-risk approval are evidenced.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does every reporting error require a restatement?","acceptedAnswer":{"@type":"Answer","text":"Authorized reviewers decide based on scope, materiality, recipients, and requirements."}},{"@type":"Question","name":"When should logs be preserved?","acceptedAnswer":{"@type":"Answer","text":"Before expiry, rotation, remediation, or testing can change them."}},{"@type":"Question","name":"Can an unsupported journal fix the total?","acceptedAnswer":{"@type":"Answer","text":"No. Corrections must trace to the affected population and correct treatment."}},{"@type":"Question","name":"How should suspected misconduct be handled?","acceptedAnswer":{"@type":"Answer","text":"Use an independent evidence-preserving investigation route."}},{"@type":"Question","name":"When is the investigation done?","acceptedAnswer":{"@type":"Answer","text":"After verified correction, disclosure, controls, monitoring, and approval."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Find related signals with <a href="/skills/detect-financial-data-anomalies/">Detect financial data anomalies</a>,
+control the period with <a href="/skills/prepare-a-month-end-close/">Prepare a month-end close</a>, and
+trace payments with <a href="/skills/investigate-a-payment-discrepancy/">Investigate a payment discrepancy</a>.</p>

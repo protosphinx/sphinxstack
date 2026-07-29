@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ask for a Raise"
+  short_description: "Prepare a compensation conversation with evidence"
+  default_prompt: "Use $ask-for-a-raise to prepare an evidence-based and bounded compensation request."

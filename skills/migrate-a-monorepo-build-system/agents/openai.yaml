@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate-a-monorepo-build-system"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $migrate-a-monorepo-build-system to complete and verify this task."

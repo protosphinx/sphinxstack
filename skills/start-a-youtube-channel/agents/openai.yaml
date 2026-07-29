@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start a YouTube Channel"
+  short_description: "Launch a YouTube channel with a repeatable format"
+  default_prompt: "Use $start-a-youtube-channel to help me complete this workflow with verified evidence."

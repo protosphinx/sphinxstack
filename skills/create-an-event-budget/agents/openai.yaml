@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create an Event Budget"
+  short_description: "Plan event cost, income, contingency, and control"
+  default_prompt: "Use $create-an-event-budget to build a realistic and controlled budget for this event."

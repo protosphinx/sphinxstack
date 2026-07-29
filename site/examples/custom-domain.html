@@ -1,0 +1,123 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, money talk included. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> I want to get rid of the .github.io part of my URL</div>
+<div class="cm cm-agent">Doable, and this is the first step in the stack that costs money, so
+numbers first: a .com runs about $10 to $15 a year, every year, paid by you on your own
+card. Worth it to you?</div>
+<div class="cm cm-user cd-hide">yeah that's fine. but DNS feels like actual magic and I'm scared of breaking my live site</div>
+<div class="cm cm-agent cd-hide">DNS is a lookup table. Your site needs two or three rows in it,
+and I'll explain each row in one line before you add it. Your site stays up the whole
+time; the old URL keeps working until the new one resolves.</div>
+<div class="cm cm-user cd-hide">ok. what name should I buy</div>
+<div class="cm cm-agent cd-hide">Your call, with a test: short, spellable out loud, no hyphens
+if you can avoid them, and fine to say in a job interview. We'll check availability
+live at the registrar instead of guessing, and skip every add-on at checkout. You need
+the domain only.</div>
+<div class="cm cm-user cd-hide">how will I know when it's actually working</div>
+<div class="cm cm-agent cd-hide">We run dig on your domain until your host's address comes back,
+usually within minutes to an hour. Then HTTPS: the host issues a free certificate on
+its own once DNS resolves, and we confirm the padlock in a real browser before calling
+it done.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>DNS feels like magic?</h2>
+<p>It is a lookup table that the whole internet shares: names on one side, addresses on
+the other. Connecting a domain means adding two or three rows to it, each of which this
+skill explains in a single line as you add it. Nothing about the process can take your
+live site down, because the host keeps serving the old URL while the world learns the
+new one. And if $12 a year is not worth it to you right now, the skill says so and
+stops: the free subdomain you already have is respectable.</p>
+
+<h2>What you end up with</h2>
+<p>Your domain serving your site over HTTPS, and a DNS panel you understand. The rows
+you will have added look like this:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example DNS records table for a custom domain">
+<div class="sheet-tag">Example</div>
+<pre>
+DNS records for example.com
+
+type    name   value
+CNAME   www    username.github.io      <span class="anno-badge">1</span>
+A       @      the four addresses      <span class="anno-badge">2</span>
+               your host's dashboard
+               lists for the bare
+               domain
+
+$ dig +short example.com               <span class="anno-badge">3</span>
+185.199.xxx.xxx   (host's address: it landed)
+
+https://example.com      loads, padlock
+https://www.example.com  redirects to it  <span class="anno-badge">4</span>
+</pre>
+</div>
+<ol class="anno-notes">
+<li><b>CNAME means "same as".</b> This row says www.example.com lives wherever
+username.github.io lives. One line, and www works.</li>
+<li><b>The host dictates the records.</b> You add the domain in the host's dashboard
+first, and it tells you exactly which rows it wants. GitHub Pages wants four A records
+for the bare domain; other hosts give their own values.</li>
+<li><b>dig is the wait-is-it-done tool.</b> DNS changes propagate in minutes to an
+hour, occasionally longer. When dig returns the host's address, the world can see your
+domain.</li>
+<li><b>Both spellings work, one wins.</b> You pick www or the bare domain, and the
+other redirects to it, so every link anyone saves points at one consistent
+address.</li>
+</ol>
+</div>
+
+<h2>Anatomy of a domain</h2>
+<p>Every part of the address has a job, and only one part costs money:</p>
+<div class="anatomy">
+<div class="an-line"><span class="an-seg an-a">https://</span><span class="an-seg an-b">www.</span><span class="an-seg an-c">maya-torres</span><span class="an-seg an-d">.com</span></div>
+<ul class="an-legend">
+<li><span class="an-key an-a">A</span> The padlock. Free: your host issues the certificate automatically once DNS resolves.</li>
+<li><span class="an-key an-b">B</span> A subdomain. Just a DNS row you control; www is convention, and yours can have others later.</li>
+<li><span class="an-key an-c">C</span> The name you actually buy. Short, spellable out loud, sayable in an interview.</li>
+<li><span class="an-key an-d">D</span> The ending sets the price. A .com is $10 to $15 a year; some endings are cheap year one and jump at renewal, so check the renewal price before buying.</li>
+</ul>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>What does a domain really cost?</summary>
+<p>A .com typically runs $10 to $15 a year, every year, at registrars that sell near
+cost like Cloudflare Registrar or Porkbun. Watch the trap endings: some are a dollar or
+two the first year and several times that at renewal, so the skill has you check the
+renewal price before you buy.</p></details>
+<details class="faq"><summary>Do I have to buy one at all?</summary>
+<p>No. The free subdomain from your host is respectable on a resume, and the skill says
+so and stops if the yearly cost isn't worth it to you right now. A domain is the first
+optional purchase in this whole stack.</p></details>
+<details class="faq"><summary>Will my site go down during the switch?</summary>
+<p>No. The host keeps serving your site at the old URL the whole time, and the new
+domain simply starts working alongside it once DNS propagates. There is no moment where
+visitors get nothing.</p></details>
+<details class="faq"><summary>Can the agent buy the domain for me?</summary>
+<p>No, on principle. You enter your own payment details at the registrar; the agent
+never handles payment or sees card numbers. It narrates the checkout, including which
+upsells to decline: you need the domain only.</p></details>
+<details class="faq"><summary>What happens if I stop paying?</summary>
+<p>The domain lapses and eventually anyone can register it, so links to it break and
+someone else could serve their site at your old address. Your actual site is unharmed
+and stays reachable at the free subdomain. Part of the skill's exit checklist is
+knowing your renewal date, the renewal price, and where to log in.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What does a domain really cost?","acceptedAnswer":{"@type":"Answer","text":"A .com typically runs $10 to $15 a year, every year. Some endings are cheap the first year and jump at renewal, so check the renewal price before buying."}},
+{"@type":"Question","name":"Do I have to buy one at all?","acceptedAnswer":{"@type":"Answer","text":"No. The free subdomain from your host is respectable, and the skill stops here if the yearly cost isn't worth it to you."}},
+{"@type":"Question","name":"Will my site go down during the switch?","acceptedAnswer":{"@type":"Answer","text":"No. The host keeps serving the old URL the whole time and the new domain starts working alongside it once DNS propagates."}},
+{"@type":"Question","name":"Can the agent buy the domain for me?","acceptedAnswer":{"@type":"Answer","text":"No. You enter your own payment details at the registrar; the agent never handles payment or sees card numbers."}},
+{"@type":"Question","name":"What happens if I stop paying?","acceptedAnswer":{"@type":"Answer","text":"The domain lapses and anyone can eventually register it. Your site stays reachable at the free subdomain."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Domain live?</b> It makes these next skills easier:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/seo-basics/"><img src="/assets/skill-img/seo-basics.jpg" alt=""><span>Get found by name</span></a>
+<a class="mini" href="/skills/add-analytics/"><img src="/assets/skill-img/add-analytics.jpg" alt=""><span>See who visits</span></a>
+<a class="mini" href="/skills/build-resume/"><img src="/assets/skill-img/build-resume.jpg" alt=""><span>Put it on your resume</span></a>
+</div>

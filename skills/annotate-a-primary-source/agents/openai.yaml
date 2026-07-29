@@ -1,0 +1,4 @@
+interface:
+  display_name: "annotate-a-primary-source"
+  short_description: "Run a verified annotate a primary source workflow"
+  default_prompt: "Use $annotate-a-primary-source to complete and verify this task."

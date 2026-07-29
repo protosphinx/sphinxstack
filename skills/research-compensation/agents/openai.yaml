@@ -1,0 +1,4 @@
+interface:
+  display_name: "research compensation"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $research-compensation to complete and verify this hiring task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "evaluate company culture"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $evaluate-company-culture to complete and verify this hiring task."

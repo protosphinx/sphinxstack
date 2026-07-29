@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Performance Review"
+  short_description: "Turn verified work into a fair performance-review narrative"
+  default_prompt: "Use $prepare-a-performance-review to assemble evidence, reflection, and goals for this review."

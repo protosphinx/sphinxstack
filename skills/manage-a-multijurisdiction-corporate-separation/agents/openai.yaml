@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage-a-multijurisdiction-corporate-separation"
+  short_description: "Control a global corporate separation"
+  default_prompt: "Use $manage-a-multijurisdiction-corporate-separation to complete and verify this task."

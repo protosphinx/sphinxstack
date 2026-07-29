@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Workforce Reorganization"
+  short_description: "Redesign work with evidence, fairness, and care"
+  default_prompt: "Use $plan-a-workforce-reorganization to evaluate and plan this organizational change responsibly."

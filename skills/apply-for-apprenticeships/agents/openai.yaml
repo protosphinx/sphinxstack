@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply For Apprenticeships"
+  short_description: "Find and apply to legitimate paid apprenticeships"
+  default_prompt: "Use $apply-for-apprenticeships to help me complete this workflow with verified evidence."

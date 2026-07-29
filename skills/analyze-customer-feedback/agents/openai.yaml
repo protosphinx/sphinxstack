@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Customer Feedback"
+  short_description: "Synthesize feedback into evidence-backed product decisions"
+  default_prompt: "Use $analyze-customer-feedback to code these records and produce themes with counterevidence."

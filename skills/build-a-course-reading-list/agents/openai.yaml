@@ -1,0 +1,4 @@
+interface:
+  display_name: "build-a-course-reading-list"
+  short_description: "Run a verified build a course reading list workflow"
+  default_prompt: "Use $build-a-course-reading-list to complete and verify this task."

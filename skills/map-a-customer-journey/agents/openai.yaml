@@ -1,0 +1,4 @@
+interface:
+  display_name: "Map a Customer Journey"
+  short_description: "Trace a real journey across channels and failures"
+  default_prompt: "Use $map-a-customer-journey to help me complete this workflow with verifiable evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investigate a Financial Reporting Error"
+  short_description: "Trace, correct, and disclose reporting errors"
+  default_prompt: "Use $investigate-a-financial-reporting-error to investigate and remediate this reporting issue."

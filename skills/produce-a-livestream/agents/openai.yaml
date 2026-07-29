@@ -1,0 +1,4 @@
+interface:
+  display_name: "Produce a Livestream"
+  short_description: "Run a resilient accessible live production"
+  default_prompt: "Use $produce-a-livestream to plan, rehearse, and operate this live production."

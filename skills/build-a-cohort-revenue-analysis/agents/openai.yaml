@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a Cohort Revenue Analysis"
+  short_description: "Track revenue behavior across acquisition cohorts"
+  default_prompt: "Use $build-a-cohort-revenue-analysis to build and verify this cohort revenue model."

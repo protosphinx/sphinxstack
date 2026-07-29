@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build an API Client"
+  short_description: "Build a typed resilient client from a contract"
+  default_prompt: "Use $build-an-api-client to implement and test this API integration."

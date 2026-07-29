@@ -1,0 +1,4 @@
+interface:
+  display_name: "README That Sells"
+  short_description: "Write a useful README that proves the project works"
+  default_prompt: "Use $readme-that-sells to help me complete this workflow with verified evidence."

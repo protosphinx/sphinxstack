@@ -1,0 +1,4 @@
+interface:
+  display_name: "compare bank fees"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $compare-bank-fees to complete and verify this finance task."

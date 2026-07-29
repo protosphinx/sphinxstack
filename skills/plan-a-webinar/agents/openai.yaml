@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Webinar"
+  short_description: "Plan a useful live session with measurable outcomes"
+  default_prompt: "Use $plan-a-webinar to define this session, audience, format, promotion, and rehearsal."

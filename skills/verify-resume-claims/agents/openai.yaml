@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify Resume Claims"
+  short_description: "Trace resume claims to permissioned evidence"
+  default_prompt: "Use $verify-resume-claims to check every material claim in this resume."

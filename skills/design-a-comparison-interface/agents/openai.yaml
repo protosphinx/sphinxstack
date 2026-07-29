@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a comparison interface"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $design-a-comparison-interface to complete and verify this design task."

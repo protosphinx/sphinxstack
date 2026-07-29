@@ -1,0 +1,4 @@
+interface:
+  display_name: "calculate break even point"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $calculate-break-even-point to complete and verify this finance task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a command palette"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $design-a-command-palette to complete and verify this design task."

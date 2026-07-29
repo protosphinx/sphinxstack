@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate a Design System Component"
+  short_description: "Test component behavior, access, and integration"
+  default_prompt: "Use $validate-a-design-system-component to verify this component across variants, users, and consumers."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start An App"
+  short_description: "Choose and begin a focused application project"
+  default_prompt: "Use $start-an-app to help me complete this workflow with verified evidence."

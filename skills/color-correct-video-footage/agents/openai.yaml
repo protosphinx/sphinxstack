@@ -1,0 +1,4 @@
+interface:
+  display_name: "Color-Correct Video Footage"
+  short_description: "Normalize exposure, balance, and shot continuity"
+  default_prompt: "Use $color-correct-video-footage to correct and verify this footage consistently."

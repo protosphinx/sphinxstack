@@ -1,0 +1,4 @@
+interface:
+  display_name: "decode-a-jwt-safely"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $decode-a-jwt-safely to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Background Job"
+  short_description: "Queue durable work with safe retries"
+  default_prompt: "Use $create-a-background-job to design and verify this asynchronous job."

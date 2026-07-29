@@ -1,0 +1,34 @@
+<h2>Worked case: move governed research collections</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A multi-institution repository must move genomic data, Indigenous-governed collections, licensed surveys, embargoed theses, software, versions, and DOI landing pages before source shutdown, but checksums are incomplete and the target uses different metadata, identity, access, and preservation models.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we copy objects first and fix metadata later?</div>
+<div class="cm cm-agent">No. Inventory rights, consent, community authority, versions, relationships, identifiers, and preservation state before access changes.</div>
+<div class="cm cm-user cd-hide">What if an object has no checksum?</div>
+<div class="cm cm-agent cd-hide">Generate one from the preserved source and record that no earlier fixity baseline exists.</div>
+<div class="cm cm-user cd-hide">The target cannot represent one consent restriction.</div>
+<div class="cm cm-agent cd-hide">Quarantine access and obtain authority. Never default the collection to open or silently flatten the rule.</div>
+<div class="cm cm-user">What proves migration?</div>
+<div class="cm cm-agent">Object fixity, metadata, rights, identifiers, relationships, access journeys, restore, delta capture, and rollback all reconcile.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Preserve governance with the bytes.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The repository migration evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Repository migration register</td><td>Data and rights inventory, scope, custody, metadata and identifier mapping, waves, exceptions, owners, and approvals</td><td>Every object, version, relationship, and right has a disposition</td></tr>
+<tr><td>Integrity and governance report</td><td>Fixity and access validation, reconciliation, rights, consent, community authority, identifiers, security, retrieval, and restore</td><td>No unexplained mismatch or unauthorized access change</td></tr>
+<tr><td>Cutover and rollback rehearsal</td><td>Delta capture, identifier resolution, workflow recovery, deposits, decisions, communications, and retirement gates</td><td>New activity survives either route</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A DOI resolves, but the landing page exposes restricted geographic metadata. The collection remains quarantined, the mapping is corrected, disclosure tests rerun, and every related version is checked before the route is enabled.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can identical files be deduplicated?</summary><p>Only after versions, relationships, retention, rights, citations, and approved disposition are preserved.</p></details>
+<details class="faq"><summary>Must persistent identifiers stay the same?</summary><p>Preserve their resolution and citation contract; never silently reuse an identifier for different content.</p></details>
+<details class="faq"><summary>How are Indigenous data rights handled?</summary><p>Through the applicable community authority and governance, not a generic open-data default.</p></details>
+<details class="faq"><summary>Is a byte-count match sufficient?</summary><p>No. Verify object fixity, metadata, versions, relationships, identifiers, access, and workflows.</p></details>
+<details class="faq"><summary>When may the source shut down?</summary><p>After preservation, governance, legal, operational, and rollback owners accept the evidence.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can identical files be deduplicated?","acceptedAnswer":{"@type":"Answer","text":"Only after governed identity and disposition review."}},{"@type":"Question","name":"Must persistent identifiers stay the same?","acceptedAnswer":{"@type":"Answer","text":"Preserve their resolution and citation contract."}},{"@type":"Question","name":"How are Indigenous data rights handled?","acceptedAnswer":{"@type":"Answer","text":"Follow applicable community governance."}},{"@type":"Question","name":"Is a byte-count match sufficient?","acceptedAnswer":{"@type":"Answer","text":"No. Verify meaning, rights, access, and workflows."}},{"@type":"Question","name":"When may the source shut down?","acceptedAnswer":{"@type":"Answer","text":"After all preservation and governance gates pass."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Govern active studies with <a href="/skills/manage-research-data/">Manage research data</a>,
+preserve analysis with <a href="/skills/reproduce-a-research-result/">Reproduce a research result</a>, and
+test recovery with <a href="/skills/verify-a-backup-restore/">Verify a backup restore</a>.</p>

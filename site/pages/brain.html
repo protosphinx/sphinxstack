@@ -1,0 +1,141 @@
+<h1>How to set up your brain</h1>
+<p class="payoff">Your agent is only as good as its configuration. This page is the
+whole method: four layers, one sorting rule, and one habit that makes the setup
+compound instead of decay.</p>
+
+<p>The setup most people run is a personality paragraph and whatever context fits in
+the current chat. That works until the third time you explain the same thing. The
+fix is structural: a configured agent runs on four layers, and every piece of
+knowledge you give it belongs in exactly one of them.</p>
+
+<ul>
+<li><strong>Identity:</strong> your taste and your rules, stated once.</li>
+<li><strong>Memory:</strong> facts about you, your work, and your decisions.</li>
+<li><strong>Skills:</strong> procedures it can run, with steps and checks written down.</li>
+<li><strong>Reflexes:</strong> checks that happen every time without being asked.</li>
+</ul>
+
+<h2>Identity: who your agent is for you</h2>
+<p>Identity is everything that applies to all of your work regardless of the task:
+how you like things written, what you refuse to ship, what tone you use with
+strangers, which tools you prefer. It gets stated once, in the place your agent
+reads at the start of every conversation.</p>
+<p>Where it lives: ChatGPT calls it custom instructions. Claude reads it from your
+project instructions, or from a CLAUDE.md file if you use Claude Code. Gemini has a
+saved-info section. The mechanism differs; the content is the same file in spirit.</p>
+<p>The test for whether something belongs here: would you want it applied to every
+single task? "Never pad text with filler phrases" belongs. "My rent is due on the
+1st" does not; that is memory. "How to deploy my site" does not; that is a skill.</p>
+<div class="sheet"><div class="sheet-tag">Example</div>
+<div class="rz-h">FROM AN IDENTITY FILE</div>
+<div class="rz-item"><div class="rz-line">Write plainly. If a sentence carries no
+information, cut it.</div></div>
+<div class="rz-item"><div class="rz-line">Never invent facts, numbers, or people.
+Say "I don't know" instead.</div></div>
+<div class="rz-item"><div class="rz-line">When I ask for options, give me your
+recommendation first and say why.</div></div>
+<div class="rz-item"><div class="rz-line">My stack is Python and Postgres. Don't
+suggest alternatives unless I ask.</div></div>
+</div>
+
+<h2>Memory: what it knows</h2>
+<p>Memory holds facts: who your collaborators are, what you decided last month and
+why, the state of your projects, the numbers that matter. It is the layer that makes
+conversation two feel like a continuation instead of a restart.</p>
+<p>Two rules keep memory useful. First, memory is for facts and decisions only. The
+moment an entry starts describing how to do something, it is a skill wearing the
+wrong clothes; move it. Second, date what you store. Facts rot: "the API key is in
+the env file" was true in March and dangerous in July. An entry with a date can be
+distrusted on schedule.</p>
+<p>Where it lives: ChatGPT and Gemini maintain memory automatically and let you
+inspect it. Claude projects hold documents you curate yourself. If your agent has no
+memory feature, a single notes file you paste at the start of big sessions is a
+crude but working substitute.</p>
+
+<h2>Skills: what it can do</h2>
+<p>This is the layer most setups are missing, and it is the difference between a
+chat and a brain. A skill is one procedure, written down: when to use it, the steps
+in order, the rules that must hold, and what done means. Your agent reads it and
+executes the procedure with you, the same way every time.</p>
+<p>Why written procedure beats a smart model improvising: the model is capable of a
+good job on any given day, and it also improvises differently every day. The skill
+pins the version you approved. Your best run becomes the floor.</p>
+<p>A skill is just text, so it loads anywhere: paste it into the chat, or give the
+agent a link to fetch. Every skill in <a href="/skills/">this catalog</a> works that
+way, and each one is a worked example of the format. The anatomy:</p>
+<pre># name-of-the-skill
+Use when: the words you would naturally say to start this.
+
+You are helping me [one procedure, stated in one sentence].
+
+Steps:
+1. First thing, concretely.
+2. Second thing.
+3. ...
+
+Rules:
+- The constraint that must hold even when inconvenient.
+- What you never do, even if I ask casually.
+
+Done means:
+- The checkable condition that ends the procedure.
+- The artifact that exists at the end.</pre>
+<p>Rules for writing good ones: one procedure per skill, so the trigger is
+unambiguous. Triggers phrased as the words you actually say. Rules that survive
+pressure, because you will one day ask the agent to cut the corner and the skill
+should hold the line. Done-means conditions a stranger could verify.</p>
+
+<h2>Reflexes: what always happens</h2>
+<p>Some checks should not depend on anyone remembering them. Before code ships, the
+tests run. Before an email sends, the recipient list gets read back. Before a file
+is deleted, its contents get looked at. Those are reflexes.</p>
+<p>In developer tools this layer is real automation: hooks that run on every commit,
+CI that blocks a bad merge. In a chat agent, the honest version is the closing
+checklist of a skill, plus a line in identity like "before presenting any deliverable,
+verify every number in it against its source." A reflex you have to remember to
+trigger is not a reflex yet; push it as far toward automatic as your tools allow.</p>
+
+<h2>Which layer does it go in?</h2>
+<p>One sorting test covers everything you will ever want to tell your agent:</p>
+<ul>
+<li>Is it taste, tone, or a standing rule? <strong>Identity.</strong></li>
+<li>Is it a fact or a decision? <strong>Memory</strong>, with a date.</li>
+<li>Is it how to do something? <strong>Skill.</strong></li>
+<li>Must it happen every time, no judgment involved? <strong>Reflex.</strong></li>
+</ul>
+<p>Misfiled knowledge is why setups decay. Procedure stored as memory gets recalled
+as trivia instead of executed as steps. Taste stored in a skill only applies when
+that skill runs. File it right and each layer does its one job.</p>
+
+<h2>The habit that makes it compound</h2>
+<p>Here is the whole discipline: <strong>any time you find yourself explaining the
+same thing to your agent twice, stop and turn it into a skill.</strong> A correction
+you encode never has to be made again. A correction you only speak will be needed
+again next week.</p>
+<p>What that looks like in practice:</p>
+<div class="chatmock">
+<div class="cm cm-user">this summary buries the actual answer in paragraph four
+again. lead with the answer.</div>
+<div class="cm cm-agent">Fixed. Want me to make that a standing procedure so you
+never have to say it again?</div>
+<div class="cm cm-user">yes. answer first, then evidence, max one page.</div>
+<p class="cm-note">That exchange becomes a summarize skill: three lines of rules,
+applied on every future summary.</p>
+</div>
+<p>Do a review pass now and then: read your identity file and your skills, delete
+what you no longer believe, and merge duplicates. Ten minutes a month keeps the
+brain trustworthy. A setup that only grows and never gets pruned ends up as noise
+the agent skims past.</p>
+
+<h2>Start here</h2>
+<p>You do not build this in a weekend; you accumulate it. A reasonable first week:
+write ten lines of identity, take two skills from the shelf, and make your first
+own skill out of whatever you corrected most recently.</p>
+<div class="cardrow">
+<a class="mini" href="/skills/build-resume/"><img src="/assets/skill-img/build-resume.jpg" alt=""><span>Build a resume</span></a>
+<a class="mini" href="/skills/ship-on-github/"><img src="/assets/skill-img/ship-on-github.jpg" alt=""><span>Ship on GitHub</span></a>
+<a class="mini" href="/skills/write-clearly/"><img src="/assets/skill-img/write-clearly.jpg" alt=""><span>Write clearly</span></a>
+</div>
+<p>Then browse the full <a href="/skills/">skills shelf</a> and the
+<a href="/ideas/">project briefs</a>. Every skill you take is one more procedure
+your agent runs properly for good.</p>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Customer Proof Library"
+  short_description: "Govern reusable customer evidence and permissions"
+  default_prompt: "Use $create-a-customer-proof-library to organize proof, scope, consent, expiry, and reuse."

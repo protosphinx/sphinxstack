@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write an Event Invitation"
+  short_description: "Write a clear invitation with useful next steps"
+  default_prompt: "Use $write-an-event-invitation to draft an accurate and accessible invitation for this event."

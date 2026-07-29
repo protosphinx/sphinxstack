@@ -1,0 +1,4 @@
+interface:
+  display_name: "Participate in a Seminar"
+  short_description: "Prepare grounded contributions and follow-ups"
+  default_prompt: "Use $participate-in-a-seminar to prepare for this seminar discussion."

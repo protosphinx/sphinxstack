@@ -1,0 +1,4 @@
+interface:
+  display_name: "Save For A Goal"
+  short_description: "Build a realistic savings plan from verified cash flow"
+  default_prompt: "Use $save-for-a-goal to help me complete this workflow with verified evidence."

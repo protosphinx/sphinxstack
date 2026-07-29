@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage a video review cycle"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $manage-a-video-review-cycle to complete and verify this media task."

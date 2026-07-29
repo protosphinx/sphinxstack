@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrate a Media Archive"
+  short_description: "Move assets, metadata, rights, and fixity"
+  default_prompt: "Use $migrate-a-media-archive to plan and prove this archive migration."

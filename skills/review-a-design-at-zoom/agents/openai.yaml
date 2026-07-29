@@ -1,0 +1,4 @@
+interface:
+  display_name: "review a design at zoom"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $review-a-design-at-zoom to complete and verify this design task."

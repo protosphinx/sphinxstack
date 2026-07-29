@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Course Registration"
+  short_description: "Build a feasible course plan with verified requirements"
+  default_prompt: "Use $plan-course-registration to prepare my course choices and fallback schedule."

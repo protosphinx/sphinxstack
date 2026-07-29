@@ -1,0 +1,120 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the blank-canvas moment. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> i want to build a site for my tutoring thing but every time i open figma i just stare at it</div>
+<div class="cm cm-agent">We'll skip the staring. Before any canvas: what does a visitor need to
+be able to do on this page?</div>
+<div class="cm cm-user cd-hide">book a session with me, basically</div>
+<div class="cm cm-agent cd-hide">Then the page is five to eight elements serving that: header,
+headline, a booking button, a few content blocks. Open your file, press F, and drag a
+frame at 1440 by 900. I can't see your screen, so tell me what happened, and send a
+screenshot at checkpoints.</div>
+<div class="cm cm-user cd-hide">ok frame made. this is where it goes wrong for me, the actual designing</div>
+<div class="cm cm-agent cd-hide">We're not there yet. Press R and block every element as a gray
+rectangle first: no fonts, no colors. This is the layout argument, and we're having it
+now, while changing your mind costs one drag. I'll propose two arrangements with a
+one-line trade-off; you pick.</div>
+<div class="cm cm-user cd-hide">done. looks like a wireframe of nothing though</div>
+<div class="cm cm-agent cd-hide">Now it gets real: your actual headline, your real nav labels, "Book
+a session" on the button. Lorem ipsum hides exactly the problems we're here to find.
+Then restrained styling, a component for the repeated button, and a share link sent to
+one real person with one question: what would you click first?</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Why mock it instead of just building it?</h2>
+<p>Because of where mistakes get found. A layout problem discovered in a mock costs
+one drag to fix; the same problem discovered after the page is built costs an evening
+of rewriting markup, and by then you are attached to the code. The mock is where you
+argue about arrangement, hierarchy, and what goes above the fold while every option is
+still cheap. When the arguing is done, the mock becomes the spec: exact sizes, hex
+values, and spacing carried straight into the build.</p>
+
+<h2>What you end up with</h2>
+<p>A named Figma file, a share link, and a mock precise enough to build from. Here is
+the closing state of the tutoring page above.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example mock summary, ready to build from">
+<div class="sheet-tag">Example</div>
+<div class="rz-name">TUTORING PAGE: THE MOCK AS SPEC</div>
+<div class="rz-h">FRAME <span class="anno-badge">1</span></div>
+<div class="rz-item"><div class="rz-line">Desktop, 1440 x 900. Mobile version deferred
+to next session; most inquiries come from parents on laptops.</div></div>
+<div class="rz-h">ELEMENTS, TOP TO BOTTOM <span class="anno-badge">2</span></div>
+<div class="rz-item"><div class="rz-line">Header, 72px: name left, "Book a session"
+button right</div></div>
+<div class="rz-item"><div class="rz-line">Headline, 48px: "Algebra help from a student
+who just took the class"</div></div>
+<div class="rz-item"><div class="rz-line">Three proof blocks: how sessions work, real
+prices, two lines from actual students</div></div>
+<div class="rz-item"><div class="rz-line">Closing block repeats the booking
+button</div></div>
+<div class="rz-h">DECISIONS RECORDED <span class="anno-badge">3</span></div>
+<div class="rz-item"><div class="rz-line rz-sub">Fonts: Inter only, 400 and 700.
+Colors: #1B1B1B on #FFFFFF, accent #0B5FA5 on both buttons. Spacing: 8px steps, 64px
+between blocks. Button is a component, used twice.</div></div>
+<div class="rz-h">FEEDBACK ROUND <span class="anno-badge">4</span></div>
+<div class="rz-item"><div class="rz-line">Share link viewed by one parent from the
+target audience. Asked "what would you click first", she said the price line. Prices
+moved above the fold; the mock was re-shared.</div></div>
+</div>
+<ol class="anno-notes">
+<li><b>One frame, at a real size.</b> 1440 for desktop because that is where the
+audience is. The mobile frame is a named next step, and doing it later is fine.</li>
+<li><b>Real content everywhere.</b> The actual headline and the actual prices are in
+the mock, because placeholder text would have hidden the problem the feedback round
+caught.</li>
+<li><b>Numbers a build can use.</b> Sizes, hex values, and the spacing step are
+written down, so building the page is translation instead of redesign.</li>
+<li><b>One outside answer changed the layout.</b> The whole point of mocking first:
+the fix cost a drag, and it happened before any code existed.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is this free?</summary>
+<p>The skill is free, no account beyond Figma's own. Figma's free tier covers
+everything the session needs: three files and unlimited personal drafts. The agent you
+paste the skill into may or may not be free; Gemini has the widest free tier.</p></details>
+<details class="faq"><summary>Can the agent drive Figma for me?</summary>
+<p>No, and the skill says so up front. It directs precisely, like "press F, drag a
+1440 by 900 frame", and you report what you see, with screenshots at checkpoints. You
+end up knowing the tool, which is part of the value.</p></details>
+<details class="faq"><summary>Do I have to learn all of Figma?</summary>
+<p>No. Four tools carry the whole session: Frame, Rectangle, Text, and Move, plus
+zooming and renaming layers as you go. Components get taught the first time you copy
+a button, in one line. Auto layout appears only if lists or cards are central to your
+screen; variants and prototyping are not today's lesson.</p></details>
+<details class="faq"><summary>Should I mock desktop or mobile?</summary>
+<p>Whichever your users will mostly be on: 1440 wide for desktop, 390 for mobile. You
+do the other one later if time allows. Guessing wrong is cheap here, which is the
+point of doing this in a mock.</p></details>
+<details class="faq"><summary>What happens to the mock afterward?</summary>
+<p>It becomes the spec. The exact sizes, hex values, and spacing in the mock carry
+directly into the build, and the share link keeps working for feedback while you
+build. If the thing you're building is a site, build-website picks up exactly where
+this ends.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this free?","acceptedAnswer":{"@type":"Answer","text":"The skill is free, and Figma's free tier covers everything needed: three files and unlimited personal drafts."}},
+{"@type":"Question","name":"Can the agent drive Figma for me?","acceptedAnswer":{"@type":"Answer","text":"No. It directs precisely and you report what you see, with screenshots at checkpoints. You end up knowing the tool yourself."}},
+{"@type":"Question","name":"Do I have to learn all of Figma?","acceptedAnswer":{"@type":"Answer","text":"No. Frame, Rectangle, Text, and Move carry the session. Components are taught when you first copy a button; variants and prototyping are not today's lesson."}},
+{"@type":"Question","name":"Should I mock desktop or mobile?","acceptedAnswer":{"@type":"Answer","text":"Whichever your users are mostly on: 1440 wide for desktop, 390 for mobile. Do the other later if time allows."}},
+{"@type":"Question","name":"What happens to the mock afterward?","acceptedAnswer":{"@type":"Answer","text":"It becomes the spec: exact sizes, hex values, and spacing carry into the build, and the share link keeps working for feedback."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Build what you mocked:</b></p>
+<div class="cardrow">
+<a class="mini" href="/skills/build-website/"><img src="/assets/skill-img/build-website.jpg" alt=""><span>Build the website</span></a>
+<a class="mini" href="/skills/portfolio-page/"><img src="/assets/skill-img/portfolio-page.jpg" alt=""><span>Portfolio page</span></a>
+<a class="mini" href="/skills/pick-fonts-and-colors/"><img src="/assets/skill-img/pick-fonts-and-colors.jpg" alt=""><span>Pick fonts and colors</span></a>
+</div>
+<p><b>Screens worth mocking first:</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/tutoring-page/"><img src="/assets/project-img/tutoring-page.jpg" alt=""><span>Tutoring page</span></a>
+<a class="mini" href="/ideas/session-booker/"><img src="/assets/project-img/session-booker.jpg" alt=""><span>Session booker</span></a>
+<a class="mini" href="/ideas/commission-page/"><img src="/assets/project-img/commission-page.jpg" alt=""><span>Commission page</span></a>
+</div>

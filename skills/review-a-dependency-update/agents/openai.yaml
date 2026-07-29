@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review a Dependency Update"
+  short_description: "Assess compatibility, security, and rollback"
+  default_prompt: "Use $review-a-dependency-update to evaluate and test this update."

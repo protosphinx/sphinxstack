@@ -1,0 +1,125 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the part where the ask gets real. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> there's a developer whose
+open-source map library I used in my project. I want to email her but I don't know what to say</div>
+<div class="cm cm-agent">Good instinct, wrong order. Before any writing: what do you want from
+her, in one sentence? Not "connect" or "pick her brain". What would she actually do?</div>
+<div class="cm cm-user cd-hide">honestly I'd love feedback on how I used the library. my bus map
+does a weird workaround for live markers and I don't know if it's dumb</div>
+<div class="cm cm-agent cd-hide">Now that's an ask: "does my live-marker workaround make sense,
+or is there an API I missed?" Answerable in five minutes of her time. Next: go read something
+she's written recently. Check she's actually the right person, then draft. You write it, I react.</div>
+<div class="cm cm-user cd-hide">draft: "Hi! I hope this email finds you well. I'm a huge fan of
+your work and I was wondering if you could possibly take a look at my project..."</div>
+<div class="cm cm-agent cd-hide">Every phrase in that could be sent to anyone by anyone, which
+is what makes it feel like spam to receive. Rewrite line one so it could only be about her,
+using the thing you just read. What did you actually take from her changelog post?</div>
+<div class="cm cm-user cd-hide">that she rewrote the marker engine last year specifically because
+of live-updating pins. which is literally my problem. ok that IS a better opener</div>
+<div class="cm cm-agent cd-hide">Write it just like that, then who you are in one line with the
+link, then the ask, then your name. Under 120 words total. And we send it in this session,
+because an unsent cold email is worth exactly nothing. Silence afterward is a normal outcome,
+so we'll also decide now what your one polite follow-up looks like.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Why would this person ever reply to me?</h2>
+<p>They often won't, and the skill is honest about that: silence is a normal outcome and no
+verdict on you. What earns the replies that do come is exactly what you have: you're young,
+you built a specific thing, and you did your homework on the person. A short email with a
+real reason for choosing them and an ask they can answer in five minutes gets read. The
+skill's job is making sure that's the email you send, and that you actually send it instead
+of polishing it forever.</p>
+
+<h2>What you end up with</h2>
+<p>One sent email, under 120 words, that you'd be comfortable reading aloud to the person's
+face. Here is the shape of one that works.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example cold email">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">SUBJECT</div>
+<div class="rz-item"><div class="rz-line">Question about pinlib's marker engine from a student
+who built on it <span class="anno-badge">1</span></div></div>
+<div class="rz-h">BODY</div>
+<div class="rz-item"><div class="rz-line">Hi Ana,</div></div>
+<div class="rz-item"><div class="rz-line">Your changelog post said you rewrote pinlib's marker
+engine because live-updating pins kept tearing. That's exactly the problem I hit.
+<span class="anno-badge">2</span></div></div>
+<div class="rz-item"><div class="rz-line">I'm 17 and I built a live bus map for my city with
+pinlib: <span class="rz-link">busmap.example.dev</span>. To keep markers smooth I re-create
+the whole layer every tick, which feels wrong. <span class="anno-badge">3</span></div></div>
+<div class="rz-item"><div class="rz-line">Is there an API I missed for updating markers in
+place? A one-line pointer would save me a week. <span class="anno-badge">4</span></div></div>
+<div class="rz-item"><div class="rz-line">Thanks either way,<br>Maya Torres</div></div>
+</div>
+<ol class="anno-notes">
+<li><b>The subject states the content.</b> Who is asking and about what. Nothing cute,
+nothing vague, no "quick question".</li>
+<li><b>Line one could only be about her.</b> It references a real thing she wrote, in plain
+words. If a first line could be pasted into an email to anyone, it fails.</li>
+<li><b>Who you are, as facts with a link.</b> Age, thing built, URL. No adjectives, no
+resume attached; links only on a first email.</li>
+<li><b>The ask is small and unmissable.</b> Answerable from her phone in a minute. "Can I
+pick your brain sometime" would die here.</li>
+</ol>
+</div>
+
+<h2>Anatomy of a subject line</h2>
+<p>The skill makes you write the subject last, when you know what the email actually says:</p>
+<div class="anatomy">
+<div class="an-line"><span class="an-seg an-a">Question about pinlib's marker engine</span>
+<span class="an-seg an-b">from a student</span> <span class="an-seg an-c">who built on it</span></div>
+<ul class="an-legend">
+<li><span class="an-key an-a">A</span> The topic, named precisely enough that she knows the email is on-subject for her.</li>
+<li><span class="an-key an-b">B</span> Who's asking, honestly. Being a student is context, and it sets the right expectations.</li>
+<li><span class="an-key an-c">C</span> The homework signal: you didn't just find her name, you used her work.</li>
+</ul>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is this free?</summary>
+<p>The skill is free, no account, no catch. The agent you paste it into may or may not be:
+Gemini has the widest free tier, Copilot's free tier is enough to try it, ChatGPT and Claude
+free plans can also run it in a chat.</p></details>
+<details class="faq"><summary>Will my email sound like AI wrote it?</summary>
+<p>This is the one kind of email where that kills you instantly, and the skill treats it that
+way. Template phrases like "I hope this email finds you well" and "I'm a huge fan of your
+work" get rewritten as what you actually mean or cut. You draft every line, the honesty
+check is "would you say it to their face", and anything that fails gets rewritten by you.</p></details>
+<details class="faq"><summary>How does it find the person's email address?</summary>
+<p>The honest ways: their personal site, GitHub profile, or a contact page. The skill rules
+out guess-and-spray and paid lookup tools. If no address is findable, that's usually a
+signal the person doesn't want cold email, and you pick a different door.</p></details>
+<details class="faq"><summary>What if they never reply?</summary>
+<p>Most won't, and the skill says so up front. After a week you send one two-line follow-up
+with no guilt-tripping, then let it go. A reply, even a no, is a win you answer fast and
+politely. The email you wrote becomes your structural template for the next one.</p></details>
+<details class="faq"><summary>Is this for job hunting too?</summary>
+<p>This skill covers emailing any stranger you want something from: feedback, advice, a
+question about their work. For the job and internship variant, cold-outreach-for-work
+handles the extra rules that hiring situations add.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this free?","acceptedAnswer":{"@type":"Answer","text":"The skill is free, no account. The agent you paste it into may have a free tier; Gemini's is the widest."}},
+{"@type":"Question","name":"Will my email sound like AI wrote it?","acceptedAnswer":{"@type":"Answer","text":"You draft every line and template phrases get cut. The check is whether you would say each sentence to the person's face."}},
+{"@type":"Question","name":"How does it find the person's email address?","acceptedAnswer":{"@type":"Answer","text":"Their personal site, GitHub profile, or contact page. No guessing at addresses and no paid lookup tools."}},
+{"@type":"Question","name":"What if they never reply?","acceptedAnswer":{"@type":"Answer","text":"Silence is a normal outcome. One two-line follow-up after a week, then let it go. Any reply, even a no, gets a fast polite answer."}},
+{"@type":"Question","name":"Is this for job hunting too?","acceptedAnswer":{"@type":"Answer","text":"This covers emailing any stranger you want something from. The cold-outreach-for-work skill handles the job and internship variant."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Emailing about work or school?</b> The specialized variants:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/cold-outreach-for-work/"><img src="/assets/skill-img/cold-outreach-for-work.jpg" alt=""><span>Cold outreach for work</span></a>
+<a class="mini" href="/skills/email-a-professor/"><img src="/assets/skill-img/email-a-professor.jpg" alt=""><span>Email a professor</span></a>
+<a class="mini" href="/skills/ask-for-recommendation/"><img src="/assets/skill-img/ask-for-recommendation.jpg" alt=""><span>Ask for a recommendation</span></a>
+</div>
+<p><b>Nothing to point the email at yet?</b> The link you include matters most:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/readme-that-sells/"><img src="/assets/skill-img/readme-that-sells.jpg" alt=""><span>README that sells</span></a>
+<a class="mini" href="/skills/portfolio-page/"><img src="/assets/skill-img/portfolio-page.jpg" alt=""><span>Portfolio page</span></a>
+<a class="mini" href="/skills/write-clearly/"><img src="/assets/skill-img/write-clearly.jpg" alt=""><span>Write clearly</span></a>
+</div>

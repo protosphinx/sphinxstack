@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Sales Follow-Up"
+  short_description: "Send a concise follow-up grounded in the call"
+  default_prompt: "Use $write-a-sales-follow-up to help me complete this workflow with verifiable evidence."

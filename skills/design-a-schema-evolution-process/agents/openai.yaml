@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-schema-evolution-process"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $design-a-schema-evolution-process to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "design an escalation path"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $design-an-escalation-path to complete and verify this operations task."

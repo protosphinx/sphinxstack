@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dispute A Billing Error"
+  short_description: "Build an evidence-backed billing dispute and follow-up log"
+  default_prompt: "Use $dispute-a-billing-error to prepare and track this billing dispute."

@@ -1,0 +1,34 @@
+<h2>Worked case: recover partial schema state</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A production migration adding a nonnull column and backfill times out behind a lock while old and new application versions keep writing, some shards committed DDL, replicas disagree, and the down migration would drop values already written by the new version.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Should we run the down migration everywhere?</div>
+<div class="cm cm-agent">No. First fence unsafe writers and map committed, partial, blocked, and unknown state per shard.</div>
+<div class="cm cm-user cd-hide">Can the migration table be marked complete?</div>
+<div class="cm cm-agent cd-hide">Only after actual schema, data, replicas, and application assumptions reconcile.</div>
+<div class="cm cm-user cd-hide">The backup job is green.</div>
+<div class="cm cm-agent cd-hide">Preserve current evidence and verify restore capability before relying on it.</div>
+<div class="cm cm-user">What permits restart?</div>
+<div class="cm cm-agent">Rehearsed recovery, schema and data reconciliation, compatible applications, healthy replicas, and gradual writer restoration.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Protect invariants before migration status.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The failed-migration evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Database migration incident timeline</td><td>Incident scope and write safety, versions, commands, locks, writers, replicas, decisions, custody, and service state</td><td>Every writer and database state is bounded</td></tr>
+<tr><td>Schema and data reconciliation report</td><td>Data and schema preservation, expected and actual objects, affected rows, invariants, backups, replicas, and application compatibility</td><td>No destructive action relies on assumed state</td></tr>
+<tr><td>Recovery and restart record</td><td>Recovery decision, rehearsal, execution, reconciliation and restart, traffic restoration, monitoring, remediation, and closeout</td><td>Writers return only to compatible state</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A repair preview finds values created by the new application that the down migration would drop. The plan switches to forward repair, preserves those rows, and validates mixed-version compatibility before any writer resumes.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is DDL always transactional?</summary><p>No. Verify actual database and operation semantics.</p></details>
+<details class="faq"><summary>Should replicas serve reads during recovery?</summary><p>Only after their schema, data, and lag reconcile with authority.</p></details>
+<details class="faq"><summary>Can migration history be edited?</summary><p>Not as a substitute for proving actual state.</p></details>
+<details class="faq"><summary>When is restore preferable?</summary><p>When verified recovery point, data loss, downtime, and committed effects support it.</p></details>
+<details class="faq"><summary>How should repair queries run?</summary><p>With bounded scope, preview, checkpoint, stop conditions, monitoring, and reconciliation.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is DDL always transactional?","acceptedAnswer":{"@type":"Answer","text":"No. Verify database semantics."}},{"@type":"Question","name":"Should replicas serve reads during recovery?","acceptedAnswer":{"@type":"Answer","text":"Only after reconciliation."}},{"@type":"Question","name":"Can migration history be edited?","acceptedAnswer":{"@type":"Answer","text":"Not instead of proving state."}},{"@type":"Question","name":"When is restore preferable?","acceptedAnswer":{"@type":"Answer","text":"When verified recovery evidence supports it."}},{"@type":"Question","name":"How should repair queries run?","acceptedAnswer":{"@type":"Answer","text":"With bounded, monitored, reconciled execution."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Plan changes with <a href="/skills/manage-database-schema-changes/">Manage database schema changes</a>,
+validate data with <a href="/skills/validate-a-data-migration/">Validate a data migration</a>, and
+test recovery with <a href="/skills/verify-a-backup-restore/">Verify a backup restore</a>.</p>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "create a live stream redundancy plan"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $create-a-live-stream-redundancy-plan to complete and verify this media task."

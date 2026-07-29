@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Disaster Recovery Plan"
+  short_description: "Plan recovery for severe service and data loss"
+  default_prompt: "Use $design-a-disaster-recovery-plan to help me complete this workflow with verifiable evidence."

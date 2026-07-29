@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a dashboard"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $design-a-dashboard to complete and verify this design task."

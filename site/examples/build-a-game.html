@@ -1,0 +1,113 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the part everyone is afraid of. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> i want to make a game but i can't draw at all</div>
+<div class="cm cm-agent">Art comes last; rectangles ship first. Pick a mechanic: dodge the
+falling things, jump the gaps, match the pairs, type the words in time, or snake with
+your own twist. Which sounds fun?</div>
+<div class="cm cm-user cd-hide">dodging stuff. but don't i need unity or godot or some engine?</div>
+<div class="cm cm-agent cd-hide">No engine. One HTML file, one script, a canvas, and
+requestAnimationFrame. Your whole game stays readable top to bottom. A library only
+enters if you ask for one, and then it's a free CDN build.</div>
+<div class="cm cm-user cd-hide">how long before it's actually playable?</div>
+<div class="cm cm-agent cd-hide">Something moves on screen in the first sitting, and we deploy the
+first playable moment, ugly on purpose. A friend playing an early build teaches you
+more than polish nobody has touched. You'll redeploy every time it gets better.</div>
+<div class="cm cm-user cd-hide">what if it ends up boring</div>
+<div class="cm cm-agent cd-hide">We playtest every few minutes and tune on the spot. Fall speed,
+player speed, spawn rate all live as named constants at the top of the file; when
+something feels unfair or mushy, we change the number then and there. Fun before
+features.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>I can't do art, and I don't own an engine</h2>
+<p>Neither is required. The game is rectangles and emoji until it's fun, and free
+assets (or your own drawings) only after, because tuning a boring game's art is wasted
+work. There is no engine to download and nothing to pay for: canvas and plain
+JavaScript carry the whole thing, and every one of these started exactly that way.</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/canvas-arcade/"><img src="/assets/project-img/canvas-arcade.jpg" alt=""><span>Browser game at a URL</span></a>
+<a class="mini" href="/ideas/idle-game/"><img src="/assets/project-img/idle-game.jpg" alt=""><span>Idle game</span></a>
+<a class="mini" href="/ideas/physics-toy-game/"><img src="/assets/project-img/physics-toy-game.jpg" alt=""><span>Physics toy game</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A game at a live URL with a full loop: start, play, fail, restart. The file below is
+where the real work shows, because every number in it was changed by a playtest.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example tuning constants from a game file">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">TOP OF game.js AFTER THREE PLAYTESTS</div>
+<pre>// tuning lives here, named, one screen from the top
+const PLAYER_SPEED    = 260;  // was 180: felt mushy
+const FALL_SPEED      = 120;  // starting px/sec
+const FALL_RAMP       = 6;    // +6 px/sec each second
+const SPAWN_EVERY_MS  = 700;  // was 400: unfair start
+const SHAKE_ON_HIT_PX = 5;    // juice pass, week 2
+
+const state = { screen: "title", score: 0, best: 0 };</pre>
+<div class="rz-h">THE LOOP, SAID ALOUD BEFORE IT WAS CODE</div>
+<pre>every frame: things fall, player moves with
+arrows/touch, collision ends the run, score is
+seconds survived, restart without reloading.</pre>
+<div class="rz-h">AFTER THE FIRST FRIEND PLAYED IT</div>
+<pre>fix: show "arrow keys to move" on the title
+screen. she sat there waiting for it to start.</pre>
+</div>
+<ol class="anno-notes">
+<li><b>The comments are playtest history.</b> "was 180: felt mushy" is what tuning
+actually looks like: feel something bad, change the number, feel again.</li>
+<li><b>Delta time is in the loop.</b> The game runs the same speed on any machine,
+explained in two sentences when the first shape moves.</li>
+<li><b>The last fix came from watching a real player.</b> The skill ends with you
+handing the URL to a friend and fixing whatever confused them. Games get good in
+that step.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Do I need Unity, Godot, or Unreal?</summary>
+<p>No. A browser game needs one HTML file, one script, and the canvas API. That keeps
+every line readable and makes shipping trivial. If you want a library like Kaplay or
+Phaser, the free CDN build works, but it's your call to add one.</p></details>
+<details class="faq"><summary>What about art and sound?</summary>
+<p>Rectangles and emoji until the game is fun, then free assets (Kenney.nl, your own
+drawings) if you want them. Sounds can be blips you record yourself. Nothing is
+purchased.</p></details>
+<details class="faq"><summary>Will it work on phones?</summary>
+<p>The skill ends with a phone check. Either touch controls go in, or the game says
+plainly on screen that it needs a keyboard. Shipping a keyboard game honestly labeled
+beats shipping a broken touch experience.</p></details>
+<details class="faq"><summary>My idea is a huge RPG. Can we build that?</summary>
+<p>Not as a first game, and the skill will say so. One mechanic, finished, with your
+theme on it. A clone with your twist that friends actually play beats an epic that
+never becomes playable. The sequel repo is where mechanic two lives.</p></details>
+<details class="faq"><summary>How do people play it?</summary>
+<p>At a URL you text them. The first playable moment gets deployed (ship on GitHub
+covers the how), and you redeploy as it improves. Watching your first real player is
+a required step, because their confusion drives the final fixes.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do I need Unity, Godot, or Unreal?","acceptedAnswer":{"@type":"Answer","text":"No. One HTML file, one script, and the canvas API. A library like Kaplay or Phaser is optional and free via CDN."}},
+{"@type":"Question","name":"What about art and sound?","acceptedAnswer":{"@type":"Answer","text":"Rectangles and emoji until the game is fun, then free assets like Kenney.nl or your own drawings. Sounds can be blips you record yourself."}},
+{"@type":"Question","name":"Will it work on phones?","acceptedAnswer":{"@type":"Answer","text":"The skill ends with a phone check: touch controls go in, or the game says on screen that it needs a keyboard."}},
+{"@type":"Question","name":"My idea is a huge RPG. Can we build that?","acceptedAnswer":{"@type":"Answer","text":"Not as a first game. One mechanic, finished, with your theme. A clone with your twist that friends play beats an epic that never becomes playable."}},
+{"@type":"Question","name":"How do people play it?","acceptedAnswer":{"@type":"Answer","text":"At a URL you text them. The first playable moment gets deployed and you redeploy as it improves; watching your first real player drives the final fixes."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Hooked? These games need a backend, which is the next skill anyway:</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/speedrun-leaderboard/"><img src="/assets/project-img/speedrun-leaderboard.jpg" alt=""><span>Speedrun game with a real leaderboard</span></a>
+<a class="mini" href="/ideas/online-turn-based/"><img src="/assets/project-img/online-turn-based.jpg" alt=""><span>Turn-based game two browsers can play</span></a>
+<a class="mini" href="/ideas/niche-daily-puzzle/"><img src="/assets/project-img/niche-daily-puzzle.jpg" alt=""><span>A daily puzzle for your niche</span></a>
+</div>
+<p><b>Cash the game in:</b></p>
+<div class="cardrow">
+<a class="mini" href="/skills/ship-on-github/"><img src="/assets/skill-img/ship-on-github.jpg" alt=""><span>Ship on GitHub: the URL friends get</span></a>
+<a class="mini" href="/skills/backend-basics/"><img src="/assets/skill-img/backend-basics.jpg" alt=""><span>Backend basics: scores that persist</span></a>
+<a class="mini" href="/skills/build-resume/"><img src="/assets/skill-img/build-resume.jpg" alt=""><span>Build your resume: it's a strong line</span></a>
+</div>

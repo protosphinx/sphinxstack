@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage a sensitive documentary production"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $manage-a-sensitive-documentary-production to complete and verify this media task."

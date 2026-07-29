@@ -1,0 +1,4 @@
+interface:
+  display_name: "Make A Thumbnail"
+  short_description: "Design a clear thumbnail and test its readability"
+  default_prompt: "Use $make-a-thumbnail to help me complete this workflow with verified evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evaluate a Business Loan Offer"
+  short_description: "Compare true financing cost and constraints"
+  default_prompt: "Use $evaluate-a-business-loan-offer to compare this financing offer and its risks."

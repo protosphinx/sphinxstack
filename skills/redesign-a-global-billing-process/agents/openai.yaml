@@ -1,0 +1,4 @@
+interface:
+  display_name: "redesign a global billing process"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $redesign-a-global-billing-process to complete and verify this finance task."

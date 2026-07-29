@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare for a Career Fair"
+  short_description: "Research, prioritize, and follow up with employers"
+  default_prompt: "Use $prepare-for-a-career-fair to prioritize employers and prepare useful conversations."

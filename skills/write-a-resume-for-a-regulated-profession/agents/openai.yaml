@@ -1,0 +1,4 @@
+interface:
+  display_name: "write a resume for a regulated profession"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $write-a-resume-for-a-regulated-profession to complete and verify this writing task."

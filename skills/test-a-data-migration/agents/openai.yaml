@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test a Data Migration"
+  short_description: "Verify migrated data and reversible behavior"
+  default_prompt: "Use $test-a-data-migration to help me complete this workflow with verifiable evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Browser Extension"
+  short_description: "Build and test a browser extension for a real need"
+  default_prompt: "Use $browser-extension to help me complete this workflow with verified evidence."

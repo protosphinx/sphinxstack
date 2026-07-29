@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Search to a Site"
+  short_description: "Add useful site search with relevance and empty states"
+  default_prompt: "Use $add-search-to-a-site to choose and implement the smallest effective search experience."

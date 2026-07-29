@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write A Business Skill"
+  short_description: "Capture one operation as a loadable skill file"
+  default_prompt: "Use $write-a-business-skill to help me complete this workflow with verified evidence."

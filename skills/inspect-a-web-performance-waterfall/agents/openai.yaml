@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspect a Web Performance Waterfall"
+  short_description: "Trace page loading through network dependencies"
+  default_prompt: "Use $inspect-a-web-performance-waterfall to diagnose this page loading sequence."

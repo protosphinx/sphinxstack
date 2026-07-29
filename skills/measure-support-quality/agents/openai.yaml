@@ -1,0 +1,4 @@
+interface:
+  display_name: "Measure Support Quality"
+  short_description: "Build a balanced support quality scorecard"
+  default_prompt: "Use $measure-support-quality to help me complete this workflow with verifiable evidence."

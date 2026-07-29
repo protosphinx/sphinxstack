@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare a teleprompter script"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $prepare-a-teleprompter-script to complete and verify this media task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test an API Integration"
+  short_description: "Exercise contracts and operational failure paths"
+  default_prompt: "Use $test-an-api-integration to help me complete this workflow with verifiable evidence."

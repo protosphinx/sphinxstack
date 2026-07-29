@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video Script"
+  short_description: "Write a concise script for a specific video"
+  default_prompt: "Use $video-script to help me complete this workflow with verified evidence."

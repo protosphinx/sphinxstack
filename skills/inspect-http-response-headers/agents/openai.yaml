@@ -1,0 +1,4 @@
+interface:
+  display_name: "inspect http response headers"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $inspect-http-response-headers to complete and verify this web task."

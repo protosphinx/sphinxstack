@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document an API Example"
+  short_description: "Publish a tested request and response example"
+  default_prompt: "Use $document-an-api-example to help me complete this workflow with verifiable evidence."

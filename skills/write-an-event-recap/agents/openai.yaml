@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write an Event Recap"
+  short_description: "Publish an accurate recap with outcomes and access"
+  default_prompt: "Use $write-an-event-recap to turn the event record into a useful public or internal recap."

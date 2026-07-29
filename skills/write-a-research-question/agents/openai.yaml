@@ -1,0 +1,4 @@
+interface:
+  display_name: "write-a-research-question"
+  short_description: "Run a verified write a research question workflow"
+  default_prompt: "Use $write-a-research-question to complete and verify this task."

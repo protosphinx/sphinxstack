@@ -1,0 +1,4 @@
+interface:
+  display_name: "Perform a Business Impact Analysis"
+  short_description: "Prioritize recovery using evidence and dependencies"
+  default_prompt: "Use $perform-a-business-impact-analysis to assess disruption impact and recovery priorities."

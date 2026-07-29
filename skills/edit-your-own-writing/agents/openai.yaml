@@ -1,0 +1,4 @@
+interface:
+  display_name: "Edit Your Own Writing"
+  short_description: "Revise writing for clarity, structure, and accuracy"
+  default_prompt: "Use $edit-your-own-writing to help me complete this workflow with verified evidence."

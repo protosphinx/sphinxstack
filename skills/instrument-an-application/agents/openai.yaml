@@ -1,0 +1,4 @@
+interface:
+  display_name: "Instrument an Application"
+  short_description: "Add useful logs, metrics, and traces"
+  default_prompt: "Use $instrument-an-application to design and verify telemetry for this service."

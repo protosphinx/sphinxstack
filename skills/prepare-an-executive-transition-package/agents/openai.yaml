@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare an Executive Transition Package"
+  short_description: "Control executive evidence, privacy, and disclosure"
+  default_prompt: "Use $prepare-an-executive-transition-package to prepare this executive transition safely."

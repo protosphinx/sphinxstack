@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improve Developer Onboarding"
+  short_description: "Shorten the path to a verified first change"
+  default_prompt: "Use $improve-developer-onboarding to help me complete this workflow with verifiable evidence."

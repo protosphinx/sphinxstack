@@ -1,0 +1,4 @@
+interface:
+  display_name: "Summarize a Support Ticket"
+  short_description: "Turn a support thread into a reliable case summary"
+  default_prompt: "Use $summarize-a-support-ticket to help me complete this workflow with verifiable evidence."

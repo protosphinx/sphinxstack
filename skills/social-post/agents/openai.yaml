@@ -1,0 +1,4 @@
+interface:
+  display_name: "Social Post"
+  short_description: "Write and publish a focused social post"
+  default_prompt: "Use $social-post to help me complete this workflow with verified evidence."

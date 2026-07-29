@@ -1,0 +1,4 @@
+interface:
+  display_name: "inspect-a-tls-certificate"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $inspect-a-tls-certificate to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage a program budget"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $manage-a-program-budget to complete and verify this operations task."

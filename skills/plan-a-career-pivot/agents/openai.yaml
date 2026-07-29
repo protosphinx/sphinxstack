@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Career Pivot"
+  short_description: "Test a new direction through evidence and experiments"
+  default_prompt: "Use $plan-a-career-pivot to turn my experience and constraints into a staged transition plan."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage a Project Budget"
+  short_description: "Reconcile project cost, commitments, forecast, and changes"
+  default_prompt: "Use $manage-a-project-budget to build and operate an evidence-backed budget."

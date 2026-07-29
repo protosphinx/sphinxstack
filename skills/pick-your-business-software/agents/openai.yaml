@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pick Your Business Software"
+  short_description: "Choose software categories from real operations"
+  default_prompt: "Use $pick-your-business-software to help me complete this workflow with verified evidence."

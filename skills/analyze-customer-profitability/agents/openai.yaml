@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Customer Profitability"
+  short_description: "Measure contribution after cost to serve"
+  default_prompt: "Use $analyze-customer-profitability to analyze customer contribution responsibly."

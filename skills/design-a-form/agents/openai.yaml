@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Form"
+  short_description: "Design an accessible form around a real user task"
+  default_prompt: "Use $design-a-form to define this form flow, fields, validation, errors, and completion evidence."

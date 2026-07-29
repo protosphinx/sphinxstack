@@ -1,0 +1,4 @@
+interface:
+  display_name: "write a sensitive research summary"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $write-a-sensitive-research-summary to complete and verify this writing task."

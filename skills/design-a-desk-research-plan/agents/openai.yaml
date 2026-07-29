@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design A Desk Research Plan"
+  short_description: "Plan bounded secondary research around a decision"
+  default_prompt: "Use $design-a-desk-research-plan to scope this decision-focused research project."

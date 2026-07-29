@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Support Handoff"
+  short_description: "Transfer customer cases without losing context"
+  default_prompt: "Use $run-a-support-handoff to help me complete this workflow with verifiable evidence."

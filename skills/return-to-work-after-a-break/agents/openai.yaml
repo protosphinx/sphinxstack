@@ -1,0 +1,4 @@
+interface:
+  display_name: "Return to Work After a Break"
+  short_description: "Re-enter work with current evidence and boundaries"
+  default_prompt: "Use $return-to-work-after-a-break to build a truthful and sustainable return plan."

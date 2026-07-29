@@ -1,0 +1,4 @@
+interface:
+  display_name: "respond to a major vendor failure"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $respond-to-a-major-vendor-failure to complete and verify this operations task."

@@ -1,0 +1,48 @@
+<h2>Worked case: restore a subscription platform</h2>
+<p class="case-trigger"><strong>Trigger:</strong> Backup jobs are green, but nobody has proved that they can restore a usable system.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Our database snapshots succeed every night. Can we close the backup audit?</div>
+<div class="cm cm-agent">Not yet. I need an isolated target, selected backup points, keys, application versions, reconciliation queries, and a safe plan for external side effects.</div>
+<div class="cm cm-user cd-hide">We can restore into staging, but staging sends email through the real provider.</div>
+<div class="cm cm-agent cd-hide">Then restoration must block outbound email before application startup. A restore that contacts customers is not a safe test.</div>
+<div class="cm cm-user cd-hide">Can we just compare the row count?</div>
+<div class="cm cm-agent cd-hide">Row count is one signal. We also need relationships, permissions, money totals, subscriptions, authentication, jobs, and critical user journeys.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">A completed backup job is input evidence, not restore proof.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The restore evidence package</h2>
+<table class="plain-table">
+<thead><tr><th>Layer</th><th>Verification</th><th>Failure condition</th></tr></thead>
+<tbody>
+<tr><td>Backup chain</td><td>Timestamp, checksum, encryption key, and retention</td><td>Missing increment or unavailable key</td></tr>
+<tr><td>Data</td><td>Counts, money totals, foreign keys, and subscription state</td><td>Unexplained mismatch</td></tr>
+<tr><td>Application</td><td>Sign-in, read, write, billing preview, and scheduled job</td><td>Critical journey cannot complete</td></tr>
+</tbody>
+</table>
+<h3>Required evidence</h3>
+<ul>
+<li><strong>Backup inventory:</strong> selected points, artifacts, checksums, encryption, keys, retention, and expected recovery point.</li>
+<li><strong>Restore transcript:</strong> exact versions, commands, timings, warnings, failures, and operator decisions.</li>
+<li><strong>Reconciliation report:</strong> data invariants, permissions, application behavior, jobs, and critical user journeys.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>The team selects the newest eligible snapshot without checking it manually first. The restore stops when an
+incremental segment fails its checksum. Operators preserve the failed target and transcript, leave original
+backups immutable, and repeat only after the broken chain has an owned diagnosis. They do not quietly choose
+a different snapshot and report success.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Does a green backup job prove recoverability?</summary><p>No. It proves that the job reported success, not that artifacts, keys, dependencies, and application behavior can be restored.</p></details>
+<details class="faq"><summary>How often should restores be tested?</summary><p>Set frequency from data criticality, change rate, obligations, and recovery risk. Test again after material platform or backup changes.</p></details>
+<details class="faq"><summary>Can the restore use production?</summary><p>Only under an approved recovery event. Exercises should use an isolated target that cannot overwrite authority or trigger external side effects.</p></details>
+<details class="faq"><summary>What should reconciliation include?</summary><p>Include structural integrity, business invariants, permissions, application behavior, jobs, and representative user journeys.</p></details>
+<details class="faq"><summary>When has the backup policy failed?</summary><p>It has failed when selected backups, keys, time, data loss, or restored behavior do not meet the stated objectives.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does a green backup job prove recoverability?","acceptedAnswer":{"@type":"Answer","text":"No. Recoverability requires an isolated restore and behavior checks."}},{"@type":"Question","name":"How often should restores be tested?","acceptedAnswer":{"@type":"Answer","text":"Set frequency from criticality, change rate, obligations, and recovery risk."}},{"@type":"Question","name":"Can the restore use production?","acceptedAnswer":{"@type":"Answer","text":"Exercises should use an isolated target unless an approved recovery event is underway."}},{"@type":"Question","name":"What should reconciliation include?","acceptedAnswer":{"@type":"Answer","text":"Include data integrity, business invariants, permissions, jobs, and user journeys."}},{"@type":"Question","name":"When has the backup policy failed?","acceptedAnswer":{"@type":"Answer","text":"It has failed when restore evidence does not meet time, data-loss, or behavior objectives."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Place the restore in a broader <a href="/skills/design-a-disaster-recovery-plan/">Disaster recovery plan</a>,
+document the operation with <a href="/skills/write-an-operations-runbook/">Write an operations runbook</a>, and
+protect release recovery with <a href="/skills/prepare-a-rollback-plan/">Prepare a rollback plan</a>.</p>

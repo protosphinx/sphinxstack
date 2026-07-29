@@ -1,0 +1,34 @@
+<h2>Worked case: operate safely when green means unknown</h2>
+<p class="case-trigger"><strong>Trigger:</strong> After a collector configuration deploy, regional dashboards remain green while request and error volumes collapse toward zero, one alert route stops paging, buffered telemetry may expire within hours, and operators cannot tell whether a customer-facing failure is hidden inside the monitoring outage.</p>
+<div class="chatdemo">
+<div class="cm cm-user">The dashboard is green. Can deployments continue?</div>
+<div class="cm cm-agent">No. Near-zero demand and errors indicate unknown coverage, not health. Declare the blind spot and pause changes that require missing evidence.</div>
+<div class="cm cm-user cd-hide">How do we tell whether the service is also failing?</div>
+<div class="cm cm-agent cd-hide">Use independent synthetics, direct bounded checks, infrastructure counts, business completions, provider status, and customer reports.</div>
+<div class="cm cm-user cd-hide">Should we replay every buffered alert after repair?</div>
+<div class="cm cm-agent cd-hide">Not blindly. Backfill with known ordering and duplicates, then suppress uncontrolled paging while preserving incident evidence.</div>
+<div class="cm cm-user">When can normal change resume?</div>
+<div class="cm cm-agent">After each affected region and critical signal passes end-to-end injection and independent service-state verification.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Unknown coverage is an operating condition.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The monitoring-blindness evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Monitoring exposure timeline</td><td>Blind-spot scope, onset, services, signals, regions, decisions, service evidence, telemetry evidence, and gaps</td><td>Unknown state is never presented as healthy</td></tr>
+<tr><td>Compensating-control log</td><td>Alternate evidence, risk-based operating mode, change restrictions, traffic controls, staffing, decisions, owners, and removal gates</td><td>Every continued operation has bounded support</td></tr>
+<tr><td>Restoration and backfill report</td><td>Visibility restoration, signal injection, notification, buffers, gaps, duplicates, backfill, reconciliation, and prevention</td><td>Dashboards and alerts are proven end to end</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>Independent synthetics reveal a real regional checkout failure inside the telemetry outage. Responders restrict deploys, isolate the region, and use load-balancer plus database completion counts until critical telemetry returns. Controlled test errors reach paging, buffers drain with duplicate markers, and an unrecoverable gap remains explicitly recorded.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Does missing data mean zero?</summary><p>No. Missing, delayed, partial, and zero data must remain distinct states.</p></details>
+<details class="faq"><summary>Should every change freeze?</summary><p>Restrict changes whose risk depends on missing evidence; allow only bounded, authorized recovery work.</p></details>
+<details class="faq"><summary>What counts as alternate evidence?</summary><p>Independent user journeys, infrastructure signals, business records, direct checks, provider status, and customer reports.</p></details>
+<details class="faq"><summary>Can buffered telemetry be backfilled?</summary><p>Only with understood ordering, duplication, retention, and downstream alert consequences.</p></details>
+<details class="faq"><summary>How is restoration proven?</summary><p>Inject controlled signals through producer, pipeline, query, dashboard, alert, and notification paths.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does missing data mean zero?","acceptedAnswer":{"@type":"Answer","text":"No. Missing and zero are different states."}},{"@type":"Question","name":"Should every change freeze?","acceptedAnswer":{"@type":"Answer","text":"Restrict changes according to evidence risk."}},{"@type":"Question","name":"What counts as alternate evidence?","acceptedAnswer":{"@type":"Answer","text":"Use independent service and business signals."}},{"@type":"Question","name":"Can buffered telemetry be backfilled?","acceptedAnswer":{"@type":"Answer","text":"Only with controlled duplicate and alert behavior."}},{"@type":"Question","name":"How is restoration proven?","acceptedAnswer":{"@type":"Answer","text":"Test the whole path end to end."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Build independent checks with <a href="/skills/create-a-synthetic-monitor/">Create a synthetic monitor</a>,
+inspect suspicious values with <a href="/skills/inspect-a-metric/">Inspect a metric</a>, and
+control incident work with <a href="/skills/debug-a-production-incident/">Debug a production incident</a>.</p>

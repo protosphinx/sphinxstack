@@ -1,0 +1,4 @@
+interface:
+  display_name: "negotiate-equity-compensation"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $negotiate-equity-compensation to complete and verify this task."

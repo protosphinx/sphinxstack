@@ -1,0 +1,4 @@
+interface:
+  display_name: "write a case study outline"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $write-a-case-study-outline to complete and verify this writing task."

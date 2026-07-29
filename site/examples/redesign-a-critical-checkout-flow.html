@@ -1,0 +1,34 @@
+<h2>Worked case: replace a global checkout without losing money</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A global retailer must redesign checkout across guest and account users, multiple currencies, taxes, discounts, inventory holds, saved addresses, wallets, cards, subscriptions, accessibility needs, fraud controls, and regional legal terms while legacy and new flows overlap and duplicate orders or lost payments are unacceptable.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we compare conversion and send half of all users to the new flow?</div>
+<div class="cm cm-agent">Not yet. Define money and state invariants, exclusions, persistent assignment, stop conditions, and reconciliation first.</div>
+<div class="cm cm-user cd-hide">If payment times out, should the button invite another attempt?</div>
+<div class="cm cm-agent cd-hide">No. Reconcile provider and ledger state before creating another financial attempt.</div>
+<div class="cm cm-user cd-hide">Can rollback route every session back to legacy checkout?</div>
+<div class="cm cm-agent cd-hide">Only if it preserves accepted payments, orders, refunds, inventory holds, and webhook ownership.</div>
+<div class="cm cm-user">What proves the redesign is safe?</div>
+<div class="cm cm-agent">Transaction reconciliation, critical accessibility journeys, bounded canaries, controlled recovery, and retirement evidence.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">One customer intent must not become two charges.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The critical checkout redesign evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Checkout architecture and journey record</td><td>State, money, ownership, disclosures, fraud, privacy, markets, compatibility, and decisions</td><td>Every write and customer outcome has an owner</td></tr>
+<tr><td>Payment and accessibility verification</td><td>Amounts, currency, idempotency, provider outcomes, order and inventory parity, and assistive-technology journeys</td><td>Each accepted payment reconciles to one intended order</td></tr>
+<tr><td>Rollout and recovery rehearsal</td><td>Migration and experiment controls, stop conditions, reconciliation, rollback, support, and legacy retirement</td><td>Recovery preserves all committed financial state</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A wallet callback reaches the new flow after its session was routed back to legacy checkout. The shared intent identifier prevents a second attempt, the transaction owner reconciles the provider result, the customer receives one clear order status, and the affected cohort is removed until the callback handoff is fixed.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is conversion the primary release gate?</summary><p>No. Financial correctness, accessibility, customer protection, and recovery are release gates.</p></details>
+<details class="faq"><summary>Can both flows write the same order?</summary><p>No. Define one authoritative writer for each state transition and enforce idempotency.</p></details>
+<details class="faq"><summary>How should ambiguous payments be handled?</summary><p>Pause retries and reconcile the provider, ledger, order, and customer outcome.</p></details>
+<details class="faq"><summary>What does accessible checkout testing cover?</summary><p>Complete purchase and recovery journeys across keyboard, screen reader, zoom, errors, challenges, and payment methods.</p></details>
+<details class="faq"><summary>When can legacy checkout retire?</summary><p>After outstanding sessions, webhooks, refunds, subscriptions, support tools, and retained records have verified dispositions.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is conversion the primary release gate?","acceptedAnswer":{"@type":"Answer","text":"No. Safety and correctness are release gates."}},{"@type":"Question","name":"Can both flows write the same order?","acceptedAnswer":{"@type":"Answer","text":"No. Use one authoritative writer per transition."}},{"@type":"Question","name":"How should ambiguous payments be handled?","acceptedAnswer":{"@type":"Answer","text":"Reconcile before permitting another attempt."}},{"@type":"Question","name":"What does accessible checkout testing cover?","acceptedAnswer":{"@type":"Answer","text":"Complete purchase and recovery journeys."}},{"@type":"Question","name":"When can legacy checkout retire?","acceptedAnswer":{"@type":"Answer","text":"After every outstanding dependency has a verified disposition."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Design the bounded journey with <a href="/skills/design-a-checkout-flow/">Design a checkout flow</a>,
+protect retries with <a href="/skills/implement-idempotency/">Implement idempotency</a>, and
+verify real access with <a href="/skills/test-web-accessibility-with-assistive-technology/">Test web accessibility with assistive technology</a>.</p>

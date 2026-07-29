@@ -1,0 +1,4 @@
+interface:
+  display_name: "write-a-resume-after-a-career-break"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $write-a-resume-after-a-career-break to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Service Accounts"
+  short_description: "Control nonhuman identity ownership and access"
+  default_prompt: "Use $manage-service-accounts to inventory and govern these machine identities."

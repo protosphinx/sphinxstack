@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit-a-complex-form"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $audit-a-complex-form to complete and verify this task."

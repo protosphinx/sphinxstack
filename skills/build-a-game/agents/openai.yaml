@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build A Game"
+  short_description: "Build, test, and publish a playable browser game"
+  default_prompt: "Use $build-a-game to help me complete this workflow with verified evidence."

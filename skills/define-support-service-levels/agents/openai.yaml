@@ -1,0 +1,4 @@
+interface:
+  display_name: "Define Support Service Levels"
+  short_description: "Set measurable response and resolution commitments"
+  default_prompt: "Use $define-support-service-levels to help me complete this workflow with verifiable evidence."

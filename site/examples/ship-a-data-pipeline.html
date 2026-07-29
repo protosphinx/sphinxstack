@@ -1,0 +1,45 @@
+<h2>Worked case: make a daily orders feed reliable</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A daily data job must handle retries, late records, and backfills without corrupting reports.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Finance gets yesterday's orders from a nightly script, but reruns double the totals.</div>
+<div class="cm cm-agent">We need the source key, event and delivery time, correction rules, consumers, and a replay source before changing the job.</div>
+<div class="cm cm-user cd-hide">Order ID is stable. Refunds can arrive three days later. The raw export is kept for thirty days.</div>
+<div class="cm cm-agent cd-hide">Then processing can be idempotent by order ID, and the published window needs controlled correction for late refunds.</div>
+<div class="cm cm-user cd-hide">Could the backfill write straight into the report table?</div>
+<div class="cm cm-agent cd-hide">Not safely. It should write isolated output, reconcile against source, then promote atomically.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Replay behavior is designed before the next failure.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The pipeline contract</h2>
+<table class="plain-table">
+<tbody>
+<tr><th>Identity</th><td>order_id plus source revision</td></tr>
+<tr><th>Time</th><td>ordered_at for business day; delivered_at for freshness</td></tr>
+<tr><th>Correction</th><td>refund updates may revise the prior three business days</td></tr>
+<tr><th>Publish</th><td>validated partition swaps atomically after reconciliation</td></tr>
+</tbody>
+</table>
+<h3>Evidence set</h3>
+<ul>
+<li><strong>Replay test:</strong> duplicate files, late refunds, malformed rows, and an interrupted run produce one correct result.</li>
+<li><strong>Reconciliation report:</strong> source, processed, quarantined, and published counts plus total value.</li>
+<li><strong>Operating runbook:</strong> pause, resume, replay, backfill, correction, and consumer notification.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>Publication fails after transformation. Because output is isolated, finance continues reading the
+last good partition. The operator preserves the checkpoint, repairs the publication permission, reruns
+the same bounded range, and promotes only after reconciliation passes.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>What makes a pipeline idempotent?</summary><p>Stable identity, deterministic transformation, checkpoints, and atomic publication make retries produce the same intended result instead of duplicates.</p></details>
+<details class="faq"><summary>Why keep raw input?</summary><p>It provides a controlled replay source for recovery, corrections, audits, and new transformation versions, subject to privacy and retention rules.</p></details>
+<details class="faq"><summary>How should bad records be handled?</summary><p>Classify the rule: block the batch, quarantine the record, warn an owner, or measure the issue. Never silently discard it.</p></details>
+<details class="faq"><summary>What is a backfill?</summary><p>A controlled reprocessing of a historical range with versioned code, bounded load, isolated output, comparison, and explicit promotion.</p></details>
+<details class="faq"><summary>How are consumers protected from corrections?</summary><p>Name correction windows and notification rules, preserve lineage, and publish atomically so consumers never read a half-corrected dataset.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What makes a pipeline idempotent?","acceptedAnswer":{"@type":"Answer","text":"Stable identity, deterministic work, checkpoints, and atomic publication."}},{"@type":"Question","name":"Why keep raw input?","acceptedAnswer":{"@type":"Answer","text":"It supports controlled replay, correction, and audit under retention rules."}},{"@type":"Question","name":"How should bad records be handled?","acceptedAnswer":{"@type":"Answer","text":"Explicitly block, quarantine, warn, or measure them."}},{"@type":"Question","name":"What is a backfill?","acceptedAnswer":{"@type":"Answer","text":"Controlled historical reprocessing with comparison before promotion."}},{"@type":"Question","name":"How are consumers protected from corrections?","acceptedAnswer":{"@type":"Answer","text":"Use correction windows, notification, lineage, and atomic publication."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Add operating signals with <a href="/skills/design-observability/">Design observability</a>, change live storage with <a href="/skills/migrate-a-database/">Migrate a database</a>, or present results with <a href="/skills/chart-the-truth/">Chart the truth</a>.</p>

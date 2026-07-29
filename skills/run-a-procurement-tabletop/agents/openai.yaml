@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Procurement Tabletop"
+  short_description: "Rehearse purchasing failures and decisions"
+  default_prompt: "Use $run-a-procurement-tabletop to rehearse this procurement failure scenario with decision owners."

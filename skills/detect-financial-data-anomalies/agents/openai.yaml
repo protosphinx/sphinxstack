@@ -1,0 +1,4 @@
+interface:
+  display_name: "Detect Financial Data Anomalies"
+  short_description: "Find unusual records without assuming fraud"
+  default_prompt: "Use $detect-financial-data-anomalies to identify and investigate these data exceptions."

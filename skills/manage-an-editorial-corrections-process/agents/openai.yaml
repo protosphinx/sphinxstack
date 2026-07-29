@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage an editorial corrections process"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $manage-an-editorial-corrections-process to complete and verify this writing task."

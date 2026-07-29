@@ -1,0 +1,4 @@
+interface:
+  display_name: "Negotiate a Promotion"
+  short_description: "Clarify scope, criteria, authority, and timing"
+  default_prompt: "Use $negotiate-a-promotion to prepare a promotion conversation grounded in actual scope and criteria."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Critique"
+  short_description: "Run a specific, evidence-based design critique"
+  default_prompt: "Use $design-critique to help me complete this workflow with verified evidence."

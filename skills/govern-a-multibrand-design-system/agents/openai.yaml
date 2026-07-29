@@ -1,0 +1,4 @@
+interface:
+  display_name: "govern-a-multibrand-design-system"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $govern-a-multibrand-design-system to complete and verify this task."

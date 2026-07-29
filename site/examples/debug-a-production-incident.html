@@ -1,0 +1,45 @@
+<h2>Worked case: checkout failures after a release</h2>
+<p class="case-trigger"><strong>Trigger:</strong> Checkout errors rose after the last release and customers are affected now.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Payments are failing. The error dashboard jumped right after deploy.</div>
+<div class="cm cm-agent">Open an incident record. What is the user impact, first known time, release ID, and safest reversible containment?</div>
+<div class="cm cm-user cd-hide">About 18 percent of checkouts fail. Release 8f21 started twelve minutes ago.</div>
+<div class="cm cm-agent cd-hide">That is enough to act. We will preserve the deploy and trace evidence, then roll back one change and predict which signal should recover.</div>
+<div class="cm cm-user cd-hide">Should we inspect the new payment code first?</div>
+<div class="cm cm-agent cd-hide">Not while impact continues. Restore the known-good path first, verify checkout as a user, then investigate from the timeline.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Restoration comes before an elegant diagnosis.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The incident record</h2>
+<table class="plain-table">
+<thead><tr><th>Time</th><th>Type</th><th>Record</th></tr></thead>
+<tbody>
+<tr><td>09:42</td><td>Observation</td><td>Checkout error rate 18 percent; release 8f21 active</td></tr>
+<tr><td>09:46</td><td>Decision</td><td>Rollback because impact is active and release is reversible</td></tr>
+<tr><td>09:51</td><td>Evidence</td><td>Error rate below 0.5 percent; three synthetic purchases pass</td></tr>
+</tbody>
+</table>
+<h3>Evidence set</h3>
+<ul>
+<li><strong>Impact window:</strong> 09:39 to 09:51, checkout only, with affected request count.</li>
+<li><strong>Recovery proof:</strong> user checkout, payment provider response, and stable error rate.</li>
+<li><strong>Follow-up owner:</strong> payments lead owns the missing contract test and its verification.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>The rollback does not reduce errors. The incident lead reverts that hypothesis to unconfirmed,
+checks the payment provider and feature-flag history, and avoids a second blind code change. If data
+integrity becomes uncertain, checkout is disabled cleanly while the data owner joins the response.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Who should lead an incident?</summary><p>One named person who coordinates decisions and keeps responders focused. The deepest technical expert can investigate without also managing the room.</p></details>
+<details class="faq"><summary>When should we roll back?</summary><p>When user harm is active, the recent change is a credible trigger, rollback is safer than continued diagnosis, and recovery can be verified.</p></details>
+<details class="faq"><summary>What belongs in the timeline?</summary><p>Timestamped observations, hypotheses, decisions, actions, owners, and results. Keep facts distinct from explanations.</p></details>
+<details class="faq"><summary>When is the incident over?</summary><p>After the user journey is restored, delayed work and repair are complete, and the service stays healthy through the stated stability window.</p></details>
+<details class="faq"><summary>Is the post-incident review about blame?</summary><p>No. It explains the trigger, contributing conditions, failed defenses, impact, and owned improvements to the system.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who should lead an incident?","acceptedAnswer":{"@type":"Answer","text":"One named person coordinates decisions and focus."}},{"@type":"Question","name":"When should we roll back?","acceptedAnswer":{"@type":"Answer","text":"When harm is active and rollback is safer than continued diagnosis."}},{"@type":"Question","name":"What belongs in the timeline?","acceptedAnswer":{"@type":"Answer","text":"Timestamped observations, hypotheses, decisions, actions, owners, and results."}},{"@type":"Question","name":"When is the incident over?","acceptedAnswer":{"@type":"Answer","text":"After recovery, repair, and a defined stability window."}},{"@type":"Question","name":"Is the post-incident review about blame?","acceptedAnswer":{"@type":"Answer","text":"No. It explains system conditions and owned improvements."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Repair missing signals with <a href="/skills/design-observability/">Design observability</a> and harden releases with <a href="/skills/create-a-deployment-pipeline/">Create a deployment pipeline</a>.</p>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Configure Secure Cookies"
+  short_description: "Set cookie scope, transport, and browser controls"
+  default_prompt: "Use $configure-secure-cookies to configure and test these application cookies safely."

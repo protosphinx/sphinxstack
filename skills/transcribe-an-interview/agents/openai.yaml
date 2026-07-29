@@ -1,0 +1,4 @@
+interface:
+  display_name: "Transcribe an Interview"
+  short_description: "Create an accurate traceable spoken transcript"
+  default_prompt: "Use $transcribe-an-interview to create and verify this interview transcript."

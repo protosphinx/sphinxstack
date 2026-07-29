@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-crisis-decision-log"
+  short_description: "Design an accountable crisis decision log"
+  default_prompt: "Use $design-a-crisis-decision-log to complete and verify this task."

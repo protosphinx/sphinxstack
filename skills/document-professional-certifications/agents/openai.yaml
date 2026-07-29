@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document Professional Certifications"
+  short_description: "List credentials with exact status and evidence"
+  default_prompt: "Use $document-professional-certifications to document these credentials accurately."

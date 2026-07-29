@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run an Event Command Center"
+  short_description: "Coordinate live decisions, incidents, and recovery"
+  default_prompt: "Use $run-an-event-command-center to design and operate live event coordination under pressure."

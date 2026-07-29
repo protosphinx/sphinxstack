@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set Up a Webhook"
+  short_description: "Implement, secure, replay, and observe webhook delivery"
+  default_prompt: "Use $set-up-a-webhook to add this event integration with verification and replay safety."

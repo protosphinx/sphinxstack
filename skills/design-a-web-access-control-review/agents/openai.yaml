@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-web-access-control-review"
+  short_description: "Design a complete web authorization review"
+  default_prompt: "Use $design-a-web-access-control-review to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "First SQL"
+  short_description: "Learn SQL through verified queries on real data"
+  default_prompt: "Use $first-sql to help me complete this workflow with verified evidence."

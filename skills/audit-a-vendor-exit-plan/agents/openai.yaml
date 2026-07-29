@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit-a-vendor-exit-plan"
+  short_description: "Audit a material vendor exit for readiness"
+  default_prompt: "Use $audit-a-vendor-exit-plan to complete and verify this task."

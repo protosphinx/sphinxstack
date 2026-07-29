@@ -1,0 +1,4 @@
+interface:
+  display_name: "Define Procurement Requirements"
+  short_description: "Turn business needs into bid-ready requirements"
+  default_prompt: "Use $define-procurement-requirements to turn this purchasing need into testable requirements."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Sales Discovery Call"
+  short_description: "Build a focused and evidence-based call plan"
+  default_prompt: "Use $prepare-a-sales-discovery-call to help me complete this workflow with verifiable evidence."

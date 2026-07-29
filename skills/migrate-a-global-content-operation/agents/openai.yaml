@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate a global content operation"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $migrate-a-global-content-operation to complete and verify this writing task."

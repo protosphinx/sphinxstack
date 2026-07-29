@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fact-check a Draft"
+  short_description: "Verify claims, citations, dates, and quoted material"
+  default_prompt: "Use $fact-check-a-draft to audit this draft and produce a sourced corrections log."

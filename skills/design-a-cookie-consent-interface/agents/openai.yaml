@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Cookie Consent Interface"
+  short_description: "Present real consent choices without coercion"
+  default_prompt: "Use $design-a-cookie-consent-interface to design and verify this consent experience."

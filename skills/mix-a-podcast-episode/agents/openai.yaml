@@ -1,0 +1,4 @@
+interface:
+  display_name: "mix a podcast episode"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $mix-a-podcast-episode to complete and verify this media task."

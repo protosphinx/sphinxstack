@@ -1,0 +1,111 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session starts when someone has never built a sheet of their own. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> teach me spreadsheets. everyone at work uses them and i just nod along</div>
+<div class="cm cm-agent">We can fix the nodding today. First question: what do you already
+keep track of, even loosely? Grades, match results, money in and out, workouts,
+a collection. Anything with rows in it.</div>
+<div class="cm cm-user cd-hide">i log my climbing sessions in my notes app. maybe 30 entries</div>
+<div class="cm cm-agent cd-hide">That's our dataset. Ten real rows beat a hundred invented ones,
+and you have thirty. Moving them into a sheet is the first lesson, because it forces
+the structure conversation: one row per session, one column per fact.</div>
+<div class="cm cm-user cd-hide">can't you just generate demo data? my notes are embarrassing</div>
+<div class="cm cm-agent cd-hide">No demo data while yours exists. Every formula I show you will
+answer a question you actually have about your climbing. So tell me one: what do you
+want this sheet to settle?</div>
+<div class="cm cm-user cd-hide">whether i'm actually getting better or just going more often</div>
+<div class="cm cm-agent cd-hide">A sheet can answer that. We'll build a summary block: sessions
+per month next to hardest grade per month. Before every formula you'll predict the
+result out loud; the wrong guesses are where the learning happens.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Have nothing worth putting in a spreadsheet?</h2>
+<p>Almost nobody thinks they do, and almost everybody does. The skill starts by asking
+what you keep track of loosely: in a notes app, in a group chat, on paper, in your
+head. It picks whichever has the most rows and builds from that. If the data only
+exists on paper, entering it together is the first lesson. If you genuinely track
+nothing yet, start a small project that produces rows:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/count-something/"><img src="/assets/project-img/count-something.jpg" alt=""><span>Count something for a week</span></a>
+<a class="mini" href="/ideas/game-night-standings/"><img src="/assets/project-img/game-night-standings.jpg" alt=""><span>Game night standings</span></a>
+<a class="mini" href="/ideas/week-of-logs/"><img src="/assets/project-img/week-of-logs.jpg" alt=""><span>A week of logs</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>The same thirty climbing sessions, before and after. The before lived in a notes
+app; the after is a sheet that answers the question it was built for.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example sheet, before and after">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">BEFORE &nbsp;·&nbsp; NOTES APP</div>
+<pre style="font-size:0.72rem; line-height:1.5; white-space:pre-wrap; margin:0.3rem 0 0;">tues climbed at crux, purple v3 finally!!
+went again thurs. tired. mostly v1s
+sat w/ dana, tried the v4 overhang, no</pre>
+<div class="rz-h">AFTER &nbsp;·&nbsp; SESSIONS TAB <span class="anno-badge">1</span></div>
+<pre style="font-size:0.72rem; line-height:1.5; margin:0.3rem 0 0;">date        gym     hardest  attempts
+2026-05-02  Crux    V3       14
+2026-05-04  Crux    V1        9
+2026-05-07  Boulda  V3       11</pre>
+<div class="rz-h">SUMMARY BLOCK <span class="anno-badge">2</span></div>
+<pre style="font-size:0.72rem; line-height:1.5; margin:0.3rem 0 0;">month     sessions  hardest
+2026-03   6         V2        =COUNTIF(...)
+2026-04   7         V3
+2026-05   6         V4</pre>
+<div class="rz-item" style="margin-top:0.6rem;"><div class="rz-line"><b>Answer:</b> hardest grade
+climbed rose from V2 to V4 over three months while sessions per month stayed flat
+<span class="anno-badge">3</span></div></div>
+</div>
+<ol class="anno-notes">
+<li><b>One row per session, one column per fact.</b> Header frozen, dates typed as
+dates, numbers as numbers. The skill shows you what breaks when "3 wins" sits in a
+number column.</li>
+<li><b>Formulas you typed yourself.</b> SUM, COUNTIF, a lookup across tabs, then a
+summary block. Each one arrives when a question of yours needs it.</li>
+<li><b>The answer as a sentence at the top of the sheet.</b> The summary now says
+something the raw rows did not, and adding a new session updates every number.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is this free?</summary>
+<p>The skill is free. It works in Google Sheets or LibreOffice Calc, both free,
+whichever you already have.</p></details>
+<details class="faq"><summary>Excel or Google Sheets?</summary>
+<p>Whichever is in front of you. The session uses Google Sheets or LibreOffice Calc,
+and everything it teaches (SUM, COUNTIF, lookups, a summary table) works the same way
+in Excel.</p></details>
+<details class="faq"><summary>Do I have to memorize formulas?</summary>
+<p>No. Each function is introduced the moment one of your own questions needs it,
+never as a list to memorize. You type every formula yourself and predict the result
+before pressing enter.</p></details>
+<details class="faq"><summary>My data is on paper or buried in a group chat.</summary>
+<p>Then entering it is the first lesson. Typing it in forces the structure decisions
+(what is a row, what is a column) that make everything after it work.</p></details>
+<details class="faq"><summary>What happens when I get new data next week?</summary>
+<p>You add a row and watch every summary update. That is the finish line of the
+session: a sheet where new data flows through without you rebuilding anything.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this free?","acceptedAnswer":{"@type":"Answer","text":"The skill is free. It works in Google Sheets or LibreOffice Calc, both free."}},
+{"@type":"Question","name":"Excel or Google Sheets?","acceptedAnswer":{"@type":"Answer","text":"Whichever you have. The session uses Google Sheets or LibreOffice Calc, and the formulas it teaches work the same way in Excel."}},
+{"@type":"Question","name":"Do I have to memorize formulas?","acceptedAnswer":{"@type":"Answer","text":"No. Each function is introduced when one of your own questions needs it. You type every formula and predict the result before pressing enter."}},
+{"@type":"Question","name":"My data is on paper or in a group chat.","acceptedAnswer":{"@type":"Answer","text":"Entering it is the first lesson. Typing it in forces the structure decisions that make everything after it work."}},
+{"@type":"Question","name":"What happens when I get new data next week?","acceptedAnswer":{"@type":"Answer","text":"You add a row and watch every summary update without rebuilding anything."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Sheet built?</b> The natural next skills:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/clean-a-dataset/"><img src="/assets/skill-img/clean-a-dataset.jpg" alt=""><span>Clean a dataset</span></a>
+<a class="mini" href="/skills/chart-the-truth/"><img src="/assets/skill-img/chart-the-truth.jpg" alt=""><span>Chart the truth</span></a>
+<a class="mini" href="/skills/track-anything/"><img src="/assets/skill-img/track-anything.jpg" alt=""><span>Track anything</span></a>
+</div>
+<p><b>Want a project that runs on a sheet?</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/club-dues-tracker/"><img src="/assets/project-img/club-dues-tracker.jpg" alt=""><span>Club dues tracker</span></a>
+<a class="mini" href="/ideas/season-in-numbers/"><img src="/assets/project-img/season-in-numbers.jpg" alt=""><span>Your season in numbers</span></a>
+<a class="mini" href="/ideas/year-of-books/"><img src="/assets/project-img/year-of-books.jpg" alt=""><span>A year of books</span></a>
+</div>

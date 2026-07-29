@@ -1,0 +1,41 @@
+<h2>Worked case: investigate a cross-system failure</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A consequential failure crossed technical and operational boundaries, evidence is incomplete, and leadership wants one person named as the root cause.</p>
+<div class="chatdemo">
+<div class="cm cm-user">The operator clicked approve, so can we close this as human error?</div>
+<div class="cm cm-agent">Not yet. I need the observed outcome, evidence provenance, synchronized chronology, expected controls, actual path, and competing causal hypotheses.</div>
+<div class="cm cm-user cd-hide">The logs are incomplete, but everyone knows what happened.</div>
+<div class="cm cm-agent cd-hide">Shared belief is not provenance. I will preserve witness accounts separately and keep hypotheses bounded by missing evidence.</div>
+<div class="cm cm-user cd-hide">Can the action be retraining the operator?</div>
+<div class="cm cm-agent cd-hide">Only if evidence shows a training gap and the action interrupts the causal path. We must also test technical, process, workload, and control conditions.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">The last visible action is not automatically the cause.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The investigation evidence package</h2>
+<table class="plain-table">
+<thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead>
+<tbody>
+<tr><td>Synchronized chronology</td><td>Observed state, actions, records, provenance, inference, and gaps</td><td>Time domains and contradictions remain visible</td></tr>
+<tr><td>Hypothesis ledger</td><td>Cause, prediction, support, contradiction, missing test, and disposition</td><td>No hypothesis wins by confidence alone</td></tr>
+<tr><td>Effectiveness verification</td><td>Control change, responsible layer, test, signal, residual risk, and authority</td><td>Action demonstrably interrupts the causal path</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>A favored explanation depends on an application timestamp while the database and message broker use different
+clocks. Investigators preserve all three records, establish clock offsets, and rebuild the synchronized chronology.
+They retain two viable hypotheses until a controlled replay distinguishes them and do not name an individual cause.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is there always one root cause?</summary><p>No. Consequential outcomes commonly require interacting events, conditions, control gaps, and impact amplifiers.</p></details>
+<details class="faq"><summary>How should witness accounts be used?</summary><p>Preserve them with source and timing, then compare them with records without treating memory as a log.</p></details>
+<details class="faq"><summary>When is a causal hypothesis supported?</summary><p>When evidence and safe tests match its predictions better than credible alternatives.</p></details>
+<details class="faq"><summary>Is retraining a valid corrective action?</summary><p>Only when a demonstrated training gap contributed and the action is tested for effectiveness.</p></details>
+<details class="faq"><summary>When can the analysis close?</summary><p>After bounded causes, tested control actions, residual risk acceptance, and later effectiveness evidence are recorded.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is there always one root cause?","acceptedAnswer":{"@type":"Answer","text":"No. Failures often require interacting events, conditions, and controls."}},{"@type":"Question","name":"How should witness accounts be used?","acceptedAnswer":{"@type":"Answer","text":"Preserve provenance and compare them with records."}},{"@type":"Question","name":"When is a causal hypothesis supported?","acceptedAnswer":{"@type":"Answer","text":"When evidence and safe tests match its predictions better than alternatives."}},{"@type":"Question","name":"Is retraining a valid corrective action?","acceptedAnswer":{"@type":"Answer","text":"Only for a demonstrated training gap with effectiveness testing."}},{"@type":"Question","name":"When can the analysis close?","acceptedAnswer":{"@type":"Answer","text":"After bounded causes, tested controls, residual risk, and effectiveness evidence."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Preserve operations with <a href="/skills/write-an-operations-runbook/">Write an operations runbook</a>,
+track treatment with <a href="/skills/create-a-risk-register/">Create a risk register</a>, and
+verify repair with <a href="/skills/design-a-regression-test/">Design a regression test</a>.</p>

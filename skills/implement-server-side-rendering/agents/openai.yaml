@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement server side rendering"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $implement-server-side-rendering to complete and verify this web task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Project Description for a Resume"
+  short_description: "Connect project decisions to verifiable outcomes"
+  default_prompt: "Use $write-a-project-description-for-a-resume to describe this project concisely."

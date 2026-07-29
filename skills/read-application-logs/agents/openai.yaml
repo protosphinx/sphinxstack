@@ -1,0 +1,4 @@
+interface:
+  display_name: "Read Application Logs"
+  short_description: "Extract evidence from structured service logs"
+  default_prompt: "Use $read-application-logs to investigate these service logs safely."

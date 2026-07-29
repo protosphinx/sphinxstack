@@ -1,0 +1,4 @@
+interface:
+  display_name: "write a public consultation response"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $write-a-public-consultation-response to complete and verify this writing task."

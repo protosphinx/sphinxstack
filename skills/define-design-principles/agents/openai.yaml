@@ -1,0 +1,4 @@
+interface:
+  display_name: "Define Design Principles"
+  short_description: "Turn product values into testable design choices"
+  default_prompt: "Use $define-design-principles to create evidence-backed principles for this product or service."

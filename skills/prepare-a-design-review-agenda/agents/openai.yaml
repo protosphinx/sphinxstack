@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare a design review agenda"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $prepare-a-design-review-agenda to complete and verify this design task."

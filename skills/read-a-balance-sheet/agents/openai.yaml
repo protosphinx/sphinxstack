@@ -1,0 +1,4 @@
+interface:
+  display_name: "Read a Balance Sheet"
+  short_description: "Interpret assets, liabilities, and equity"
+  default_prompt: "Use $read-a-balance-sheet to analyze and reconcile this balance sheet."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "recover-from-a-catastrophic-source-control-failure"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $recover-from-a-catastrophic-source-control-failure to complete and verify this task."

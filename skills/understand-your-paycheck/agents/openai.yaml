@@ -1,0 +1,4 @@
+interface:
+  display_name: "Understand Your Paycheck"
+  short_description: "Reconcile a paycheck without guessing deductions"
+  default_prompt: "Use $understand-your-paycheck to help me complete this workflow with verified evidence."

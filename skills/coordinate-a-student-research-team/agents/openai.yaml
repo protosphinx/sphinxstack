@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coordinate a Student Research Team"
+  short_description: "Coordinate roles, evidence, and fair contribution"
+  default_prompt: "Use $coordinate-a-student-research-team to coordinate this research team."

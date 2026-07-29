@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrate an Accounting System"
+  short_description: "Move ledgers, controls, and audit history"
+  default_prompt: "Use $migrate-an-accounting-system to plan and prove this accounting migration."

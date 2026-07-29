@@ -1,0 +1,4 @@
+interface:
+  display_name: "Define A Research Question"
+  short_description: "Turn a broad topic into an answerable research question"
+  default_prompt: "Use $define-a-research-question to turn my topic into a bounded, answerable research question."

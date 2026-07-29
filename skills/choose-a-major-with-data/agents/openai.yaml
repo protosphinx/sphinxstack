@@ -1,0 +1,4 @@
+interface:
+  display_name: "Choose A Major with Data"
+  short_description: "Compare college majors with evidence and tradeoffs"
+  default_prompt: "Use $choose-a-major-with-data to help me complete this workflow with verified evidence."

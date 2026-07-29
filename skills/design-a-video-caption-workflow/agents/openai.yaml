@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Video Caption Workflow"
+  short_description: "Produce accurate timed accessible captions"
+  default_prompt: "Use $design-a-video-caption-workflow to design and verify captions for this production."

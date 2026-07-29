@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Healthcare Resume"
+  short_description: "Present verified clinical scope and credentials"
+  default_prompt: "Use $write-a-healthcare-resume to create a safe and accurate healthcare resume."

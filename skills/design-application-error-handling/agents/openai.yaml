@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Application Error Handling"
+  short_description: "Classify failures and protect recovery paths"
+  default_prompt: "Use $design-application-error-handling to define safe error behavior."

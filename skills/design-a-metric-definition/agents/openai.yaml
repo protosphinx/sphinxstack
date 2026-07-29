@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a metric definition"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $design-a-metric-definition to complete and verify this data task."

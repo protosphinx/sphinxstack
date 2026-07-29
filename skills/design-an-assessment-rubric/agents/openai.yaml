@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-an-assessment-rubric"
+  short_description: "Run a verified design an assessment rubric workflow"
+  default_prompt: "Use $design-an-assessment-rubric to complete and verify this task."

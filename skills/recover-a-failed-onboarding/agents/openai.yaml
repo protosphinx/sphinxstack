@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recover a Failed Onboarding"
+  short_description: "Restore a stalled customer onboarding safely"
+  default_prompt: "Use $recover-a-failed-onboarding to help me complete this workflow with verifiable evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document a Purchase Decision"
+  short_description: "Record a traceable purchasing rationale"
+  default_prompt: "Use $document-a-purchase-decision to record this purchasing decision and its evidence."

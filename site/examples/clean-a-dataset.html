@@ -1,0 +1,121 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a cleaning session starts, including the rule that protects you from
+yourself. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> our club signup sheet is a disaster. dates stored as text, names spelled three ways, random blank rows</div>
+<div class="cm cm-agent">A real mess is the right classroom. Before we touch anything: copy
+the whole thing to a tab called <b>raw</b> and treat that tab as read-only. Cleaning
+never happens on the original.</div>
+<div class="cm cm-user cd-hide">copied. can we just delete the junk rows now?</div>
+<div class="cm cm-agent cd-hide">Look before touching. Sort each important column and skim the
+extremes, count blanks with COUNTBLANK, count exact duplicates, and write every problem
+in a list before fixing any of them. That list becomes your cleaning log.</div>
+<div class="cm cm-user cd-hide">found 4 exact duplicate rows. deleting them?</div>
+<div class="cm cm-agent cd-hide">One check first: could two identical rows both be real? Two people
+with the same name can sign up the same day. You know this club and I don't, so that
+call is yours.</div>
+<div class="cm cm-user cd-hide">no, the form double-submitted. deleted, and i wrote it down: 212 rows to 208</div>
+<div class="cm cm-agent cd-hide">That log line is the whole discipline. Anyone reading it, including
+future you, can see exactly what the data went through and why. Next problem on your
+list: the three spellings of "Priya".</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Isn't editing the data just... changing the data?</h2>
+<p>It can be, which is why the skill makes you keep a <b>log</b> tab: one line per
+change, what and why, with row counts before and after. The original stays untouched
+in the <b>raw</b> tab, so any change can be traced or reversed. Blanks are decided
+per column instead of filled to look complete, out-of-range values get flagged in a
+notes column instead of silently deleted, and you make every judgment call because
+you know the data's world. If you want a dataset of your own to practice on, these
+projects produce satisfyingly messy ones:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/street-tree-survey/"><img src="/assets/project-img/street-tree-survey.jpg" alt=""><span>Street tree survey</span></a>
+<a class="mini" href="/ideas/missing-stat-table/"><img src="/assets/project-img/missing-stat-table.jpg" alt=""><span>Build a missing stat table</span></a>
+<a class="mini" href="/ideas/club-dues-tracker/"><img src="/assets/project-img/club-dues-tracker.jpg" alt=""><span>Club dues tracker</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>Three tabs. The same signup rows before and after, and the log that says what
+happened in between.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example cleaned dataset, three tabs">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">RAW TAB &nbsp;·&nbsp; UNTOUCHED <span class="anno-badge">1</span></div>
+<pre style="font-size:0.72rem; line-height:1.5; margin:0.3rem 0 0;">name        joined       paid
+Priya S.    March 3rd    yes
+priya s     March 3rd    yes
+Jordan M.                $10
+DANA K      3/9/26       ten dollars</pre>
+<div class="rz-h">CLEAN TAB <span class="anno-badge">2</span></div>
+<pre style="font-size:0.72rem; line-height:1.5; margin:0.3rem 0 0;">name       joined      paid   notes
+Priya S.   2026-03-03  10
+Jordan M.  2026-03-05  10     joined date from form email
+Dana K.    2026-03-09  10</pre>
+<div class="rz-h">LOG TAB <span class="anno-badge">3</span></div>
+<pre style="font-size:0.72rem; line-height:1.5; white-space:pre-wrap; margin:0.3rem 0 0;">removed 4 exact dupes (form double-submit), 212 -&gt; 208
+dates parsed to YYYY-MM-DD, 11 were text
+"paid" to numbers; "ten dollars" confirmed as 10 w/ Dana
+merged 3 spellings of Priya S. (same email)</pre>
+<div class="rz-item" style="margin-top:0.6rem;"><div class="rz-line"><b>Proof:</b>
+=SUMIF(paid) returned an error on raw and returns 2,080 on clean
+<span class="anno-badge">4</span></div></div>
+</div>
+<ol class="anno-notes">
+<li><b>The original survives.</b> The raw tab is copied first and never edited. Every
+fix happens on the clean tab, so nothing is unrecoverable.</li>
+<li><b>One problem type at a time.</b> Types first, then inconsistent labels, then
+duplicates, then blanks, then out-of-range values. You decide each case; the skill
+explains the trade-off.</li>
+<li><b>The log is what separates cleaning from tampering.</b> One line per change
+with a reason and row counts. It also records anything masked before sharing, like
+other people's contact details.</li>
+<li><b>Cleaning has to buy something.</b> The session ends with a summary formula
+that failed on raw working on clean, and with you able to say in one sentence what
+this dataset can and cannot answer.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Will I lose my original data?</summary>
+<p>No. The first step is copying everything to a raw tab that stays read-only for the
+whole session. All fixes happen on a separate clean tab.</p></details>
+<details class="faq"><summary>What do I do with blank cells?</summary>
+<p>Decide per column, out loud: leave blank, fill with a known value, or drop the
+row, and write the reason in the log. A blank is information. The skill never invents
+a value to make a column look complete.</p></details>
+<details class="faq"><summary>How do I know when it's clean enough?</summary>
+<p>When one row means one thing, columns hold one type each, and a summary formula
+that failed on the raw tab works. Clean enough to answer your question is the bar,
+and the skill has you state what the dataset still cannot answer.</p></details>
+<details class="faq"><summary>My dataset has other people's names and emails in it.</summary>
+<p>Then before the sheet is shared anywhere, you mask or remove those columns and add
+a log line saying what was removed. The skill prompts this explicitly.</p></details>
+<details class="faq"><summary>Do I need to code?</summary>
+<p>No. Everything happens in Google Sheets or LibreOffice Calc with sorting,
+find-replace, TRIM, COUNTBLANK, and helper columns. If your questions later outgrow
+formulas, first-sql is the next step.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Will I lose my original data?","acceptedAnswer":{"@type":"Answer","text":"No. The first step is copying everything to a read-only raw tab. All fixes happen on a separate clean tab."}},
+{"@type":"Question","name":"What do I do with blank cells?","acceptedAnswer":{"@type":"Answer","text":"Decide per column: leave blank, fill with a known value, or drop the row, with the reason logged. A blank is information; the skill never invents values."}},
+{"@type":"Question","name":"How do I know when it's clean enough?","acceptedAnswer":{"@type":"Answer","text":"When one row means one thing, each column holds one type, and a summary formula that failed on raw works on clean."}},
+{"@type":"Question","name":"My dataset has other people's names and emails in it.","acceptedAnswer":{"@type":"Answer","text":"Mask or remove those columns before sharing and add a log line saying what was removed. The skill prompts this explicitly."}},
+{"@type":"Question","name":"Do I need to code?","acceptedAnswer":{"@type":"Answer","text":"No. Everything happens in Google Sheets or LibreOffice Calc. If your questions outgrow formulas, first-sql is the next step."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Data clean?</b> Now it will not fight back:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/chart-the-truth/"><img src="/assets/skill-img/chart-the-truth.jpg" alt=""><span>Chart the truth</span></a>
+<a class="mini" href="/skills/first-sql/"><img src="/assets/skill-img/first-sql.jpg" alt=""><span>First SQL</span></a>
+<a class="mini" href="/skills/simple-dashboard/"><img src="/assets/skill-img/simple-dashboard.jpg" alt=""><span>Simple dashboard</span></a>
+</div>
+<p><b>Need messier practice?</b> Collect a dataset of your own:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/run-a-survey/"><img src="/assets/skill-img/run-a-survey.jpg" alt=""><span>Run a survey</span></a>
+<a class="mini" href="/ideas/hours-vs-grades/"><img src="/assets/project-img/hours-vs-grades.jpg" alt=""><span>Hours vs grades</span></a>
+<a class="mini" href="/ideas/listening-charted/"><img src="/assets/project-img/listening-charted.jpg" alt=""><span>Your listening, charted</span></a>
+</div>

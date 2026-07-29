@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a localization ready interface"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $design-a-localization-ready-interface to complete and verify this design task."

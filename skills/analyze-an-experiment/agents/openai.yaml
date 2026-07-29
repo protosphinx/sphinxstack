@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze an Experiment"
+  short_description: "Evaluate an experiment without hiding uncertainty"
+  default_prompt: "Use $analyze-an-experiment to check this experiment and write a decision-ready result."

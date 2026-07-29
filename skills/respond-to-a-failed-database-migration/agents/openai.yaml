@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to a Failed Database Migration"
+  short_description: "Protect data and restore safe service state"
+  default_prompt: "Use $respond-to-a-failed-database-migration to contain and recover this failure."

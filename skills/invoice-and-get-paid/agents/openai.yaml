@@ -1,0 +1,4 @@
+interface:
+  display_name: "Invoice and Get Paid"
+  short_description: "Create an accurate invoice and track payment"
+  default_prompt: "Use $invoice-and-get-paid to help me complete this workflow with verified evidence."

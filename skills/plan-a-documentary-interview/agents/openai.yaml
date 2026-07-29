@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Documentary Interview"
+  short_description: "Plan ethical evidence-rich documentary interviews"
+  default_prompt: "Use $plan-a-documentary-interview to plan this interview and its participant safeguards."

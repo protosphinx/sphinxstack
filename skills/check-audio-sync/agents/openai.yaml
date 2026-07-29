@@ -1,0 +1,4 @@
+interface:
+  display_name: "check audio sync"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $check-audio-sync to complete and verify this media task."

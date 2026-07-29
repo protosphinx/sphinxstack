@@ -1,0 +1,4 @@
+interface:
+  display_name: "write-a-skills-based-resume"
+  short_description: "Run a verified write a skills based resume workflow"
+  default_prompt: "Use $write-a-skills-based-resume to complete and verify this task."

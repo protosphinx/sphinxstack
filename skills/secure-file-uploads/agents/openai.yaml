@@ -1,0 +1,4 @@
+interface:
+  display_name: "Secure File Uploads"
+  short_description: "Constrain, scan, store, and serve uploads safely"
+  default_prompt: "Use $secure-file-uploads to design a safe upload pipeline for these files and users."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compare Pricing Models"
+  short_description: "Compare pricing structures with scenarios and guardrails"
+  default_prompt: "Use $compare-pricing-models to model these pricing options and document a decision."

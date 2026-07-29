@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start A Project"
+  short_description: "Turn an idea into a scoped, working project"
+  default_prompt: "Use $start-a-project to help me complete this workflow with verified evidence."

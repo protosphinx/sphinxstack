@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prevent Cross-Site Scripting"
+  short_description: "Keep untrusted data out of executable contexts"
+  default_prompt: "Use $prevent-cross-site-scripting to trace and remove XSS paths in this application."

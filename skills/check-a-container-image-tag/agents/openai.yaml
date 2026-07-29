@@ -1,0 +1,4 @@
+interface:
+  display_name: "check-a-container-image-tag"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $check-a-container-image-tag to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Email A Professor"
+  short_description: "Write a respectful, specific email to an instructor"
+  default_prompt: "Use $email-a-professor to help me complete this workflow with verified evidence."

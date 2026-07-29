@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio Page"
+  short_description: "Build a portfolio page from verified work"
+  default_prompt: "Use $portfolio-page to help me complete this workflow with verified evidence."

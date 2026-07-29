@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate a Product Idea"
+  short_description: "Test a product assumption before investing in a build"
+  default_prompt: "Use $validate-a-product-idea to turn this idea into a small evidence-gathering test."

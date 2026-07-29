@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare-a-thesis-defense"
+  short_description: "Run a verified prepare a thesis defense workflow"
+  default_prompt: "Use $prepare-a-thesis-defense to complete and verify this task."

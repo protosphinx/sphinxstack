@@ -1,0 +1,4 @@
+interface:
+  display_name: "build-a-return-to-work-plan"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $build-a-return-to-work-plan to complete and verify this task."

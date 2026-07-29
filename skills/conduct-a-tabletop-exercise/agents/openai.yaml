@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conduct a Tabletop Exercise"
+  short_description: "Test decisions and controls through a safe scenario"
+  default_prompt: "Use $conduct-a-tabletop-exercise to run and evaluate this scenario-based exercise."

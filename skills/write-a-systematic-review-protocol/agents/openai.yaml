@@ -1,0 +1,4 @@
+interface:
+  display_name: "write-a-systematic-review-protocol"
+  short_description: "Run a verified write a systematic review protocol workflow"
+  default_prompt: "Use $write-a-systematic-review-protocol to complete and verify this task."

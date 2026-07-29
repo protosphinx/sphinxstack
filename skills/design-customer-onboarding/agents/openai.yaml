@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Customer Onboarding"
+  short_description: "Create a measurable path to first customer value"
+  default_prompt: "Use $design-customer-onboarding to help me complete this workflow with verifiable evidence."

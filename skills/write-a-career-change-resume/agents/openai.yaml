@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Career Change Resume"
+  short_description: "Translate relevant evidence across career fields"
+  default_prompt: "Use $write-a-career-change-resume to position this career transition honestly."

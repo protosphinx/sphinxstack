@@ -1,0 +1,34 @@
+<h2>Worked case: recover an account when its usual channels are compromised</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A workspace owner reports password-reset messages and an authenticator they did not add while logs show a new location, API token, bulk export, forwarding-rule change, and ownership transfer attempt, but the registered email and phone may both be controlled by the attacker.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can support send a reset link to the registered email?</div>
+<div class="cm cm-agent">No. That channel may be attacker-controlled. Protect the account, preserve evidence, and use the approved independent proof path.</div>
+<div class="cm cm-user cd-hide">Should we delete the suspicious events to secure the account?</div>
+<div class="cm cm-agent cd-hide">No. Revoke active capability while preserving immutable evidence and a clear timeline.</div>
+<div class="cm cm-user cd-hide">Can we just change the password?</div>
+<div class="cm cm-agent cd-hide">That leaves sessions, API tokens, remembered devices, recovery links, federation grants, and malicious factors active.</div>
+<div class="cm cm-user">When is control restored?</div>
+<div class="cm cm-agent">After independent identity proof, full session and token containment, fresh factors and recovery codes, reversal review, and recurrence monitoring.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Protect the victim without helping the attacker.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The account-takeover evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Account exposure timeline</td><td>Signals, confirmed events, sessions, tokens, factors, recovery, profile, privilege, exports, messages, payments, and uncertainty</td><td>Facts and hypotheses remain distinct</td></tr>
+<tr><td>Containment and recovery log</td><td>Victim protection, revocations, secret rotation, evidence preservation, independent identity proof, fresh factors, reversal, and notification</td><td>No suspected attacker channel proves ownership</td></tr>
+<tr><td>Control effectiveness review</td><td>Entry path, affected scope, detection, rate limits, sessions, recovery, notifications, support, user harm, recurrence, and improvements</td><td>Each finding has evidence, owner, and verification</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>The person reporting the takeover cannot use the registered email, and an attacker is actively contacting support from that address. Responders freeze ownership and export actions in a reversible state, preserve both support conversations, revoke active credentials, and move recovery to a previously verified organization administrator with two-person approval. No ownership transfer occurs until proof is complete.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Should the whole account be disabled immediately?</summary><p>Use the narrowest safe restriction that stops harm while preserving critical access and evidence.</p></details>
+<details class="faq"><summary>Is a password reset enough?</summary><p>No. Contain sessions, tokens, factors, devices, recovery links, integrations, and unauthorized changes.</p></details>
+<details class="faq"><summary>How should identity be proven?</summary><p>Use the approved risk-based evidence path and independent channels, with separation of duties for privileged accounts.</p></details>
+<details class="faq"><summary>What evidence should be retained?</summary><p>Preserve relevant authentication, session, token, recovery, profile, action, notification, and support evidence under policy.</p></details>
+<details class="faq"><summary>When is the incident complete?</summary><p>After control is restored, unauthorized effects are reviewed, recurrence is monitored, and control improvements are owned and verified.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should the whole account be disabled immediately?","acceptedAnswer":{"@type":"Answer","text":"Use the narrowest restriction that safely stops harm."}},{"@type":"Question","name":"Is a password reset enough?","acceptedAnswer":{"@type":"Answer","text":"No. Contain all active authentication and recovery paths."}},{"@type":"Question","name":"How should identity be proven?","acceptedAnswer":{"@type":"Answer","text":"Use approved independent proof with stronger controls for privilege."}},{"@type":"Question","name":"What evidence should be retained?","acceptedAnswer":{"@type":"Answer","text":"Retain the records needed to reconstruct access, action, and recovery."}},{"@type":"Question","name":"When is the incident complete?","acceptedAnswer":{"@type":"Answer","text":"After recovery, effect review, monitoring, and verified improvements."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Design safer sessions with <a href="/skills/design-session-management/">Design session management</a>,
+test recovery paths with <a href="/skills/test-authentication-flows/">Test authentication flows</a>, and
+record actions with <a href="/skills/implement-audit-logging/">Implement audit logging</a>.</p>

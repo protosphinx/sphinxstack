@@ -1,0 +1,4 @@
+interface:
+  display_name: "plan-a-business-unit-carve-out"
+  short_description: "Plan an evidence-backed business carve-out"
+  default_prompt: "Use $plan-a-business-unit-carve-out to complete and verify this task."

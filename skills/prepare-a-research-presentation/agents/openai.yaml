@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Research Presentation"
+  short_description: "Turn research into a clear, defensible presentation"
+  default_prompt: "Use $prepare-a-research-presentation to build and rehearse this evidence-based talk."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Media List"
+  short_description: "Build a relevant and privacy-conscious outreach list"
+  default_prompt: "Use $create-a-media-list to research and verify a focused list for this story."

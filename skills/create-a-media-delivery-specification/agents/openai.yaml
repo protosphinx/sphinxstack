@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Media Delivery Specification"
+  short_description: "Define masters, variants, metadata, and checks"
+  default_prompt: "Use $create-a-media-delivery-specification to define and verify this delivery package."

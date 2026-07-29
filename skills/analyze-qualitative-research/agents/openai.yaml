@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Qualitative Research"
+  short_description: "Develop traceable themes from qualitative evidence"
+  default_prompt: "Use $analyze-qualitative-research to analyze this qualitative research evidence."

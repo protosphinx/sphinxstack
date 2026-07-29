@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Crowd Safety and Egress"
+  short_description: "Plan crowd movement with qualified safety owners"
+  default_prompt: "Use $plan-crowd-safety-and-egress to build an evidence-led crowd safety and evacuation plan."

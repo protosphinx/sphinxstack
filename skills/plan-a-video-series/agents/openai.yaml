@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Video Series"
+  short_description: "Design a coherent video season with a repeatable format"
+  default_prompt: "Use $plan-a-video-series to define the audience, episodes, production system, and pilot."

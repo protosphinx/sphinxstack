@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrate a Research Data Repository"
+  short_description: "Move governed research data with proof and rollback"
+  default_prompt: "Use $migrate-a-research-data-repository to plan and verify this repository migration."

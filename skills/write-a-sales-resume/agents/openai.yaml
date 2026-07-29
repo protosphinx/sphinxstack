@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Sales Resume"
+  short_description: "Verify revenue, quota, territory, and sales outcomes"
+  default_prompt: "Use $write-a-sales-resume to build a sales resume from verified performance evidence."

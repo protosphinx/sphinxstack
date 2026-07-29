@@ -1,0 +1,4 @@
+interface:
+  display_name: "compare-two-database-schemas"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $compare-two-database-schemas to complete and verify this task."

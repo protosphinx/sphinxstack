@@ -1,0 +1,4 @@
+interface:
+  display_name: "Log Video Footage"
+  short_description: "Record usable takes, moments, and source facts"
+  default_prompt: "Use $log-video-footage to create a reliable footage log for this production."

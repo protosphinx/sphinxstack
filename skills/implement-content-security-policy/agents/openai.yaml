@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement content security policy"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $implement-content-security-policy to complete and verify this web task."

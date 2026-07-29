@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Portfolio Review"
+  short_description: "Build a role-specific portfolio presentation and practice loop"
+  default_prompt: "Use $prepare-a-portfolio-review to select evidence and rehearse this portfolio conversation."

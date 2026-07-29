@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write an Executive Resume"
+  short_description: "Show leadership scope, decisions, and outcomes"
+  default_prompt: "Use $write-an-executive-resume to build a concise evidence-backed executive resume."

@@ -1,0 +1,34 @@
+<h2>Worked case: replace the ledger before year-end</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A multi-entity company is migrating live general ledger, payables, receivables, payroll, inventory, fixed assets, tax, and multi-currency reporting from inconsistent account charts before year-end, while duplicate suppliers, open historical periods, manual overrides, missing audit attachments, and a looming source-retirement date make a direct cutover unsafe.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we import closing balances and switch at year-end?</div>
+<div class="cm cm-agent">Not safely. First inventory ledgers, subledgers, controls, history, attachments, roles, integrations, and statutory access.</div>
+<div class="cm cm-user cd-hide">What should happen to duplicate suppliers?</div>
+<div class="cm cm-agent cd-hide">Preserve source identities, quarantine ambiguous matches, and require an approved mapping rather than merging by name.</div>
+<div class="cm cm-user cd-hide">The source contract has a hard retirement date.</div>
+<div class="cm cm-agent cd-hide">Escalate the commercial constraint if reconciliation, parallel close, retained history, or rollback evidence is incomplete.</div>
+<div class="cm cm-user">What proves the migration is ready?</div>
+<div class="cm cm-agent">Reconciled balances and subledgers, end-to-end control tests, a parallel close, and a timed cutover and rollback rehearsal.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Balances, controls, and history move together.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The accounting migration evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Accounting migration register</td><td>Ledger and control inventory, scope, source custody, data and balance mapping, transformation versions, owners, approvals, and retained access</td><td>Every record, control, report, and integration has a disposition</td></tr>
+<tr><td>Reconciliation and control report</td><td>Trial balance, subledgers, statements, tax, currencies, roles, workflows, reports, interfaces, and parallel close</td><td>No unexplained material difference or untested critical control</td></tr>
+<tr><td>Cutover and rollback rehearsal</td><td>Freeze, delta load, timing, restored source state, balances, support, communications, and decision gates</td><td>Recovery is measured before source retirement</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>The second rehearsal produces a balanced trial balance, but supplier aging differs because credit notes lost their source-document relationships. The cutover pauses. Transformation rules are corrected, affected records are reloaded idempotently, aging and ledger balances reconcile, and the parallel close is repeated. A balanced ledger alone is not accepted as migration proof.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>How much history should move?</summary><p>Move the detail needed for operations, law, audit, comparison, and support, while keeping approved retained-source access for the remainder.</p></details>
+<details class="faq"><summary>Can charts of accounts be cleaned during migration?</summary><p>Yes, through approved mappings that preserve traceability from every source account and historical report.</p></details>
+<details class="faq"><summary>Is a matching trial balance enough?</summary><p>No. Subledgers, tax, aging, currencies, controls, workflows, reports, attachments, and integrations must also be verified.</p></details>
+<details class="faq"><summary>How long should the source remain available?</summary><p>Until operational, audit, legal, retention, and rollback owners approve retirement based on evidence.</p></details>
+<details class="faq"><summary>What makes a rollback credible?</summary><p>A timed rehearsal that restores processing and reconciled balances without losing committed source activity.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much history should move?","acceptedAnswer":{"@type":"Answer","text":"Move required detail and preserve approved access to retained history."}},{"@type":"Question","name":"Can charts of accounts be cleaned during migration?","acceptedAnswer":{"@type":"Answer","text":"Use approved and traceable mappings."}},{"@type":"Question","name":"Is a matching trial balance enough?","acceptedAnswer":{"@type":"Answer","text":"No. Verify subledgers, controls, reports, and integrations."}},{"@type":"Question","name":"How long should the source remain available?","acceptedAnswer":{"@type":"Answer","text":"Until evidence satisfies operational, legal, audit, retention, and rollback owners."}},{"@type":"Question","name":"What makes a rollback credible?","acceptedAnswer":{"@type":"Answer","text":"A timed and reconciled recovery rehearsal."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Rehearse recovery with <a href="/skills/verify-a-backup-restore/">Verify a backup restore</a>,
+control the reporting cycle with <a href="/skills/prepare-a-month-end-close/">Prepare a month-end close</a>, and
+validate source structure with <a href="/skills/profile-a-financial-dataset/">Profile a financial dataset</a>.</p>

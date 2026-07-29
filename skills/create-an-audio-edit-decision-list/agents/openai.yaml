@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create an Audio Edit Decision List"
+  short_description: "Record precise audio edit choices and sources"
+  default_prompt: "Use $create-an-audio-edit-decision-list to document this audio edit precisely."

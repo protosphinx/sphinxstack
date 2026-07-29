@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to a Data Subject Request"
+  short_description: "Coordinate a verified and privacy-safe rights response"
+  default_prompt: "Use $respond-to-a-data-subject-request to plan and evidence this rights request response."

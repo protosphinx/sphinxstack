@@ -1,0 +1,4 @@
+interface:
+  display_name: "Moderate an Online Community"
+  short_description: "Apply transparent community rules with care and evidence"
+  default_prompt: "Use $moderate-an-online-community to assess this situation and take a proportionate action."

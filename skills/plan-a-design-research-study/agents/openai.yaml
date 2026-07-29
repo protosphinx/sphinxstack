@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Design Research Study"
+  short_description: "Plan ethical research around a design decision"
+  default_prompt: "Use $plan-a-design-research-study to define participants, method, safeguards, and analysis for this study."

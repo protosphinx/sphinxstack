@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a One-on-One"
+  short_description: "Plan and run a useful recurring one-on-one"
+  default_prompt: "Use $run-a-one-on-one to prepare an agenda and follow-through for this meeting."

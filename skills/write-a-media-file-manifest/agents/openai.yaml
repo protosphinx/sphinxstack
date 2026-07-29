@@ -1,0 +1,4 @@
+interface:
+  display_name: "write-a-media-file-manifest"
+  short_description: "Manifest media files, rights, and checksums"
+  default_prompt: "Use $write-a-media-file-manifest to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "verify-a-bank-transfer-reference"
+  short_description: "Verify a transfer reference without exposing data"
+  default_prompt: "Use $verify-a-bank-transfer-reference to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Runbook Step"
+  short_description: "Turn one operation into a verified instruction"
+  default_prompt: "Use $write-a-runbook-step to help me complete this workflow with verifiable evidence."

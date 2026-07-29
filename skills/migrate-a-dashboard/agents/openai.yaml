@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate a dashboard"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $migrate-a-dashboard to complete and verify this data task."

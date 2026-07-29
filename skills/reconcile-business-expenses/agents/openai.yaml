@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reconcile Business Expenses"
+  short_description: "Match expense records, receipts, accounts, and exceptions"
+  default_prompt: "Use $reconcile-business-expenses to reconcile these records and produce an exceptions report."

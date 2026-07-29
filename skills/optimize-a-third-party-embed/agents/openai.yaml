@@ -1,0 +1,4 @@
+interface:
+  display_name: "optimize a third party embed"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $optimize-a-third-party-embed to complete and verify this web task."

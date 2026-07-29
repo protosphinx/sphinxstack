@@ -1,0 +1,4 @@
+interface:
+  display_name: "navigate-a-background-check"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $navigate-a-background-check to complete and verify this task."

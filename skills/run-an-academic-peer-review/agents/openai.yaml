@@ -1,0 +1,4 @@
+interface:
+  display_name: "run-an-academic-peer-review"
+  short_description: "Run a verified run an academic peer review workflow"
+  default_prompt: "Use $run-an-academic-peer-review to complete and verify this task."

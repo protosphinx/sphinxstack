@@ -1,0 +1,4 @@
+interface:
+  display_name: "check-an-api-pagination-loop"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $check-an-api-pagination-loop to complete and verify this task."

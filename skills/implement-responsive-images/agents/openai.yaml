@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement Responsive Images"
+  short_description: "Deliver correctly sized accessible images"
+  default_prompt: "Use $implement-responsive-images to design and test image delivery for these layouts."

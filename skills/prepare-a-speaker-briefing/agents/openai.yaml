@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Speaker Briefing"
+  short_description: "Give speakers the context and logistics they need"
+  default_prompt: "Use $prepare-a-speaker-briefing to prepare this speaker for the audience, format, and venue."

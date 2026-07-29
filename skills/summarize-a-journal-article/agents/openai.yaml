@@ -1,0 +1,4 @@
+interface:
+  display_name: "summarize-a-journal-article"
+  short_description: "Run a verified summarize a journal article workflow"
+  default_prompt: "Use $summarize-a-journal-article to complete and verify this task."

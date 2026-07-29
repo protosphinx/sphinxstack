@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Third-Party Scripts"
+  short_description: "Assess browser script value, access, and risk"
+  default_prompt: "Use $audit-third-party-scripts to inventory and reduce third-party browser risk."

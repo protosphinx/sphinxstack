@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-cache-invalidation-strategy"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $design-a-cache-invalidation-strategy to complete and verify this task."

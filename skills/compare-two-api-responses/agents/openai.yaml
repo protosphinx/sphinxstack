@@ -1,0 +1,4 @@
+interface:
+  display_name: "compare-two-api-responses"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $compare-two-api-responses to complete and verify this task."

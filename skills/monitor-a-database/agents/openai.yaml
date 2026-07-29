@@ -1,0 +1,4 @@
+interface:
+  display_name: "Monitor a Database"
+  short_description: "Observe database demand, latency, and capacity"
+  default_prompt: "Use $monitor-a-database to design actionable monitoring for this database."

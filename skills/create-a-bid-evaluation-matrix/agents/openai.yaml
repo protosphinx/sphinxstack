@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Bid Evaluation Matrix"
+  short_description: "Compare vendor bids with weighted evidence"
+  default_prompt: "Use $create-a-bid-evaluation-matrix to compare these bids against explicit criteria."

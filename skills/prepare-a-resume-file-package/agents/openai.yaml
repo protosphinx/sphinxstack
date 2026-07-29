@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Resume File Package"
+  short_description: "Package clean resume files for applications"
+  default_prompt: "Use $prepare-a-resume-file-package to prepare and verify these application files."

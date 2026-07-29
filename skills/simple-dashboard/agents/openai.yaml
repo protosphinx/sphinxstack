@@ -1,0 +1,4 @@
+interface:
+  display_name: "Simple Dashboard"
+  short_description: "Build a decision-focused dashboard from real data"
+  default_prompt: "Use $simple-dashboard to help me complete this workflow with verified evidence."

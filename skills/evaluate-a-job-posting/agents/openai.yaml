@@ -1,0 +1,4 @@
+interface:
+  display_name: "evaluate-a-job-posting"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $evaluate-a-job-posting to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "check-a-database-index"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $check-a-database-index to complete and verify this task."

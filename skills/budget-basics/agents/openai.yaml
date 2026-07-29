@@ -1,0 +1,4 @@
+interface:
+  display_name: "Budget Basics"
+  short_description: "Build a budget from verified income and spending"
+  default_prompt: "Use $budget-basics to help me complete this workflow with verified evidence."

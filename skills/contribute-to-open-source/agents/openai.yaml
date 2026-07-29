@@ -1,0 +1,4 @@
+interface:
+  display_name: "Contribute to Open Source"
+  short_description: "Make a useful, reviewable open-source contribution"
+  default_prompt: "Use $contribute-to-open-source to help me complete this workflow with verified evidence."

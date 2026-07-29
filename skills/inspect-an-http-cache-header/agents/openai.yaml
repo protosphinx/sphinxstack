@@ -1,0 +1,4 @@
+interface:
+  display_name: "inspect-an-http-cache-header"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $inspect-an-http-cache-header to complete and verify this task."

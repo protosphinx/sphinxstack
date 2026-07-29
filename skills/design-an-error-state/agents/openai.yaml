@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design an Error State"
+  short_description: "Design actionable, accessible recovery from product errors"
+  default_prompt: "Use $design-an-error-state to define the message, recovery, and verification for this failure."

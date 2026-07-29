@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create an Editorial Calendar"
+  short_description: "Plan evidence-based content with owners and review gates"
+  default_prompt: "Use $create-an-editorial-calendar to build a realistic publishing calendar from these goals."

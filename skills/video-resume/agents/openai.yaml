@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video Resume"
+  short_description: "Create an honest, accessible video resume"
+  default_prompt: "Use $video-resume to help me complete this workflow with verified evidence."

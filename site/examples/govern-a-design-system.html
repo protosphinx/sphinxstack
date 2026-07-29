@@ -1,0 +1,34 @@
+<h2>Worked case: govern a shared system under strain</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A shared system serves twelve product teams, but contribution decisions are informal, accessibility fixes can break consumers, exceptions never expire, maintainers are overloaded, and adoption metrics count package installs as success.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we mandate the next version and call every installed package adopted?</div>
+<div class="cm cm-agent">No. I need a consumer inventory, contribution governance, release evidence, bounded exceptions, and outcome-based adoption states.</div>
+<div class="cm cm-user cd-hide">Exceptions slow standardization, so can they remain undocumented?</div>
+<div class="cm cm-agent cd-hide">That hides risk and system gaps. Each exception needs scope, owner, compensation, expiry, and a convergence or retirement decision.</div>
+<div class="cm cm-user cd-hide">What if the only maintainer is unavailable during a breaking fix?</div>
+<div class="cm cm-agent cd-hide">The governance model must rehearse that failure, preserve release and rollback authority, and narrow the service promise to staffed capacity.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Installation is not verified adoption.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The governance evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Governance charter</td><td>Scope, decision rights, ownership, funding, service promise, and review</td><td>Authority matches available capacity</td></tr>
+<tr><td>Release evidence package</td><td>Change class, consumers, compatibility, accessibility, tests, docs, and rollback</td><td>Breaking impact is owned before release</td></tr>
+<tr><td>Consumer health review</td><td>Meaningful adoption, duplication, defects, exceptions, burden, and outcomes</td><td>Package presence cannot count as success</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>An urgent accessibility fix changes focus behavior for several critical consumers while the primary maintainer is
+unavailable. The backup authority pauses broad release, tests representative consumers, publishes a bounded patch,
+and verifies rollback before resuming the normal contribution process.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Who owns a design system?</summary><p>Named maintainers operate it, while sponsors and consumer representatives hold explicit decision and risk roles.</p></details>
+<details class="faq"><summary>Should adoption be mandatory?</summary><p>Only when the system meets evidenced needs and the organization owns migration, support, and exception paths.</p></details>
+<details class="faq"><summary>What makes an exception valid?</summary><p>Specific scope, rationale, controls, owner, expiry, and a tested convergence or retirement plan.</p></details>
+<details class="faq"><summary>How are breaking changes approved?</summary><p>Through consumer impact, compatibility, accessibility, migration, and rollback evidence.</p></details>
+<details class="faq"><summary>When should a component retire?</summary><p>After supported consumers migrate or receive an accepted alternative and recovery evidence passes.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who owns a design system?","acceptedAnswer":{"@type":"Answer","text":"Named maintainers, sponsors, and consumers hold explicit roles."}},{"@type":"Question","name":"Should adoption be mandatory?","acceptedAnswer":{"@type":"Answer","text":"Only with evidenced fit and supported migration and exceptions."}},{"@type":"Question","name":"What makes an exception valid?","acceptedAnswer":{"@type":"Answer","text":"Scope, controls, owner, expiry, and convergence evidence."}},{"@type":"Question","name":"How are breaking changes approved?","acceptedAnswer":{"@type":"Answer","text":"Through impact, compatibility, access, migration, and rollback evidence."}},{"@type":"Question","name":"When should a component retire?","acceptedAnswer":{"@type":"Answer","text":"After supported consumers move and recovery evidence passes."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Measure outcomes with <a href="/skills/measure-design-system-adoption/">Measure design system adoption</a>,
+verify releases with <a href="/skills/validate-a-design-system-component/">Validate a design system component</a>, and
+record choices with <a href="/skills/document-a-design-decision/">Document a design decision</a>.</p>

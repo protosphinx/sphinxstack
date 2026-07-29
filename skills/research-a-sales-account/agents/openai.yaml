@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research a Sales Account"
+  short_description: "Build a sourced brief for one prospective account"
+  default_prompt: "Use $research-a-sales-account to help me complete this workflow with verifiable evidence."

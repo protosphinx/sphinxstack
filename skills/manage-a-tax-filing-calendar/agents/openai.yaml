@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage a Tax Filing Calendar"
+  short_description: "Track filing duties, owners, and evidence"
+  default_prompt: "Use $manage-a-tax-filing-calendar to build and verify this filing schedule."

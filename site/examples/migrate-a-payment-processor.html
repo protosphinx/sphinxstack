@@ -1,0 +1,34 @@
+<h2>Worked case: migrate payments without a duplicate debit</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A marketplace must migrate card, wallet, bank-debit, subscription, refund, dispute, token, webhook, payout, reserve, fraud, and reconciliation flows to a new payment processor across countries while old and new transactions overlap and no customer may be charged twice or lose a refund.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can a timeout retry at the new processor?</div>
+<div class="cm cm-agent">Not until the old processor outcome is resolved. Record an indeterminate state and query by stable merchant reference.</div>
+<div class="cm cm-user cd-hide">Do historical refunds move to the new provider?</div>
+<div class="cm cm-agent cd-hide">Usually no. The processor owning the original transaction keeps its refund and dispute lifecycle.</div>
+<div class="cm cm-user cd-hide">Can we copy card numbers ourselves?</div>
+<div class="cm cm-agent cd-hide">No. Use approved PCI provider or network-token pathways and obtain fresh authorization where portability fails.</div>
+<div class="cm cm-user">What makes rollback safe?</div>
+<div class="cm cm-agent">Stop new routing, fence the failed generation, preserve in-flight ownership, and never replay an ambiguous debit.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Every transaction remains owned by exactly one processor generation.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The payment migration evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>payment migration register</td><td>Methods, intents, tokens, authentication, states, webhooks, refunds, disputes, settlement, ledger, generations, and owners</td><td>Every mutation and in-flight state has one owner</td></tr>
+<tr><td>transaction, payout, and customer parity report</td><td>Authorization, capture, refund, dispute, fraud, fee, reserve, payout, ledger, notification, and customer outcomes</td><td>Representative cohorts meet financial and customer thresholds</td></tr>
+<tr><td>cutover and rollback rehearsal</td><td>Routing, fencing, idempotency, webhook overlap, in-flight ownership, stop authority, support, and reconciliation</td><td>An outage or timeout cannot cause an uncontrolled replay</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A checkout request times out after the old processor may have authorized it while routing has switched to the new provider. The platform records an indeterminate outcome, blocks a second authorization under the stable payment intent, queries the old provider, resumes the owning state machine, and reconciles the customer, order, processor, payout, and ledger result.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can both processors receive live authorizations?</summary><p>Only for separately assigned intents; never let both mutate the same payment intent.</p></details>
+<details class="faq"><summary>What if tokens are not portable?</summary><p>Keep the cohort on the old route or obtain new customer authorization through an approved flow.</p></details>
+<details class="faq"><summary>How are delayed webhooks handled?</summary><p>Verify signatures, reject replays, preserve event IDs, and apply explicit state-machine ordering rules.</p></details>
+<details class="faq"><summary>Where do old disputes go?</summary><p>Keep them with the processor that owns the original transaction unless transfer is formally supported.</p></details>
+<details class="faq"><summary>When can the old account close?</summary><p>After refunds, disputes, payouts, reserves, retention, reporting, and support obligations are proven complete.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can both processors receive live authorizations?","acceptedAnswer":{"@type":"Answer","text":"Never for the same payment intent."}},{"@type":"Question","name":"What if tokens are not portable?","acceptedAnswer":{"@type":"Answer","text":"Keep the old route or obtain fresh authorization."}},{"@type":"Question","name":"How are delayed webhooks handled?","acceptedAnswer":{"@type":"Answer","text":"Verify, deduplicate, and apply explicit state rules."}},{"@type":"Question","name":"Where do old disputes go?","acceptedAnswer":{"@type":"Answer","text":"Keep them with the original transaction owner."}},{"@type":"Question","name":"When can the old account close?","acceptedAnswer":{"@type":"Answer","text":"After all durable obligations are proven complete."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Implement retries with <a href="/skills/implement-idempotency/">Implement idempotency</a>,
+reconcile settlements with <a href="/skills/reconcile-payment-processor-payouts/">Reconcile payment processor payouts</a>, and
+test contracts with <a href="/skills/build-a-contract-test-suite/">Build a contract test suite</a>.</p>

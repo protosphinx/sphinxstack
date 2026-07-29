@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review a Pull Request"
+  short_description: "Review a code change for behavior, risk, and proof"
+  default_prompt: "Use $review-a-pull-request to review this change and report only actionable findings."

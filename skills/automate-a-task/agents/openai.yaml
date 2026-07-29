@@ -1,0 +1,4 @@
+interface:
+  display_name: "Automate A Task"
+  short_description: "Automate a real repetitive task with safe controls"
+  default_prompt: "Use $automate-a-task to help me complete this workflow with verified evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Brand Voice Guide"
+  short_description: "Turn communication principles into usable voice rules"
+  default_prompt: "Use $create-a-brand-voice-guide to define examples, boundaries, and review checks for this voice."

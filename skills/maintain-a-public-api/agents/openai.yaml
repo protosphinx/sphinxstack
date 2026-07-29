@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintain a Public API"
+  short_description: "Evolve a consumer contract with compatibility"
+  default_prompt: "Use $maintain-a-public-api to help me complete this workflow with verifiable evidence."

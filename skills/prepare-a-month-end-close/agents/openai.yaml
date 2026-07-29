@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Month-End Close"
+  short_description: "Close accounts with owned reconciliations"
+  default_prompt: "Use $prepare-a-month-end-close to run and verify this accounting close."

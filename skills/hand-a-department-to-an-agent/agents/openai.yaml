@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hand A Department To An Agent"
+  short_description: "Give an agent one department, with boundaries"
+  default_prompt: "Use $hand-a-department-to-an-agent to help me complete this workflow with verified evidence."

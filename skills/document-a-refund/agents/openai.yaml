@@ -1,0 +1,4 @@
+interface:
+  display_name: "document a refund"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $document-a-refund to complete and verify this finance task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a data access review"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $design-a-data-access-review to complete and verify this data task."

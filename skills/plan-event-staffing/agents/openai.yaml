@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Event Staffing"
+  short_description: "Match roles and shifts to demand and risk"
+  default_prompt: "Use $plan-event-staffing to build a safe, supported staffing plan for this event."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Component Inventory"
+  short_description: "Inventory interface patterns, variants, and ownership"
+  default_prompt: "Use $create-a-component-inventory to map repeated interface components and consolidation opportunities."

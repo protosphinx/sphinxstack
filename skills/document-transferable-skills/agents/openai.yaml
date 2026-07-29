@@ -1,0 +1,4 @@
+interface:
+  display_name: "document-transferable-skills"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $document-transferable-skills to complete and verify this task."

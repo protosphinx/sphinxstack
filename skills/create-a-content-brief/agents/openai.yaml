@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Content Brief"
+  short_description: "Turn audience intent into a clear production brief"
+  default_prompt: "Use $create-a-content-brief to define the audience, purpose, evidence, structure, and acceptance criteria."

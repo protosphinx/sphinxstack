@@ -1,0 +1,34 @@
+<h2>Worked case: govern data behind credit and fraud decisions</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A lender wants one dataset for credit eligibility and fraud models across countries, combining historical approvals, repayment, manual investigations, bureau data, device signals, customer appeals, and prior-model scores, while past policies differed, rejected applicants lack outcome labels, identity and disability proxies may exist, vendor rights vary, and downstream teams want to reuse the data.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can repayment be the label for everyone?</div>
+<div class="cm cm-agent">Rejected applicants have no comparable repayment outcome, and approvals reflect historical selection policy.</div>
+<div class="cm cm-user cd-hide">Can prior-model scores be normal features?</div>
+<div class="cm cm-agent cd-hide">They create feedback and policy lineage; isolate, justify, and test their influence explicitly.</div>
+<div class="cm cm-user cd-hide">May another team reuse the release?</div>
+<div class="cm cm-agent cd-hide">Only if its purpose, rights, population, limitations, and approved dataset generation support that use.</div>
+<div class="cm cm-user">What blocks release?</div>
+<div class="cm cm-agent">Unresolved rights, invalid labels, unknown provenance, unsafe population gaps, split leakage, or missing appeal and stop controls.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Historical decisions are not automatically valid ground truth.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The high-stakes dataset evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>dataset governance register</td><td>Purpose, rights, provenance, population, labels, fields, versions, owners, and use restrictions</td><td>Every source and proposed use is authorized and traceable</td></tr>
+<tr><td>provenance, quality, and fairness report</td><td>Lineage, label validity, sampling, missingness, leakage, annotation, coverage, uncertainty, and robustness</td><td>Limitations and affected populations are explicit</td></tr>
+<tr><td>release and monitoring evidence package</td><td>Manifests, splits, access, deletion, approval, attestation, appeals, stop rules, and harm monitoring</td><td>The exact generation is governed after release</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A vendor cannot establish reuse rights for bureau-derived fields and one sparse disability-related subgroup has unstable error estimates. The release excludes the disputed source, records population uncertainty, restricts unsupported claims and uses, and requires new evidence before expansion.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Does removing protected traits remove bias?</summary><p>No. Proxies, selection, labels, access, and historical policy can preserve disparities.</p></details>
+<details class="faq"><summary>Can synthetic data solve missing populations?</summary><p>It cannot create verified real-world outcomes or erase collection bias.</p></details>
+<details class="faq"><summary>Should train and test split randomly?</summary><p>Prevent entity, temporal, household, and source leakage according to deployment conditions.</p></details>
+<details class="faq"><summary>Can a sparse group be declared fair?</summary><p>Report uncertainty and restrict claims rather than treating absence of evidence as parity.</p></details>
+<details class="faq"><summary>What happens after deletion?</summary><p>Propagate a new generation and identify affected descendants, models, and evaluations.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does removing protected traits remove bias?","acceptedAnswer":{"@type":"Answer","text":"No."}},{"@type":"Question","name":"Can synthetic data solve missing populations?","acceptedAnswer":{"@type":"Answer","text":"No. It does not create verified outcomes."}},{"@type":"Question","name":"Should train and test split randomly?","acceptedAnswer":{"@type":"Answer","text":"Use deployment-aware leakage controls."}},{"@type":"Question","name":"Can a sparse group be declared fair?","acceptedAnswer":{"@type":"Answer","text":"Report uncertainty."}},{"@type":"Question","name":"What happens after deletion?","acceptedAnswer":{"@type":"Answer","text":"Propagate a new governed generation."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Validate features with <a href="/skills/validate-a-machine-learning-feature/">Validate a machine learning feature</a>,
+document sources with <a href="/skills/implement-data-lineage/">Implement data lineage</a>, and
+audit decisions with <a href="/skills/audit-an-automated-hiring-system/">Audit an automated hiring system</a>.</p>

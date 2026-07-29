@@ -1,0 +1,45 @@
+<h2>Worked case: decide whether an assistant improved</h2>
+<p class="case-trigger"><strong>Trigger:</strong> The assistant looks good in demos, but we do not know whether a new version is actually better.</p>
+<div class="chatdemo">
+<div class="cm cm-user">The new prompt sounds better. Can we ship it?</div>
+<div class="cm cm-agent">We need the user task, current baseline, unacceptable failures, allowed examples, and release owner before comparing versions.</div>
+<div class="cm cm-user cd-hide">It answers product support questions. Invented policy details are unacceptable.</div>
+<div class="cm cm-agent cd-hide">Then factual support is a blocking measure, and policy questions need their own failure slice rather than disappearing into an average.</div>
+<div class="cm cm-user cd-hide">Can another model grade all the answers?</div>
+<div class="cm cm-agent cd-hide">It can assist after calibration, but humans must review judgment-dependent and high-risk cases and record disagreements.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">A release decision starts with tasks and unacceptable failures.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The evaluation record</h2>
+<table class="plain-table">
+<thead><tr><th>Slice</th><th>Baseline</th><th>Candidate</th><th>Decision</th></tr></thead>
+<tbody>
+<tr><td>Common support</td><td>82%</td><td>89%</td><td>improved</td></tr>
+<tr><td>Policy questions</td><td>96%</td><td>90%</td><td>blocking regression</td></tr>
+<tr><td>Missing context</td><td>71%</td><td>86%</td><td>improved abstention</td></tr>
+</tbody>
+</table>
+<h3>Evidence set</h3>
+<ul>
+<li><strong>Versioned cases:</strong> inputs, allowed context, expected properties, source, and risk tag.</li>
+<li><strong>Scorecard:</strong> baseline and candidate by slice, plus safety, latency, cost, and variance.</li>
+<li><strong>Release decision:</strong> hold the candidate until policy accuracy recovers; owner and disable condition recorded.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>Reviewers discover that half the policy cases were used while editing the prompt. Those cases are
+marked contaminated and removed from the release comparison. The candidate is rerun on the held-out
+set, and the earlier result remains stored with a warning rather than quietly replaced.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>How large should the evaluation set be?</summary><p>Large enough to cover important capabilities and failure slices, but small enough to run and inspect regularly. Add evidence as the product learns.</p></details>
+<details class="faq"><summary>Can one score summarize the result?</summary><p>No. Averages can hide severe regressions. Report blocking measures and meaningful slices alongside any overall number.</p></details>
+<details class="faq"><summary>May a model judge another model?</summary><p>Yes for some scaled review after calibration against humans. Report disagreement and keep human authority for high-impact judgments.</p></details>
+<details class="faq"><summary>What is the baseline?</summary><p>The current production version or manual process that the candidate must improve without violating release thresholds.</p></details>
+<details class="faq"><summary>When should a production failure join the set?</summary><p>After privacy review, add it to a protected regression set with its source, expected behavior, and risk label.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How large should the evaluation set be?","acceptedAnswer":{"@type":"Answer","text":"Large enough for important slices and small enough to run and inspect often."}},{"@type":"Question","name":"Can one score summarize the result?","acceptedAnswer":{"@type":"Answer","text":"No. Report blocking measures and meaningful failure slices."}},{"@type":"Question","name":"May a model judge another model?","acceptedAnswer":{"@type":"Answer","text":"Yes after human calibration, with disagreement reported."}},{"@type":"Question","name":"What is the baseline?","acceptedAnswer":{"@type":"Answer","text":"The current version or process the candidate must improve."}},{"@type":"Question","name":"When should a production failure join the set?","acceptedAnswer":{"@type":"Answer","text":"After privacy review, add it to a protected regression set."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Develop the model with <a href="/skills/train-a-model/">Train a model</a>, improve data with <a href="/skills/clean-a-dataset/">Clean a dataset</a>, and monitor release behavior with <a href="/skills/design-observability/">Design observability</a>.</p>

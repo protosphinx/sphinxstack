@@ -1,0 +1,115 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the part everyone is afraid of. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> the recipe site i use buries every recipe under 900 words of life story. can i fix that?</div>
+<div class="cm cm-agent">That's exactly what a content script is for. First: open dev tools on
+one of those pages with me. Which element actually holds the recipe?</div>
+<div class="cm cm-user cd-hide">there's a div called recipe-card i think. but don't extensions need
+google's approval and a developer account and all that?</div>
+<div class="cm cm-agent cd-hide">Only if you publish to the store, and we're not doing that today.
+Your extension loads unpacked in developer mode, in your own browser, this session.
+Publishing is a separate decision with its own review process, and the extension is
+complete without it.</div>
+<div class="cm cm-user cd-hide">isn't an extension basically a whole app though? i've only ever
+written page scripts</div>
+<div class="cm cm-agent cd-hide">It's a folder with a manifest.json and a couple of plain JS files.
+Manifest V3, no build step, no framework. If you can hide a div with a script, you can
+build this.</div>
+<div class="cm cm-user cd-hide">does it need access to all my tabs?</div>
+<div class="cm cm-agent cd-hide">No, and we'll defend that. It matches only the recipe site, and
+every permission in the manifest gets a one-line justification in the README. Keeping
+permissions narrow is the habit worth more than the extension itself.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Don't extensions need the Chrome Web Store's approval?</h2>
+<p>Only published ones. Yours loads unpacked in developer mode and runs in your daily
+browser from day one; the store, its developer fee, and its review queue never enter
+the picture. Success is measured a week later, when the extension is still installed
+because it earns its place on a site you actually use. If you later decide to publish,
+that's its own project with its own rules, and the extension is complete either
+way.</p>
+
+<h2>What you end up with</h2>
+<p>A folder in a repo that changes a page you visit every day. Here is the whole
+skeleton for the recipe fix, and it barely grows from here.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example extension manifest and content script">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">manifest.json, THE WHOLE THING</div>
+<pre>{
+  "manifest_version": 3,
+  "name": "Recipe First",
+  "version": "1.0",
+  "content_scripts": [{
+    "matches": ["*://recipes.example.com/*"],
+    "js": ["content.js"]
+  }],
+  "icons": { "128": "icon.png" }
+}</pre>
+<div class="rz-h">content.js, THE CORE BEHAVIOR</div>
+<pre>const card = document.querySelector(".recipe-card");
+if (card) {
+  card.scrollIntoView();
+  document.querySelectorAll(".life-story, .ad-slot")
+    .forEach((el) =&gt; el.remove());
+}
+// no .recipe-card (logged out, index page):
+// do nothing, never break the site</pre>
+<div class="rz-h">README, PERMISSIONS SECTION</div>
+<pre>matches recipes.example.com only:
+the extension has no reason to see
+any other site, so it can't.</pre>
+</div>
+<ol class="anno-notes">
+<li><b>The match pattern is the security story.</b> One site, argued for in the
+README. <code>&lt;all_urls&gt;</code> never goes in without a fight.</li>
+<li><b>The quiet failure is deliberate.</b> On pages where the markup differs, the
+script checks and does nothing. Tested on three real pages of the site, plus logged
+out.</li>
+<li><b>This is the whole codebase.</b> A manifest, a content script, an icon. Every
+line is yours to read, which is why it stays fixable when the site changes.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Do I need to publish to the Chrome Web Store?</summary>
+<p>No. The extension loads unpacked in developer mode and works in your daily browser
+indefinitely. Store submission is a separate decision with its own review process, out
+of scope for this session and unnecessary for a tool you built for yourself.</p></details>
+<details class="faq"><summary>Can my extension see my passwords and other sites?</summary>
+<p>Only what its permissions grant, which is why the skill fights for narrow ones. A
+content script matched to one site sees that site's pages and nothing else. Every
+permission in your manifest gets a one-line justification in the README, so the answer
+is auditable.</p></details>
+<details class="faq"><summary>Will it break when the site updates?</summary>
+<p>Eventually, and that's manageable: the script checks for its selectors before
+acting and fails quietly when they're missing, so the site keeps working even when the
+extension doesn't. Then you update one selector, reload, done.</p></details>
+<details class="faq"><summary>Does this work in Firefox or Edge?</summary>
+<p>Edge and other Chromium browsers load the same unpacked folder. Firefox supports
+Manifest V3 with small differences, and the agent can walk you through them if
+Firefox is your daily browser. The skill targets whatever browser you actually
+use.</p></details>
+<details class="faq"><summary>Is changing a website's pages even allowed?</summary>
+<p>Restyling and hiding things in your own browser is yours to do. The line the skill
+holds is about actions: anything that automates clicks on someone else's site stays
+within that site's terms and your own account.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do I need to publish to the Chrome Web Store?","acceptedAnswer":{"@type":"Answer","text":"No. The extension loads unpacked in developer mode and works in your daily browser indefinitely. Publishing is a separate decision with its own review."}},
+{"@type":"Question","name":"Can my extension see my passwords and other sites?","acceptedAnswer":{"@type":"Answer","text":"Only what its permissions grant. A content script matched to one site sees that site only, and every permission gets a one-line justification in the README."}},
+{"@type":"Question","name":"Will it break when the site updates?","acceptedAnswer":{"@type":"Answer","text":"Eventually. The script checks for its selectors and fails quietly when they're missing, so the site keeps working; you update a selector and reload."}},
+{"@type":"Question","name":"Does this work in Firefox or Edge?","acceptedAnswer":{"@type":"Answer","text":"Chromium browsers load the same unpacked folder; Firefox supports Manifest V3 with small differences the agent can walk you through."}},
+{"@type":"Question","name":"Is changing a website's pages even allowed?","acceptedAnswer":{"@type":"Answer","text":"Restyling and hiding things in your own browser is yours to do. Automating actions on someone else's site stays within that site's terms and your own account."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Ship it, then feed it:</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/small-web-fix/"><img src="/assets/project-img/small-web-fix.jpg" alt=""><span>An extension for an annoyance you can name</span></a>
+<a class="mini" href="/skills/ship-on-github/"><img src="/assets/skill-img/ship-on-github.jpg" alt=""><span>Ship on GitHub: give it a repo</span></a>
+<a class="mini" href="/skills/use-an-api/"><img src="/assets/skill-img/use-an-api.jpg" alt=""><span>Use an API: pull in outside data</span></a>
+</div>

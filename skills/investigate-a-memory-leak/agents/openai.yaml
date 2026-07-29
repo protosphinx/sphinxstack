@@ -1,0 +1,4 @@
+interface:
+  display_name: "investigate-a-memory-leak"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $investigate-a-memory-leak to complete and verify this task."

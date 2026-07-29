@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Design System Migration"
+  short_description: "Migrate shared UI safely across many consumers"
+  default_prompt: "Use $plan-a-design-system-migration to inventory, sequence, verify, and recover this migration."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Govern a Design System"
+  short_description: "Govern shared design decisions, change, and adoption"
+  default_prompt: "Use $govern-a-design-system to create accountable contribution, release, exception, and retirement controls."

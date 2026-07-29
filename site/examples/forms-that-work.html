@@ -1,0 +1,119 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the question that stops most people. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> I want a contact form on my site</div>
+<div class="cm cm-agent">Easy to add. One decision comes before any HTML: where should
+submissions land? Usually the answer is your own email inbox.</div>
+<div class="cm cm-user cd-hide">wait, my site is just HTML files. don't forms need a server?</div>
+<div class="cm cm-agent cd-hide">Yours doesn't have one and won't need one. A free form backend
+receives the submission and forwards it to your email. Formspree's free tier is around
+50 submissions a month; Web3Forms is free with just an access key. For a personal
+site, 50 a month is plenty.</div>
+<div class="cm cm-user cd-hide">what about spam bots filling it with junk</div>
+<div class="cm cm-agent cd-hide">Two cheap defenses that are enough at this scale: the backend's
+own filtering stays on, and we add a honeypot, a hidden field humans never see and
+bots fill in. CAPTCHA waits until spam actually shows up, because it annoys real
+people too.</div>
+<div class="cm cm-user cd-hide">how many fields should I ask for</div>
+<div class="cm cm-agent cd-hide">As few as you can defend. Name, email, message is usually the
+whole form; every field you drop removes friction and spam surface. Validation is the
+browser's job: required on mandatory fields, type="email" on the email one, no
+JavaScript needed.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Don't forms need a server?</h2>
+<p>They need something to receive the submission, and that something can be someone
+else's server, free. A form backend gives you an endpoint URL; your plain HTML form
+posts to it; the submission lands in your inbox. Your site stays static, your host
+stays free, and the whole feature is a dozen lines of HTML. Pages where a working form
+is the whole point:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/bake-order-page/"><img src="/assets/project-img/bake-order-page.jpg" alt=""><span>Order page for a home baker</span></a>
+<a class="mini" href="/ideas/commission-page/"><img src="/assets/project-img/commission-page.jpg" alt=""><span>Commission page for your art</span></a>
+<a class="mini" href="/ideas/session-booker/"><img src="/assets/project-img/session-booker.jpg" alt=""><span>Session booker for lessons</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A form short enough to finish on a phone, wired so the browser does the nagging.
+This is the entire thing:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example HTML contact form wired to a form backend">
+<div class="sheet-tag">Example</div>
+<pre>
+&lt;form action="https://forms.example/f/x8k2"  <span class="anno-badge">1</span>
+      method="POST"&gt;
+
+  &lt;label&gt;Name
+    &lt;input name="name" required&gt;&lt;/label&gt;     <span class="anno-badge">2</span>
+  &lt;label&gt;Email
+    &lt;input type="email" name="email"
+           required&gt;&lt;/label&gt;
+  &lt;label&gt;Message
+    &lt;textarea name="message"
+              required&gt;&lt;/textarea&gt;&lt;/label&gt;
+
+  &lt;input type="text" name="_gotcha"
+         class="hp-hidden"&gt;                   <span class="anno-badge">3</span>
+
+  &lt;button&gt;Send&lt;/button&gt;                       <span class="anno-badge">4</span>
+&lt;/form&gt;
+</pre>
+</div>
+<ol class="anno-notes">
+<li><b>The action is the whole backend.</b> The endpoint the backend gave you, and
+nothing else. Submissions forward to your address; the skill's rule is that they never
+route through anything the agent controls.</li>
+<li><b>Labels and browser validation.</b> Every input wired to a label, which
+accessibility-pass would demand anyway, and required plus type="email" means empty or
+garbage input gets rejected before anything sends.</li>
+<li><b>The honeypot.</b> Hidden from humans by CSS, irresistible to bots. The backend
+drops any submission where it is filled. Combined with the backend's own filtering,
+that is enough at this scale.</li>
+<li><b>After Send, something visible happens.</b> A thanks message or redirect gets
+configured before the form ships, because nobody should stare at a blank page
+wondering whether it worked.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is the form backend free?</summary>
+<p>At personal-site volume, yes: Formspree's free tier is around 50 submissions a
+month, Web3Forms is free via an access key, and Netlify Forms includes around 100 a
+month if your site already deploys there. The skill has you check the current numbers
+on the provider's pricing page at setup, because tiers move.</p></details>
+<details class="faq"><summary>Where do submissions actually go?</summary>
+<p>To your email address, set by you in the backend account you create yourself. That
+routing rule is explicit in the skill: the destination is yours, and submissions never
+pass through anything the agent controls.</p></details>
+<details class="faq"><summary>Do I need JavaScript?</summary>
+<p>No. A plain HTML form with an action and method covers submission, and required
+plus type="email" covers validation. The browser handles the error messages in the
+visitor's own language, which JavaScript versions often get wrong.</p></details>
+<details class="faq"><summary>What about spam?</summary>
+<p>The honeypot plus the backend's filtering handles a personal site's spam load. If
+junk still gets through months later, every backend on the list supports adding
+CAPTCHA then, when it has earned its annoyance.</p></details>
+<details class="faq"><summary>What if I outgrow 50 submissions a month?</summary>
+<p>First, congratulations, because for a contact form that is a lot of real interest.
+The options at that point: the backend's paid tier, a second free backend for a second
+form, or if the form is becoming an actual product, build-web-app is the next skill
+up.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is the form backend free?","acceptedAnswer":{"@type":"Answer","text":"At personal-site volume, yes: Formspree's free tier is around 50 submissions a month and Web3Forms is free via an access key. Check current numbers at setup, since tiers move."}},
+{"@type":"Question","name":"Where do submissions actually go?","acceptedAnswer":{"@type":"Answer","text":"To your email address, set by you in the backend account you create yourself. They never route through anything the agent controls."}},
+{"@type":"Question","name":"Do I need JavaScript?","acceptedAnswer":{"@type":"Answer","text":"No. A plain HTML form covers submission, and required plus type=email lets the browser handle validation."}},
+{"@type":"Question","name":"What about spam?","acceptedAnswer":{"@type":"Answer","text":"A honeypot field plus the backend's filtering is enough at this scale. CAPTCHA can be added later if spam actually shows up."}},
+{"@type":"Question","name":"What if I outgrow 50 submissions a month?","acceptedAnswer":{"@type":"Answer","text":"Use the backend's paid tier, or if the form is becoming a product, build-web-app is the next skill up."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Form live and tested from a phone?</b> Keep building on the site:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/accessibility-pass/"><img src="/assets/skill-img/accessibility-pass.jpg" alt=""><span>Accessibility pass</span></a>
+<a class="mini" href="/skills/add-analytics/"><img src="/assets/skill-img/add-analytics.jpg" alt=""><span>See who visits</span></a>
+<a class="mini" href="/skills/build-web-app/"><img src="/assets/skill-img/build-web-app.jpg" alt=""><span>Grow it into an app</span></a>
+</div>

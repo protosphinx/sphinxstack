@@ -1,0 +1,4 @@
+interface:
+  display_name: "consolidate-multiple-resume-versions"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $consolidate-multiple-resume-versions to complete and verify this task."

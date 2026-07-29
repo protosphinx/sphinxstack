@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Navigation System"
+  short_description: "Design findable navigation from tasks and content"
+  default_prompt: "Use $design-a-navigation-system to create and test navigation for this information space."

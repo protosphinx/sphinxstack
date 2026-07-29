@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Progressive Web App"
+  short_description: "Add installable resilient web app behavior"
+  default_prompt: "Use $create-a-progressive-web-app to design and verify progressive behavior for this site."

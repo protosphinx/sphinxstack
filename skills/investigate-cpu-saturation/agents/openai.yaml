@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investigate CPU Saturation"
+  short_description: "Trace CPU pressure to work and bottlenecks"
+  default_prompt: "Use $investigate-cpu-saturation to diagnose this CPU saturation with evidence."

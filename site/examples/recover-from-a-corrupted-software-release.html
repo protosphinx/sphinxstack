@@ -1,0 +1,34 @@
+<h2>Worked case: restore trust when hashes disagree</h2>
+<p class="case-trigger"><strong>Trigger:</strong> One software release version has different artifact hashes across regions, registry metadata was overwritten, build provenance is incomplete, edge caches contain mixed files, the prior release used the same runner, and a database migration already committed new records.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we roll back to the previous tag?</div>
+<div class="cm cm-agent">Not until its runner, registry, signing, cache, artifact, and runtime chain are independently trusted.</div>
+<div class="cm cm-user cd-hide">Should caches be purged immediately?</div>
+<div class="cm cm-agent cd-hide">Preserve representative corrupted variants first unless active harm makes immediate containment necessary.</div>
+<div class="cm cm-user cd-hide">Can we rebuild from the same pipeline?</div>
+<div class="cm cm-agent cd-hide">Use a clean isolated path from reviewed source and verified pinned dependencies.</div>
+<div class="cm cm-user">What proves recovery?</div>
+<div class="cm cm-agent">Attested clean artifacts, independent runtime hashes, state-compatible behavior, reconciled data, revoked trust, and recurrence tests.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">A filename is not integrity.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The corrupted-release evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Release corruption timeline</td><td>Release trust boundary, source, builds, artifacts, hashes, signatures, regions, runtimes, state changes, discovery, containment, and custody</td><td>Every untrusted stage is bounded</td></tr>
+<tr><td>Artifact and runtime integrity report</td><td>Containment and evidence, scope, provenance, corruption layer, credentials, data effects, and recovery decision</td><td>Recovery does not reuse unverified trust</td></tr>
+<tr><td>Clean recovery and recurrence report</td><td>Trusted rebuild, state-compatible recovery, canary, runtime hashes, data controls, trust revocation, remediation, monitoring, and closeout</td><td>Clean artifacts and live state agree</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>The clean rebuild matches in two environments, but a canary host still serves a mixed cached asset. Traffic remains limited, cache keys and propagation are repaired, and independent runtime verification repeats before expansion.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Does a signature prove a clean artifact?</summary><p>Only if the signing identity, inputs, build, storage, and verification chain remain trusted.</p></details>
+<details class="faq"><summary>Can the prior release be trusted?</summary><p>Not when it shares the affected trust path without independent verification.</p></details>
+<details class="faq"><summary>What happens to committed database changes?</summary><p>Design rollback, forward repair, or restore to preserve valid committed effects.</p></details>
+<details class="faq"><summary>When should evidence yield to containment?</summary><p>When active harm requires immediate action; document what could not be preserved.</p></details>
+<details class="faq"><summary>When is service fully restored?</summary><p>After artifacts, runtimes, data, behavior, security, and business outcomes reconcile.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does a signature prove a clean artifact?","acceptedAnswer":{"@type":"Answer","text":"Only with a trusted end-to-end chain."}},{"@type":"Question","name":"Can the prior release be trusted?","acceptedAnswer":{"@type":"Answer","text":"Only after independent verification."}},{"@type":"Question","name":"What happens to committed database changes?","acceptedAnswer":{"@type":"Answer","text":"Preserve them through state-compatible recovery."}},{"@type":"Question","name":"When should evidence yield to containment?","acceptedAnswer":{"@type":"Answer","text":"When immediate harm requires it."}},{"@type":"Question","name":"When is service fully restored?","acceptedAnswer":{"@type":"Answer","text":"After integrity, data, behavior, and business reconciliation."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Control release flow with <a href="/skills/create-a-deployment-pipeline/">Create a deployment pipeline</a>,
+review dependencies with <a href="/skills/review-a-dependency-update/">Review a dependency update</a>, and
+prepare recovery with <a href="/skills/design-a-disaster-recovery-plan/">Design a disaster recovery plan</a>.</p>

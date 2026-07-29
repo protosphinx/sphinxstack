@@ -1,0 +1,4 @@
+interface:
+  display_name: "document-a-decision-owner"
+  short_description: "Record one decision owner and authority boundary"
+  default_prompt: "Use $document-a-decision-owner to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "build-an-enterprise-risk-appetite-process"
+  short_description: "Turn risk appetite into operating decisions"
+  default_prompt: "Use $build-an-enterprise-risk-appetite-process to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Financial Dashboard"
+  short_description: "Connect financial measures to decisions"
+  default_prompt: "Use $design-a-financial-dashboard to create and verify this finance decision view."

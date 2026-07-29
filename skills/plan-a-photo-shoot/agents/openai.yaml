@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Photo Shoot"
+  short_description: "Plan a safe, efficient shoot around required images"
+  default_prompt: "Use $plan-a-photo-shoot to build the production plan for this photo shoot."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "test-a-multiregion-web-failover"
+  short_description: "Test regional web failure and recovery"
+  default_prompt: "Use $test-a-multiregion-web-failover to complete and verify this task."

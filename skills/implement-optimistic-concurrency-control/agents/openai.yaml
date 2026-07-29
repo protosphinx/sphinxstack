@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement-optimistic-concurrency-control"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $implement-optimistic-concurrency-control to complete and verify this task."

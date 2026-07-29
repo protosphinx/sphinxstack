@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare an interview question list"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $prepare-an-interview-question-list to complete and verify this hiring task."

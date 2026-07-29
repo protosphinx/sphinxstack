@@ -1,0 +1,4 @@
+interface:
+  display_name: "Restore a Corrupted Media Project"
+  short_description: "Recover media sources, edits, and provenance"
+  default_prompt: "Use $restore-a-corrupted-media-project to recover and verify this damaged production."

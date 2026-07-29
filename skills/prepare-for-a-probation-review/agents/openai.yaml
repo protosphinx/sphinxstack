@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare for a Probation Review"
+  short_description: "Prepare evidence and questions for an early review"
+  default_prompt: "Use $prepare-for-a-probation-review to organize evidence for my employment review."

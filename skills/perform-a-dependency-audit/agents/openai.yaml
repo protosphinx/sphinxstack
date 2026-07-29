@@ -1,0 +1,4 @@
+interface:
+  display_name: "Perform a Dependency Audit"
+  short_description: "Assess software dependencies and remediation risk"
+  default_prompt: "Use $perform-a-dependency-audit to help me complete this workflow with verifiable evidence."

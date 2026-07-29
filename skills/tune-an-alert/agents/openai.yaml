@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tune an Alert"
+  short_description: "Improve signal quality and response timing"
+  default_prompt: "Use $tune-an-alert to evaluate and improve this operational alert."

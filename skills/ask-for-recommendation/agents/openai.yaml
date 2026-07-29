@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ask For Recommendation"
+  short_description: "Request a strong recommendation with useful evidence"
+  default_prompt: "Use $ask-for-recommendation to help me complete this workflow with verified evidence."

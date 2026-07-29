@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit-an-academic-cv-for-public-appointment"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $audit-an-academic-cv-for-public-appointment to complete and verify this task."

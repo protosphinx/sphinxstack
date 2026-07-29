@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Landing Page"
+  short_description: "Write focused web copy around one audience decision"
+  default_prompt: "Use $write-a-landing-page to create and verify copy for this page and audience."

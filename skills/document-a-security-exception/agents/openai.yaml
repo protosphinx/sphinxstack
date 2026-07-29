@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document a Security Exception"
+  short_description: "Record bounded risk acceptance and compensating controls"
+  default_prompt: "Use $document-a-security-exception to create a governed and time-bounded exception record."

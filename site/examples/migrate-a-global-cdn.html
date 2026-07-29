@@ -1,0 +1,34 @@
+<h2>Worked case: move global edge delivery without private cache leakage</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A global commerce platform must move web pages, APIs, images, downloads, signed links, checkout, login, redirects, WAF, bot controls, rate limits, certificates, DNS, cache invalidation, logs, and origin shielding from one CDN to another while both edges overlap across regions and no private response may leak through a bad cache key.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we point all DNS at the new CDN after the homepage works?</div>
+<div class="cm cm-agent">No. Compare route, region, identity, cache, security, mutation, and origin behavior before bounded traffic changes.</div>
+<div class="cm cm-user cd-hide">May both providers use one origin credential?</div>
+<div class="cm cm-agent cd-hide">Use separate revocable provider identities so a failed edge can be fenced without taking down the safe path.</div>
+<div class="cm cm-user cd-hide">What blocks expansion?</div>
+<div class="cm cm-agent cd-hide">Private cache leakage, security-policy drift, unexplained content differences, unsafe origin load, or loss of traffic authority.</div>
+<div class="cm cm-user">What makes rollback real?</div>
+<div class="cm cm-agent">Propagation-aware routing, warm capacity, valid certificates, known cache state, origin protection, monitoring, and tested stop authority.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">A successful status code does not prove edge parity.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The CDN migration evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>CDN migration register</td><td>Domains, routes, dependencies, certificates, cache, security, origin, logs, and owners</td><td>Every delivery and control path has an accountable owner</td></tr>
+<tr><td>regional delivery, cache, and security parity report</td><td>Content, headers, variants, personalization, performance, origin load, and enforcement</td><td>No unexplained private, security, or material delivery difference</td></tr>
+<tr><td>cutover and rollback rehearsal</td><td>Traffic, propagation, cache warmth, purge, certificates, origin fencing, monitoring, and stop authority</td><td>Traffic can return safely without losing protection</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>An authenticated account page is cached without the session variation in one region. The team stops that route, purges both edges, fences the unsafe configuration, traces affected requests, protects users, repairs the cache key and private-response rule, and reruns regional identity tests before resuming.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can a hosts-file test prove readiness?</summary><p>No. It misses global DNS, resolver, routing, certificate, and connection behavior.</p></details>
+<details class="faq"><summary>Should cache rules be copied literally?</summary><p>Preserve behavior and invariants; provider configuration models may differ.</p></details>
+<details class="faq"><summary>When can DNS TTLs rise?</summary><p>After stable delivery and rollback confidence through the intended observation period.</p></details>
+<details class="faq"><summary>Can the old CDN be disabled after traffic reaches zero?</summary><p>Not until logs, credentials, certificates, purges, objects, billing, and incident duties close.</p></details>
+<details class="faq"><summary>How should signed URLs be tested?</summary><p>Verify scope, expiry, clock skew, region, method, cache, replay, and origin enforcement.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a hosts-file test prove readiness?","acceptedAnswer":{"@type":"Answer","text":"No. Global delivery behavior still needs testing."}},{"@type":"Question","name":"Should cache rules be copied literally?","acceptedAnswer":{"@type":"Answer","text":"Preserve behavior and invariants."}},{"@type":"Question","name":"When can DNS TTLs rise?","acceptedAnswer":{"@type":"Answer","text":"After stable delivery and rollback confidence."}},{"@type":"Question","name":"Can the old CDN be disabled after traffic reaches zero?","acceptedAnswer":{"@type":"Answer","text":"Only after durable obligations close."}},{"@type":"Question","name":"How should signed URLs be tested?","acceptedAnswer":{"@type":"Answer","text":"Test scope, expiry, replay, cache, and enforcement."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Review caching with <a href="/skills/manage-web-cache-invalidation/">Manage web cache invalidation</a>,
+test delivery with <a href="/skills/design-a-global-web-delivery-architecture/">Design global web delivery architecture</a>, and
+prepare recovery with <a href="/skills/prepare-a-rollback-plan/">Prepare a rollback plan</a>.</p>

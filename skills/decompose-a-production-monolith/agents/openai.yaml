@@ -1,0 +1,4 @@
+interface:
+  display_name: "Decompose a Production Monolith"
+  short_description: "Separate production boundaries without losing control"
+  default_prompt: "Use $decompose-a-production-monolith to plan reversible extraction waves."

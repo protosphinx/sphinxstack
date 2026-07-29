@@ -1,0 +1,4 @@
+interface:
+  display_name: "write a short executive summary"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $write-a-short-executive-summary to complete and verify this writing task."

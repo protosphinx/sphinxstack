@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Research Data"
+  short_description: "Control research data from capture to disposal"
+  default_prompt: "Use $manage-research-data to create a data-management plan for this study."

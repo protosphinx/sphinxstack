@@ -1,0 +1,4 @@
+interface:
+  display_name: "write-a-resume-for-an-academic-role"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $write-a-resume-for-an-academic-role to complete and verify this task."

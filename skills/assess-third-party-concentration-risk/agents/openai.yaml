@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assess Third-Party Concentration Risk"
+  short_description: "Measure supplier dependency and viable exits"
+  default_prompt: "Use $assess-third-party-concentration-risk to assess this supplier concentration and test alternatives."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Bug Report"
+  short_description: "Turn a defect into a reproducible engineering report"
+  default_prompt: "Use $write-a-bug-report to help me complete this workflow with verifiable evidence."

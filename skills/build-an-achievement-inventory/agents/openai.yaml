@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build an Achievement Inventory"
+  short_description: "Capture verified accomplishments for resumes and reviews"
+  default_prompt: "Use $build-an-achievement-inventory to turn my records into a reusable evidence inventory."

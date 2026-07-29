@@ -1,0 +1,4 @@
+interface:
+  display_name: "Measure a Queue Backlog"
+  short_description: "Measure queued work, age, and drain rate"
+  default_prompt: "Use $measure-a-queue-backlog to assess this queue and its processing risk."

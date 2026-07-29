@@ -1,0 +1,4 @@
+interface:
+  display_name: "Handle a Refund Request"
+  short_description: "Decide and process a refund with an audit trail"
+  default_prompt: "Use $handle-a-refund-request to help me complete this workflow with verifiable evidence."

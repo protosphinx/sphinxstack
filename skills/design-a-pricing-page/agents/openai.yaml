@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a pricing page"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $design-a-pricing-page to complete and verify this design task."

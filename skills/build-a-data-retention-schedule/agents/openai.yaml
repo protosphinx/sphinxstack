@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a Data Retention Schedule"
+  short_description: "Set evidence-based retention and disposal rules"
+  default_prompt: "Use $build-a-data-retention-schedule to create a governed retention and disposal schedule."

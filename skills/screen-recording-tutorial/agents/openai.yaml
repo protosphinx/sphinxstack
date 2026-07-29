@@ -1,0 +1,4 @@
+interface:
+  display_name: "Screen Recording Tutorial"
+  short_description: "Plan, record, and publish a screen tutorial"
+  default_prompt: "Use $screen-recording-tutorial to help me complete this workflow with verified evidence."

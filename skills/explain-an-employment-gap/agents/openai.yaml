@@ -1,0 +1,4 @@
+interface:
+  display_name: "Explain an Employment Gap"
+  short_description: "Describe a career gap honestly and proportionately"
+  default_prompt: "Use $explain-an-employment-gap to frame this gap accurately and privately."

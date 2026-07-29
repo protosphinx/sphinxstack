@@ -1,0 +1,4 @@
+interface:
+  display_name: "Edit a Podcast Interview"
+  short_description: "Shape spoken audio without changing meaning"
+  default_prompt: "Use $edit-a-podcast-interview to create a clear faithful interview edit."

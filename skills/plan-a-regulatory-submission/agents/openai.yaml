@@ -1,0 +1,4 @@
+interface:
+  display_name: "plan a regulatory submission"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $plan-a-regulatory-submission to complete and verify this operations task."

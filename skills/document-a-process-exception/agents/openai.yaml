@@ -1,0 +1,4 @@
+interface:
+  display_name: "document a process exception"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $document-a-process-exception to complete and verify this operations task."

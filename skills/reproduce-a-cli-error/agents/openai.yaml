@@ -1,0 +1,4 @@
+interface:
+  display_name: "reproduce-a-cli-error"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $reproduce-a-cli-error to complete and verify this task."

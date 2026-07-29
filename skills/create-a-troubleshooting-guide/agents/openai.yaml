@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Troubleshooting Guide"
+  short_description: "Guide diagnosis from symptoms to safe fixes"
+  default_prompt: "Use $create-a-troubleshooting-guide to help me complete this workflow with verifiable evidence."

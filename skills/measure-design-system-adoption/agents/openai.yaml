@@ -1,0 +1,4 @@
+interface:
+  display_name: "Measure Design System Adoption"
+  short_description: "Measure shared-system use, quality, and outcomes"
+  default_prompt: "Use $measure-design-system-adoption to build a decision-ready adoption and health model."

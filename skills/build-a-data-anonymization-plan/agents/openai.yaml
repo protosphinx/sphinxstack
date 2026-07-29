@@ -1,0 +1,4 @@
+interface:
+  display_name: "build a data anonymization plan"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $build-a-data-anonymization-plan to complete and verify this data task."

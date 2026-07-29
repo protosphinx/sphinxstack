@@ -1,0 +1,4 @@
+interface:
+  display_name: "validate column types"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $validate-column-types to complete and verify this data task."

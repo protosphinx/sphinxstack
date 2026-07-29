@@ -1,0 +1,35 @@
+{
+  "name": "sphinxstack",
+  "version": "1.0.0",
+  "description": "A stack of skills for your AI agent, made for people starting from zero. Take a skill, load it into whatever agent you have — Codex, Claude Code, Copilot, Gemini, Cursor — and do the thing: build your resume, put a website live, ship a working app.",
+  "scripts": {
+    "validate": "node registry/validate.mjs",
+    "validate:roadmap": "node registry/validate-roadmap.mjs",
+    "lint:skills": "node registry/lint-skills.mjs",
+    "lint:advanced": "node registry/lint-advanced.mjs",
+    "lint:examples": "node site/lint-examples.mjs",
+    "lint:seo": "node site/lint-seo.mjs",
+    "build": "node site/build.mjs",
+    "test": "npm run validate && npm run validate:roadmap && npm run lint:skills && npm run lint:advanced && npm run lint:examples && npm run build && npm run lint:seo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protosphinx/sphinxstack.git"
+  },
+  "keywords": [
+    "skills",
+    "agent-skills",
+    "ai-agents",
+    "claude-code",
+    "codex"
+  ],
+  "author": "protosphinx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/protosphinx/sphinxstack/issues"
+  },
+  "homepage": "https://github.com/protosphinx/sphinxstack#readme",
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}

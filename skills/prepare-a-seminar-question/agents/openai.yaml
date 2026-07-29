@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare-a-seminar-question"
+  short_description: "Run a verified prepare a seminar question workflow"
+  default_prompt: "Use $prepare-a-seminar-question to complete and verify this task."

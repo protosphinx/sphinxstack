@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Role-Based Access Control"
+  short_description: "Map roles to least-privilege decisions and tests"
+  default_prompt: "Use $design-role-based-access-control to create a testable authorization model for this system."

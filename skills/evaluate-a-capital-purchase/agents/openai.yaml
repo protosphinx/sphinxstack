@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evaluate a Capital Purchase"
+  short_description: "Assess a long-lived investment and its risks"
+  default_prompt: "Use $evaluate-a-capital-purchase to compare this capital investment with alternatives."

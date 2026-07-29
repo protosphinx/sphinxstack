@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design an Operating Rhythm"
+  short_description: "Align recurring forums, decisions, signals, and follow-through"
+  default_prompt: "Use $design-an-operating-rhythm to design a coherent operating cadence."

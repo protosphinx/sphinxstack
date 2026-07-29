@@ -1,0 +1,4 @@
+interface:
+  display_name: "check an interview invitation"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $check-an-interview-invitation to complete and verify this hiring task."

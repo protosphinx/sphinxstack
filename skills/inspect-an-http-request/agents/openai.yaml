@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspect an HTTP Request"
+  short_description: "Trace HTTP inputs, responses, and boundaries"
+  default_prompt: "Use $inspect-an-http-request to explain and debug this request without exposing secrets."

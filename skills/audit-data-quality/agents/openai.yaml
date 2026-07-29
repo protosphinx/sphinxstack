@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Data Quality"
+  short_description: "Measure data defects, lineage, impact, and repair priorities"
+  default_prompt: "Use $audit-data-quality to produce a reproducible quality report for this dataset."

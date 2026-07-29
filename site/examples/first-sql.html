@@ -1,0 +1,135 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a first SQL session starts, intimidation included. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> everyone says learn SQL but it looks like arcane incantations. SELECT WHATEVER FROM WHEREVER</div>
+<div class="cm cm-agent">You just read it aloud correctly, which is most of the trick: SQL
+is closer to a stiff sentence than to code. What data of your own do you have? A
+tracker, a spending export, game logs?</div>
+<div class="cm cm-user cd-hide">my spending log, about 8 months of it in a sheet</div>
+<div class="cm cm-agent cd-hide">Perfect. Export it as CSV and we'll load it into SQLite: one free
+file on your machine, no server, no account. Then give me five questions you actually
+want answered about your spending, before we write any SQL at all.</div>
+<div class="cm cm-user cd-hide">ok... what do i spend most on? did march really cost as much as it felt like?</div>
+<div class="cm cm-agent cd-hide">Each of those is one readable line, and each pulls in exactly the
+clause it needs. Fair warning about the first error you'll hit: the CSV import makes
+every column text, so comparisons act strange until we fix the types. We'll hit it
+live; it's a good lesson.</div>
+<div class="cm cm-user cd-hide">SELECT category, SUM(amount) FROM spending GROUP BY category; ...it worked??</div>
+<div class="cm cm-agent cd-hide">Check it against your sheet before you trust it. The sheet is the
+thing you already believe, and when the numbers agree, the database has earned its
+place. Question three is yours to type alone; I'll stay quiet.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Doesn't SQL need a server and a CS degree?</h2>
+<p>Neither. The tool is SQLite: the whole database is a single file in a folder you
+own, and the <code>sqlite3</code> program is already on most machines (there's a free
+GUI, DB Browser for SQLite, if you'd rather click). The degree gets replaced by your
+own curiosity: the session collects five real questions about your data first, and
+syntax arrives as a side effect of answering them. WHERE turns out to be the filter
+button, GROUP BY turns out to be the pivot table, and both were already yours. Data
+worth querying is the only prerequisite; these projects generate plenty:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/hours-vs-grades/"><img src="/assets/project-img/hours-vs-grades.jpg" alt=""><span>Hours vs grades</span></a>
+<a class="mini" href="/ideas/listening-charted/"><img src="/assets/project-img/listening-charted.jpg" alt=""><span>Your listening, charted</span></a>
+<a class="mini" href="/ideas/count-something/"><img src="/assets/project-img/count-something.jpg" alt=""><span>Count something for a week</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A database built from your own CSV, and a <code>queries.sql</code> file where every
+question keeps its query and its answer. An excerpt:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example queries.sql excerpt with results">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">QUERIES.SQL &nbsp;·&nbsp; QUESTION 3 OF 5 <span class="anno-badge">1</span></div>
+<pre style="font-size:0.72rem; line-height:1.55; margin:0.3rem 0 0;">-- Q3: Which month did food actually cost the most?
+SELECT strftime('%Y-%m', date) AS month,
+       SUM(amount) AS food_total
+FROM spending
+WHERE category = 'food'
+GROUP BY month
+ORDER BY food_total DESC
+LIMIT 3;
+
+month    food_total
+-------  ----------
+2026-03  164.20
+2026-01  131.75
+2026-04  118.40
+
+-- Answer: March, by about $32. The camping trip
+-- groceries, mostly. Matches the sheet's SUMIF.</pre>
+<div class="rz-item" style="margin-top:0.6rem;"><div class="rz-line">Alongside it:
+<b>mydata.db</b>, types checked with .schema, rebuilt where the CSV import left
+numbers as text <span class="anno-badge">2</span></div></div>
+</div>
+<ol class="anno-notes">
+<li><b>Question, query, answer, together.</b> The comment holds the question in plain
+words, AS gives result columns honest names, and the noted answer makes the file
+both a reference and a proof. When the data grows, every query reruns.</li>
+<li><b>Verified against the sheet.</b> March's total agrees with the spreadsheet's
+SUMIF, which is how the database earns trust. The session ends with you answering a
+brand-new question end to end, unassisted.</li>
+</ol>
+</div>
+
+<h2>Anatomy of your first real query</h2>
+<p>Every clause maps to something you already do in a sheet:</p>
+<div class="anatomy">
+<div class="an-line"><span class="an-seg an-a">SELECT category, SUM(amount)</span>
+<span class="an-seg an-b">FROM spending</span>
+<span class="an-seg an-c">WHERE date &gt;= '2026-01-01'</span>
+<span class="an-seg an-d">GROUP BY category</span></div>
+<ul class="an-legend">
+<li><span class="an-key an-a">A</span> What you want back. COUNT and SUM answer "how many" and "how much".</li>
+<li><span class="an-key an-b">B</span> The table, which was your sheet's tab five minutes ago.</li>
+<li><span class="an-key an-c">C</span> The filter, doing the same job as the filter button in a sheet.</li>
+<li><span class="an-key an-d">D</span> Per-category totals: the pivot table's job in one readable clause.</li>
+</ul>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Do I need to install anything?</summary>
+<p>Usually not. <code>sqlite3</code> ships with macOS and most Linux systems, and the
+agent checks yours first. If you prefer a GUI, DB Browser for SQLite is a free
+download.</p></details>
+<details class="faq"><summary>I don't have any data. Can I use sample data?</summary>
+<p>The skill will stop and route you to track-anything or spreadsheet-basics first.
+SQL on synthetic rows teaches syntax and nothing else; the whole method depends on
+you caring about the answers.</p></details>
+<details class="faq"><summary>Do I need to know programming first?</summary>
+<p>No. SQL here is a question language: you describe what you want and the database
+fetches it. Nothing in the session assumes you have written code before.</p></details>
+<details class="faq"><summary>What happens when my query errors?</summary>
+<p>You read the error together with the agent. SQLite's messages are better than
+their reputation and usually point at the exact word to fix. Wrong-looking results
+get checked against your sheet, which stays the source of trust.</p></details>
+<details class="faq"><summary>My spreadsheet already answers these questions. Why bother?</summary>
+<p>At small size, the sheet is fine and the skill says so. The win shows up as
+questions get sharper: "top category per month" is a short readable query, while the
+sheet version becomes a formula buried in a cell that even you can't re-explain in a
+month.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do I need to install anything?","acceptedAnswer":{"@type":"Answer","text":"Usually not. sqlite3 ships with macOS and most Linux systems. DB Browser for SQLite is a free GUI if you prefer one."}},
+{"@type":"Question","name":"I don't have any data. Can I use sample data?","acceptedAnswer":{"@type":"Answer","text":"The skill stops and routes you to track-anything or spreadsheet-basics first. SQL on synthetic rows teaches syntax and nothing else."}},
+{"@type":"Question","name":"Do I need to know programming first?","acceptedAnswer":{"@type":"Answer","text":"No. You describe what you want and the database fetches it. The session assumes no prior code."}},
+{"@type":"Question","name":"What happens when my query errors?","acceptedAnswer":{"@type":"Answer","text":"You read the error with the agent; SQLite's messages usually point at the exact word to fix. Results get checked against your sheet."}},
+{"@type":"Question","name":"My spreadsheet already answers these questions. Why bother?","acceptedAnswer":{"@type":"Answer","text":"At small size the sheet is fine. The win shows up as questions get sharper: a short readable query beats a formula buried in a cell."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Five questions answered?</b> The next skills up:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/decide-with-data/"><img src="/assets/skill-img/decide-with-data.jpg" alt=""><span>Decide with data</span></a>
+<a class="mini" href="/skills/database-basics/"><img src="/assets/skill-img/database-basics.jpg" alt=""><span>Database basics</span></a>
+<a class="mini" href="/skills/build-web-app/"><img src="/assets/skill-img/build-web-app.jpg" alt=""><span>Build a web app</span></a>
+</div>
+<p><b>Data with bigger ambitions?</b> These projects chain well:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/predict-the-season/"><img src="/assets/project-img/predict-the-season.jpg" alt=""><span>Predict the season</span></a>
+<a class="mini" href="/ideas/taste-predictor/"><img src="/assets/project-img/taste-predictor.jpg" alt=""><span>Taste predictor</span></a>
+<a class="mini" href="/ideas/personal-recommender/"><img src="/assets/project-img/personal-recommender.jpg" alt=""><span>Personal recommender</span></a>
+</div>

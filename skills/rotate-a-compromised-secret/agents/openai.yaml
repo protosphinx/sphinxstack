@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rotate a Compromised Secret"
+  short_description: "Contain and replace exposed credentials with evidence"
+  default_prompt: "Use $rotate-a-compromised-secret to contain this exposure and verify safe credential rotation."

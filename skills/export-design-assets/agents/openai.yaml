@@ -1,0 +1,4 @@
+interface:
+  display_name: "export design assets"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $export-design-assets to complete and verify this design task."

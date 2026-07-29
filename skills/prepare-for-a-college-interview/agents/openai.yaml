@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare for a College Interview"
+  short_description: "Prepare grounded stories and questions for an interview"
+  default_prompt: "Use $prepare-for-a-college-interview to help me prepare for this college interview."

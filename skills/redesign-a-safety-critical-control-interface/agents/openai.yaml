@@ -1,0 +1,4 @@
+interface:
+  display_name: "redesign-a-safety-critical-control-interface"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $redesign-a-safety-critical-control-interface to complete and verify this task."

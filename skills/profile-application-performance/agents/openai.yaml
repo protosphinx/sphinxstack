@@ -1,0 +1,4 @@
+interface:
+  display_name: "Profile Application Performance"
+  short_description: "Measure bottlenecks before optimizing code"
+  default_prompt: "Use $profile-application-performance to find and verify the real bottleneck."

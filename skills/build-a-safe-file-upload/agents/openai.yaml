@@ -1,0 +1,4 @@
+interface:
+  display_name: "build-a-safe-file-upload"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $build-a-safe-file-upload to complete and verify this task."

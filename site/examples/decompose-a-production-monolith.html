@@ -1,0 +1,34 @@
+<h2>Worked case: split only a proven boundary</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A commerce monolith shares one database across checkout, inventory, billing, support, reporting, sessions, caches, and jobs, while undocumented cross-module transactions, release bottlenecks, cascading incidents, and a six-month demand for four new services make a direct split unsafe.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can teams each take their tables and build a service?</div>
+<div class="cm cm-agent">Not until domain, runtime, data, transaction, job, report, and failure dependencies are measured.</div>
+<div class="cm cm-user cd-hide">Should checkout be extracted first because it matters most?</div>
+<div class="cm cm-agent cd-hide">Start with a coherent lower-risk boundary that proves ownership and operating controls.</div>
+<div class="cm cm-user cd-hide">Can both systems write during migration?</div>
+<div class="cm cm-agent cd-hide">Only under one declared authority and reconciled transition; uncontrolled multi-writer state is a stop condition.</div>
+<div class="cm cm-user">What proves the split works?</div>
+<div class="cm cm-agent">Behavior, data, permission, load, latency, cost, isolation, operations, and rollback parity at each wave.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Extract ownership, not folders.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The decomposition evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Decomposition architecture record</td><td>Domain and dependency inventory, constraints, boundaries, data and transaction ownership, contracts, objectives, owners, and decisions</td><td>The boundary is coherent and operable</td></tr>
+<tr><td>Wave parity and isolation report</td><td>Extraction waves, behavior, data, permissions, latency, load, cost, failure isolation, operations, and consumers</td><td>No unexplained parity or coupling regression</td></tr>
+<tr><td>Cutover and rollback rehearsal</td><td>Routing, ownership, reconciliation, state-compatible recovery, committed effects, monitoring, and retirement</td><td>Rollback preserves business effects</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>Shadow reads disagree because a report encodes an undocumented cross-module adjustment. The wave pauses, the dependency joins the inventory, ownership and contract are redesigned, and the report remains on the old path until parity is proven.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Does every module need its own service?</summary><p>No. Separate only boundaries that justify independent operation.</p></details>
+<details class="faq"><summary>Who owns shared data?</summary><p>Declare one authoritative writer and explicit read or workflow contracts.</p></details>
+<details class="faq"><summary>Can a distributed transaction replace the old transaction?</summary><p>Only after invariants, failure modes, compensation, and recovery are proven.</p></details>
+<details class="faq"><summary>What is a good first extraction?</summary><p>A coherent, measurable, lower-risk boundary with an accountable operator.</p></details>
+<details class="faq"><summary>When can old code be deleted?</summary><p>After consumers, data, recovery, and retention gates prove it obsolete.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does every module need its own service?","acceptedAnswer":{"@type":"Answer","text":"No. Require an independently operable boundary."}},{"@type":"Question","name":"Who owns shared data?","acceptedAnswer":{"@type":"Answer","text":"Declare one authoritative writer."}},{"@type":"Question","name":"Can a distributed transaction replace the old transaction?","acceptedAnswer":{"@type":"Answer","text":"Only with proven invariants and recovery."}},{"@type":"Question","name":"What is a good first extraction?","acceptedAnswer":{"@type":"Answer","text":"A coherent lower-risk boundary."}},{"@type":"Question","name":"When can old code be deleted?","acceptedAnswer":{"@type":"Answer","text":"After every retirement gate."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Model dependencies with <a href="/skills/write-an-architecture-decision-record/">Write an architecture decision record</a>,
+protect data evolution with <a href="/skills/manage-database-schema-changes/">Manage database schema changes</a>, and
+define interfaces with <a href="/skills/design-an-api-contract/">Design an API contract</a>.</p>

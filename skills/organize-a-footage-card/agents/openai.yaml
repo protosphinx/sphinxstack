@@ -1,0 +1,4 @@
+interface:
+  display_name: "organize a footage card"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $organize-a-footage-card to complete and verify this media task."

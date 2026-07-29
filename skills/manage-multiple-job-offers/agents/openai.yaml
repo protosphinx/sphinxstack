@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage multiple job offers"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $manage-multiple-job-offers to complete and verify this hiring task."

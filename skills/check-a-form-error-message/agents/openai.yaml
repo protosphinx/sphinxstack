@@ -1,0 +1,4 @@
+interface:
+  display_name: "check a form error message"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $check-a-form-error-message to complete and verify this web task."

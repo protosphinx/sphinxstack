@@ -1,0 +1,4 @@
+interface:
+  display_name: "redesign-an-operational-dashboard"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $redesign-an-operational-dashboard to complete and verify this task."

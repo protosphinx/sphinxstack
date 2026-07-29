@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Telemetry Sampling"
+  short_description: "Control telemetry volume without hiding risk"
+  default_prompt: "Use $manage-telemetry-sampling to design a measurable sampling policy for these signals."

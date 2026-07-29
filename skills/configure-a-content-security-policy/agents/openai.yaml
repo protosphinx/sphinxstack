@@ -1,0 +1,4 @@
+interface:
+  display_name: "Configure a Content Security Policy"
+  short_description: "Constrain browser resource and script execution"
+  default_prompt: "Use $configure-a-content-security-policy to design, stage, and verify a CSP for this site."

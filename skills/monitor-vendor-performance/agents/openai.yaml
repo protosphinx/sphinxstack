@@ -1,0 +1,4 @@
+interface:
+  display_name: "Monitor Vendor Performance"
+  short_description: "Measure vendor outcomes and corrective actions"
+  default_prompt: "Use $monitor-vendor-performance to build an evidence-based vendor scorecard and review loop."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pitch a Journalist"
+  short_description: "Pitch a relevant story with evidence and respect"
+  default_prompt: "Use $pitch-a-journalist to research and draft a focused, non-spammy media pitch."

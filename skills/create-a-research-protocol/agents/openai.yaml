@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Research Protocol"
+  short_description: "Specify repeatable research steps and controls"
+  default_prompt: "Use $create-a-research-protocol to create a reproducible protocol for this study."

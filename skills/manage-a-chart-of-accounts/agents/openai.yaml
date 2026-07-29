@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage a chart of accounts"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $manage-a-chart-of-accounts to complete and verify this finance task."

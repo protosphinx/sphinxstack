@@ -1,0 +1,4 @@
+interface:
+  display_name: "calculate runway"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $calculate-runway to complete and verify this finance task."

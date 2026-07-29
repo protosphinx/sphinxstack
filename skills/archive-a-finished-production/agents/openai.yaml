@@ -1,0 +1,4 @@
+interface:
+  display_name: "archive a finished production"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $archive-a-finished-production to complete and verify this media task."

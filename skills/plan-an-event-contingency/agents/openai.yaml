@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan an Event Contingency"
+  short_description: "Prepare proportionate responses to event disruption"
+  default_prompt: "Use $plan-an-event-contingency to prepare decision triggers and recovery options for this event."

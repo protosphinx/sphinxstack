@@ -1,0 +1,34 @@
+<h2>Worked case: move a billing API without replaying charges</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A billing API must move hundreds of internal and partner consumers to a new provider, but response shapes, authentication scopes, idempotency, rate limits, webhook signatures, SDK defaults, and error behavior differ, while scheduled clients may be absent from recent telemetry.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we inventory consumers from the last 30 days of traffic?</div>
+<div class="cm cm-agent">No. Add credentials, contracts, code search, SDKs, jobs, webhooks, support, partners, and owner attestation.</div>
+<div class="cm cm-user cd-hide">How do we dual run charge creation?</div>
+<div class="cm cm-agent cd-hide">Do not duplicate mutations. Shadow computation or reconcile provider-side outcomes safely.</div>
+<div class="cm cm-user cd-hide">Can the new auth scope be broader temporarily?</div>
+<div class="cm cm-agent cd-hide">No. Access widening is a stop condition, not a migration shortcut.</div>
+<div class="cm cm-user">What proves cutover?</div>
+<div class="cm cm-agent">Consumer-generated compatibility evidence, safe state transition, monitored health, and a rollback that preserves accepted mutations.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Telemetry absence does not retire a client.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The critical API migration evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>API migration register</td><td>Consumer inventory, contracts, owners, versions, notice, compatibility, credentials, waves, exceptions, and decisions</td><td>Every material consumer has a disposition</td></tr>
+<tr><td>Consumer compatibility report</td><td>Compatibility contract and dual-run validation for behavior, auth, errors, pagination, idempotency, webhooks, performance, SDKs, and mixed versions</td><td>Consumer proof covers normal and failure behavior</td></tr>
+<tr><td>Cutover and rollback rehearsal</td><td>Routing, credentials, state-compatible recovery, accepted mutations, monitoring, support, and retirement</td><td>No charge or revocation is lost or duplicated</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A dormant monthly client authenticates only during billing close. The old version remains supported, the owner receives a test window, and retirement pauses until the scheduled journey and rollback pass.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is schema compatibility enough?</summary><p>No. Verify semantics, auth, errors, timing, limits, retries, and side effects.</p></details>
+<details class="faq"><summary>Can mirrored mutations use test accounts?</summary><p>Use controlled safe accounts only when provider effects and cleanup are understood.</p></details>
+<details class="faq"><summary>How long should the old API remain?</summary><p>Until contractual notice, consumer evidence, failover, and retirement gates pass.</p></details>
+<details class="faq"><summary>Who proves consumer migration?</summary><p>The consumer owner produces versioned journey and rollback evidence.</p></details>
+<details class="faq"><summary>What if a consumer has no owner?</summary><p>Maintain compatibility or escalate an explicit risk decision.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is schema compatibility enough?","acceptedAnswer":{"@type":"Answer","text":"No. Verify the complete behavioral contract."}},{"@type":"Question","name":"Can mirrored mutations use test accounts?","acceptedAnswer":{"@type":"Answer","text":"Only under controlled safe conditions."}},{"@type":"Question","name":"How long should the old API remain?","acceptedAnswer":{"@type":"Answer","text":"Until all retirement gates pass."}},{"@type":"Question","name":"Who proves consumer migration?","acceptedAnswer":{"@type":"Answer","text":"The consumer owner."}},{"@type":"Question","name":"What if a consumer has no owner?","acceptedAnswer":{"@type":"Answer","text":"Maintain compatibility or escalate risk."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Specify behavior with <a href="/skills/design-an-api-contract/">Design an API contract</a>,
+test compatibility with <a href="/skills/build-a-contract-test-suite/">Build a contract test suite</a>, and
+protect mutations with <a href="/skills/implement-idempotency/">Implement idempotency</a>.</p>

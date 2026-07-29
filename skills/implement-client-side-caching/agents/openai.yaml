@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement Client-Side Caching"
+  short_description: "Cache browser data with honest freshness rules"
+  default_prompt: "Use $implement-client-side-caching to design and verify safe client caching for this data."

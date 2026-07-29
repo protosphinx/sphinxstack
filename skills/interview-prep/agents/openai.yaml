@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interview Prep"
+  short_description: "Prepare evidence-backed stories for a job interview"
+  default_prompt: "Use $interview-prep to help me complete this workflow with verified evidence."

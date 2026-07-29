@@ -1,0 +1,4 @@
+interface:
+  display_name: "Track Anything"
+  short_description: "Build a tracker that answers a real question"
+  default_prompt: "Use $track-anything to help me complete this workflow with verified evidence."

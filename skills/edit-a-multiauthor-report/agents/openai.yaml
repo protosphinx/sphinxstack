@@ -1,0 +1,4 @@
+interface:
+  display_name: "edit a multiauthor report"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $edit-a-multiauthor-report to complete and verify this writing task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "harden-a-cli-for-automation"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $harden-a-cli-for-automation to complete and verify this task."

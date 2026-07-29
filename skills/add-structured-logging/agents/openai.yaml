@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Structured Logging"
+  short_description: "Create useful privacy-safe application event logs"
+  default_prompt: "Use $add-structured-logging to design and verify structured events for this service."

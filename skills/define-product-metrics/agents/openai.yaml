@@ -1,0 +1,4 @@
+interface:
+  display_name: "Define Product Metrics"
+  short_description: "Connect product decisions to measurable user outcomes"
+  default_prompt: "Use $define-product-metrics to create a metric tree and measurement specification."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design an Event Feedback Survey"
+  short_description: "Measure event experience without survey noise"
+  default_prompt: "Use $design-an-event-feedback-survey to create a focused and ethical post-event survey."

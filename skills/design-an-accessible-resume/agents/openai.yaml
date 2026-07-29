@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design an Accessible Resume"
+  short_description: "Make resume files readable across assistive tools"
+  default_prompt: "Use $design-an-accessible-resume to make this resume accessible and testable."

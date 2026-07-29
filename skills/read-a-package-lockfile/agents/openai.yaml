@@ -1,0 +1,4 @@
+interface:
+  display_name: "read-a-package-lockfile"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $read-a-package-lockfile to complete and verify this task."

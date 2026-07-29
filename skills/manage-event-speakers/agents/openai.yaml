@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Event Speakers"
+  short_description: "Coordinate speakers from invitation to follow-up"
+  default_prompt: "Use $manage-event-speakers to coordinate speaker commitments, content, logistics, and care."

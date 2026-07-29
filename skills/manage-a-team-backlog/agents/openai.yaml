@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage a Team Backlog"
+  short_description: "Keep work ordered, bounded, evidenced, and current"
+  default_prompt: "Use $manage-a-team-backlog to reconcile and prioritize this team's work."

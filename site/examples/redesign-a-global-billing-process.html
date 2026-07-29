@@ -1,0 +1,34 @@
+<h2>Worked case: replace global billing without corrupting customer balances</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A global subscription company must redesign billing across contracts, usage, seats, multiple currencies, taxes, discounts, credits, invoices, collections, revenue schedules, payment methods, refunds, and regional legal terms while legacy and new engines overlap and duplicate invoices, lost credits, or misstated balances are unacceptable.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can both billing engines issue invoices during the dual run?</div>
+<div class="cm cm-agent">No. One engine owns mutation; the other calculates and renders in shadow mode.</div>
+<div class="cm cm-user cd-hide">What identity survives retries and cutover?</div>
+<div class="cm cm-agent cd-hide">Use a durable business key plus generation epoch, and fence every stale worker.</div>
+<div class="cm cm-user cd-hide">Can rollback delete new invoices?</div>
+<div class="cm cm-agent cd-hide">Never delete issued financial history. Preserve documents and payments, then reconcile or correct forward.</div>
+<div class="cm cm-user">What proves a cohort is ready?</div>
+<div class="cm cm-agent">Contract, line, tax, balance, ledger, collection, notification, and document parity with no unexplained material difference.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Dual calculation is safe only when financial mutation has one owner.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The global billing evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>billing architecture and control register</td><td>Authoritative states, contracts, prices, usage, tax, invoices, payments, credits, ledger consumers, generations, and owners</td><td>Every mutation has one writer and durable identity</td></tr>
+<tr><td>invoice, ledger, and customer parity report</td><td>Line, tax, rounding, balance, document, collection, revenue, notification, and exception comparison</td><td>No unexplained material customer or financial difference</td></tr>
+<tr><td>cutover and rollback rehearsal</td><td>Waves, checkpoints, fencing, in-flight items, stop authority, issued-document handling, support, and reconciliation</td><td>Failure can be contained without replay or lost history</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A stale worker issues invoices after a regional cohort moves to the new engine. The team stops the wave, fences the old generation, preserves both invoice versions, prevents collection on the duplicate, traces notifications and ledger postings, corrects customer balances, and reruns the parity gate before resuming.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can the shadow engine send customer emails?</summary><p>No. Notifications are customer-facing mutations and remain with the authoritative engine.</p></details>
+<details class="faq"><summary>Can old invoice numbers be regenerated?</summary><p>No. Preserve issued numbering and link corrections through governed references.</p></details>
+<details class="faq"><summary>How should credits move?</summary><p>Reconcile each credit's origin, remaining amount, currency, tax effect, application, and customer balance.</p></details>
+<details class="faq"><summary>What happens during financial close?</summary><p>Coordinate freeze windows, cutoffs, ledger reconciliation, and explicit approval before changing authority.</p></details>
+<details class="faq"><summary>When can the legacy engine retire?</summary><p>Only after dispute, tax, history, retention, audit, access, and recovery duties have proven owners.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can the shadow engine send customer emails?","acceptedAnswer":{"@type":"Answer","text":"No. Keep notifications with the authoritative engine."}},{"@type":"Question","name":"Can old invoice numbers be regenerated?","acceptedAnswer":{"@type":"Answer","text":"No. Preserve issued numbering and correction links."}},{"@type":"Question","name":"How should credits move?","acceptedAnswer":{"@type":"Answer","text":"Reconcile every credit and application."}},{"@type":"Question","name":"What happens during financial close?","acceptedAnswer":{"@type":"Answer","text":"Coordinate cutoffs, reconciliation, and approval."}},{"@type":"Question","name":"When can the legacy engine retire?","acceptedAnswer":{"@type":"Answer","text":"After all durable obligations have proven owners."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Review contracts with <a href="/skills/design-a-revenue-recognition-checklist/">Design a revenue recognition checklist</a>,
+reconcile money with <a href="/skills/reconcile-payment-processor-payouts/">Reconcile payment processor payouts</a>, and
+plan recovery with <a href="/skills/prepare-a-rollback-plan/">Prepare a rollback plan</a>.</p>

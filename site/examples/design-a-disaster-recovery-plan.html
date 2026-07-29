@@ -1,0 +1,48 @@
+<h2>Worked case: recover a regional order service</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A regional outage and corrupted replica could remove our primary service and newest customer data at the same time.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Design disaster recovery for our order API and database. We say recovery takes one hour.</div>
+<div class="cm cm-agent">I need the critical journeys, evidence behind that hour, acceptable data loss, failure domains, and who can authorize failover.</div>
+<div class="cm cm-user cd-hide">Order capture is critical. The one-hour claim has never been tested. We believe backups run every fifteen minutes.</div>
+<div class="cm cm-agent cd-hide">Then one hour and fifteen minutes are hypotheses. I will separate the recovery time objective from the recovery point objective and design exercises to measure both.</div>
+<div class="cm cm-user cd-hide">Can the replica take traffic immediately?</div>
+<div class="cm cm-agent cd-hide">Not until corruption isolation, write authority, secrets, queues, and reconciliation are proven. Otherwise failover could spread the failure.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Recovery objectives remain unproven until a rehearsal measures them.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The recovery evidence package</h2>
+<table class="plain-table">
+<thead><tr><th>Capability</th><th>Objective</th><th>Recovery proof</th></tr></thead>
+<tbody>
+<tr><td>Accept new orders</td><td>60-minute recovery time</td><td>Regional cutover plus signed test order</td></tr>
+<tr><td>Preserve accepted orders</td><td>15-minute recovery point</td><td>Backup timestamp and order reconciliation</td></tr>
+<tr><td>Send fulfillment events</td><td>Resume without duplicates</td><td>Queue replay and idempotency check</td></tr>
+</tbody>
+</table>
+<h3>Required evidence</h3>
+<ul>
+<li><strong>Recovery architecture:</strong> failure domains, protected backups, identity, network, data authority, restoration order, and degraded modes.</li>
+<li><strong>Tabletop record:</strong> activation decision, missing authority, customer communication, and corrective owners.</li>
+<li><strong>Recovery rehearsal:</strong> measured failover, restore, reconciliation, user journey, and return to normal operation.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>The exercise simulates loss of the primary region and suspected replica corruption. Operators freeze new
+writes, isolate the corrupted path, restore the latest verified point into the recovery region, replay accepted
+events, and compare order totals and identifiers. Traffic moves only after one test order and reconciliation
+pass. If write authority is ambiguous, the exercise stops rather than risking split-brain data.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is high availability the same as disaster recovery?</summary><p>No. High availability handles expected component failure. Disaster recovery covers failures that exceed ordinary redundancy and require coordinated restoration.</p></details>
+<details class="faq"><summary>Who chooses the recovery objectives?</summary><p>Business and system owners choose them from tolerable user harm, data loss, obligations, cost, and measured capability.</p></details>
+<details class="faq"><summary>Can a tabletop prove the plan works?</summary><p>No. It proves roles and decisions. Component restores and production-shaped recovery exercises prove technical behavior.</p></details>
+<details class="faq"><summary>When should failover stop?</summary><p>Stop when isolation, write authority, data protection, access, or a safe return path cannot be verified.</p></details>
+<details class="faq"><summary>What if the rehearsal misses the target?</summary><p>Record the observed limit, keep the target unproven, assign corrective work, and repeat the exercise.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is high availability the same as disaster recovery?","acceptedAnswer":{"@type":"Answer","text":"No. Disaster recovery covers failures beyond ordinary redundancy."}},{"@type":"Question","name":"Who chooses the recovery objectives?","acceptedAnswer":{"@type":"Answer","text":"Business and system owners choose them from tolerable harm, obligations, cost, and evidence."}},{"@type":"Question","name":"Can a tabletop prove the plan works?","acceptedAnswer":{"@type":"Answer","text":"No. It validates roles and decisions, while recovery exercises validate technical behavior."}},{"@type":"Question","name":"When should failover stop?","acceptedAnswer":{"@type":"Answer","text":"Stop when isolation, write authority, data protection, access, or recovery cannot be verified."}},{"@type":"Question","name":"What if the rehearsal misses the target?","acceptedAnswer":{"@type":"Answer","text":"Record the limit, assign correction, and repeat the exercise."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Prove the stored recovery points with <a href="/skills/verify-a-backup-restore/">Verify a backup restore</a>,
+prepare release recovery with <a href="/skills/prepare-a-rollback-plan/">Prepare a rollback plan</a>, and exercise
+capacity with <a href="/skills/run-a-load-test/">Run a load test</a>.</p>

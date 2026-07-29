@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Video Description"
+  short_description: "Write accurate findable viewing context"
+  default_prompt: "Use $write-a-video-description to write an accurate accessible description for this video."

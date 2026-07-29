@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Clearly"
+  short_description: "Revise writing until readers can act on it"
+  default_prompt: "Use $write-clearly to help me complete this workflow with verified evidence."

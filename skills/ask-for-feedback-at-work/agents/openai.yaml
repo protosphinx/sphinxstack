@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ask for Feedback at Work"
+  short_description: "Request specific, actionable workplace feedback"
+  default_prompt: "Use $ask-for-feedback-at-work to prepare a focused feedback request."

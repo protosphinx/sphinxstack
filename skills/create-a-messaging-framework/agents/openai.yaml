@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Messaging Framework"
+  short_description: "Align proof, value, objections, and audience language"
+  default_prompt: "Use $create-a-messaging-framework to create a consistent evidence-backed message system."

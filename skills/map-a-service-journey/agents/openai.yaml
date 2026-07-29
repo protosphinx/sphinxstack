@@ -1,0 +1,4 @@
+interface:
+  display_name: "Map a Service Journey"
+  short_description: "Map an end-to-end service experience from evidence"
+  default_prompt: "Use $map-a-service-journey to document this experience, handoffs, needs, and evidence gaps."

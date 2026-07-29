@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spreadsheet Basics"
+  short_description: "Build a reliable spreadsheet from real data"
+  default_prompt: "Use $spreadsheet-basics to help me complete this workflow with verified evidence."

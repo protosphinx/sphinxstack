@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Telemetry Pipeline"
+  short_description: "Build reliable governed telemetry transport"
+  default_prompt: "Use $design-a-telemetry-pipeline to design and prove this production telemetry path."

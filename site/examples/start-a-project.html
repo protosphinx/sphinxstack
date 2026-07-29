@@ -1,0 +1,111 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes when someone arrives with ten ideas and zero started. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> i want to build something real but i have like ten ideas and i keep switching between them</div>
+<div class="cm cm-agent">Ten ideas usually means zero finished, so we converge on one today
+and start it before we're done. First: what do you actually do with your time? Games,
+sports, a job, a fandom, a family business?</div>
+<div class="cm cm-user cd-hide">mostly climbing. i also run the discord for my gym's youth team</div>
+<div class="cm cm-agent cd-hide">That Discord is real material, better than any generic idea. How
+many hours a week can you honestly give this, and what do you want at the end: a resume
+line, a portfolio piece, money?</div>
+<div class="cm cm-user cd-hide">maybe 5 hours. resume line, i'm applying for internships next fall</div>
+<div class="cm cm-agent cd-hide">Two candidates then. A bot for your team Discord that posts session
+signups, or a site listing every climbing spot in your county, live at a URL. Week one
+of the bot: it answers one command in your real server. Which one would you be
+embarrassed to show a friend unfinished?</div>
+<div class="cm cm-user cd-hide">the bot, honestly. people in the server would ask me about it</div>
+<div class="cm cm-agent cd-hide">The embarrassment means you care, so the bot wins. I'm creating the
+repo now with a README in your words, plus issue #1: "bot replies to !sessions with
+this week's schedule." We do the first fifteen minutes together before you go, so the
+repo isn't empty when you walk away.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Too many ideas to pick one?</h2>
+<p>The skill treats that as the normal starting condition. It interviews you about what
+you already do with your time, because the project comes from that list. Candidates get
+one sentence each, with what will exist at the end and what week one looks like. If you
+stall, it asks which one you would be embarrassed to show a friend unfinished, and that
+one wins. If you have zero ideas instead of ten, it walks the idea bank with you and
+bends a shape around your real material. Three shapes that read well later:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/discord-server-bot/"><img src="/assets/project-img/discord-server-bot.jpg" alt=""><span>Discord bot your server uses</span></a>
+<a class="mini" href="/ideas/price-drop-alert/"><img src="/assets/project-img/price-drop-alert.jpg" alt=""><span>Price-drop watcher on a schedule</span></a>
+<a class="mini" href="/ideas/canvas-arcade/"><img src="/assets/project-img/canvas-arcade.jpg" alt=""><span>Browser game at a URL</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A decision would evaporate by the weekend, so the session ends with a started repo
+instead. This is the state of things when the conversation above closes:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example repo state at end of session">
+<div class="sheet-tag">Example</div>
+<pre>
+teambot/
+├── README.md          committed
+└── bot.js             first 15 minutes done, replies to !ping
+
+README.md
+  # teambot
+  Discord bot for my climbing gym's youth team server (32 members).
+  Posts the week's session schedule and takes signups, so the
+  pinned-screenshot system can retire.
+
+Issue #1 — first milestone
+  "Bot replies to !sessions with this week's schedule, hardcoded."
+  Done when: someone besides me runs the command in the real server.
+
+Handoff: ship-on-github once the bot answers for real, so the
+work lives at a public URL. The schedule stays hardcoded until a
+real member asks for more.
+</pre>
+</div>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>What if I have no ideas at all?</summary>
+<p>Then the interview matters more. The skill asks what you do with your time and reads
+the idea bank at <a href="/ideas/">/ideas/</a> against your answers. The bank is a menu
+of shapes; the skill bends one around your actual life, your server, your team, your
+family's business.</p></details>
+<details class="faq"><summary>Do I have to finish the whole thing in a week?</summary>
+<p>No. The rule is that week one produces something visible, and the skill cuts
+features until that is true. A project you can complete outranks a project that
+impresses in description.</p></details>
+<details class="faq"><summary>I always abandon projects. Why would this be different?</summary>
+<p>The skill asks what you already tried and why it died, and treats the reason as a
+constraint on the next pick. It also refuses to end at a decision: the repo exists and
+the first fifteen minutes are done before the session closes, which is further than
+most abandoned projects ever got.</p></details>
+<details class="faq"><summary>Do I need to know how to code first?</summary>
+<p>No. Picking and starting need honest answers from you. The building happens in the
+skill this one hands off to, where the agent writes code and you make the calls.</p></details>
+<details class="faq"><summary>Is this free?</summary>
+<p>The skill is free, no account, no catch. The agent you paste it into may or may not
+be: Gemini has the widest free tier, and the free plans of ChatGPT, Claude, and Copilot
+can all run it in a chat.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What if I have no ideas at all?","acceptedAnswer":{"@type":"Answer","text":"The skill interviews you about what you do with your time and reads the idea bank against your answers, bending a project shape around your actual life."}},
+{"@type":"Question","name":"Do I have to finish the whole thing in a week?","acceptedAnswer":{"@type":"Answer","text":"No. Week one has to produce something visible, and the skill cuts features until that is true."}},
+{"@type":"Question","name":"I always abandon projects. Why would this be different?","acceptedAnswer":{"@type":"Answer","text":"It asks why past projects died and uses the reason as a constraint on the pick. The session also ends with the repo created and the first fifteen minutes done."}},
+{"@type":"Question","name":"Do I need to know how to code first?","acceptedAnswer":{"@type":"Answer","text":"No. This skill needs honest answers; the build skill it hands off to does the code with the agent."}},
+{"@type":"Question","name":"Is this free?","acceptedAnswer":{"@type":"Answer","text":"The skill is free, no account. The agent you paste it into may have a free tier; Gemini's is the widest."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Project picked?</b> These are the skills it hands off to:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/build-website/"><img src="/assets/skill-img/build-website.jpg" alt=""><span>Build a website</span></a>
+<a class="mini" href="/skills/build-web-app/"><img src="/assets/skill-img/build-web-app.jpg" alt=""><span>Build a web app</span></a>
+<a class="mini" href="/skills/ship-on-github/"><img src="/assets/skill-img/ship-on-github.jpg" alt=""><span>Ship on GitHub</span></a>
+</div>
+<p><b>Project not software?</b> These begin where this one ends:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/start-a-newsletter/"><img src="/assets/skill-img/start-a-newsletter.jpg" alt=""><span>Start a newsletter</span></a>
+<a class="mini" href="/skills/start-a-youtube-channel/"><img src="/assets/skill-img/start-a-youtube-channel.jpg" alt=""><span>Start a YouTube channel</span></a>
+<a class="mini" href="/skills/start-selling-something/"><img src="/assets/skill-img/start-selling-something.jpg" alt=""><span>Start selling something</span></a>
+</div>

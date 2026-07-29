@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a content preview workflow"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $design-a-content-preview-workflow to complete and verify this web task."

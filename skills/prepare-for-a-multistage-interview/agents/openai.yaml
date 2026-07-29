@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare-for-a-multistage-interview"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $prepare-for-a-multistage-interview to complete and verify this task."

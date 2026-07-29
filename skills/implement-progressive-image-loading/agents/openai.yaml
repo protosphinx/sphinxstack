@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement progressive image loading"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $implement-progressive-image-loading to complete and verify this web task."

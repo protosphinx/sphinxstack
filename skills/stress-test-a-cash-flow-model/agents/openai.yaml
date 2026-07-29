@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stress-Test a Cash Flow Model"
+  short_description: "Test liquidity under adverse assumptions"
+  default_prompt: "Use $stress-test-a-cash-flow-model to test this forecast and its liquidity limits."

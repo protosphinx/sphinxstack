@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare a vendor kickoff"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $prepare-a-vendor-kickoff to complete and verify this operations task."

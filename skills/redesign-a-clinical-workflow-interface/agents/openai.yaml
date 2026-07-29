@@ -1,0 +1,4 @@
+interface:
+  display_name: "redesign a clinical workflow interface"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $redesign-a-clinical-workflow-interface to complete and verify this design task."

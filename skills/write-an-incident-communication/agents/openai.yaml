@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write an Incident Communication"
+  short_description: "Communicate incident facts, impact, and next updates"
+  default_prompt: "Use $write-an-incident-communication to draft a clear evidence-bounded incident update."

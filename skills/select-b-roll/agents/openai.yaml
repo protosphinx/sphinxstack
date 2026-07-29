@@ -1,0 +1,4 @@
+interface:
+  display_name: "Select B-Roll"
+  short_description: "Choose supporting footage with narrative purpose"
+  default_prompt: "Use $select-b-roll to select and document supporting footage for this edit."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Change Freeze"
+  short_description: "Set a bounded freeze with exceptions and exit rules"
+  default_prompt: "Use $plan-a-change-freeze to define this freeze, its exceptions, and its exit evidence."

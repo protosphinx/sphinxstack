@@ -1,0 +1,4 @@
+interface:
+  display_name: "Profile a Financial Dataset"
+  short_description: "Assess financial data shape and quality"
+  default_prompt: "Use $profile-a-financial-dataset to inspect this dataset before analysis."

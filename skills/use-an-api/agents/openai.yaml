@@ -1,0 +1,4 @@
+interface:
+  display_name: "Use An API"
+  short_description: "Integrate an API with safe credentials and error handling"
+  default_prompt: "Use $use-an-api to help me complete this workflow with verified evidence."

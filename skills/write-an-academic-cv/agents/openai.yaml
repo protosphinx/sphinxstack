@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write an Academic CV"
+  short_description: "Organize academic evidence for a specific review"
+  default_prompt: "Use $write-an-academic-cv to build and verify this academic CV."

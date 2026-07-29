@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review a Design Specification"
+  short_description: "Check design states, rules, and handoff gaps"
+  default_prompt: "Use $review-a-design-specification to assess this design before implementation."

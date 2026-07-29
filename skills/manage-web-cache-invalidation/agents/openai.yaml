@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage web cache invalidation"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $manage-web-cache-invalidation to complete and verify this web task."

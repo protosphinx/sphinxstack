@@ -1,0 +1,53 @@
+<h2>Worked case: six agents on one Rust repository overnight</h2>
+<p class="case-trigger"><strong>Trigger:</strong> Three Codex agents and three Claude Code agents need to work one repository overnight without colliding.</p>
+<div class="chatdemo">
+<div class="cm cm-user">I want three Codex workers on gpt-5.6 Sol at maximum reasoning and three Claude Code workers on Opus 5 at xhigh against this repo tonight. Can you set it up?</div>
+<div class="cm cm-agent">First I read every applicable AGENTS.md and the README, map the architecture, and verify that exact roster. Then: how long is a cold build, how much disk does one build take, and is there a queue of items already written down?</div>
+<div class="cm cm-user cd-hide">Cold build is about nine minutes and eats 12 GB. There is no queue, just a list of things I want fixed.</div>
+<div class="cm cm-agent cd-hide">Then six independent builds would need 72 GB and thrash the machine. We use one shared cached build path, one build at a time, and I turn your list into queue items with a statement of done before any agent starts.</div>
+<div class="cm cm-user cd-hide">Can the agents just pick their own work?</div>
+<div class="cm cm-agent cd-hide">No. Each agent claims one item and works only the files that item names. Anything they discover becomes a new item, not an unplanned edit.</div>
+<div class="cm cm-user cd-hide">What happens when one of them dies at 3am?</div>
+<div class="cm cm-agent cd-hide">The supervision cycle runs every four minutes. A claim with no commit for three cycles is released back to open with a note, and the idle agent gets fresh instructions.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">The queue and the build budget come before the agents.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The run record</h2>
+<table class="plain-table">
+<thead><tr><th>Control</th><th>Setting for this run</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Roster</td><td>Three Codex workers and three Claude Code workers, with the requested models and reasoning settings verified before launch</td><td>Silent model substitution would make the run different from the one approved</td></tr>
+<tr><td>Tool map</td><td><code>ntm</code> hosts sessions, <code>br</code>/<code>bv</code> hold the queue, <code>rch</code> runs builds, and <code>loop</code> supervises every four minutes</td><td>Each named tool has one explicit operating role</td></tr>
+<tr><td>Isolation</td><td>One git worktree and branch per agent</td><td>Two agents cannot overwrite one checkout</td></tr>
+<tr><td>Build contention</td><td>One shared cached runner, one build at a time</td><td>Six cold builds would exceed disk and CPU</td></tr>
+<tr><td>Disk budget</td><td>Prune artifacts each cycle, stop admitting work under 60 GB free</td><td>A full disk corrupts caches mid-build</td></tr>
+<tr><td>Stall window</td><td>Three cycles with no commit releases the claim</td><td>Dead agents must not hold open work</td></tr>
+</tbody>
+</table>
+<h3>Evidence set</h3>
+<ul>
+<li><strong>Roster record:</strong> Six worker ids list runtime, model, reasoning setting, worktree, and assigned role before the first item is claimed.</li>
+<li><strong>Queue snapshot:</strong> 31 items open at 22:40 and 9 open at 07:10, each closed item naming its owner and the test run that closed it.</li>
+<li><strong>Supervision log:</strong> 118 cycles, 14 idle agents restarted, 6 stalled claims released, 214 GB of build artifacts reclaimed.</li>
+<li><strong>Merge record:</strong> 22 branches reviewed by an agent that did not write them, 19 merged by a human against green tests, 3 sent back.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>At 02:15 two agents both edit the scheduler module and the second branch conflicts. Review
+catches it, the second item returns to open with the first change linked as context, and the
+queue owner resplits the two items so they stop overlapping. At 04:40 free disk drops under
+the threshold, so the cycle stops handing out work, prunes finished worktrees, recovers 90 GB,
+and resumes. Nothing merges while either condition is open.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>How many agents should I run?</summary><p>As many as the build path and disk can carry, which is usually far fewer than the number you can afford to start. Run one full cycle, then add agents only if it stayed green.</p></details>
+<details class="faq"><summary>Do I need this exact tool and model stack?</summary><p>No. The method needs a session host, shared queue, isolated checkouts, serialized build runner, and supervisor. If you requested specific tools or models, the orchestrator must verify them and ask before substituting.</p></details>
+<details class="faq"><summary>What stops agents from doing random work?</summary><p>The queue. One item per owner, and anything discovered becomes a new item. An agent that cannot claim an item is idle, which the supervision cycle reports rather than hides.</p></details>
+<details class="faq"><summary>How do I know when to stop a review round?</summary><p>Track defects found against effort spent. When that ratio flattens across rounds you have hit saturation, so switch to a different kind of pass or stop.</p></details>
+<details class="faq"><summary>Can the swarm merge its own work?</summary><p>No. A reviewer who did not write the change checks it against the statement of done, and a person merges. That is the control that makes an unattended run safe to leave running.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many agents should I run?","acceptedAnswer":{"@type":"Answer","text":"As many as the build path and disk can carry. Run one full cycle before adding more."}},{"@type":"Question","name":"Do I need this exact tool and model stack?","acceptedAnswer":{"@type":"Answer","text":"No. Fill the required operating roles, but verify requested tools and models and ask before substituting."}},{"@type":"Question","name":"What stops agents from doing random work?","acceptedAnswer":{"@type":"Answer","text":"The shared work queue. One item per owner, and discoveries become new items."}},{"@type":"Question","name":"How do I know when to stop a review round?","acceptedAnswer":{"@type":"Answer","text":"When the rate of defects found per unit of effort flattens across rounds, the round has hit saturation."}},{"@type":"Question","name":"Can the swarm merge its own work?","acceptedAnswer":{"@type":"Answer","text":"No. A reviewer who did not write the change checks it, and a person merges."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Give the swarm a build path worth sharing with <a href="/skills/create-a-deployment-pipeline/">Create a deployment pipeline</a>, turn audit findings into checkable items with <a href="/skills/design-a-production-system/">Design a production system</a>, and handle anything that reaches users with <a href="/skills/debug-a-production-incident/">Debug a production incident</a>.</p>

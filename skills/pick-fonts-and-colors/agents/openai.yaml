@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pick Fonts and Colors"
+  short_description: "Choose readable fonts and colors for a real project"
+  default_prompt: "Use $pick-fonts-and-colors to help me complete this workflow with verified evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conduct Research with Human Participants"
+  short_description: "Operate approved studies with participant protections"
+  default_prompt: "Use $conduct-research-with-human-participants to operate this approved study safely."

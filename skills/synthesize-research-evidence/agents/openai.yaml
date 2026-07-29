@@ -1,0 +1,4 @@
+interface:
+  display_name: "Synthesize Research Evidence"
+  short_description: "Combine evidence without flattening conflicts or uncertainty"
+  default_prompt: "Use $synthesize-research-evidence to produce a claim-by-claim synthesis of these sources."

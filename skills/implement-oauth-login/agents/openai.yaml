@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement OAuth Login"
+  short_description: "Implement standards-based delegated sign-in safely"
+  default_prompt: "Use $implement-oauth-login to design and verify this OAuth or OpenID Connect login flow."

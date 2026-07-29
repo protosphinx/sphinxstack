@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research a Company"
+  short_description: "Build an evidence-based company brief for a job search"
+  default_prompt: "Use $research-a-company to create a sourced brief for this role and company."

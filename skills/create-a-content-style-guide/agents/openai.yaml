@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Content Style Guide"
+  short_description: "Create usable writing rules from real content"
+  default_prompt: "Use $create-a-content-style-guide to build a concise guide for this content system."

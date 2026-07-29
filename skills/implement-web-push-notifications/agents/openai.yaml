@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement web push notifications"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $implement-web-push-notifications to complete and verify this web task."

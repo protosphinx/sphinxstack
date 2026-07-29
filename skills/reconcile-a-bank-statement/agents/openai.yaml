@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reconcile a Bank Statement"
+  short_description: "Match bank activity to accounting records"
+  default_prompt: "Use $reconcile-a-bank-statement to reconcile this account and document exceptions."

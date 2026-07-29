@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test a Web Form"
+  short_description: "Test form behavior, validation, and submission"
+  default_prompt: "Use $test-a-web-form to create and execute a complete test matrix for this form."

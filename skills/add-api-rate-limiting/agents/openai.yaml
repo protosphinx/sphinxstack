@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add API Rate Limiting"
+  short_description: "Control request pressure with fair recovery"
+  default_prompt: "Use $add-api-rate-limiting to design and test proportionate limits for this API."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify A Statistical Claim"
+  short_description: "Check a numerical claim from source through calculation"
+  default_prompt: "Use $verify-a-statistical-claim to check this number from source through calculation."

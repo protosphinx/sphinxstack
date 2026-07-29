@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create an Uptime Check"
+  short_description: "Verify service reachability and behavior"
+  default_prompt: "Use $create-an-uptime-check to design and test this external service check."

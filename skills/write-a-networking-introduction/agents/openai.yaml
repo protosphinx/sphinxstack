@@ -1,0 +1,4 @@
+interface:
+  display_name: "write-a-networking-introduction"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $write-a-networking-introduction to complete and verify this task."

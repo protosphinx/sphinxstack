@@ -1,0 +1,4 @@
+interface:
+  display_name: "Negotiate a Vendor Renewal"
+  short_description: "Prepare a renewal with options and leverage"
+  default_prompt: "Use $negotiate-a-vendor-renewal to prepare this vendor renewal and fallback plan."

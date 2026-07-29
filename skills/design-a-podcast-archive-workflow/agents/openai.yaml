@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-podcast-archive-workflow"
+  short_description: "Design a durable, searchable podcast archive"
+  default_prompt: "Use $design-a-podcast-archive-workflow to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a File Upload Interface"
+  short_description: "Guide upload selection, progress, and recovery"
+  default_prompt: "Use $design-a-file-upload-interface to design this upload journey and its failure states."

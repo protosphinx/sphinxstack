@@ -1,0 +1,4 @@
+interface:
+  display_name: "govern design for a regulated product"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $govern-design-for-a-regulated-product to complete and verify this design task."

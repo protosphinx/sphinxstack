@@ -1,0 +1,45 @@
+<h2>Worked case: add customer document uploads</h2>
+<p class="case-trigger"><strong>Trigger:</strong> The feature crosses a trust boundary and handles data we would regret exposing.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Customers need to upload identity documents for account review.</div>
+<div class="cm cm-agent">We need the data classification, who may read it, retention, file limits, processing path, and release risk owner before implementation.</div>
+<div class="cm cm-user cd-hide">Review staff can read files. We planned to put them in the normal public asset bucket with hard-to-guess names.</div>
+<div class="cm cm-agent cd-hide">That is not an authorization control. The bucket is a trust boundary and requires private storage with checked access.</div>
+<div class="cm cm-user cd-hide">Is file type validation enough?</div>
+<div class="cm cm-agent cd-hide">No. We also need size limits, content inspection, isolated processing, safe download headers, retention, logging, and containment.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">The review follows the data and authority.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The threat record</h2>
+<table class="plain-table">
+<thead><tr><th>Abuse case</th><th>Mitigation</th><th>Verification</th></tr></thead>
+<tbody>
+<tr><td>Guess or share a file URL</td><td>Private object, checked short-lived access</td><td>Cross-account authorization test</td></tr>
+<tr><td>Upload active or malicious content</td><td>Quarantine, inspect, render safe preview</td><td>Blocked fixture set</td></tr>
+<tr><td>Staff read outside assigned cases</td><td>Least privilege and access audit</td><td>Permission and audit review</td></tr>
+</tbody>
+</table>
+<h3>Evidence set</h3>
+<ul>
+<li><strong>Threat diagram:</strong> customer, upload API, quarantine, scanner, private store, and reviewer boundary.</li>
+<li><strong>Mitigation check:</strong> unauthorized account, dangerous fixture, oversized file, and expired link all fail safely.</li>
+<li><strong>Accepted risk owner:</strong> compliance lead owns the documented residual retention risk and review date.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>A storage policy accidentally permits public reads. The release monitor detects the configuration,
+the feature is disabled, access credentials are rotated, evidence is preserved, and the privacy owner
+decides notification. Recovery includes a cross-account test, not only a corrected policy screen.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is a threat model a security audit?</summary><p>No. It is a design review that identifies important abuse paths and verifies mitigations. Some systems also need specialist testing or formal audit.</p></details>
+<details class="faq"><summary>What is a trust boundary?</summary><p>A place where identity, ownership, privilege, network, validation, or data classification changes.</p></details>
+<details class="faq"><summary>Do we need to list every possible attack?</summary><p>No. Cover credible paths to important assets, rank them with stated assumptions, and revisit the model as the design changes.</p></details>
+<details class="faq"><summary>Who may accept a risk?</summary><p>The named person accountable for the affected asset and consequence, under the organization's policy. A developer cannot silently accept it for others.</p></details>
+<details class="faq"><summary>When should the model be updated?</summary><p>When data flow, privileges, external dependencies, attacker opportunity, or the consequence of failure materially changes.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a threat model a security audit?","acceptedAnswer":{"@type":"Answer","text":"No. It is a focused design review and may lead to specialist testing."}},{"@type":"Question","name":"What is a trust boundary?","acceptedAnswer":{"@type":"Answer","text":"A place where identity, ownership, privilege, network, validation, or data classification changes."}},{"@type":"Question","name":"Do we need to list every possible attack?","acceptedAnswer":{"@type":"Answer","text":"No. Cover credible paths to important assets and revisit as the design changes."}},{"@type":"Question","name":"Who may accept a risk?","acceptedAnswer":{"@type":"Answer","text":"The named person accountable for the affected asset and consequence."}},{"@type":"Question","name":"When should the model be updated?","acceptedAnswer":{"@type":"Answer","text":"When data flow, privileges, dependencies, or consequences materially change."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Implement access foundations with <a href="/skills/auth-basics/">Auth basics</a>, define interface behavior with <a href="/skills/design-an-api-contract/">Design an API contract</a>, and add detection with <a href="/skills/design-observability/">Design observability</a>.</p>

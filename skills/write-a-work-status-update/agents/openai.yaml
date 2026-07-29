@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Work Status Update"
+  short_description: "Report progress, risk, decisions, and next actions"
+  default_prompt: "Use $write-a-work-status-update to turn my notes into a clear status update."

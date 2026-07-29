@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Git Branch"
+  short_description: "Start isolated work without losing changes"
+  default_prompt: "Use $create-a-git-branch to isolate this work safely."

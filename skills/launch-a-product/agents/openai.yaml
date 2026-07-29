@@ -1,0 +1,4 @@
+interface:
+  display_name: "Launch a Product"
+  short_description: "Coordinate a small product launch with proof and rollback"
+  default_prompt: "Use $launch-a-product to prepare and run a measured launch for this product."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "respond to a publication ethics crisis"
+  short_description: "Run this writing workflow with verified evidence"
+  default_prompt: "Use $respond-to-a-publication-ethics-crisis to complete and verify this writing task."

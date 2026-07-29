@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Risk Register"
+  short_description: "Track material risks, evidence, treatment, and ownership"
+  default_prompt: "Use $create-a-risk-register to build an actionable risk register for this work."

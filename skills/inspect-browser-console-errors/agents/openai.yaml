@@ -1,0 +1,4 @@
+interface:
+  display_name: "inspect browser console errors"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $inspect-browser-console-errors to complete and verify this web task."

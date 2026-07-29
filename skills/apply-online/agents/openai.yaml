@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply Online"
+  short_description: "Submit a complete, truthful online job application"
+  default_prompt: "Use $apply-online to help me complete this workflow with verified evidence."

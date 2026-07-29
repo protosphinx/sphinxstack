@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-mixed-methods-study"
+  short_description: "Run a verified design a mixed methods study workflow"
+  default_prompt: "Use $design-a-mixed-methods-study to complete and verify this task."

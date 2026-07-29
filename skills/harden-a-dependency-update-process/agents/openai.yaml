@@ -1,0 +1,4 @@
+interface:
+  display_name: "harden-a-dependency-update-process"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $harden-a-dependency-update-process to complete and verify this task."

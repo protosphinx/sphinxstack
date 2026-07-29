@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document an Environment Variable"
+  short_description: "Specify configuration meaning and safe use"
+  default_prompt: "Use $document-an-environment-variable to document this configuration contract."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conduct User Interviews"
+  short_description: "Plan, run, and synthesize ethical user interviews"
+  default_prompt: "Use $conduct-user-interviews to create a neutral interview plan and evidence-backed synthesis."

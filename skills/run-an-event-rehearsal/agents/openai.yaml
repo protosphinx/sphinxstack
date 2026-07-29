@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run an Event Rehearsal"
+  short_description: "Test cues, people, systems, and recovery paths"
+  default_prompt: "Use $run-an-event-rehearsal to rehearse this event and turn failures into owned fixes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Correlate Deployments with Incidents"
+  short_description: "Test whether a release changed service behavior"
+  default_prompt: "Use $correlate-deployments-with-incidents to evaluate this suspected release impact."

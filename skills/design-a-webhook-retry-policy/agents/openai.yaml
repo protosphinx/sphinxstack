@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a webhook retry policy"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $design-a-webhook-retry-policy to complete and verify this web task."

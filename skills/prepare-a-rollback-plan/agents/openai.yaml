@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Rollback Plan"
+  short_description: "Define tested recovery from a failed release"
+  default_prompt: "Use $prepare-a-rollback-plan to help me complete this workflow with verifiable evidence."

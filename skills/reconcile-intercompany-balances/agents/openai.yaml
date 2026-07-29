@@ -1,0 +1,4 @@
+interface:
+  display_name: "reconcile intercompany balances"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $reconcile-intercompany-balances to complete and verify this finance task."

@@ -1,0 +1,114 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a tracking session starts with someone whose last five logs all died.
+Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> i want to track my gym sessions but i've started five logs before and they all died by week two</div>
+<div class="cm cm-agent">Logs die for two reasons: logging cost too much, or nobody ever
+read the log. We'll build against both. First, what do you want to be true in three
+months?</div>
+<div class="cm cm-user cd-hide">benching 165. i'm at 135 now</div>
+<div class="cm cm-agent cd-hide">Then one entry is: date, exercise, weight times reps. Three
+columns. Every required field past that adds cost to a habit you're trying to make
+nearly free.</div>
+<div class="cm cm-user cd-hide">shouldn't i also track sleep? and protein? my last spreadsheet had 11 columns</div>
+<div class="cm cm-agent cd-hide">Eleven columns is probably why it died. You can add one in month
+two if a real question demands it. Now: sheet on your phone home screen, newest row
+on top, dropdown for the exercise. What already happens right when you finish a
+workout?</div>
+<div class="cm cm-user cd-hide">i sit in my car for a minute before driving home</div>
+<div class="cm cm-agent cd-hide">That minute is the trigger: log before the engine starts. And one
+rule for later: a missed day stays blank. Backfilling from memory manufactures data,
+and a gap is honest information about the week. A broken streak won't kill this log.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>I always quit by week two</h2>
+<p>Most tracking dies there, and the skill treats that as a design problem in the
+tracker rather than a character flaw in you. It builds both halves: a capture flow
+measured in seconds (two taps to the sheet, dropdowns instead of typing, a trigger
+moment tied to something that already happens) and a weekly review that pays the
+data back, because a log nobody reads is a chore with no payoff. It also decides in
+advance what happens when you miss three days: the gap stays, you resume. If you
+want a bounded warm-up before tracking something long-term, try a one-week project:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/week-of-logs/"><img src="/assets/project-img/week-of-logs.jpg" alt=""><span>A week of logs</span></a>
+<a class="mini" href="/ideas/sleep-week/"><img src="/assets/project-img/sleep-week.jpg" alt=""><span>Sleep week</span></a>
+<a class="mini" href="/ideas/screen-time-honesty/"><img src="/assets/project-img/screen-time-honesty.jpg" alt=""><span>Screen time honesty</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>Two tabs: the log you fill in seconds, and the review tab that makes it worth
+filling. Plus the ritual that connects them.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example tracking sheet with review tab">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">LOG TAB &nbsp;·&nbsp; NEWEST FIRST <span class="anno-badge">1</span></div>
+<pre style="font-size:0.72rem; line-height:1.5; margin:0.3rem 0 0;">date        exercise  weight x reps   notes
+2026-05-14  bench     140 x 5
+2026-05-12  squat     185 x 5         knee ok
+2026-05-11  bench     140 x 4
+2026-05-09  (blank: missed, gap kept)</pre>
+<div class="rz-h">REVIEW TAB <span class="anno-badge">2</span></div>
+<pre style="font-size:0.72rem; line-height:1.5; margin:0.3rem 0 0;">sessions this week   3   (last week: 2)
+current streak       3 weeks logged
+best bench           145 x 3 (May 2)</pre>
+<div class="rz-h">WEEKLY REVIEW &nbsp;·&nbsp; SUNDAY, 2 MIN <span class="anno-badge">3</span></div>
+<div class="rz-item"><div class="rz-line">May 11: "Data says Friday sessions keep
+getting skipped. Adjustment: move Friday to Saturday morning and see if week 4 holds
+at 3 sessions."</div></div>
+</div>
+<ol class="anno-notes">
+<li><b>The smallest record that shows progress.</b> Date, the one number that
+matters, at most two context fields, and an optional notes column. Dropdowns keep
+labels consistent so the review tab can count them later.</li>
+<li><b>Computed from the log, never typed.</b> This week vs last week, streak, and
+best ever: the same shape as simple-dashboard, scaled down to a tab.</li>
+<li><b>The adjustment is the payoff.</b> Once a week, two minutes, two questions:
+what does the data say, and what is one change for next week? Averages over weeks
+beat any single day, so outliers get a shrug.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>What happens when I miss three days?</summary>
+<p>The gap stays blank and you resume. The skill sets this rule on day one, before
+any streak exists, precisely so a broken streak cannot take the whole log down with
+it.</p></details>
+<details class="faq"><summary>Why a spreadsheet instead of a habit app?</summary>
+<p>Apps shut down, paywall features, and hold your history hostage. The sheet is
+yours forever, and it feeds directly into chart-the-truth, simple-dashboard, and
+first-sql when the data grows up.</p></details>
+<details class="faq"><summary>Can I track several things at once?</summary>
+<p>The skill will push back. One thing you actually care about, with one number that
+matters, is what survives. Add a column in month two if a real question demands it.</p></details>
+<details class="faq"><summary>Can I fill in yesterday from memory?</summary>
+<p>No. Backfilling manufactures data, and the log stops being evidence the moment
+you do it. A blank day is honest information about the week.</p></details>
+<details class="faq"><summary>When does this start paying off?</summary>
+<p>The first Sunday review, about a week in: you read the week-vs-week numbers and
+write one adjustment. By then you also have at least seven real entries, which is
+the skill's definition of done.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What happens when I miss three days?","acceptedAnswer":{"@type":"Answer","text":"The gap stays blank and you resume. The rule is set on day one so a broken streak cannot kill the log."}},
+{"@type":"Question","name":"Why a spreadsheet instead of a habit app?","acceptedAnswer":{"@type":"Answer","text":"Apps shut down and hold history hostage. The sheet is yours forever and feeds later skills like chart-the-truth and first-sql."}},
+{"@type":"Question","name":"Can I track several things at once?","acceptedAnswer":{"@type":"Answer","text":"One thing with one number that matters is what survives. Add a column in month two if a real question demands it."}},
+{"@type":"Question","name":"Can I fill in yesterday from memory?","acceptedAnswer":{"@type":"Answer","text":"No. Backfilling manufactures data. A blank day is honest information about the week."}},
+{"@type":"Question","name":"When does this start paying off?","acceptedAnswer":{"@type":"Answer","text":"The first weekly review, about a week in, when you read the numbers and write one adjustment."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>A month of entries banked?</b> The data is ready for more:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/chart-the-truth/"><img src="/assets/skill-img/chart-the-truth.jpg" alt=""><span>Chart the truth</span></a>
+<a class="mini" href="/skills/simple-dashboard/"><img src="/assets/skill-img/simple-dashboard.jpg" alt=""><span>Simple dashboard</span></a>
+<a class="mini" href="/skills/first-sql/"><img src="/assets/skill-img/first-sql.jpg" alt=""><span>First SQL</span></a>
+</div>
+<p><b>Want something concrete to track?</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/year-of-books/"><img src="/assets/project-img/year-of-books.jpg" alt=""><span>A year of books</span></a>
+<a class="mini" href="/ideas/feeder-counter/"><img src="/assets/project-img/feeder-counter.jpg" alt=""><span>Bird feeder counter</span></a>
+<a class="mini" href="/ideas/volunteer-hours/"><img src="/assets/project-img/volunteer-hours.jpg" alt=""><span>Volunteer hours</span></a>
+</div>

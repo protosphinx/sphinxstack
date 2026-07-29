@@ -1,0 +1,4 @@
+interface:
+  display_name: "implement-a-circuit-breaker"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $implement-a-circuit-breaker to complete and verify this task."

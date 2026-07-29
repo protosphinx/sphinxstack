@@ -1,0 +1,4 @@
+interface:
+  display_name: "build an operating cadence"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $build-an-operating-cadence to complete and verify this operations task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document a Work Process"
+  short_description: "Capture a repeatable process with controls and evidence"
+  default_prompt: "Use $document-a-work-process to turn this workflow into usable process documentation."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "check video frame rate"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $check-video-frame-rate to complete and verify this media task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cite a Dataset"
+  short_description: "Create a traceable citation for research data"
+  default_prompt: "Use $cite-a-dataset to create and verify a citation for this dataset."

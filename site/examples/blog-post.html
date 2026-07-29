@@ -1,0 +1,112 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the moment the topic shows up. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> I want to start a blog
+but I have no idea what to write about</div>
+<div class="cm cm-agent">Then we won't start with topics. What did you do lately that took real
+effort? A thing you built, a problem you fought with, something you figured out the hard way.</div>
+<div class="cm cm-user cd-hide">I spent three days fixing a bug where my game froze every time
+you paused it. does that count?</div>
+<div class="cm cm-agent cd-hide">That's the post. "How I fixed the pause freeze in my browser
+game." You were there, you have the error messages, and the next person with that bug will
+find it by searching. Fill this in before we draft: this post tells <i>who</i> <i>what</i>?</div>
+<div class="cm cm-user cd-hide">it tells people making their first canvas game why the game
+loop keeps running when the tab thinks it's paused. but isn't that way too small for a blog?</div>
+<div class="cm cm-agent cd-hide">The person googling that exact freeze at 1am won't think so.
+Small and true is how first posts work. Outline: 4 to 6 beats, one plain sentence each. I can
+type the outline with you; the prose is yours. What happened first?</div>
+<div class="cm cm-user cd-hide">first I blamed the browser, which cost me a whole day</div>
+<div class="cm cm-agent cd-hide">Good, that's beat one, and it's your opening: start at "I
+blamed the browser", skip any "In this post I will" wind-up. Draft each beat fast and ugly,
+paste the real error message in, and we publish today. Where it lives comes after the draft.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Have nothing to write about?</h2>
+<p>You have things you've done; those are the only posts worth writing anyway. The skill
+steers you away from topic essays about things you've only read about, because the internet
+already has those, written by people who were there. It digs for what you built, broke, or
+figured out. If the honest answer is "nothing yet", do a small project first and the post
+writes itself as a build log.</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/fix-writeup/"><img src="/assets/project-img/fix-writeup.jpg" alt=""><span>Write up a fix you found</span></a>
+<a class="mini" href="/ideas/how-to-guide/"><img src="/assets/project-img/how-to-guide.jpg" alt=""><span>How-to guide for a thing you do</span></a>
+<a class="mini" href="/ideas/niche-explainer/"><img src="/assets/project-img/niche-explainer.jpg" alt=""><span>Explainer on your niche</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A post that is live at a URL by the end of the sitting. Here is what the top of a good
+first post looks like.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example blog post opening">
+<div class="sheet-tag">Example</div>
+<div class="rz-name">How I fixed the pause freeze in my browser game</div>
+<div class="rz-contact">June 2026 &nbsp;·&nbsp; by a real name &nbsp;·&nbsp; 4 min read <span class="anno-badge">1</span></div>
+<div class="rz-item"><div class="rz-line">I blamed the browser for a whole day. My game froze
+solid whenever you hit pause, and I was sure it was a Chrome bug, because my code was
+obviously fine. <span class="anno-badge">2</span></div></div>
+<div class="rz-item"><div class="rz-line">It wasn't a Chrome bug. The console said
+<span class="rz-link">Uncaught TypeError: cannot read properties of null</span>, and it said
+it 400 times a second, because my game loop kept running against a scene I had already torn
+down. <span class="anno-badge">3</span></div></div>
+<div class="rz-item rz-sub"><div class="rz-line">Here's how I found it, what actually fixes
+it, and the two dead ends that cost me most of the three days.</div></div>
+</div>
+<ol class="anno-notes">
+<li><b>The title is plain and searchable.</b> It names the exact problem, so the next person
+with the freeze can find it. Clever wordplay would rank for nothing.</li>
+<li><b>It starts where it gets interesting.</b> No "In this post I will explore". The first
+sentence is a confession with information in it, and it happened.</li>
+<li><b>The real error message is in the post.</b> Checkable details are how a post earns
+trust, and yours are the only ones you can supply. That exact string is what search
+engines and stuck strangers match on.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is this free?</summary>
+<p>The skill is free, no account, no catch. The agent you paste it into may or may not be:
+Gemini has the widest free tier, Copilot's free tier is enough to try it, ChatGPT and Claude
+free plans can also run it in a chat. Publishing is free too: Bearblog, GitHub Pages, and
+dev.to all have honest free tiers.</p></details>
+<details class="faq"><summary>Will it sound like AI wrote my post?</summary>
+<p>Not if you follow the skill, because you draft every sentence and the edit pass hunts the
+machine tells: rhythmic triple lists, "it's not just X, it's Y" constructions, words like
+"truly" and "seamless". The agent supplies structure and questions; the words are yours,
+which is the only reliable way to not sound like a machine.</p></details>
+<details class="faq"><summary>Does the agent write the post for me?</summary>
+<p>No. It can type the outline with you, because that's scaffolding. The prose you draft
+yourself, fast and ugly, section by section. If you stall, it asks you to tell it the
+section in chat, then has you write down what you said.</p></details>
+<details class="faq"><summary>Where does the post actually live?</summary>
+<p>If you have a personal site, there. Otherwise the skill helps you pick a free home:
+Bearblog, GitHub Pages with plain HTML, or dev.to for technical posts. It steers you away
+from anything demanding a paywall or a phone number. Either way you leave with a URL.</p></details>
+<details class="faq"><summary>What if nobody reads it?</summary>
+<p>The first post's job is to exist at a link you can put in a bio, a resume, or a reply.
+The skill has you send it to one real person who would care. Readers beyond that come from
+writing the next one; one is a post, three is a blog.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this free?","acceptedAnswer":{"@type":"Answer","text":"The skill is free, no account. Free agents can run it, and Bearblog, GitHub Pages, and dev.to publish for free."}},
+{"@type":"Question","name":"Will it sound like AI wrote my post?","acceptedAnswer":{"@type":"Answer","text":"Not if you follow the skill: you draft every sentence, and the edit pass strips machine tells like rhythmic lists and empty intensifiers."}},
+{"@type":"Question","name":"Does the agent write the post for me?","acceptedAnswer":{"@type":"Answer","text":"No. It types the outline with you; the prose is yours. If you stall, you tell it the section in chat, then write down what you said."}},
+{"@type":"Question","name":"Where does the post actually live?","acceptedAnswer":{"@type":"Answer","text":"On your personal site if you have one, otherwise a free home like Bearblog, GitHub Pages, or dev.to. You leave with a URL."}},
+{"@type":"Question","name":"What if nobody reads it?","acceptedAnswer":{"@type":"Answer","text":"The first post's job is to exist at a link. Send it to one person who would care; readers come from writing the next one."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Post is live?</b> The natural next moves:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/social-post/"><img src="/assets/skill-img/social-post.jpg" alt=""><span>Announce it without cringe</span></a>
+<a class="mini" href="/skills/edit-your-own-writing/"><img src="/assets/skill-img/edit-your-own-writing.jpg" alt=""><span>Edit your own writing</span></a>
+<a class="mini" href="/skills/seo-basics/"><img src="/assets/skill-img/seo-basics.jpg" alt=""><span>SEO basics</span></a>
+</div>
+<p><b>Want the blog on your own domain?</b> Build the home for it:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/build-website/"><img src="/assets/skill-img/build-website.jpg" alt=""><span>Build a website</span></a>
+<a class="mini" href="/skills/custom-domain/"><img src="/assets/skill-img/custom-domain.jpg" alt=""><span>Custom domain</span></a>
+<a class="mini" href="/skills/start-a-newsletter/"><img src="/assets/skill-img/start-a-newsletter.jpg" alt=""><span>Start a newsletter</span></a>
+</div>

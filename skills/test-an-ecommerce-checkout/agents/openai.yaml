@@ -1,0 +1,4 @@
+interface:
+  display_name: "test an ecommerce checkout"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $test-an-ecommerce-checkout to complete and verify this web task."

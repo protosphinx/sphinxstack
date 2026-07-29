@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design A Production System"
+  short_description: "Design a production system around explicit risks"
+  default_prompt: "Use $design-a-production-system to help me complete this workflow with verified evidence."

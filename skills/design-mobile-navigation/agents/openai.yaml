@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Mobile Navigation"
+  short_description: "Design mobile navigation around priority and context"
+  default_prompt: "Use $design-mobile-navigation to create and test mobile navigation for these tasks and content."

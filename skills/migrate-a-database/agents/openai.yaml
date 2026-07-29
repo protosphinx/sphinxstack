@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrate A Database"
+  short_description: "Plan, execute, and verify a database migration"
+  default_prompt: "Use $migrate-a-database to help me complete this workflow with verified evidence."

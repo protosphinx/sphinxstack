@@ -1,0 +1,4 @@
+interface:
+  display_name: "Study System"
+  short_description: "Build a study system and test it in real use"
+  default_prompt: "Use $study-system to help me complete this workflow with verified evidence."

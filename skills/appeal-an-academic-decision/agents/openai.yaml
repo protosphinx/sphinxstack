@@ -1,0 +1,4 @@
+interface:
+  display_name: "Appeal an Academic Decision"
+  short_description: "Prepare a policy-grounded academic appeal"
+  default_prompt: "Use $appeal-an-academic-decision to organize a factual, policy-grounded appeal."

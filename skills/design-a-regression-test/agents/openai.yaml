@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Regression Test"
+  short_description: "Protect a fixed defect with focused evidence"
+  default_prompt: "Use $design-a-regression-test to help me complete this workflow with verifiable evidence."

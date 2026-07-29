@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Unit Test"
+  short_description: "Specify one behavior with deterministic evidence"
+  default_prompt: "Use $write-a-unit-test to add a focused test for this behavior."

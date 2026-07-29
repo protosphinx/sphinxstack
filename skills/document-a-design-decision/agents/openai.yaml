@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document a Design Decision"
+  short_description: "Record design rationale, evidence, and tradeoffs"
+  default_prompt: "Use $document-a-design-decision to preserve this design choice, alternatives, evidence, and review trigger."

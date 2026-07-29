@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Content Audit"
+  short_description: "Inventory content quality, purpose, risk, and action"
+  default_prompt: "Use $run-a-content-audit to evaluate this content estate and assign evidence-based actions."

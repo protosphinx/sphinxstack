@@ -1,0 +1,34 @@
+<h2>Worked case: remove attacker-controlled cache variants</h2>
+<p class="case-trigger"><strong>Trigger:</strong> Users in several regions receive attacker-controlled redirects and headers from a shared web cache only for certain languages and devices, while origin responses appear clean, cache keys and normalization are undocumented, multiple CDN layers are involved, purge results disagree, and authenticated pages may share cacheable fragments.</p>
+<div class="chatdemo">
+<div class="cm cm-user">The origin looks clean. Can we call this a false alarm?</div>
+<div class="cm cm-agent">No. Capture affected edge variants and trace every cache layer before drawing that conclusion.</div>
+<div class="cm cm-user cd-hide">Should we purge everything immediately?</div>
+<div class="cm cm-agent cd-hide">Preserve minimum safe evidence first when possible, then bypass affected shared caching and purge every dependent layer.</div>
+<div class="cm cm-user cd-hide">One region now returns the right page. Are we restored?</div>
+<div class="cm cm-agent cd-hide">No. Verify cold and warm variants, regions, providers, protocols, and authenticated isolation independently.</div>
+<div class="cm cm-user">What if bypassing the CDN overloads origin?</div>
+<div class="cm cm-agent">Shed noncritical load or serve a verified static safe response while keeping the poisoned path disabled.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">A purge receipt is not restoration evidence.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The cache poisoning incident evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Cache poisoning incident timeline</td><td>Detection, poisoned variants, evidence provenance, containment, provider actions, decisions, notifications, and restoration</td><td>Every material action has time and authority</td></tr>
+<tr><td>Variant and exposure reconciliation</td><td>Keys, tiers, routes, regions, users, content, authenticated boundaries, time window, purges, and uncertainty</td><td>Exposure is supported by delivery evidence</td></tr>
+<tr><td>Restoration and control effectiveness report</td><td>Trusted origin, fixed keys and normalization, private isolation, regional results, monitoring, and recurrence tests</td><td>Independent cold and warm checks stay clean</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>The outer CDN reports a successful purge while its shield tier still serves a poisoned language variant. Bypass remains active, the shield key and dependent objects are enumerated, each tier is purged, and canary restoration waits for independently verified hashes and headers.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Why preserve a poisoned response?</summary><p>A controlled sample can prove the affected variant and cause, but do not spread or retain more harmful data than necessary.</p></details>
+<details class="faq"><summary>Does a clean origin prove users are safe?</summary><p>No. Intermediate and stored representations can remain poisoned.</p></details>
+<details class="faq"><summary>Is a global purge sufficient?</summary><p>No. Verify every tier, key family, region, and dependent object.</p></details>
+<details class="faq"><summary>What if authenticated fragments were cached?</summary><p>Treat possible cross-user delivery as a confidentiality incident and preserve access evidence.</p></details>
+<details class="faq"><summary>When can shared caching resume?</summary><p>After reviewed key repairs and independent canary checks prove correct variants and isolation.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why preserve a poisoned response?","acceptedAnswer":{"@type":"Answer","text":"To preserve controlled evidence of variant and cause."}},{"@type":"Question","name":"Does a clean origin prove users are safe?","acceptedAnswer":{"@type":"Answer","text":"No. Cached representations require separate verification."}},{"@type":"Question","name":"Is a global purge sufficient?","acceptedAnswer":{"@type":"Answer","text":"No. Verify every cache tier and variant."}},{"@type":"Question","name":"What if authenticated fragments were cached?","acceptedAnswer":{"@type":"Answer","text":"Treat it as a possible confidentiality incident."}},{"@type":"Question","name":"When can shared caching resume?","acceptedAnswer":{"@type":"Answer","text":"After reviewed repairs and independent verification."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Design cache controls with <a href="/skills/manage-web-cache-invalidation/">Manage web cache invalidation</a>,
+preserve the response process with <a href="/skills/write-an-operations-runbook/">Write an operations runbook</a>, and
+review third-party behavior with <a href="/skills/audit-third-party-scripts/">Audit third-party scripts</a>.</p>

@@ -1,0 +1,124 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the part everyone is afraid of. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> every monday i copy my shifts from the work site into my calendar and i hate it</div>
+<div class="cm cm-agent">Perfect chore: weekly, mechanical, and actually yours. First: does the
+work site have a feed or an export button anywhere, or is it read-off-the-page only?</div>
+<div class="cm cm-user cd-hide">just the page. but i'm nervous about a script running while i'm not
+looking. what if it trashes my files or spams something</div>
+<div class="cm cm-agent cd-hide">Nothing destructive runs cold. Anything that renames, moves, or
+deletes gets a dry-run mode first: it prints what it would do and only touches copies
+until you've read the output twice. This particular script just reads a page and writes
+a calendar file, so the blast radius is tiny anyway.</div>
+<div class="cm cm-user cd-hide">my laptop is usually closed on monday mornings though</div>
+<div class="cm cm-agent cd-hide">Then it runs in the cloud on a GitHub Actions schedule, free tier.
+Honest limits: the timing is best-effort, free minutes are capped, and schedules on
+inactive repos get suspended. All fine for a weekly chore.</div>
+<div class="cm cm-user cd-hide">how will i know it actually ran?</div>
+<div class="cm cm-agent cd-hide">Every run writes a dated log line, and we trigger the workflow once
+by hand before trusting the clock. If a run fails, it fails loudly with a clear message
+and a nonzero exit instead of leaving half-finished work.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>What if it breaks something while I'm not looking?</h2>
+<p>The skill treats that fear as a design requirement. Destructive steps rehearse in
+dry-run mode against copies of real files before they earn the originals. Every run
+leaves visible output, so a silent failure has nowhere to hide. And the script does one
+job, readable top to bottom, so when the source page changes shape you can see exactly
+where it stopped. These are the kinds of chores people kill first:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/downloads-janitor/"><img src="/assets/project-img/downloads-janitor.jpg" alt=""><span>Downloads janitor</span></a>
+<a class="mini" href="/ideas/morning-digest/"><img src="/assets/project-img/morning-digest.jpg" alt=""><span>One email instead of three apps</span></a>
+<a class="mini" href="/ideas/price-drop-alert/"><img src="/assets/project-img/price-drop-alert.jpg" alt=""><span>Price-drop watcher on a schedule</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A script that does the real chore, on a schedule, with proof. Here is the shift
+script's log after its first unattended week.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example week of unattended runs">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">A WEEK OF RUNS, NOBODY WATCHING</div>
+<pre>$ tail runs.log
+2026-07-13 07:02  ok    4 shifts found, calendar updated
+2026-07-14 07:01  ok    no changes
+2026-07-15 07:02  ok    no changes
+2026-07-16 07:03  FAIL  page layout changed, wrote
+                        nothing (exit 1)
+2026-07-16 18:40  ok    selector fixed, 4 shifts found
+2026-07-17 07:02  ok    no changes
+2026-07-18 07:01  ok    1 shift added, calendar updated</pre>
+<div class="rz-h">THE README LINE</div>
+<pre>Runs every morning at 07:00 via GitHub Actions
+(.github/workflows/shifts.yml). To stop it,
+comment out the `schedule:` block.</pre>
+</div>
+<ol class="anno-notes">
+<li><b>The failure is the best line in the log.</b> The page changed shape, and the
+script wrote nothing rather than half a calendar, said why, and exited nonzero. That
+behavior was built in step 3, before scheduling.</li>
+<li><b>"No changes" is still a line.</b> Visible output on every run is what makes an
+unattended script trustworthy; a quiet log means it ran and found nothing, a missing
+line means it didn't run.</li>
+<li><b>The off switch is documented.</b> One README line says what runs, when, and how
+to turn it off. Future you will need exactly that.</li>
+</ol>
+</div>
+
+<h2>Anatomy of a cron line</h2>
+<p>The five fields that scare everyone read left to right:</p>
+<div class="anatomy">
+<div class="an-line"><span class="an-seg an-a">0</span> <span class="an-seg an-b">7</span> <span class="an-seg an-c">* *</span> <span class="an-seg an-d">1</span> &nbsp;python fetch_shifts.py</div>
+<ul class="an-legend">
+<li><span class="an-key an-a">A</span> Minute 0.</li>
+<li><span class="an-key an-b">B</span> Hour 7, so 07:00.</li>
+<li><span class="an-key an-c">C</span> Any day of the month, any month.</li>
+<li><span class="an-key an-d">D</span> Weekday 1, which is Monday. Whole line: every Monday at 07:00, run the script. You'll write yours and be able to recite it back.</li>
+</ul>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Do I need a server for this?</summary>
+<p>No. Chores on your own machine run under cron or launchd. Chores that must run while
+your laptop is closed go in a GitHub Actions scheduled workflow on the free tier. Both
+cost nothing.</p></details>
+<details class="faq"><summary>Is scraping a website allowed?</summary>
+<p>The skill has the script behave like a polite visitor: check robots.txt, fetch once
+per run, and prefer an official feed or API whenever one exists. If the site offers an
+export, that beats scraping every time.</p></details>
+<details class="faq"><summary>Where do passwords and tokens go?</summary>
+<p>In an env var locally and in Actions secrets on GitHub. Never in the script, never
+committed. If the chore needs your login to a site, that's worth a pause to check the
+site's terms before automating.</p></details>
+<details class="faq"><summary>Python or JavaScript?</summary>
+<p>Whichever you've touched. The skill favors plain files and standard tools over
+frameworks either way, so the script stays readable top to bottom.</p></details>
+<details class="faq"><summary>What happens when the page changes shape?</summary>
+<p>The script fails with a clear message and a nonzero exit instead of producing
+half-finished work, and the dated log makes the failure visible. You fix the selector
+and re-run by hand, which the log above shows happening in real life.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do I need a server for this?","acceptedAnswer":{"@type":"Answer","text":"No. Local chores run under cron or launchd; chores that must run while your laptop is closed use a free GitHub Actions scheduled workflow."}},
+{"@type":"Question","name":"Is scraping a website allowed?","acceptedAnswer":{"@type":"Answer","text":"The script behaves politely: check robots.txt, fetch once per run, and prefer an official feed or API when one exists."}},
+{"@type":"Question","name":"Where do passwords and tokens go?","acceptedAnswer":{"@type":"Answer","text":"In an env var locally and in Actions secrets on GitHub. Never in the script, never committed."}},
+{"@type":"Question","name":"Python or JavaScript?","acceptedAnswer":{"@type":"Answer","text":"Whichever you've touched. Plain files and standard tools over frameworks, so the script stays readable."}},
+{"@type":"Question","name":"What happens when the page changes shape?","acceptedAnswer":{"@type":"Answer","text":"The script fails with a clear message and a nonzero exit instead of half-finished work, and the dated log makes the failure visible."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>More chores worth killing:</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/school-calendar-feed/"><img src="/assets/project-img/school-calendar-feed.jpg" alt=""><span>School calendar feed</span></a>
+<a class="mini" href="/ideas/repo-action/"><img src="/assets/project-img/repo-action.jpg" alt=""><span>A repo that maintains itself</span></a>
+<a class="mini" href="/ideas/chore-rotation-bot/"><img src="/assets/project-img/chore-rotation-bot.jpg" alt=""><span>Chore rotation bot</span></a>
+</div>
+<p><b>Level the script up:</b></p>
+<div class="cardrow">
+<a class="mini" href="/skills/use-an-api/"><img src="/assets/skill-img/use-an-api.jpg" alt=""><span>Use an API: richer data in</span></a>
+<a class="mini" href="/skills/ship-on-github/"><img src="/assets/skill-img/ship-on-github.jpg" alt=""><span>Ship on GitHub: a repo of its own</span></a>
+<a class="mini" href="/skills/train-a-model/"><img src="/assets/skill-img/train-a-model.jpg" alt=""><span>Train a model on the data it collects</span></a>
+</div>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "verify a mailto link"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $verify-a-mailto-link to complete and verify this web task."

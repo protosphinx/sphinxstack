@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare for a Case Interview"
+  short_description: "Practice structured reasoning and communication"
+  default_prompt: "Use $prepare-for-a-case-interview to build a realistic practice and feedback plan."

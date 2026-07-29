@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrate a Website"
+  short_description: "Move a website while preserving content, URLs, and measurement"
+  default_prompt: "Use $migrate-a-website to create and execute a redirect-safe website migration plan."

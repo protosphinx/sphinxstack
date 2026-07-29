@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Multistep Form"
+  short_description: "Structure long forms with progress and recovery"
+  default_prompt: "Use $design-a-multistep-form to design and test this multistep form flow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prevent Cross-Site Request Forgery"
+  short_description: "Protect state-changing browser requests"
+  default_prompt: "Use $prevent-cross-site-request-forgery to identify and close CSRF paths in this application."

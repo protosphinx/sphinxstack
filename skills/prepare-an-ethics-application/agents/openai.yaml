@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare an Ethics Application"
+  short_description: "Document participant protections and study controls"
+  default_prompt: "Use $prepare-an-ethics-application to prepare this study for ethics review."

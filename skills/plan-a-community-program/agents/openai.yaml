@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Community Program"
+  short_description: "Design a community program with mutual value and safeguards"
+  default_prompt: "Use $plan-a-community-program to define this community program, its boundaries, and success evidence."

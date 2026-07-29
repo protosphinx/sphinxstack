@@ -1,0 +1,4 @@
+interface:
+  display_name: "recover from a failed data backfill"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $recover-from-a-failed-data-backfill to complete and verify this data task."

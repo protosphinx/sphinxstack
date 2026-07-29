@@ -1,0 +1,112 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes when the app idea is secretly a startup. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> i have an app idea. it's like strava but for gym workouts, with friends and streaks and challenges</div>
+<div class="cm cm-agent">That is a startup wearing an app costume. I'm not going to kill
+it, but ideas that size die in the planning stage. Which piece of it would you
+personally use this month?</div>
+<div class="cm cm-user cd-hide">honestly just logging my lifts. i keep them in my notes app and it's a mess</div>
+<div class="cm cm-agent cd-hide">Then version one is a lift log with one user: you. One screen
+showing your lifts, one action to add a set. Friends, streaks, and challenges go on a
+version-two list so they are written down and out of the way. Deal?</div>
+<div class="cm cm-user cd-hide">deal. but doesn't it need accounts for the later stuff?</div>
+<div class="cm cm-agent cd-hide">No accounts unless someone besides you uses it this month.
+Skipping them saves you weeks. Now the seed data: what did you actually lift this
+week? The app starts from your real life, hardcoded is fine.</div>
+<div class="cm cm-user cd-hide">squats tuesday, 5x5 at 185. bench thursday, 5x5 at 135</div>
+<div class="cm cm-agent cd-hide">Those two workouts are the seed data. Repo created, README carries
+the one sentence and the version-two list, and issue #1 is "core screen shows this
+week's lifts." Let's commit the first file together before you go, so the repo is
+real when you close this tab.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Is your idea too big to start?</h2>
+<p>Most first app ideas are, because they are aimed at imaginary users. The skill does
+not throw the big idea away; it carves out the smallest piece you would use yourself
+this month and parks everything else on a written version-two list, so scope creep has
+somewhere to go besides the code. The best first app has one user, you, and replaces
+something you already do manually. Three shapes that pass that test:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/workout-timer/"><img src="/assets/project-img/workout-timer.jpg" alt=""><span>Workout timer you'd really use</span></a>
+<a class="mini" href="/ideas/bill-split/"><img src="/assets/project-img/bill-split.jpg" alt=""><span>Bill splitter for your group</span></a>
+<a class="mini" href="/ideas/score-keeper/"><img src="/assets/project-img/score-keeper.jpg" alt=""><span>Score keeper for game night</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A repo that already contains the decisions, so building can start instead of
+restarting the argument with yourself. End state of the session above:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example repo state at end of session">
+<div class="sheet-tag">Example</div>
+<pre>
+liftlog/
+├── README.md          committed
+└── data/lifts.json    real data from day one
+
+README.md
+  # liftlog
+  This app lets me log my lifts so the notes-app mess can retire.
+  Core screen: this week's workouts. Core action: add a set.
+
+  Version two (parked on purpose):
+  - friends can follow my log
+  - streaks and challenges
+  - accounts
+
+Issue #1 — first milestone
+  "Core screen lists this week's workouts from data/lifts.json."
+
+data/lifts.json
+  [{"day":"Tue","lift":"squat","sets":"5x5","weight":185},
+   {"day":"Thu","lift":"bench","sets":"5x5","weight":135}]
+</pre>
+</div>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>What happens to the rest of my big idea?</summary>
+<p>It gets written down as later versions, in the README, where it cannot be lost.
+Carving out the small piece is how the big idea survives; unscoped, it dies in
+planning.</p></details>
+<details class="faq"><summary>Do I need accounts and a database?</summary>
+<p>Not to start. The rule in the skill: no accounts unless someone besides you will
+use the app this month. Real data from your life, hardcoded at first, is enough to
+build the core screen.</p></details>
+<details class="faq"><summary>How is this different from starting a website?</summary>
+<p>An app has actions and state; a site shows information. The skill warns you
+honestly that an app takes longer, and if your idea is really a page that shows
+information, it routes you to <a href="/skills/start-a-website/">start-a-website</a>
+for a better first win.</p></details>
+<details class="faq"><summary>What if I don't have a problem worth an app?</summary>
+<p>You probably do: anything you track in your notes app, a spreadsheet, or your
+head qualifies, and so does anything your club or friend group coordinates badly.
+If nothing surfaces, the skill walks the idea bank with you.</p></details>
+<details class="faq"><summary>Do I need to know how to code?</summary>
+<p>No. This skill is about choosing and starting. The building happens in
+build-web-app, where the agent writes the code and you supply the real data and the
+decisions.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What happens to the rest of my big idea?","acceptedAnswer":{"@type":"Answer","text":"It is written down as later versions in the README. The small carved-out piece is what gets built first."}},
+{"@type":"Question","name":"Do I need accounts and a database?","acceptedAnswer":{"@type":"Answer","text":"Not to start. No accounts unless someone besides you uses the app this month; hardcoded real data is enough for the core screen."}},
+{"@type":"Question","name":"How is this different from starting a website?","acceptedAnswer":{"@type":"Answer","text":"An app has actions and state. If the idea is really a page showing information, the skill routes you to start-a-website and says why."}},
+{"@type":"Question","name":"What if I don't have a problem worth an app?","acceptedAnswer":{"@type":"Answer","text":"Anything you track manually or your group coordinates badly qualifies. Otherwise the skill walks the idea bank with you."}},
+{"@type":"Question","name":"Do I need to know how to code?","acceptedAnswer":{"@type":"Answer","text":"No. The build-web-app skill handles the building; the agent writes code and you make the calls."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>App chosen?</b> The build chain:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/build-web-app/"><img src="/assets/skill-img/build-web-app.jpg" alt=""><span>Build the web app</span></a>
+<a class="mini" href="/skills/ship-on-github/"><img src="/assets/skill-img/ship-on-github.jpg" alt=""><span>Ship on GitHub</span></a>
+<a class="mini" href="/skills/database-basics/"><img src="/assets/skill-img/database-basics.jpg" alt=""><span>Database basics, when data outgrows a file</span></a>
+</div>
+<p><b>Want more app shapes first?</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/personal-tracker/"><img src="/assets/project-img/personal-tracker.jpg" alt=""><span>Tracker for anything you count</span></a>
+<a class="mini" href="/ideas/chore-board/"><img src="/assets/project-img/chore-board.jpg" alt=""><span>Chore board your house uses</span></a>
+<a class="mini" href="/ideas/game-night-standings/"><img src="/assets/project-img/game-night-standings.jpg" alt=""><span>Game night standings</span></a>
+</div>

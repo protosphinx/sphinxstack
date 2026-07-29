@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspect a Metric"
+  short_description: "Interpret metric shape, labels, and limits"
+  default_prompt: "Use $inspect-a-metric to explain and verify this metric."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage-a-job-search-confidentially"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $manage-a-job-search-confidentially to complete and verify this task."

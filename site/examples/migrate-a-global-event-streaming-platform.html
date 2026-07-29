@@ -1,0 +1,21 @@
+<h2>Worked case: transfer global event authority</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A global marketplace moves orders, payments, inventory, identity, notifications, and analytics streams between platforms while producers and consumers span regions, transactions and ordering differ, historical replay is incomplete, and both brokers must overlap.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we dual-consume for confidence?</div><div class="cm cm-agent">Only if one durable operation ledger prevents two side-effect authorities.</div>
+<div class="cm cm-user cd-hide">Do matching counts prove transfer?</div><div class="cm cm-agent cd-hide">No. Reconcile event identity, sequence, schema, tombstones, transactions, offsets, and business outcomes.</div>
+<div class="cm cm-user cd-hide">What survives rollback?</div><div class="cm cm-agent cd-hide">Target-accepted events and acknowledged effects remain authoritative and must not replay.</div>
+<div class="cm cm-user">What gates a partition?</div><div class="cm cm-agent">Converged watermarks, ready consumers, durable deduplication, external acknowledgements, and usable rollback.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Move outcomes, not just bytes.</span></p></div>
+<div class="advanced-case"><h2>The streaming migration evidence package</h2><table class="plain-table"><thead><tr><th>Artifact</th><th>Gate</th></tr></thead><tbody>
+<tr><td>global streaming migration register</td><td>Every stream, region, identity, and effect is owned</td></tr>
+<tr><td>event, offset, schema, transaction, security, and business-outcome parity report</td><td>Transfer is complete and effects reconcile</td></tr>
+<tr><td>cutover and rollback rehearsal</td><td>Accepted effects survive without replay</td></tr></tbody></table></div>
+<h2>Failure rehearsal</h2><p>A payment reaches both brokers during a region partition. The stale consumer is fenced, one operation receipt controls the charge, and offsets reconcile after recovery.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is at-least-once unsafe?</summary><p>It requires durable idempotent effects and reconciliation.</p></details>
+<details class="faq"><summary>Can analytics move first?</summary><p>Only after its hidden operational consumers are inventoried.</p></details>
+<details class="faq"><summary>What about tombstones?</summary><p>Preserve their identity, ordering, retention, and compaction meaning.</p></details>
+<details class="faq"><summary>Can offsets map directly?</summary><p>Only when semantics and partitioning support a proven mapping.</p></details>
+<details class="faq"><summary>When can legacy retire?</summary><p>After history, replay, audit, security, and restore duties pass.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is at-least-once unsafe?","acceptedAnswer":{"@type":"Answer","text":"It needs idempotency."}},{"@type":"Question","name":"Can analytics move first?","acceptedAnswer":{"@type":"Answer","text":"After inventory."}},{"@type":"Question","name":"What about tombstones?","acceptedAnswer":{"@type":"Answer","text":"Preserve semantics."}},{"@type":"Question","name":"Can offsets map directly?","acceptedAnswer":{"@type":"Answer","text":"Only with proven semantics."}},{"@type":"Question","name":"When can legacy retire?","acceptedAnswer":{"@type":"Answer","text":"After duties pass."}}]}</script>
+<h2>Where to go from here</h2><p>Design delivery with <a href="/skills/implement-an-outbox-pattern/">Implement an outbox pattern</a>, move smaller queues with <a href="/skills/migrate-a-message-queue/">Migrate a message queue</a>, and test scale with <a href="/skills/run-a-load-test/">Run a load test</a>.</p>

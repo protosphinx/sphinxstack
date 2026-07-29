@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create an Interview Scorecard"
+  short_description: "Turn role criteria into observable interview evidence"
+  default_prompt: "Use $create-an-interview-scorecard to build a fair scorecard for this role."

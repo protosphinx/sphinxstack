@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize a Slow Query"
+  short_description: "Measure and improve a database query without changing results"
+  default_prompt: "Use $optimize-a-slow-query to explain this query plan and verify a safe improvement."

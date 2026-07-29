@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Customer Success Plan"
+  short_description: "Turn customer outcomes into an accountable plan"
+  default_prompt: "Use $write-a-customer-success-plan to help me complete this workflow with verifiable evidence."

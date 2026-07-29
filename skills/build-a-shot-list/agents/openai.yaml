@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a Shot List"
+  short_description: "Turn a visual concept into an ordered shot plan"
+  default_prompt: "Use $build-a-shot-list to create a practical shot list for this production."

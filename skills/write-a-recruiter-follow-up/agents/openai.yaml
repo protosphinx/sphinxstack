@@ -1,0 +1,4 @@
+interface:
+  display_name: "write a recruiter follow up"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $write-a-recruiter-follow-up to complete and verify this hiring task."

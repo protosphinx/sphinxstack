@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Root Cause Analysis"
+  short_description: "Explain a failure through evidence and control improvements"
+  default_prompt: "Use $run-a-root-cause-analysis to investigate this failure without blame or guesswork."

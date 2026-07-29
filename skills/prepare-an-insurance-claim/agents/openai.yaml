@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare An Insurance Claim"
+  short_description: "Organize claim evidence without inventing coverage"
+  default_prompt: "Use $prepare-an-insurance-claim to organize a truthful, traceable claim package."

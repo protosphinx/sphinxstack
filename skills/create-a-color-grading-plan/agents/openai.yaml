@@ -1,0 +1,4 @@
+interface:
+  display_name: "create a color grading plan"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $create-a-color-grading-plan to complete and verify this media task."

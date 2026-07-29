@@ -1,0 +1,34 @@
+<h2>Worked case: consolidate tenants without crossing boundaries</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A growing project-management SaaS is consolidating separate customer databases into shared regional storage, but API routes, search, cache keys, exports, background jobs, signed file URLs, support impersonation, and recovery tools derive tenant context differently while enterprise launch is six weeks away.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we add a tenant filter to repositories and finish the migration?</div>
+<div class="cm cm-agent">No. A filter covers only one boundary. First define isolation invariants across requests, storage, jobs, caches, search, files, exports, support, and recovery.</div>
+<div class="cm cm-user cd-hide">The tenant ID is already present in every request.</div>
+<div class="cm cm-agent cd-hide">Presence is not trust. Derive tenant context from authenticated membership, bind it to the resource, and deny missing or conflicting context.</div>
+<div class="cm cm-user cd-hide">Support needs a fast way to enter any tenant.</div>
+<div class="cm cm-agent cd-hide">Use an approved, time-limited, attributable support grant with notice and immutable audit evidence. Do not create a hidden universal bypass.</div>
+<div class="cm cm-user">What blocks the launch?</div>
+<div class="cm cm-agent">Any unowned boundary, policy mismatch, cross-tenant test failure, or unrehearsed recovery path blocks it.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Prove the invariant at every path.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The multitenant authorization evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Authorization architecture record</td><td>Tenant boundary model, isolation invariants, trusted context sources, authorization decision point, data keys, support powers, and rollback</td><td>Every path names one enforceable boundary</td></tr>
+<tr><td>Isolation test report</td><td>Cross-tenant test matrix for APIs, queries, caches, search, files, exports, jobs, events, races, and deleted membership</td><td>No cross-tenant disclosure, mutation, or enumeration</td></tr>
+<tr><td>Abuse and recovery rehearsal</td><td>Malicious references, support misuse, missing context, locked-out administrator, containment, evidence, and restoration</td><td>Recovery preserves identity proof and isolation</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>Shadow evaluation finds that an export worker accepts the tenant ID from its queue payload and reads a document by global ID. The wave stops, affected exports are disabled, evidence is preserved, and the worker is changed to load trusted job ownership before the shared decision point evaluates access. The full queue and export matrix is repeated before launch.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can a tenant ID in a signed token be trusted?</summary><p>Only after the token, issuer, audience, session state, and current membership have been validated for the requested action.</p></details>
+<details class="faq"><summary>Is a database row filter enough?</summary><p>No. Search, caches, files, jobs, exports, support tools, and application relationships also need enforced isolation.</p></details>
+<details class="faq"><summary>How should shared resources work?</summary><p>Model explicit ownership and collaboration relationships, then authorize each action through the same decision contract.</p></details>
+<details class="faq"><summary>Can support impersonate a tenant administrator?</summary><p>Only through a narrow approved workflow with proof, purpose, expiry, notice, attribution, and review.</p></details>
+<details class="faq"><summary>What should happen when tenant context is missing?</summary><p>Deny the action, record a safe diagnostic, and repair the caller instead of selecting a default tenant.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a tenant ID in a signed token be trusted?","acceptedAnswer":{"@type":"Answer","text":"Only after validating the token and current authorization context."}},{"@type":"Question","name":"Is a database row filter enough?","acceptedAnswer":{"@type":"Answer","text":"No. Every system boundary must preserve isolation."}},{"@type":"Question","name":"How should shared resources work?","acceptedAnswer":{"@type":"Answer","text":"Use explicit relationships and the shared decision contract."}},{"@type":"Question","name":"Can support impersonate a tenant administrator?","acceptedAnswer":{"@type":"Answer","text":"Only through a controlled, time-limited, audited workflow."}},{"@type":"Question","name":"What should happen when tenant context is missing?","acceptedAnswer":{"@type":"Answer","text":"Deny the action and repair the caller."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Define ordinary permissions with <a href="/skills/design-role-based-access-control/">Design role-based access control</a>,
+test boundaries with <a href="/skills/write-a-test-plan/">Write a test plan</a>, and
+record consequential decisions with <a href="/skills/implement-audit-logging/">Implement audit logging</a>.</p>

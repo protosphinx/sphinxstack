@@ -1,0 +1,4 @@
+interface:
+  display_name: "document a data field"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $document-a-data-field to complete and verify this data task."

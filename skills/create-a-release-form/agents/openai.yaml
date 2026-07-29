@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Release Form"
+  short_description: "Document informed media permissions clearly"
+  default_prompt: "Use $create-a-release-form to draft a clear permission record for this production."

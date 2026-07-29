@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Feature Flag Rollout"
+  short_description: "Stage release exposure with measurable gates"
+  default_prompt: "Use $create-a-feature-flag-rollout to stage and verify this release."

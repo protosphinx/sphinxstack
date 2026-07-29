@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Technical Interview"
+  short_description: "Build a role-specific technical interview practice loop"
+  default_prompt: "Use $prepare-a-technical-interview to turn this job description into a focused practice plan."

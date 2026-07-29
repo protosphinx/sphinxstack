@@ -1,0 +1,4 @@
+interface:
+  display_name: "clear music for a video"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $clear-music-for-a-video to complete and verify this media task."

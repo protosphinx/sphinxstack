@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a User Flow"
+  short_description: "Map a user task across states, choices, and failures"
+  default_prompt: "Use $design-a-user-flow to map this task and produce an implementation-ready flow."

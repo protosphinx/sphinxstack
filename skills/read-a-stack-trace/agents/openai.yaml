@@ -1,0 +1,4 @@
+interface:
+  display_name: "Read a Stack Trace"
+  short_description: "Trace failures from symptom to code path"
+  default_prompt: "Use $read-a-stack-trace to interpret this failure without guessing."

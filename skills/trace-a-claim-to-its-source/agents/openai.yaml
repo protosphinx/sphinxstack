@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trace A Claim to Its Source"
+  short_description: "Follow a repeated claim back to its strongest evidence"
+  default_prompt: "Use $trace-a-claim-to-its-source to reconstruct how this claim traveled and changed."

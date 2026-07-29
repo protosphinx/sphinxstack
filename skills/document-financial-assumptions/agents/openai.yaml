@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document Financial Assumptions"
+  short_description: "Record sourced model assumptions and ranges"
+  default_prompt: "Use $document-financial-assumptions to create a traceable assumption register."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Creative Brief"
+  short_description: "Translate a creative request into clear constraints"
+  default_prompt: "Use $write-a-creative-brief to align this project on audience, outcome, and constraints."

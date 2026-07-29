@@ -1,0 +1,46 @@
+<h2>Worked case: design a launch-ready notification service</h2>
+<p class="case-trigger"><strong>Trigger:</strong> We need an architecture for a service that will have real users and on-call support.</p>
+<div class="chatdemo">
+<div class="cm cm-user">We need email and push notifications for account activity. Can you design the stack?</div>
+<div class="cm cm-agent">First I need the critical journey, delivery target, expected peak, sensitive data, and the failures support can tolerate.</div>
+<div class="cm cm-user cd-hide">Password-reset email is critical. Product messages can wait. Peak is estimated at 150 messages a second.</div>
+<div class="cm cm-agent cd-hide">Then those are separate service classes. I will label the traffic estimate and design password resets around correctness and bounded delay.</div>
+<div class="cm cm-user cd-hide">Should this be microservices?</div>
+<div class="cm cm-agent cd-hide">That is not a requirement. We will start with responsibilities and failure modes, then choose the smallest boundary that meets them.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">A design review begins with constraints, not vendors.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The design record</h2>
+<table class="plain-table">
+<thead><tr><th>Decision</th><th>Reason</th><th>Reopen when</th></tr></thead>
+<tbody>
+<tr><td>One service, two queues</td><td>Separate critical resets from delay-tolerant product messages</td><td>Teams require independent release or scaling</td></tr>
+<tr><td>Durable queue before providers</td><td>Provider outages must not lose accepted work</td><td>Measured delay exceeds the reset objective</td></tr>
+<tr><td>Idempotency key per notification</td><td>Retries must not send duplicates</td><td>Never; this is a correctness invariant</td></tr>
+</tbody>
+</table>
+<h3>Evidence set</h3>
+<ul>
+<li><strong>System diagram:</strong> API, queue classes, worker, provider adapters, status store, and trust boundaries.</li>
+<li><strong>Trade-off record:</strong> one service now, with the condition that justifies a future split.</li>
+<li><strong>Failure walkthrough:</strong> provider outage, duplicate delivery, and bad deployment from signal to recovery.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>The email provider returns errors for ten minutes. The critical queue age alert fires,
+workers stop retrying aggressively, and the service changes to the approved second provider.
+The team checks one password-reset journey and the queue drain rate before closing the event.
+Product messages remain queued so they cannot consume the recovery capacity.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Does a production design require microservices?</summary><p>No. Service boundaries follow responsibilities, independent change, and failure isolation. One process is often the most supportable first design.</p></details>
+<details class="faq"><summary>How accurate must the traffic estimate be?</summary><p>It must be labeled and useful for a decision. Show the arithmetic, test the likely peak, and record what observation would change the design.</p></details>
+<details class="faq"><summary>What belongs on the diagram?</summary><p>Components, external actors, stores, data flow, dependencies, and trust boundaries. Leave out detail that does not affect a decision.</p></details>
+<details class="faq"><summary>Who approves the architecture?</summary><p>The person accountable for delivery and operation, with review from owners of security, data, and affected systems where needed.</p></details>
+<details class="faq"><summary>When is the design finished?</summary><p>When another engineer can implement the first slice and walk important failures from detection to recovery without inventing missing policy.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does a production design require microservices?","acceptedAnswer":{"@type":"Answer","text":"No. Boundaries follow responsibilities, independent change, and failure isolation."}},{"@type":"Question","name":"How accurate must the traffic estimate be?","acceptedAnswer":{"@type":"Answer","text":"It must be labeled, show its arithmetic, and support a decision."}},{"@type":"Question","name":"What belongs on the diagram?","acceptedAnswer":{"@type":"Answer","text":"Components, actors, stores, data flow, dependencies, and trust boundaries."}},{"@type":"Question","name":"Who approves the architecture?","acceptedAnswer":{"@type":"Answer","text":"The person accountable for delivery and operation, with relevant specialist review."}},{"@type":"Question","name":"When is the design finished?","acceptedAnswer":{"@type":"Answer","text":"When the first slice and important failure responses are implementable without missing policy."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Attach operating signals with <a href="/skills/design-observability/">Design observability</a>, verify capacity with <a href="/skills/run-a-load-test/">Run a load test</a>, and review exposure with <a href="/skills/threat-model-a-feature/">Threat model a feature</a>.</p>

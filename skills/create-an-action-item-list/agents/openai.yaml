@@ -1,0 +1,4 @@
+interface:
+  display_name: "create an action item list"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $create-an-action-item-list to complete and verify this operations task."

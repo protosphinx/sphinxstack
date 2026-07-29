@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Production Safety Brief"
+  short_description: "Document production hazards and controls"
+  default_prompt: "Use $write-a-production-safety-brief to prepare this authorized production safety briefing."

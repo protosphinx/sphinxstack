@@ -1,0 +1,117 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the part everyone is afraid of. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> my workout tracker loses everything when i clear my browser. how do i store this properly?</div>
+<div class="cm cm-agent">localStorage lives in one browser on one device; a database lives on a
+host and outlasts your laptop. First: what does one entry in your tracker look like?</div>
+<div class="cm cm-user cd-hide">date, exercise, sets, reps, and a note. but SQL looks terrifying, do
+i actually have to learn it</div>
+<div class="cm cm-agent cd-hide">You'll type a little of it by hand, on purpose: the CREATE TABLE and
+a few SELECTs in the provider's console, so the layer under any client library isn't
+magic. It reads closer to English than you'd guess from the reputation.</div>
+<div class="cm cm-user cd-hide">does a hosted database cost money?</div>
+<div class="cm cm-agent cd-hide">Free tiers cover this: hosted Postgres or SQLite. I'll say the
+limits before you commit to one, like storage caps and databases that pause after
+inactivity. No card details anywhere.</div>
+<div class="cm cm-user cd-hide">ok so what's step one</div>
+<div class="cm cm-agent cd-hide">Paper before console. One entry becomes one row, every field gets a
+type, and we both say why. Then you write the CREATE TABLE yourself, run it, and INSERT
+three real workouts by hand before any app code touches the database.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Do I really have to learn SQL?</h2>
+<p>A little, by hand, and it's the part that pays off longest. The skill has you design
+the schema on paper around your actual data (two tables maximum, and the second only
+when a real one-to-many shows up), then type the CREATE TABLE and a few queries
+yourself in the database console. Client libraries come after, once the layer they wrap
+is real to you. The finish line is being able to write a SELECT with a WHERE clause
+unaided. These projects each stand on a schema someone designed this way:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/speedrun-leaderboard/"><img src="/assets/project-img/speedrun-leaderboard.jpg" alt=""><span>Speedrun game with a real leaderboard</span></a>
+<a class="mini" href="/ideas/club-dues-tracker/"><img src="/assets/project-img/club-dues-tracker.jpg" alt=""><span>Club dues tracker</span></a>
+<a class="mini" href="/ideas/team-stats-board/"><img src="/assets/project-img/team-stats-board.jpg" alt=""><span>Team stats board</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A hosted database with a schema you can explain, and your app doing full CRUD
+against it. Here is what the workout tracker's database looks like when it's done.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example schema and queries">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">THE SCHEMA, TYPED BY HAND IN THE CONSOLE</div>
+<pre>CREATE TABLE workouts (
+  id       serial PRIMARY KEY,
+  day      date NOT NULL,
+  exercise text NOT NULL,
+  sets     int,
+  reps     int,
+  note     text
+);</pre>
+<div class="rz-h">A QUERY YOU CAN WRITE UNAIDED AT THE END</div>
+<pre>SELECT day, exercise, sets, reps
+FROM workouts
+WHERE day &gt;= '2026-07-01'
+ORDER BY day;</pre>
+<div class="rz-h">THE DATABASE DEFENDING ITSELF (TRIGGERED ON PURPOSE)</div>
+<pre>INSERT INTO workouts (exercise) VALUES ('squats');
+ERROR: null value in column "day" violates
+       not-null constraint</pre>
+</div>
+<ol class="anno-notes">
+<li><b>Every field has a type and a reason.</b> One entry became one row; you said why
+<code>day</code> is a date and why it can't be null. That modeling habit is the
+durable lesson.</li>
+<li><b>You break it once on purpose.</b> Seeing the NOT NULL error fire teaches what
+the database refuses on your behalf, before bad data ever gets in.</li>
+<li><b>Persistence is proven, then localStorage is deleted.</b> Redeploy the app, open
+it on your phone, the workouts are still there. Then the old storage code goes.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is SQL hard to learn?</summary>
+<p>The slice you need here is small: CREATE TABLE, INSERT, SELECT with a WHERE, UPDATE,
+DELETE. You type each one by hand in the console before app code hides them. Most
+people are surprised how readable it is.</p></details>
+<details class="faq"><summary>Is a hosted database free?</summary>
+<p>Free tiers of hosted Postgres and SQLite cover a personal app comfortably. The skill
+names the limits before you commit: storage caps, and some free databases pause after
+inactivity. No card details anywhere.</p></details>
+<details class="faq"><summary>Where does the connection string go?</summary>
+<p>It's a secret, so: env vars on the server side, a gitignored <code>.env</code>
+locally, never in frontend code, and proven absent from git. If you connect from the
+browser via a service like Supabase, the skill explains which key is publishable and
+turns on row-level security before any write works.</p></details>
+<details class="faq"><summary>How many tables should I make?</summary>
+<p>Two at most, and the second only when a real one-to-many appears in your data (a
+workout with many sets, an order with many items). Starting with one well-typed table
+teaches more than a diagram of eight empty ones.</p></details>
+<details class="faq"><summary>What happens to the data already in localStorage?</summary>
+<p>You migrate it: read the entries out, INSERT them as rows, check the count matches.
+Then the localStorage code is deleted from the app so there's exactly one source of
+truth.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is SQL hard to learn?","acceptedAnswer":{"@type":"Answer","text":"The slice you need is small: CREATE TABLE, INSERT, SELECT with a WHERE, UPDATE, DELETE, each typed by hand in the console. It is more readable than its reputation."}},
+{"@type":"Question","name":"Is a hosted database free?","acceptedAnswer":{"@type":"Answer","text":"Free tiers of hosted Postgres and SQLite cover a personal app. Limits like storage caps and pausing after inactivity are named before you commit. No card details anywhere."}},
+{"@type":"Question","name":"Where does the connection string go?","acceptedAnswer":{"@type":"Answer","text":"Env vars on the server, a gitignored .env locally, never in frontend code. Browser-side services get row-level security turned on before any write works."}},
+{"@type":"Question","name":"How many tables should I make?","acceptedAnswer":{"@type":"Answer","text":"Two at most, and the second only when a real one-to-many appears in your data."}},
+{"@type":"Question","name":"What happens to the data already in localStorage?","acceptedAnswer":{"@type":"Answer","text":"You migrate it into rows, check the count matches, then delete the localStorage code so there is one source of truth."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Shared data raises the next question: whose rows are whose?</b></p>
+<div class="cardrow">
+<a class="mini" href="/skills/auth-basics/"><img src="/assets/skill-img/auth-basics.jpg" alt=""><span>Auth basics: rows owned by users</span></a>
+<a class="mini" href="/skills/first-sql/"><img src="/assets/skill-img/first-sql.jpg" alt=""><span>First SQL: go deeper on queries</span></a>
+<a class="mini" href="/skills/backend-basics/"><img src="/assets/skill-img/backend-basics.jpg" alt=""><span>Backend basics: an API in front</span></a>
+</div>
+<p><b>Or build something that needs real persistence:</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/tool-lending-library/"><img src="/assets/project-img/tool-lending-library.jpg" alt=""><span>Tool lending library</span></a>
+<a class="mini" href="/ideas/online-turn-based/"><img src="/assets/project-img/online-turn-based.jpg" alt=""><span>Turn-based game two browsers can play</span></a>
+<a class="mini" href="/ideas/alumni-directory/"><img src="/assets/project-img/alumni-directory.jpg" alt=""><span>Alumni directory</span></a>
+</div>

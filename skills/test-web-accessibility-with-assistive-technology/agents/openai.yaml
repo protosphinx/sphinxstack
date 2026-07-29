@@ -1,0 +1,4 @@
+interface:
+  display_name: "test web accessibility with assistive technology"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $test-web-accessibility-with-assistive-technology to complete and verify this web task."

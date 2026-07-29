@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Your First 90 Days"
+  short_description: "Start a role with listening, evidence, and trust"
+  default_prompt: "Use $plan-your-first-90-days to create a learning-first plan for this new role."

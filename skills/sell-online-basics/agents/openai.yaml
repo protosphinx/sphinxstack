@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sell Online Basics"
+  short_description: "List and sell an item safely online"
+  default_prompt: "Use $sell-online-basics to help me complete this workflow with verified evidence."

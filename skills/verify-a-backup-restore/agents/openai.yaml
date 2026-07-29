@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify a Backup Restore"
+  short_description: "Prove backups can restore usable trusted systems"
+  default_prompt: "Use $verify-a-backup-restore to help me complete this workflow with verifiable evidence."

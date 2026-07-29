@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Research CV"
+  short_description: "Document research outputs, methods, and contribution"
+  default_prompt: "Use $write-a-research-cv to create a complete evidence-based research CV."

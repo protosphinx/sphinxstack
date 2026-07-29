@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Database Schema Changes"
+  short_description: "Evolve schemas through compatible stages"
+  default_prompt: "Use $manage-database-schema-changes to plan and verify this schema change."

@@ -1,0 +1,21 @@
+<h2>Worked case: reconstruct distributed source history</h2>
+<p class="case-trigger"><strong>Trigger:</strong> An attacker compromises the central Git service, rewrites protected branches and tags, deletes repositories and backups, steals signing and deploy keys, while mirrors replicate damage and teams retain divergent clones plus unpushed work.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Which clone is the source of truth?</div><div class="cm cm-agent">None automatically. Preserve all sources and reconcile objects, refs, signatures, artifacts, releases, and provenance.</div>
+<div class="cm cm-user cd-hide">Can we force-push the majority history?</div><div class="cm cm-agent cd-hide">Not before unique and disputed objects are quarantined and authority is established.</div>
+<div class="cm cm-user cd-hide">Do old signatures restore trust?</div><div class="cm cm-agent cd-hide">Only as bounded evidence; exposed signing keys require new trust.</div>
+<div class="cm cm-user">What proves restoration?</div><div class="cm cm-agent">Supported history, preserved disputes, rotated trust, reproducible critical builds, protected hosting, and independent acceptance.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Every clone is evidence, not automatic authority.</span></p></div>
+<div class="advanced-case"><h2>The source recovery evidence package</h2><table class="plain-table"><thead><tr><th>Artifact</th><th>Gate</th></tr></thead><tbody>
+<tr><td>source-control failure timeline</td><td>Damage and propagation are attributable</td></tr>
+<tr><td>repository object, ref, signature, clone, artifact, release, and unique-work reconciliation</td><td>History and disputes are explicit</td></tr>
+<tr><td>restoration and trust report</td><td>Hosting, credentials, builds, and backups are proven</td></tr></tbody></table></div>
+<h2>Failure rehearsal</h2><p>A minority clone contains an unpushed security fix. Recovery preserves and reviews it rather than deleting it through a majority vote.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can mirrors be trusted?</summary><p>Only after their replication point and integrity are reconciled.</p></details>
+<details class="faq"><summary>Should garbage collection run?</summary><p>No, not before all unique evidence is preserved.</p></details>
+<details class="faq"><summary>Can releases validate commits?</summary><p>They are corroborating evidence with their own provenance limits.</p></details>
+<details class="faq"><summary>What if history stays disputed?</summary><p>Publish bounded recovery and preserve disputed refs.</p></details>
+<details class="faq"><summary>When can deploys resume?</summary><p>After new trust and reproducible critical builds pass.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can mirrors be trusted?","acceptedAnswer":{"@type":"Answer","text":"Only after reconciliation."}},{"@type":"Question","name":"Should garbage collection run?","acceptedAnswer":{"@type":"Answer","text":"No."}},{"@type":"Question","name":"Can releases validate commits?","acceptedAnswer":{"@type":"Answer","text":"Only as bounded evidence."}},{"@type":"Question","name":"What if history stays disputed?","acceptedAnswer":{"@type":"Answer","text":"Preserve and disclose disputes."}},{"@type":"Question","name":"When can deploys resume?","acceptedAnswer":{"@type":"Answer","text":"After trust and builds pass."}}]}</script>
+<h2>Where to go from here</h2><p>Repair a single copy with <a href="/skills/recover-a-corrupted-git-repository/">Recover a corrupted Git repository</a>, protect release paths with <a href="/skills/audit-a-build-pipeline/">Audit a build pipeline</a>, and verify recovery with <a href="/skills/verify-a-backup-restore/">Verify a backup restore</a>.</p>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to Monitoring Blindness"
+  short_description: "Restore trustworthy visibility during failure"
+  default_prompt: "Use $respond-to-monitoring-blindness to contain and recover from this visibility failure."

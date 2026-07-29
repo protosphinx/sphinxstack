@@ -1,0 +1,4 @@
+interface:
+  display_name: "recover-from-a-global-treasury-control-failure"
+  short_description: "Recover treasury authority and payment truth"
+  default_prompt: "Use $recover-from-a-global-treasury-control-failure to complete and verify this task."

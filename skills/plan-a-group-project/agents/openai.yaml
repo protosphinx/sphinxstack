@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Group Project"
+  short_description: "Turn shared school work into owned tasks and evidence"
+  default_prompt: "Use $plan-a-group-project to create a fair, checkable plan for this assignment."

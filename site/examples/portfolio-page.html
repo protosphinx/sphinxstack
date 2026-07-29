@@ -1,0 +1,118 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the "coming soon" temptation. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> i need a portfolio site for my resume by tonight</div>
+<div class="cm cm-agent">If you have work to put on it, tonight is realistic. Inventory first:
+list everything you've made. Repos, deployed sites, school projects, physical builds,
+designs, anything.</div>
+<div class="cm cm-user cd-hide">the discord bot from last month, a weather dashboard, and a half-finished game</div>
+<div class="cm cm-agent cd-hide">For each one, what can a stranger click? The bot: is the repo
+public with real commits? The dashboard: live at a URL? The game: does anything run?</div>
+<div class="cm cm-user cd-hide">bot repo is public, dashboard is live. the game only runs on my laptop. can i add it with a "coming soon" card?</div>
+<div class="cm cm-agent cd-hide">No coming-soon cards, that's a rule: a project earns its spot by
+having something to click. The game gets added the day it runs at a URL, and adding it
+will be a two-line edit. So tonight: two projects, your name, a one-line bio, contact.
+Static HTML you can read, live on GitHub Pages before we stop.</div>
+<div class="cm cm-user cd-hide">only two projects? everyone else's portfolio has like ten</div>
+<div class="cm cm-agent cd-hide">A screener clicks one link, maybe two. Two that load and work do
+more for you than ten thin ones. Give me two sentences about the bot in your own
+words: what it is and what you did. I'll verify both links load before they go on the
+page, then we build.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Is two projects really enough?</h2>
+<p>Yes, when both can be opened by a stranger right now. The skill's rule is that
+everything on the page must be demoable: a live site, a repo with real commits, a
+video, a photo of the physical thing. Two or three of those beat six thin ones, and
+"coming soon" cards are banned outright. If you have zero, the skill says so and sends
+you to build one first; after that, this page takes about twenty minutes. Projects
+that read well behind a link:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/discord-server-bot/"><img src="/assets/project-img/discord-server-bot.jpg" alt=""><span>Discord bot your server uses</span></a>
+<a class="mini" href="/ideas/canvas-arcade/"><img src="/assets/project-img/canvas-arcade.jpg" alt=""><span>Browser game at a URL</span></a>
+<a class="mini" href="/ideas/price-drop-alert/"><img src="/assets/project-img/price-drop-alert.jpg" alt=""><span>Price-drop watcher on a schedule</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>One page, live at a real URL, that a resume screener lands on and believes. Here is
+the whole thing; a portfolio at this stage is short, and that is correct.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example portfolio page">
+<div class="sheet-tag">Example</div>
+<div class="rz-name">RILEY NAKAMURA</div>
+<div class="rz-contact">rileynakamura.github.io &nbsp;·&nbsp; github.com/rileynakamura <span class="anno-badge">1</span></div>
+<div class="rz-item"><div class="rz-line">I build small tools my friends and family actually use.
+Jefferson High, class of 2027. <span class="anno-badge">2</span></div></div>
+<div class="rz-h">PROJECTS</div>
+<div class="rz-item rz-hot">
+  <div class="rz-line"><b>Server bot</b> — runs the role assignments and game-night polls for my
+  80-member Discord server. I wrote it in JavaScript and it has run unattended since
+  April. &nbsp;·&nbsp; <span class="rz-link">github.com/rileynakamura/serverbot</span> <span class="anno-badge">3</span></div>
+</div>
+<div class="rz-item">
+  <div class="rz-line"><b>Weather dashboard</b> — shows my family the next 48 hours for our town
+  at a glance. It pulls a public forecast API and lives on our kitchen tablet.
+  &nbsp;·&nbsp; <span class="rz-link">rileynakamura.github.io/weather</span> <span class="anno-badge">4</span></div>
+</div>
+</div>
+<ol class="anno-notes">
+<li><b>The URL is theirs.</b> GitHub Pages under their own username, free, and the same
+URL goes on the resume header and their GitHub profile before the sitting ends. Email
+appears only if they are comfortable publishing it; GitHub is contact enough.</li>
+<li><b>One line about who they are.</b> True, plain, and it frames both projects. No
+mission statement.</li>
+<li><b>Blurbs are two sentences in their words.</b> What it is, then what they did.
+The agent typed the page; the person chose which projects lead and what each blurb
+says.</li>
+<li><b>Every link tested before it shipped.</b> The skill verifies each link loads,
+then the two of you open the page on a phone together. A dead link on a portfolio
+costs more than a missing project.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is this free?</summary>
+<p>The skill is free and so is the hosting: GitHub Pages costs nothing and the URL is
+yours. The agent you paste the skill into may or may not be free; Gemini has the
+widest free tier, and the free plans of ChatGPT, Claude, and Copilot can run it.</p></details>
+<details class="faq"><summary>Do I need to know how to code?</summary>
+<p>No. The agent writes the HTML and CSS, explains each move in a one-liner as it goes,
+and keeps the result plain enough that you can read it. Your job is the choices: which
+projects lead, what each blurb says, what the page feels like.</p></details>
+<details class="faq"><summary>I have zero finished projects. Can I make the page anyway?</summary>
+<p>No, and the skill will say so rather than fill the page with promises. Only work
+that exists goes up, and a project needs something to click. Build one real thing
+first; the page itself then takes about twenty minutes.</p></details>
+<details class="faq"><summary>Do I need my own domain name?</summary>
+<p>No. GitHub Pages under your username gives you a real URL for free, and that is
+where the session ends. If you later want yourname.com, the custom-domain skill picks
+up from exactly here.</p></details>
+<details class="faq"><summary>How do I add my next project?</summary>
+<p>A two-line edit you watched the agent make the first time: one line for the project,
+one for the link. The page is static HTML with no framework, so there is nothing to
+relearn. Finish something, add it, done.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this free?","acceptedAnswer":{"@type":"Answer","text":"The skill is free and GitHub Pages hosting costs nothing. The agent you paste it into may have a free tier; Gemini's is the widest."}},
+{"@type":"Question","name":"Do I need to know how to code?","acceptedAnswer":{"@type":"Answer","text":"No. The agent writes the HTML and explains each move; you make the choices about which projects lead and what the blurbs say."}},
+{"@type":"Question","name":"I have zero finished projects. Can I make the page anyway?","acceptedAnswer":{"@type":"Answer","text":"No. Only work that exists goes up. Build one real thing first; the page then takes about twenty minutes."}},
+{"@type":"Question","name":"Do I need my own domain name?","acceptedAnswer":{"@type":"Answer","text":"No. GitHub Pages under your username gives you a real URL for free. A custom domain can come later."}},
+{"@type":"Question","name":"How do I add my next project?","acceptedAnswer":{"@type":"Answer","text":"A two-line edit: one line for the project, one for the link. The page is plain HTML, so you can do it yourself."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Page live?</b> Make the things it links to look as good as the page:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/readme-that-sells/"><img src="/assets/skill-img/readme-that-sells.jpg" alt=""><span>README that sells</span></a>
+<a class="mini" href="/skills/ship-on-github/"><img src="/assets/skill-img/ship-on-github.jpg" alt=""><span>Ship on GitHub</span></a>
+<a class="mini" href="/skills/custom-domain/"><img src="/assets/skill-img/custom-domain.jpg" alt=""><span>Custom domain</span></a>
+</div>
+<p><b>Portfolio feeding a job hunt?</b></p>
+<div class="cardrow">
+<a class="mini" href="/skills/build-resume/"><img src="/assets/skill-img/build-resume.jpg" alt=""><span>Build your resume</span></a>
+<a class="mini" href="/skills/tailor-resume/"><img src="/assets/skill-img/tailor-resume.jpg" alt=""><span>Tailor your resume</span></a>
+<a class="mini" href="/skills/linkedin-profile/"><img src="/assets/skill-img/linkedin-profile.jpg" alt=""><span>LinkedIn profile</span></a>
+</div>

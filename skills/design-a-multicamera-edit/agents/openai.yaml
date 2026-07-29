@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a multicamera edit"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $design-a-multicamera-edit to complete and verify this media task."

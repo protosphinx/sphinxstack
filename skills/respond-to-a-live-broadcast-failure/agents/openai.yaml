@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to a Live Broadcast Failure"
+  short_description: "Protect audiences and restore live continuity"
+  default_prompt: "Use $respond-to-a-live-broadcast-failure to contain and recover this live production."

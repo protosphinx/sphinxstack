@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scholarship Search"
+  short_description: "Find and track legitimate scholarship opportunities"
+  default_prompt: "Use $scholarship-search to help me complete this workflow with verified evidence."

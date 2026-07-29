@@ -1,0 +1,4 @@
+interface:
+  display_name: "Define Alert Severity"
+  short_description: "Map alerts to impact, urgency, and authority"
+  default_prompt: "Use $define-alert-severity to create a useful severity rule for this condition."

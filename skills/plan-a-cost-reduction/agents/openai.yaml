@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Cost Reduction"
+  short_description: "Reduce cost while protecting critical outcomes"
+  default_prompt: "Use $plan-a-cost-reduction to find reversible savings without hiding service harm."

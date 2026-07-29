@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to Public Criticism"
+  short_description: "Respond to public claims with evidence and proportional care"
+  default_prompt: "Use $respond-to-public-criticism to assess the criticism and prepare a truthful response."

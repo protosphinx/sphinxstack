@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design an Email Nurture Sequence"
+  short_description: "Design a consent-aware sequence around user progress"
+  default_prompt: "Use $design-an-email-nurture-sequence to create this sequence, its branching, and measurement."

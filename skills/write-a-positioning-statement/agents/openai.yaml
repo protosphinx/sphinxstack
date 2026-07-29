@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Positioning Statement"
+  short_description: "Clarify audience, category, value, and credible difference"
+  default_prompt: "Use $write-a-positioning-statement to draft and test an evidence-backed positioning statement."

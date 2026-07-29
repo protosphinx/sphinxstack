@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Service Dashboard"
+  short_description: "Turn service signals into decision views"
+  default_prompt: "Use $create-a-service-dashboard to design and verify an operational dashboard."

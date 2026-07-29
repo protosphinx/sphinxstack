@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Background Job"
+  short_description: "Define durable work, retry, and recovery rules"
+  default_prompt: "Use $design-a-background-job to design this asynchronous workflow."

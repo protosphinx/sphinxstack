@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Permission Prompt"
+  short_description: "Ask for device access with context and recovery"
+  default_prompt: "Use $design-a-permission-prompt to design this permission request and denial recovery."

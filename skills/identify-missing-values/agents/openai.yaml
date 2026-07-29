@@ -1,0 +1,4 @@
+interface:
+  display_name: "identify missing values"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $identify-missing-values to complete and verify this data task."

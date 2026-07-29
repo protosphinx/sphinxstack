@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Web App"
+  short_description: "Build and publish a focused web application"
+  default_prompt: "Use $build-web-app to help me complete this workflow with verified evidence."

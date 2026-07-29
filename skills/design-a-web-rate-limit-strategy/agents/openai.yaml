@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a web rate limit strategy"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $design-a-web-rate-limit-strategy to complete and verify this web task."

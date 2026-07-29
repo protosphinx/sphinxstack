@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement Idempotent Requests"
+  short_description: "Make retries safe across partial failure"
+  default_prompt: "Use $implement-idempotent-requests to add and verify idempotency for this operation."

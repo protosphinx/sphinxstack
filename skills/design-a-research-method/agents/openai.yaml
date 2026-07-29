@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Research Method"
+  short_description: "Align evidence collection with a research question"
+  default_prompt: "Use $design-a-research-method to design a method for this research question."

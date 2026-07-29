@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish to YouTube"
+  short_description: "Package, upload, and verify a YouTube video"
+  default_prompt: "Use $publish-to-youtube to help me complete this workflow with verified evidence."

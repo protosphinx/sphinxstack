@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create A Personal Records System"
+  short_description: "Design a maintainable personal recordkeeping workflow"
+  default_prompt: "Use $create-a-personal-records-system to design my ongoing recordkeeping workflow."

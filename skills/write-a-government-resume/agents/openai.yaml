@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Government Resume"
+  short_description: "Match public-sector criteria with complete evidence"
+  default_prompt: "Use $write-a-government-resume to address this public-sector application exactly."

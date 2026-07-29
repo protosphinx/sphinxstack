@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Design System"
+  short_description: "Build reusable tokens, components, states, and governance"
+  default_prompt: "Use $create-a-design-system to turn this interface inventory into a tested design system."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Revenue Concentration"
+  short_description: "Measure dependency on customers and channels"
+  default_prompt: "Use $analyze-revenue-concentration to measure and stress-test this revenue concentration."

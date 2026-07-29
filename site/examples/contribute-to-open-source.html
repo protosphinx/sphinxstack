@@ -1,0 +1,116 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes when someone is sure they don't belong in open source yet. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> i want to contribute to open source but my code isn't good enough for real projects</div>
+<div class="cm cm-agent">First PRs are almost never clever code. Docs fixes,
+error-message improvements, small reproducible bugs. Different question: what open
+source software did you actually use this week?</div>
+<div class="cm cm-user cd-hide">the discord bot in my server is open source i think. and a CLI tool i use for class</div>
+<div class="cm cm-agent cd-hide">Start there. A contributor who uses the project writes better
+fixes and cares whether they land. Let's check the pulse of both repos: commits in
+the last month, maintainers answering issues, a CONTRIBUTING file. A friendly small
+project beats a famous one; first PRs to huge repos can sit unreviewed for months.</div>
+<div class="cm cm-user cd-hide">the bot repo had a commit yesterday. but its good-first-issue label has nothing in it</div>
+<div class="cm cm-agent cd-hide">Then trust your own experience instead of the labels. Has
+anything about that bot ever confused you? An error message, a setup step in the
+README that didn't work?</div>
+<div class="cm cm-user cd-hide">actually yes. the setup docs skip the part where you need a token. i was stuck on that for an hour</div>
+<div class="cm cm-agent cd-hide">That is a legitimate first issue, and you are the most qualified
+person to fix it because you hit it. Plan for this sitting: file the issue, comment
+that you'll take it (one or two sentences, your words), then fork, get it running
+locally, make the fix, and open the PR. Right-sized means you can explain the fix in
+one sentence, and you just did.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Feel like an imposter in open source?</h2>
+<p>The bar for a first contribution is lower and more useful than the imposter feeling
+suggests. Docs fixes, confusing error messages, and small reproducible bugs are all
+legitimate first issues, and nothing is beneath a first PR. The skill also skips the
+"good first issue" aggregators full of abandoned repos and starts from software you
+already use, because a typo you noticed or a setup step that failed for you is an
+issue you are uniquely qualified to fix. Projects on this site that practice the same
+muscles:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/small-web-fix/"><img src="/assets/project-img/small-web-fix.jpg" alt=""><span>Fix a small thing on the open web</span></a>
+<a class="mini" href="/ideas/fix-writeup/"><img src="/assets/project-img/fix-writeup.jpg" alt=""><span>Write up a fix you made</span></a>
+<a class="mini" href="/ideas/repo-action/"><img src="/assets/project-img/repo-action.jpg" alt=""><span>Automate a repo with an action</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>Every command runs in the sitting, so the session ends with the change submitted
+and the expectations set. End state of the session above:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example contribution state at end of session">
+<div class="sheet-tag">Example</div>
+<pre>
+Issue filed:   #214 "Setup docs don't mention the bot token"
+Claim comment: "Hit this setting up the bot for my server.
+               Happy to send a docs fix if that's welcome."
+Fork:          cloned, upstream remote added, bot running
+               locally by following the project's own docs
+Branch:        docs-token-setup
+The change:    6 lines in README setup, including the exact
+               error you see when the token is missing
+PR opened:     links #214, states what changed, plain words
+
+Expectations set: review may take days · requested changes
+are the normal path to merge · reply within a day
+</pre>
+</div>
+</div>
+
+<h2>Anatomy of a good first PR</h2>
+<p>The skill shapes the submission to this standard:</p>
+<div class="anatomy">
+<div class="an-line"><span class="an-seg an-a">Add missing token step to setup docs</span> ·
+<span class="an-seg an-b">Fixes #214</span> ·
+<span class="an-seg an-c">"The setup section now covers DISCORD_TOKEN and shows the error you get without it"</span> ·
+<span class="an-seg an-d">project's checks run before pushing</span></div>
+<ul class="an-legend">
+<li><span class="an-key an-a">A</span> A title that says the change plainly. No "various improvements".</li>
+<li><span class="an-key an-b">B</span> The linked issue, so reviewers see the why in one click.</li>
+<li><span class="an-key an-c">C</span> What changed, in your words. Small and complete beats broad and half-done.</li>
+<li><span class="an-key an-d">D</span> Proof you ran the project's own tests or checks first.</li>
+</ul>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is a typo or docs fix a real contribution?</summary>
+<p>Yes. Docs fixes, error-message improvements, and small reproducible bugs all count,
+and nothing is beneath a first PR. A doc step that failed for you is a legitimate
+issue you can file and then fix.</p></details>
+<details class="faq"><summary>What if the maintainers ignore me?</summary>
+<p>The skill checks the project's pulse before you invest: commits in the last month,
+maintainers responding to issues, a CONTRIBUTING file. A friendly small project beats
+a famous one, because first PRs to huge repos often sit unreviewed for months.</p></details>
+<details class="faq"><summary>Do I ask before writing code?</summary>
+<p>Yes. You comment on the issue asking to take it, one or two sentences in your own
+words. That is the norm in open source, and it is also your first public interaction
+with the project.</p></details>
+<details class="faq"><summary>What if they request changes on my PR?</summary>
+<p>Requested changes are the usual road to a merge, and the skill sets that
+expectation before you submit. Respond within a day when the review comes and keep
+the changes small.</p></details>
+<details class="faq"><summary>How does this help my resume?</summary>
+<p>A merged PR on a project other people use is public, verifiable proof of work,
+exactly what a thin resume lacks. Once merged, the contribution goes on the resume
+with the PR link, and the build-resume skill shapes that line.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is a typo or docs fix a real contribution?","acceptedAnswer":{"@type":"Answer","text":"Yes. Docs fixes, error-message improvements, and small reproducible bugs all count; nothing is beneath a first PR."}},
+{"@type":"Question","name":"What if the maintainers ignore me?","acceptedAnswer":{"@type":"Answer","text":"The skill checks the project's pulse first: recent commits, responsive maintainers, a CONTRIBUTING file. Friendly small projects beat famous ones for a first PR."}},
+{"@type":"Question","name":"Do I ask before writing code?","acceptedAnswer":{"@type":"Answer","text":"Yes, with a short comment claiming the issue in your own words. That is the norm and your first public interaction with the project."}},
+{"@type":"Question","name":"What if they request changes on my PR?","acceptedAnswer":{"@type":"Answer","text":"Requested changes are the usual road to a merge. Respond within a day and keep changes small."}},
+{"@type":"Question","name":"How does this help my resume?","acceptedAnswer":{"@type":"Answer","text":"A merged PR on a project other people use is public, verifiable proof of work. It goes on the resume with the PR link."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>PR submitted?</b> Turn the momentum toward your own work:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/ship-on-github/"><img src="/assets/skill-img/ship-on-github.jpg" alt=""><span>Ship your own project</span></a>
+<a class="mini" href="/skills/readme-that-sells/"><img src="/assets/skill-img/readme-that-sells.jpg" alt=""><span>A README that sells it</span></a>
+<a class="mini" href="/skills/build-resume/"><img src="/assets/skill-img/build-resume.jpg" alt=""><span>Put the PR on your resume</span></a>
+</div>

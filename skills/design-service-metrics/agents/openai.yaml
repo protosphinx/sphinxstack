@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Service Metrics"
+  short_description: "Measure service demand, errors, and saturation"
+  default_prompt: "Use $design-service-metrics to create a bounded metric set for this service."

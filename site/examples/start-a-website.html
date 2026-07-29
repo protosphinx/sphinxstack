@@ -1,0 +1,105 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes when someone wants a website before they know what it is for. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> i want a website but idk what it would even be about</div>
+<div class="cm cm-agent">Then we hold off on the HTML. What already exists in your life
+that has no page? A club or team, a family business, a hobby where you know things
+other people search for?</div>
+<div class="cm cm-user cd-hide">my aunt sells tamales. she takes orders in facebook comments</div>
+<div class="cm cm-agent cd-hide">That is a real site with a real visitor: someone who heard about
+the tamales and wants to see the menu. Who asked most recently?</div>
+<div class="cm cm-user cd-hide">her coworker last week. my aunt typed the whole menu out in messenger. again</div>
+<div class="cm cm-agent cd-hide">So the sentence is: this site tells your aunt's customers the menu
+and prices so they can order without messaging her first. That sentence demands one
+page, maybe two. Where does the menu come from?</div>
+<div class="cm cm-user cd-hide">i can get it from her tonight, i basically know it by heart anyway</div>
+<div class="cm cm-agent cd-hide">By heart is good enough to start. Repo created, README carries the
+sentence and the page list. Dictate the menu from memory now and it goes straight into
+index.html; she corrects it tonight. Then the build-website skill takes it from
+skeleton to live URL.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>No idea what the site should be?</h2>
+<p>That is the right starting point, because the failure mode is a generic site nobody
+visits. The skill hunts your actual life for things that have no page: the club that
+organizes over group chat screenshots, the neighbor's business with no web presence,
+the hobby where you know what people search for. Every candidate has to name a
+specific visitor, one person who would open the page and get something from it. If
+nothing surfaces, you browse the idea bank together. Three site shapes people pick:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/club-page/"><img src="/assets/project-img/club-page.jpg" alt=""><span>Page for a club you're in</span></a>
+<a class="mini" href="/ideas/bake-order-page/"><img src="/assets/project-img/bake-order-page.jpg" alt=""><span>Order page for a home baker</span></a>
+<a class="mini" href="/ideas/team-schedule/"><img src="/assets/project-img/team-schedule.jpg" alt=""><span>Your team's season schedule</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>The choice made and the project started, so build-website inherits momentum instead
+of a blank folder. End state of the session above:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example repo state at end of session">
+<div class="sheet-tag">Example</div>
+<pre>
+rosas-tamales/
+├── README.md          committed
+└── index.html         first real content, dictated in session
+
+README.md
+  # rosas-tamales
+  This site tells Rosa's customers the menu and prices so they
+  can order without messaging her first.
+  Pages: menu (home) · how to order
+
+index.html — the paragraph that makes it started, not just named
+  "Tamales made every Friday. Pork, chicken, rajas con queso.
+  By the dozen or half dozen. Order by Wednesday for Friday
+  pickup. Message Rosa at rosa@example.com."
+
+Homework sent: one message to Rosa asking for the real price
+list. Skeleton gets built while waiting.
+</pre>
+</div>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Shouldn't I just make a personal portfolio site?</summary>
+<p>Only if you have work to show: projects, art, writing, a resume that needs a link.
+A personal site made from obligation tends to stall, and a site with a real visitor
+tends to get finished. The skill checks for both and lets you choose.</p></details>
+<details class="faq"><summary>What if the content belongs to someone else?</summary>
+<p>Then the homework is one message asking for it, sent during the session, and the
+skeleton gets built while you wait. The skill will not let a missing price list stop
+the repo from existing.</p></details>
+<details class="faq"><summary>What if my idea needs logins or saved data?</summary>
+<p>Then it is an app wearing a website costume, and the skill says so and routes you
+to <a href="/skills/build-web-app/">build-web-app</a> instead, with the reason stated.</p></details>
+<details class="faq"><summary>Do I need to buy a domain?</summary>
+<p>No. The site goes live at a free URL first. A domain of its own is a later,
+optional step with its own skill, and nothing here depends on it.</p></details>
+<details class="faq"><summary>How many pages should it have?</summary>
+<p>The 1 to 3 pages the one-sentence purpose demands, and no more. If a page does not
+serve the sentence, it waits.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Shouldn't I just make a personal portfolio site?","acceptedAnswer":{"@type":"Answer","text":"Only if you have work to show. A site with a real, specific visitor tends to get finished; the skill checks for both and lets you choose."}},
+{"@type":"Question","name":"What if the content belongs to someone else?","acceptedAnswer":{"@type":"Answer","text":"The homework is one message asking for it, sent during the session, and the skeleton gets built while you wait."}},
+{"@type":"Question","name":"What if my idea needs logins or saved data?","acceptedAnswer":{"@type":"Answer","text":"Then it is an app, and the skill routes you to build-web-app and says why."}},
+{"@type":"Question","name":"Do I need to buy a domain?","acceptedAnswer":{"@type":"Answer","text":"No. The site goes live at a free URL first; a custom domain is a later optional step."}},
+{"@type":"Question","name":"How many pages should it have?","acceptedAnswer":{"@type":"Answer","text":"The 1 to 3 pages the one-sentence purpose demands, and no more."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Choice made?</b> This chain takes the skeleton to a live link:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/build-website/"><img src="/assets/skill-img/build-website.jpg" alt=""><span>Build the website</span></a>
+<a class="mini" href="/skills/ship-on-github/"><img src="/assets/skill-img/ship-on-github.jpg" alt=""><span>Ship on GitHub</span></a>
+<a class="mini" href="/skills/custom-domain/"><img src="/assets/skill-img/custom-domain.jpg" alt=""><span>Custom domain</span></a>
+</div>
+<p><b>Still browsing?</b> More site-shaped ideas:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/event-page/"><img src="/assets/project-img/event-page.jpg" alt=""><span>Page for a real event</span></a>
+<a class="mini" href="/ideas/real-site/"><img src="/assets/project-img/real-site.jpg" alt=""><span>Site for someone's real thing</span></a>
+<a class="mini" href="/ideas/tutoring-page/"><img src="/assets/project-img/tutoring-page.jpg" alt=""><span>Tutoring one-pager</span></a>
+</div>

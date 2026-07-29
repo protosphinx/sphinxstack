@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pin a Dependency Version"
+  short_description: "Control dependency resolution reproducibly"
+  default_prompt: "Use $pin-a-dependency-version to pin and verify this dependency safely."

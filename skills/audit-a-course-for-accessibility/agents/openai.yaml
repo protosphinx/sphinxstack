@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit-a-course-for-accessibility"
+  short_description: "Run a verified audit a course for accessibility workflow"
+  default_prompt: "Use $audit-a-course-for-accessibility to complete and verify this task."

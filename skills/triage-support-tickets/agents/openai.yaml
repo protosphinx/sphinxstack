@@ -1,0 +1,4 @@
+interface:
+  display_name: "Triage Support Tickets"
+  short_description: "Prioritize and route a support queue consistently"
+  default_prompt: "Use $triage-support-tickets to help me complete this workflow with verifiable evidence."

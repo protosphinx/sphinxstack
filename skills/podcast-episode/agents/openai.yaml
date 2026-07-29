@@ -1,0 +1,4 @@
+interface:
+  display_name: "Podcast Episode"
+  short_description: "Plan, record, edit, and publish a podcast episode"
+  default_prompt: "Use $podcast-episode to help me complete this workflow with verified evidence."

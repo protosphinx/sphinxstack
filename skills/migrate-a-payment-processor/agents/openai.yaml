@@ -1,0 +1,4 @@
+interface:
+  display_name: "migrate a payment processor"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $migrate-a-payment-processor to complete and verify this finance task."

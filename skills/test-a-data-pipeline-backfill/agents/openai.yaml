@@ -1,0 +1,4 @@
+interface:
+  display_name: "test a data pipeline backfill"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $test-a-data-pipeline-backfill to complete and verify this data task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Event Vendors"
+  short_description: "Coordinate supplier delivery, controls, and recovery"
+  default_prompt: "Use $manage-event-vendors to coordinate supplier obligations and acceptance for this event."

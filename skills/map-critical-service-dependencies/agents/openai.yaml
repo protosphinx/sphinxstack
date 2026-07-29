@@ -1,0 +1,4 @@
+interface:
+  display_name: "Map Critical Service Dependencies"
+  short_description: "Map service dependencies, owners, and failure effects"
+  default_prompt: "Use $map-critical-service-dependencies to build a verified dependency and ownership map."

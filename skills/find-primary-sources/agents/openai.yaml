@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find Primary Sources"
+  short_description: "Locate original evidence behind a research claim"
+  default_prompt: "Use $find-primary-sources to trace my claim to the strongest accessible original evidence."

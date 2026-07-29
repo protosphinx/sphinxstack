@@ -1,0 +1,4 @@
+interface:
+  display_name: "trace-a-dns-resolution"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $trace-a-dns-resolution to complete and verify this task."

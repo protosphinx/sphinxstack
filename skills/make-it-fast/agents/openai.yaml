@@ -1,0 +1,4 @@
+interface:
+  display_name: "Make It Fast"
+  short_description: "Measure and improve website performance"
+  default_prompt: "Use $make-it-fast to help me complete this workflow with verified evidence."

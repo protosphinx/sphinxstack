@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backend Basics"
+  short_description: "Build and deploy a small server with real endpoints"
+  default_prompt: "Use $backend-basics to help me complete this workflow with verified evidence."

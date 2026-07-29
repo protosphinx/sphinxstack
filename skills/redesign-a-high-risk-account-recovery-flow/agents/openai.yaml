@@ -1,0 +1,4 @@
+interface:
+  display_name: "redesign a high risk account recovery flow"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $redesign-a-high-risk-account-recovery-flow to complete and verify this web task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Quantitative Research"
+  short_description: "Test quantitative evidence with explicit assumptions"
+  default_prompt: "Use $analyze-quantitative-research to analyze this quantitative research dataset."

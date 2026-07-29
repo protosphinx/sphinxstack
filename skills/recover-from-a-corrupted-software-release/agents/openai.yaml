@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recover from a Corrupted Software Release"
+  short_description: "Restore trusted artifacts and runtime state"
+  default_prompt: "Use $recover-from-a-corrupted-software-release to recover from verified sources."

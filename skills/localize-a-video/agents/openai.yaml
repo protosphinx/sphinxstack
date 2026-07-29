@@ -1,0 +1,4 @@
+interface:
+  display_name: "Localize a Video"
+  short_description: "Adapt video language, timing, and context"
+  default_prompt: "Use $localize-a-video to produce and verify this localized video version."

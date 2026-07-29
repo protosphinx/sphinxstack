@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare-a-job-fair-plan"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $prepare-a-job-fair-plan to complete and verify this task."

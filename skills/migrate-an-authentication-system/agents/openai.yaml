@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrate an Authentication System"
+  short_description: "Move identities and sessions without account loss"
+  default_prompt: "Use $migrate-an-authentication-system to plan and verify this identity migration with rollback."

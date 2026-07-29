@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Session Management"
+  short_description: "Control session creation, renewal, and revocation"
+  default_prompt: "Use $design-session-management to design and test the complete session lifecycle."

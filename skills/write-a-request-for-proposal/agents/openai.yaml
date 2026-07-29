@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Request for Proposal"
+  short_description: "Draft a fair and testable vendor solicitation"
+  default_prompt: "Use $write-a-request-for-proposal to draft a clear and evaluable RFP."

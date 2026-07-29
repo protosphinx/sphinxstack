@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Project Kickoff"
+  short_description: "Align a project on outcomes, roles, risks, and next steps"
+  default_prompt: "Use $prepare-a-project-kickoff to build the kickoff package for this project."

@@ -1,0 +1,34 @@
+<h2>Worked case: contain poisoned inputs and repair affected decisions</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A fraud and eligibility platform discovers that an upstream partner feed was compromised, labels were altered through a feedback tool, suspect records entered training and test sets, shared features reached several models, and deployed decisions have affected customers for weeks.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Should we retrain the latest model without the partner feed?</div>
+<div class="cm cm-agent">First quarantine suspect generations and trace every record, feature, model, metric, decision, and downstream copy.</div>
+<div class="cm cm-user cd-hide">Can a good offline score clear the rebuild?</div>
+<div class="cm cm-agent cd-hide">No. Validate provenance, label integrity, independent evaluation, subgroup outcomes, decision impact, and adversarial resistance.</div>
+<div class="cm cm-user cd-hide">What happens to past customers?</div>
+<div class="cm cm-agent cd-hide">Protect, notify, appeal, reverse, or re-evaluate through accountable domain processes while preserving original evidence.</div>
+<div class="cm cm-user">What blocks automation?</div>
+<div class="cm cm-agent">Unknown trusted data, unresolved descendants, invalid labels, unsafe decisions, or failed authenticity and behavior tests.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">A clean rebuild must include decision remediation.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The data poisoning evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>data poisoning incident timeline</td><td>Sources, access, changes, runs, versions, models, decisions, containment, and custody</td><td>Every suspect generation is time aligned</td></tr>
+<tr><td>provenance, dataset, model, and decision reconciliation</td><td>Records, descendants, influence, features, models, users, outcomes, and remediation</td><td>Every plausible descendant and affected decision has a disposition</td></tr>
+<tr><td>recovery and control-effectiveness report</td><td>Trusted rebuild, customer protection, reevaluation, authenticity, quality, subgroup, adversarial, and access tests</td><td>Independent release gates pass</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>The team cannot prove which feedback labels were altered because logs rolled over. It keeps all descendant model generations quarantined, expands the affected population, moves high-impact decisions to qualified review, rebuilds from a verifiable earlier boundary, and records residual uncertainty.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can poisoned rows simply be deleted?</summary><p>Only after descendants, joins, features, models, metrics, and decisions are traced.</p></details>
+<details class="faq"><summary>Should the source vendor investigate alone?</summary><p>No. Preserve independent evidence and verify claims against your own lineage and outcomes.</p></details>
+<details class="faq"><summary>Do test-set records matter?</summary><p>Yes. Poisoned evaluation can hide unsafe models or create false confidence.</p></details>
+<details class="faq"><summary>Can old decisions be overwritten?</summary><p>No. Preserve originals and link reviewed corrections or remediation.</p></details>
+<details class="faq"><summary>When can automation resume?</summary><p>After trusted provenance, rebuild, independent evaluation, decision protection, and monitoring pass.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can poisoned rows simply be deleted?","acceptedAnswer":{"@type":"Answer","text":"Only after full descendant tracing."}},{"@type":"Question","name":"Should the source vendor investigate alone?","acceptedAnswer":{"@type":"Answer","text":"No. Verify independently."}},{"@type":"Question","name":"Do test-set records matter?","acceptedAnswer":{"@type":"Answer","text":"Yes. Evaluation integrity matters."}},{"@type":"Question","name":"Can old decisions be overwritten?","acceptedAnswer":{"@type":"Answer","text":"No. Link corrected outcomes."}},{"@type":"Question","name":"When can automation resume?","acceptedAnswer":{"@type":"Answer","text":"After all release gates pass."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Trace inputs with <a href="/skills/implement-data-lineage/">Implement data lineage</a>,
+validate features with <a href="/skills/validate-a-machine-learning-feature/">Validate a machine learning feature</a>, and
+manage incidents with <a href="/skills/create-a-fraud-response-plan/">Create a fraud response plan</a>.</p>

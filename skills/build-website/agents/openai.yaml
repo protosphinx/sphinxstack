@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Website"
+  short_description: "Build and publish a website with real content"
+  default_prompt: "Use $build-website to help me complete this workflow with verified evidence."

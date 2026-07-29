@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check Color Contrast"
+  short_description: "Measure and repair accessible color contrast"
+  default_prompt: "Use $check-color-contrast to evaluate and repair contrast in this interface."

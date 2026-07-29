@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage a project recovery"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $manage-a-project-recovery to complete and verify this operations task."

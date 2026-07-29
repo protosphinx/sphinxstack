@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to Resume Identity Theft"
+  short_description: "Contain impersonation and protect affected people"
+  default_prompt: "Use $respond-to-resume-identity-theft to structure evidence, containment, and recovery."

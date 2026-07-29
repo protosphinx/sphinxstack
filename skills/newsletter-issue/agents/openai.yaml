@@ -1,0 +1,4 @@
+interface:
+  display_name: "Newsletter Issue"
+  short_description: "Write, test, and publish a newsletter issue"
+  default_prompt: "Use $newsletter-issue to help me complete this workflow with verified evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Choose What To Measure"
+  short_description: "Pick a few operating measures that change decisions"
+  default_prompt: "Use $choose-what-to-measure to help me complete this workflow with verified evidence."

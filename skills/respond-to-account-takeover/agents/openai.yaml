@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to Account Takeover"
+  short_description: "Protect victims, contain access, and recover identity"
+  default_prompt: "Use $respond-to-account-takeover to contain and recover this compromised account safely."

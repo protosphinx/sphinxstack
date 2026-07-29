@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Accessible Error Messages"
+  short_description: "Write clear errors that help every user recover"
+  default_prompt: "Use $write-accessible-error-messages to create accurate, actionable, and accessible recovery text."

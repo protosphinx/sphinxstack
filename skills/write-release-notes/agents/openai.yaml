@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Release Notes"
+  short_description: "Explain verified product changes to real users"
+  default_prompt: "Use $write-release-notes to help me complete this workflow with verifiable evidence."

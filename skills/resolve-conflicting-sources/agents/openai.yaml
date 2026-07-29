@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resolve Conflicting Sources"
+  short_description: "Explain why credible sources disagree and what follows"
+  default_prompt: "Use $resolve-conflicting-sources to compare these claims and explain the disagreement."

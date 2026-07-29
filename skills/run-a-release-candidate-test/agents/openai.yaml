@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Release Candidate Test"
+  short_description: "Verify a frozen build against release risks"
+  default_prompt: "Use $run-a-release-candidate-test to help me complete this workflow with verifiable evidence."

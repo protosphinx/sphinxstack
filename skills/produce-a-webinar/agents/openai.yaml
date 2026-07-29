@@ -1,0 +1,4 @@
+interface:
+  display_name: "Produce a Webinar"
+  short_description: "Run and verify an accessible live online session"
+  default_prompt: "Use $produce-a-webinar to coordinate this webinar from technical rehearsal through follow-up."

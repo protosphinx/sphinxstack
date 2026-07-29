@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Data Table"
+  short_description: "Design usable data tables for real comparison tasks"
+  default_prompt: "Use $design-a-data-table to define structure, interaction, access, and responsive behavior for this dataset."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find Openings"
+  short_description: "Find legitimate job openings that match real constraints"
+  default_prompt: "Use $find-openings to help me complete this workflow with verified evidence."

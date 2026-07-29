@@ -1,0 +1,4 @@
+interface:
+  display_name: "Process Webhooks Reliably"
+  short_description: "Verify, queue, deduplicate, and reconcile events"
+  default_prompt: "Use $process-webhooks-reliably to build a safe receiver and recovery path for these events."

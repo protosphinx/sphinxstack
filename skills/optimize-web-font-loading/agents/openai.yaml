@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize Web Font Loading"
+  short_description: "Improve font speed, stability, and resilience"
+  default_prompt: "Use $optimize-web-font-loading to improve and verify this site font delivery."

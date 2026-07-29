@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cold Outreach For Work"
+  short_description: "Prepare honest cold outreach for job opportunities"
+  default_prompt: "Use $cold-outreach-for-work to help me complete this workflow with verified evidence."

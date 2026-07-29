@@ -1,0 +1,4 @@
+interface:
+  display_name: "write-a-career-objective"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $write-a-career-objective to complete and verify this task."

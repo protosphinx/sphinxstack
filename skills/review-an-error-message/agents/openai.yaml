@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review an Error Message"
+  short_description: "Make one product error clear and recoverable"
+  default_prompt: "Use $review-an-error-message to help me complete this workflow with verifiable evidence."

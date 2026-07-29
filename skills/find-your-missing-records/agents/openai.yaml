@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find Your Missing Records"
+  short_description: "Find records the business should keep and does not"
+  default_prompt: "Use $find-your-missing-records to help me complete this workflow with verified evidence."

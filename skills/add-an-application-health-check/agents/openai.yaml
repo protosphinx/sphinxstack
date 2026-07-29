@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add an Application Health Check"
+  short_description: "Expose truthful liveness and readiness signals"
+  default_prompt: "Use $add-an-application-health-check to design a truthful health endpoint for this service."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trace a Request ID"
+  short_description: "Follow one request across service boundaries"
+  default_prompt: "Use $trace-a-request-id to reconstruct this request path from available evidence."

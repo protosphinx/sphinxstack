@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scope a Freelance Project"
+  short_description: "Define deliverables, boundaries, price inputs, and change rules"
+  default_prompt: "Use $scope-a-freelance-project to turn this client request into a clear scope."

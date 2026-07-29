@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conduct A Literature Search"
+  short_description: "Run a reproducible search across scholarly sources"
+  default_prompt: "Use $conduct-a-literature-search to design and document a reproducible literature search."

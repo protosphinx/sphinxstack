@@ -1,0 +1,4 @@
+interface:
+  display_name: "Store User Preferences Safely"
+  short_description: "Persist settings with privacy and recovery boundaries"
+  default_prompt: "Use $store-user-preferences-safely to design storage and synchronization for these settings."

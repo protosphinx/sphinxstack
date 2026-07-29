@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Event Communications"
+  short_description: "Coordinate timely messages across the event journey"
+  default_prompt: "Use $manage-event-communications to plan accurate messages before, during, and after this event."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit-a-resume-after-identity-fraud"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $audit-a-resume-after-identity-fraud to complete and verify this task."

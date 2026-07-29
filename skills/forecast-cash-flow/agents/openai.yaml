@@ -1,0 +1,4 @@
+interface:
+  display_name: "Forecast Cash Flow"
+  short_description: "Build a transparent short-term cash forecast and scenarios"
+  default_prompt: "Use $forecast-cash-flow to create a conservative cash forecast from these records."

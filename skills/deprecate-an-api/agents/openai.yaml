@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deprecate an API"
+  short_description: "Retire an API without surprising consumers"
+  default_prompt: "Use $deprecate-an-api to help me complete this workflow with verifiable evidence."

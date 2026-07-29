@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit an Automated Hiring System"
+  short_description: "Test hiring automation for validity and harm"
+  default_prompt: "Use $audit-an-automated-hiring-system to audit this system before or during hiring use."

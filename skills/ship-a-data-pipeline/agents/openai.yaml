@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ship A Data Pipeline"
+  short_description: "Build and operate a tested data pipeline"
+  default_prompt: "Use $ship-a-data-pipeline to help me complete this workflow with verified evidence."

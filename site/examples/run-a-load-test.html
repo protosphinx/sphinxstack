@@ -1,0 +1,45 @@
+<h2>Worked case: prepare for launch traffic</h2>
+<p class="case-trigger"><strong>Trigger:</strong> We need evidence that the service can survive the expected launch traffic.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Marketing expects ten thousand people in the first hour. Can we load test production?</div>
+<div class="cm cm-agent">Not without explicit approval and isolation. First we need the journey mix, arrival shape, service objective, dependency limits, and a safe environment.</div>
+<div class="cm cm-user cd-hide">Most users browse; about five percent create an account. We have a staging copy.</div>
+<div class="cm cm-agent cd-hide">We will model those as separate journeys and verify staging has production-shaped limits before trusting the result.</div>
+<div class="cm cm-user cd-hide">How high should we push it?</div>
+<div class="cm cm-agent cd-hide">To the first defined abort threshold. The goal is a capacity decision, not the largest number the generator can print.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">The test has a question and a stop condition.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The experiment record</h2>
+<table class="plain-table">
+<tbody>
+<tr><th>Workload</th><td>95 percent browse, 5 percent signup, ramp to 80 requests a second</td></tr>
+<tr><th>Success</th><td>p95 browse below 800 ms, signup below 2 s, errors below 1 percent</td></tr>
+<tr><th>Abort</th><td>errors above 3 percent for 2 minutes or database connections above 90 percent</td></tr>
+<tr><th>Result</th><td>safe through 62 requests a second; connection pool saturates next</td></tr>
+</tbody>
+</table>
+<h3>Evidence set</h3>
+<ul>
+<li><strong>Baseline run:</strong> one and ten virtual users with matching client and server counts.</li>
+<li><strong>Bottleneck record:</strong> latency rise aligns with database connection wait, not CPU.</li>
+<li><strong>Capacity decision:</strong> launch cap, headroom, pool change, and retest condition.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>The generator continues after the controller exits. The operator uses the separate kill switch,
+confirms request rate returns to baseline, and checks shared dependencies. Results from the affected
+stage are discarded because the workload no longer matches the recorded plan.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can we load test production?</summary><p>Only with explicit owner approval, a bounded plan, dependency coordination, safe test data, and immediate abort control. A production-shaped isolated environment is usually safer.</p></details>
+<details class="faq"><summary>What is the difference between load and stress testing?</summary><p>Load testing checks an expected workload. Stress testing deliberately explores behavior beyond the expected range and needs stricter containment.</p></details>
+<details class="faq"><summary>How long should a test run?</summary><p>Long enough for the question. A baseline may take minutes; queues, caches, leaks, and autoscaling may require longer held stages or a soak.</p></details>
+<details class="faq"><summary>Is requests per second enough?</summary><p>No. Record journey mix, payloads, arrivals, concurrency, think time, data, and cache state because they change system cost.</p></details>
+<details class="faq"><summary>When should the test stop?</summary><p>At the first approved abort threshold, unexpected external impact, invalid measurement, or loss of control over the generator.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can we load test production?","acceptedAnswer":{"@type":"Answer","text":"Only with explicit approval, containment, safe data, and abort control."}},{"@type":"Question","name":"What is the difference between load and stress testing?","acceptedAnswer":{"@type":"Answer","text":"Load checks expected traffic while stress explores beyond it."}},{"@type":"Question","name":"How long should a test run?","acceptedAnswer":{"@type":"Answer","text":"Long enough to answer the stated question and observe relevant system behavior."}},{"@type":"Question","name":"Is requests per second enough?","acceptedAnswer":{"@type":"Answer","text":"No. Journey mix, arrivals, data, and session behavior also matter."}},{"@type":"Question","name":"When should the test stop?","acceptedAnswer":{"@type":"Answer","text":"At an abort threshold, external impact, invalid measurement, or loss of control."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Repair missing measurements with <a href="/skills/design-observability/">Design observability</a> or revise structural limits with <a href="/skills/design-a-production-system/">Design a production system</a>.</p>

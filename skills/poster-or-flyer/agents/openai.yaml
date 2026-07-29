@@ -1,0 +1,4 @@
+interface:
+  display_name: "Poster or Flyer"
+  short_description: "Design a clear poster or flyer for a real event"
+  default_prompt: "Use $poster-or-flyer to help me complete this workflow with verified evidence."

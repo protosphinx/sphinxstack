@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Service Recovery"
+  short_description: "Repair customer harm after a service failure"
+  default_prompt: "Use $plan-a-service-recovery to help me complete this workflow with verifiable evidence."

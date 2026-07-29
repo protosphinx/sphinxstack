@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage a Maintenance Window"
+  short_description: "Coordinate a safe, observable maintenance event"
+  default_prompt: "Use $manage-a-maintenance-window to plan, communicate, and verify this maintenance event."

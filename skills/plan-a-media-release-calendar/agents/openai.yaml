@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Media Release Calendar"
+  short_description: "Sequence releases, dependencies, and owners"
+  default_prompt: "Use $plan-a-media-release-calendar to plan this production release schedule."

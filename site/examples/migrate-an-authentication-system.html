@@ -1,0 +1,34 @@
+<h2>Worked case: move identities without guessing account ownership</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A live business application must move two million accounts from a legacy username and password store to an external identity provider, but duplicate emails, shared mailboxes, local MFA, dormant administrators, service identities, active sessions, and conflicting recovery data make automatic linking unsafe.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we link every account that has the same email address?</div>
+<div class="cm cm-agent">No. Email text can be duplicated, recycled, shared, or unverified. Define a canonical subject and quarantine ambiguous ownership for proof-based review.</div>
+<div class="cm cm-user cd-hide">Could users keep all old sessions until they expire?</div>
+<div class="cm cm-agent cd-hide">Only if their subject, tenant, assurance, and privilege remain provable. High-risk cohorts should reauthenticate through the new verifier.</div>
+<div class="cm cm-user cd-hide">Leadership wants one irreversible weekend cutover.</div>
+<div class="cm cm-agent cd-hide">Stage cohorts, compare outcomes, set pause thresholds, and rehearse rollback before any broad wave.</div>
+<div class="cm cm-user">What proves readiness?</div>
+<div class="cm cm-agent">Reconciled identities and roles, successful critical journeys, resolved exceptions, support readiness, and a rollback rehearsal with preserved evidence.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Identity continuity needs reconciliation.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The authentication migration evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Identity reconciliation report</td><td>Source and target subjects, verified contacts, collisions, roles, tenants, factors, service identities, sessions, and unresolved cases</td><td>No privileged identity is linked by guesswork</td></tr>
+<tr><td>Cutover verification</td><td>Login, MFA, recovery, session transition, logout, administration, revocation, notification, support, and audit journeys</td><td>Every critical cohort passes in the target environment</td></tr>
+<tr><td>Rollback rehearsal</td><td>Pause, issuer restoration, session treatment, evidence preservation, user communication, reconciliation, and safe resumption</td><td>The last known-good verifier can resume without restoring revoked access</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A pilot shows that suspended legacy administrators are active after provisioning. The wave pauses automatically. Target sessions for the affected mapping are revoked, the source-status rule is corrected, the pilot is rebuilt, and identity and privilege counts are reconciled. The rollback path restores login for unaffected users while preserving every target-side event.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can email be the permanent user ID?</summary><p>No. Use an immutable internal subject and treat verified email as a changeable attribute.</p></details>
+<details class="faq"><summary>Must every user reset a password?</summary><p>Not always. Choose secure transfer, rehash, federation, or reset from source capability and risk.</p></details>
+<details class="faq"><summary>What happens to active sessions?</summary><p>Define acceptance overlap, issuer changes, privilege refresh, revocation, and forced reauthentication by cohort.</p></details>
+<details class="faq"><summary>How are account collisions resolved?</summary><p>Quarantine them and use approved evidence with stronger controls for privileged accounts.</p></details>
+<details class="faq"><summary>When should a migration wave stop?</summary><p>Stop when ownership is ambiguous, privileges drift, recovery weakens, or reconciliation exceeds the approved threshold.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can email be the permanent user ID?","acceptedAnswer":{"@type":"Answer","text":"No. Use an immutable internal subject."}},{"@type":"Question","name":"Must every user reset a password?","acceptedAnswer":{"@type":"Answer","text":"Choose the credential transition from capability and risk."}},{"@type":"Question","name":"What happens to active sessions?","acceptedAnswer":{"@type":"Answer","text":"Handle them through an explicit transition policy."}},{"@type":"Question","name":"How are account collisions resolved?","acceptedAnswer":{"@type":"Answer","text":"Quarantine ambiguity for proof-based review."}},{"@type":"Question","name":"When should a migration wave stop?","acceptedAnswer":{"@type":"Answer","text":"Stop on ambiguity, control regression, or failed reconciliation."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Design resulting sessions with <a href="/skills/design-session-management/">Design session management</a>,
+verify journeys with <a href="/skills/test-authentication-flows/">Test authentication flows</a>, and
+manage machine identities with <a href="/skills/manage-service-accounts/">Manage service accounts</a>.</p>

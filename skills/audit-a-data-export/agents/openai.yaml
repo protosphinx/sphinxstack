@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit a data export"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $audit-a-data-export to complete and verify this data task."

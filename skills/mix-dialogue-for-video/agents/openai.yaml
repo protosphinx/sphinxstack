@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mix Dialogue for Video"
+  short_description: "Create clear consistent spoken-word mixes"
+  default_prompt: "Use $mix-dialogue-for-video to mix and verify dialogue for this video."

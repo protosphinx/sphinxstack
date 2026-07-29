@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-service-health-check"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $design-a-service-health-check to complete and verify this task."

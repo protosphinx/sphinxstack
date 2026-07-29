@@ -1,0 +1,4 @@
+interface:
+  display_name: "Synthesize Design Research"
+  short_description: "Turn research evidence into bounded design insights"
+  default_prompt: "Use $synthesize-design-research to analyze this research without erasing contradiction or uncertainty."

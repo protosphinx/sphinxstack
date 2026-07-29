@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage-a-research-collaboration"
+  short_description: "Run a verified manage a research collaboration workflow"
+  default_prompt: "Use $manage-a-research-collaboration to complete and verify this task."

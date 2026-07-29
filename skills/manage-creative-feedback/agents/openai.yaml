@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Creative Feedback"
+  short_description: "Turn conflicting feedback into owned decisions"
+  default_prompt: "Use $manage-creative-feedback to consolidate this feedback into clear decisions."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Scholarship Essay"
+  short_description: "Build a truthful, specific scholarship essay"
+  default_prompt: "Use $write-a-scholarship-essay to develop an evidence-backed essay for this scholarship."

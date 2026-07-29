@@ -1,0 +1,45 @@
+<h2>Worked case: split a live name column</h2>
+<p class="case-trigger"><strong>Trigger:</strong> We must change a live table without losing writes or taking the product offline.</p>
+<div class="chatdemo">
+<div class="cm cm-user">We need to replace users.name with given_name and family_name this week.</div>
+<div class="cm cm-agent">Before commands: which readers and writers use the column, how large is the table, and has a current backup been restored successfully?</div>
+<div class="cm cm-user cd-hide">The API and two reports use it. Twelve million rows. Backups run nightly, but nobody has restored one lately.</div>
+<div class="cm cm-agent cd-hide">Then restoration is the first gate. We will also expand the schema before changing either reader.</div>
+<div class="cm cm-user cd-hide">Can we rename the column and fix errors as they appear?</div>
+<div class="cm cm-agent cd-hide">No. That creates an outage and makes rollback depend on hurried code. We will keep both paths compatible during the move.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">The first migration step protects recovery.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The migration plan</h2>
+<ol>
+<li>Add nullable new columns with no table rewrite.</li>
+<li>Deploy compatible code that writes old and new values.</li>
+<li>Backfill stable ID ranges in resumable batches.</li>
+<li>Reconcile null counts, samples, and application reads.</li>
+<li>Move reads, observe, then remove the old path in a later release.</li>
+</ol>
+<h3>Evidence set</h3>
+<ul>
+<li><strong>Staging rehearsal:</strong> 12 million shaped rows, measured locks, duration, log growth, and lag.</li>
+<li><strong>Reconciliation query:</strong> old rows equal populated new rows plus reviewed exceptions.</li>
+<li><strong>Rollback proof:</strong> tested code revert, preserved old column, threshold, and named operator.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>Replication lag crosses the approved threshold during batch 14. The operator stops the
+resumable worker, records its checkpoint, and confirms lag returns to normal. Because old and
+new columns are still written, the application remains correct. The next run resumes at a lower
+batch rate after review.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Why restore the backup before changing anything?</summary><p>A backup is only a recovery option after a restore proves it can be read and meets the required recovery time.</p></details>
+<details class="faq"><summary>What is expand and contract?</summary><p>Add a compatible new shape, move traffic and verify it, then remove the old shape in a later release.</p></details>
+<details class="faq"><summary>Can a migration be rolled back?</summary><p>Sometimes. Code may be reverted while data cannot. The plan must state the last reversible point and when forward repair is safer.</p></details>
+<details class="faq"><summary>Why batch the backfill?</summary><p>Bounded batches limit locks and resource use, make progress measurable, and allow safe pause and resume.</p></details>
+<details class="faq"><summary>When can the old column be removed?</summary><p>After every reader and writer uses the new path, reconciliation passes, and the agreed observation and rollback window has ended.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why restore the backup before changing anything?","acceptedAnswer":{"@type":"Answer","text":"A backup becomes a recovery option only after a successful timed restore."}},{"@type":"Question","name":"What is expand and contract?","acceptedAnswer":{"@type":"Answer","text":"Add a compatible shape, move and verify traffic, then remove the old shape later."}},{"@type":"Question","name":"Can a migration be rolled back?","acceptedAnswer":{"@type":"Answer","text":"Sometimes. The plan must state the last reversible point and when forward repair is safer."}},{"@type":"Question","name":"Why batch the backfill?","acceptedAnswer":{"@type":"Answer","text":"Batches limit resource use and allow measured pause and resume."}},{"@type":"Question","name":"When can the old column be removed?","acceptedAnswer":{"@type":"Answer","text":"After all consumers move, reconciliation passes, and the observation window ends."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Use <a href="/skills/design-observability/">Design observability</a> for integrity and lag signals, or <a href="/skills/ship-a-data-pipeline/">Ship a data pipeline</a> when historical records need controlled replay.</p>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start Selling Something"
+  short_description: "Test and launch a small, honest offer"
+  default_prompt: "Use $start-selling-something to help me complete this workflow with verified evidence."

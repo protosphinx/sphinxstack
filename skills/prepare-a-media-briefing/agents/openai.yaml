@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Media Briefing"
+  short_description: "Prepare sources, evidence, boundaries, and follow-up"
+  default_prompt: "Use $prepare-a-media-briefing to prepare this spokesperson and briefing evidence."

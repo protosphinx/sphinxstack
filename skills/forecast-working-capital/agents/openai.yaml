@@ -1,0 +1,4 @@
+interface:
+  display_name: "Forecast Working Capital"
+  short_description: "Forecast receivables, inventory, and payables"
+  default_prompt: "Use $forecast-working-capital to model and stress-test operating cash needs."

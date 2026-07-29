@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Unit Economics"
+  short_description: "Model contribution, acquisition, and payback"
+  default_prompt: "Use $model-unit-economics to build and test this unit economics model."

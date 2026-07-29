@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a bulk action flow"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $design-a-bulk-action-flow to complete and verify this design task."

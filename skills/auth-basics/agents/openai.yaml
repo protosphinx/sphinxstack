@@ -1,0 +1,4 @@
+interface:
+  display_name: "Auth Basics"
+  short_description: "Add provider-managed authentication and authorization"
+  default_prompt: "Use $auth-basics to help me complete this workflow with verified evidence."

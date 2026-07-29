@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate Untrusted Input"
+  short_description: "Constrain external input at trust boundaries"
+  default_prompt: "Use $validate-untrusted-input to define and test validation for this input boundary."

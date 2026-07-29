@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Delegation Brief"
+  short_description: "Delegate an outcome with authority and guardrails"
+  default_prompt: "Use $write-a-delegation-brief to prepare a clear, bounded delegation."

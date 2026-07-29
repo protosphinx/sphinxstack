@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit-a-digital-asset-library"
+  short_description: "Audit media identity, rights, and retrieval"
+  default_prompt: "Use $audit-a-digital-asset-library to complete and verify this task."

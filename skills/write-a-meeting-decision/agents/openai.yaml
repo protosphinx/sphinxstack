@@ -1,0 +1,4 @@
+interface:
+  display_name: "write a meeting decision"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $write-a-meeting-decision to complete and verify this operations task."

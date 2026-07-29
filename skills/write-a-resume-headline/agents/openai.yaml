@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Resume Headline"
+  short_description: "Summarize role fit without empty claims"
+  default_prompt: "Use $write-a-resume-headline to write a precise headline for this resume."

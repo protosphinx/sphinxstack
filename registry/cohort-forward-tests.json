@@ -1,0 +1,1497 @@
+[
+  {
+    "cohort_id": "foundation-150",
+    "skill_id": "migrate-a-website",
+    "scenario": "Move a 280-page community college WordPress site to a static generator on the same domain while preserving admissions traffic and a seven-day rollback path.",
+    "observed_artifacts": [
+      "complete URL and content inventory",
+      "version-controlled redirect manifest",
+      "content parity and launch checklists",
+      "cutover, monitoring, and rollback runbook"
+    ],
+    "result": "pass",
+    "notes": "The procedure preserved URL history, separated navigation from URL design, defined explicit launch gates, and did not claim traffic priority without analytics and Search Console evidence."
+  },
+  {
+    "cohort_id": "foundation-150",
+    "skill_id": "design-a-data-model",
+    "scenario": "Model a tool-lending library with interchangeable catalog items, uniquely tagged copies, loans, return inspections, changing member email, retirement, and waived late fees.",
+    "observed_artifacts": [
+      "entity relationship model and glossary",
+      "field-level data dictionary",
+      "database invariants and derived facts",
+      "tricky workflow and query checks"
+    ],
+    "result": "pass",
+    "notes": "The procedure separated catalog entries from physical copies, retained temporal history, modeled waivers as ledger adjustments, and exposed unresolved policy decisions instead of inventing them."
+  },
+  {
+    "cohort_id": "foundation-150",
+    "skill_id": "prepare-a-performance-review",
+    "scenario": "Prepare a self-review covering a shared checkout redesign, payment-outage response, mentoring, and a missed legacy reporting-job goal without inventing metrics or claiming team outcomes as individual work.",
+    "observed_artifacts": [
+      "evidence-bounded self-review structure",
+      "claim-by-claim evidence table",
+      "missing-evidence checklist",
+      "measurable next-period goal template"
+    ],
+    "result": "pass",
+    "notes": "The procedure separated individual responsibility from team results, kept unknown facts as explicit placeholders, treated the missed goal candidly, and required dated evidence before submission."
+  },
+  {
+    "cohort_id": "core-175",
+    "skill_id": "triage-support-tickets",
+    "scenario": "Prioritize and route a mixed SaaS queue containing a multi-merchant payment outage, possible cross-customer privacy exposure, a self-harm threat, an accessibility blocker, stale financial and feature cases, repeated transfers, and automated duplicates without supplied numeric severity or response rules.",
+    "observed_artifacts": [
+      "risk-ordered triage and ownership table",
+      "case-specific acknowledgement drafts",
+      "duplicate and incident linkage map",
+      "missing-rules list and consistency review"
+    ],
+    "result": "pass",
+    "notes": "The procedure prioritized safety, privacy, payment availability, and accessibility from observable harm; preserved customer-specific obligations across duplicates; refused to invent absent service levels; and distinguished resolved automation noise from active customer cases."
+  },
+  {
+    "cohort_id": "core-175",
+    "skill_id": "forecast-a-sales-pipeline",
+    "scenario": "Forecast Q4 signed bookings from eight opportunity rows containing a duplicate, a pre-quarter signed deal, a missing amount, stale discovery work, an unresolved pricing dispute, an out-of-quarter product dependency, foreign currency, historical slippage, and limited implementation capacity.",
+    "observed_artifacts": [
+      "reconciled opportunity forecast ledger",
+      "conservative, expected, and upside scenarios",
+      "concentration, timing, currency, and capacity sensitivities",
+      "quarter-end actuals scorecard"
+    ],
+    "result": "pass",
+    "notes": "The procedure removed the duplicate and pre-quarter booking, refused to monetize the unknown amount, discounted stale and dependency-blocked work, ignored unsupported owner confidence, labeled the exchange-rate assumption, and preserved a later calibration path."
+  },
+  {
+    "cohort_id": "core-175",
+    "skill_id": "investigate-a-customer-complaint",
+    "scenario": "Investigate a complaint where a support agent immediately cancelled workspace access despite a written request to pause renewal and use email, later claimed uncertain phone consent, and left the workspace recoverable under a policy requiring written confirmation for access-removing cancellation.",
+    "observed_artifacts": [
+      "claim register and controlled evidence log",
+      "chronology with claim-by-claim findings",
+      "neutral follow-up questions and recommended resolution",
+      "owned corrective-action tracker"
+    ],
+    "result": "pass",
+    "notes": "The procedure noticed that cancellation preceded the call, kept oral assent unresolved, substantiated the written-policy breach without claiming deleted data, restricted accessibility information, separated restoration from billing authority, and required evidence for every promised correction."
+  },
+  {
+    "cohort_id": "core-200",
+    "skill_id": "investigate-a-flaky-test",
+    "scenario": "Investigate an expiry test that fails only in a parallel Linux CI shard using shared PostgreSQL, a process-local fake clock, reused identifiers, timestamp-window cleanup, an arbitrary sleep, and a retry that turns the job green.",
+    "observed_artifacts": [
+      "attempt-level baseline and failure signatures",
+      "ranked hypothesis ledger with discriminating predictions",
+      "clock, identifier, ordering, isolation, and worker-lifecycle experiments",
+      "minimal reproducer and evidence-based fix acceptance criteria"
+    ],
+    "result": "pass",
+    "notes": "The procedure rejected sleeps and retries as causal fixes, separated database and process clock domains, exposed unsafe shared-row cleanup, required controlled experiments before naming a root cause, and retained the original parallel CI context as the final stability gate."
+  },
+  {
+    "cohort_id": "core-200",
+    "skill_id": "maintain-a-public-api",
+    "scenario": "Evaluate a 30-day public API release that removes a response field, changes validation status and shape, requires a formerly optional field, lowers pagination defaults, changes authorization scopes, adds metadata, and recommends retrying a non-idempotent POST despite incomplete consumer telemetry and 90-day partner notice terms.",
+    "observed_artifacts": [
+      "change-by-change compatibility classification",
+      "additive and versioned migration plan",
+      "provider and consumer contract-test matrix",
+      "privacy-safe observability, communication, rollback, and release gates"
+    ],
+    "result": "pass",
+    "notes": "The procedure stopped the unsafe in-place release, treated incomplete telemetry as a lower bound rather than proof, preserved version-one behavior, moved breaking changes behind a versioned contract, required idempotency before POST retries, and honored contractual notice windows."
+  },
+  {
+    "cohort_id": "core-200",
+    "skill_id": "verify-a-backup-restore",
+    "scenario": "Verify whole-service recovery for a subscription platform with green snapshot jobs, a possibly unavailable historical KMS key, an apparent WAL gap near billing updates, unproven attachment recovery, unsafe outbound routes, uncertain historical application compatibility, and unmeasured recovery objectives.",
+    "observed_artifacts": [
+      "dependency-complete backup inventory",
+      "gated and timed restore transcript plan",
+      "financial, subscription, permission, attachment, and journey reconciliation report",
+      "stop decision plus cleanup and sensitive-data evidence requirements"
+    ],
+    "result": "pass",
+    "notes": "The procedure stopped before unsafe data restoration, refused to convert backup-job status into recovery evidence, preserved the older and chain-gap failures, distinguished migration-assisted recovery from historical-artifact recovery, and left the two-hour RTO and fifteen-minute RPO explicitly unproven."
+  },
+  {
+    "cohort_id": "core-225",
+    "skill_id": "verify-a-statistical-claim",
+    "scenario": "Verify a board claim that hybrid work cut attrition by forty percent using two years of beginning-headcount ratios, concurrent policy and management changes, partial-year hires, changed exit coding, and an uncertain source-data revision.",
+    "observed_artifacts": [
+      "reproduced calculation with relative and percentage-point changes",
+      "alternative-definition and revision sensitivity table",
+      "denominator reconciliation and uncertainty analysis",
+      "causally bounded board-safe wording"
+    ],
+    "result": "pass",
+    "notes": "The procedure reproduced the narrow calculation but exposed the headcount denominator mismatch, an unexplained eighteen-person flow gap, revision ambiguity, broad statistical uncertainty, and concurrent causes; it rejected both the generic attrition label and the causal conclusion."
+  },
+  {
+    "cohort_id": "core-225",
+    "skill_id": "evaluate-a-vendor",
+    "scenario": "Select a donor CRM under an eight-week deadline and forty-two-thousand-dollar first-year cap when each vendor has a different mix of unverified claims, accessibility defects, data-location or recovery failures, hidden costs, lock-in, and incomplete contract evidence.",
+    "observed_artifacts": [
+      "must-have gate and evidence-status matrix",
+      "known-cost model with unresolved exposure",
+      "vendor-specific dispositions and contract conditions",
+      "auditable cure plan and no-award decision"
+    ],
+    "result": "pass",
+    "notes": "The procedure refused to turn sales claims, a polished demo, or an uncommitted roadmap into passed gates; it distinguished recovery time from recovery point evidence, kept cost unknowns visible, rejected post-hoc weighting, and recommended a bounded evidence cure rather than a forced selection."
+  },
+  {
+    "cohort_id": "core-225",
+    "skill_id": "prepare-an-insurance-claim",
+    "scenario": "Prepare a tenant water-loss claim with conflicting third-party cause statements, property moved before photographs, missing receipts and values, increasing mold odor, a damp electrical outlet, uncertain coverage and mitigation rules, and a fourteen-day notice deadline.",
+    "observed_artifacts": [
+      "truthful preliminary notice and attributed chronology",
+      "property, evidence, expense, and communications ledgers",
+      "urgent electrical, mold, mitigation, and notice actions",
+      "coverage-neutral unresolved-question register"
+    ],
+    "result": "pass",
+    "notes": "The procedure prioritized the damp-outlet and mold hazards, reported cause as undetermined, preserved conflicting statements by attribution, rejected the requested storm narrative, separated supported and unsupported expenses, avoided deciding coverage, and retained all missing evidence as explicit follow-up."
+  },
+  {
+    "cohort_id": "core-250",
+    "skill_id": "compare-financial-aid-offers",
+    "scenario": "Compare two college offers containing fixed scholarships, provisional grants, student and parent loans, work-study, ambiguous deposits, an outside scholarship with unknown displacement, different renewal rules, uncertain cost inflation, and a hard family cash limit.",
+    "observed_artifacts": [
+      "normalized direct-cost, total-cost, gift-aid, debt, and work table",
+      "current funding-gap scenarios excluding unwanted parent debt",
+      "bounded four-year renewal and inflation model",
+      "offer-specific clarification and reconsideration questions"
+    ],
+    "result": "pass",
+    "notes": "The procedure separated gift aid from debt and earned work, preserved provisional and displacement uncertainty, treated deposits consistently, refused to use Parent PLUS to close the gap, showed scholarship-loss sensitivity, and avoided converting modeling assumptions into promised future aid."
+  },
+  {
+    "cohort_id": "core-250",
+    "skill_id": "appeal-an-academic-decision",
+    "scenario": "Prepare a deadline-sensitive appeal of an academic-integrity decision where required evidence and a meeting were not provided before judgment, the final notice cites undisclosed classifier evidence, contemporaneous drafting records exist, and the policy permits only procedural error or genuinely unavailable new evidence.",
+    "observed_artifacts": [
+      "permitted-grounds and timeliness analysis",
+      "neutral chronology and privacy-aware evidence index",
+      "concise policy-grounded protective appeal",
+      "process-focused remedy and appeal-office question set"
+    ],
+    "result": "pass",
+    "notes": "The procedure centered the documented pre-decision process failure, treated existing drafting records as evidence of materiality rather than falsely calling them unavailable, minimized classmate disclosure, requested a proportional re-hearing remedy, and made no promise that the appeal would succeed."
+  },
+  {
+    "cohort_id": "core-250",
+    "skill_id": "prepare-artwork-for-delivery",
+    "scenario": "Preflight a same-day event-poster package with ambiguous final files, a web-only hero-image license, insufficient effective resolution, unresolved sponsor logo, hidden donor data, uncertain font rights, an unapproved translation, noncompliant print color and bleed, and a clipped social export.",
+    "observed_artifacts": [
+      "channel-specific production stop decision",
+      "rights, approval, content, and technical preflight findings",
+      "controlled remediation and verification sequence",
+      "sanitized delivery structure and checksum manifest schema"
+    ],
+    "result": "pass",
+    "notes": "The procedure refused to send a mixed working folder, kept approval and rights blockers outside the printer's authority, preserved the approved source separately, required actual PDF and separation checks, excluded confidential and stale assets, and distinguished transfer from recipient production acceptance."
+  },
+  {
+    "cohort_id": "core-275",
+    "skill_id": "plan-capacity-and-staffing",
+    "scenario": "Plan support staffing when channel definitions, concurrency, shrinkage, backlog flow, reopen demand, senior capacity, hiring lead time, and campaign demand are all partly unresolved, while leadership asks for exactly four hires.",
+    "observed_artifacts": [
+      "reconciled demand and effective-capacity ranges",
+      "skill-constrained departure and campaign scenarios",
+      "staged options with sustainable-load limits",
+      "owned staffing triggers and missing-data plan"
+    ],
+    "result": "pass",
+    "notes": "The procedure rejected a false-precision four-hire answer, reconciled arrival and abandonment interpretations, treated the fifty-seven percent availability calculation as provisional, exposed the senior bottleneck and ramp delay, bounded backlog and reopen uncertainty, and recommended reversible bridge capacity with explicit decision gates."
+  },
+  {
+    "cohort_id": "core-275",
+    "skill_id": "design-an-on-call-rotation",
+    "scenario": "Design global payments on-call for seven engineers when most pages are unactionable, a database expert is an exhausted hidden dependency, access is shared, regional compensation differs, runbooks are stale, and leadership demands launch next Monday.",
+    "observed_artifacts": [
+      "service scope and severity evidence record",
+      "qualified rotation and formal escalation design",
+      "failed-primary, access, and database-failover rehearsal plan",
+      "burden, compensation, recovery, and stop-condition review"
+    ],
+    "result": "pass",
+    "notes": "The procedure rejected a next-Monday launch, quantified noise and specialist concentration, refused hidden off-rota labor, treated compensation and recovery as unresolved jurisdiction-specific gates, required individual privileged access and primary-failure rehearsals, and narrowed the interim service promise to demonstrated capacity."
+  },
+  {
+    "cohort_id": "core-275",
+    "skill_id": "run-a-root-cause-analysis",
+    "scenario": "Investigate duplicate refunds after timeout-after-accept responses, manual replay, changed retry and queue behavior, regenerated idempotency keys, stale guidance, missing shard logs, incompatible time sources, and pressure to blame one operator.",
+    "observed_artifacts": [
+      "bounded impact and evidence-provenance inventory",
+      "uncertainty-aware synchronized chronology",
+      "discriminating causal hypothesis ledger",
+      "cross-layer actions and effectiveness-verification plan"
+    ],
+    "result": "pass",
+    "notes": "The procedure refused to convert exposure into confirmed impact or assume unknown timezone offsets, preserved missing evidence, separated leading mechanisms from contributing conditions, rejected operator blame without proof, and required transaction-level tests plus independent residual-risk acceptance before closure."
+  },
+  {
+    "cohort_id": "core-300",
+    "skill_id": "rotate-a-compromised-secret",
+    "scenario": "Rotate a broadly privileged production credential exposed for about thirty-six hours in public source history, CI logs, and possibly an image layer when consumers, derived sessions, downstream credentials, and a payroll-safe revocation order are incomplete.",
+    "observed_artifacts": [
+      "restricted exposure and evidence-preservation record",
+      "dependency-specific consumer cutover sequence",
+      "old-credential and derived-session rejection proof",
+      "contained, recovered, and closed status gates"
+    ],
+    "result": "pass",
+    "notes": "The procedure treated the event as confirmed compromise, made authority and session revocation more urgent than history rewriting, preserved evidence without reproducing the secret, rejected an ownerless consumer as a reason to keep access alive, protected settlement integrity through canary and reconciliation gates, and kept unverifiable third-party possession as owned residual risk."
+  },
+  {
+    "cohort_id": "core-300",
+    "skill_id": "define-service-reliability-objectives",
+    "scenario": "Define checkout objectives when an API success precedes hosted payment, inventory, and order outcomes, retries duplicate request events, overnight traffic is sparse, telemetry was missing during an incident, vendors seek exclusions, and contract language is undefined.",
+    "observed_artifacts": [
+      "versioned end-to-end indicator definitions",
+      "good, bad, and unknown denominator policy",
+      "incident, retry, exclusion, and low-volume backtest plan",
+      "alert, breach, and announcement decision gates"
+    ],
+    "result": "pass",
+    "notes": "The procedure rejected the convenient health check and next-week claim, based availability on distinct user attempts and end-to-end correctness, treated missing telemetry as unknown rather than good, separated user-centered objectives from unresolved contract interpretation, and required historical backtests plus failure rehearsals before approval."
+  },
+  {
+    "cohort_id": "core-300",
+    "skill_id": "perform-a-business-impact-analysis",
+    "scenario": "Prioritize university storm recovery when every owner claims one-hour criticality, a fifteen-minute alert target depends on slower shared services and one specialist, fuel shares the hazard region, financial claims are unsigned, manual paths are missing, and backups are untested.",
+    "observed_artifacts": [
+      "sourced impact and confidence register",
+      "time-banded minimum-service model",
+      "dependency-tested recovery objective candidates",
+      "sequenced recovery priority and evidence decisions"
+    ],
+    "result": "pass",
+    "notes": "The procedure preserved stakeholder estimates as unverified claims, showed that the alert objective could not outrun identity and common dependencies, prioritized safety outcomes and degraded service rather than departmental advocacy, refused to assign a numerical recovery point to an untested backup, and tied approval to timed exercises or explicit risk acceptance."
+  },
+  {
+    "cohort_id": "core-325",
+    "skill_id": "plan-a-content-migration",
+    "scenario": "Move a multilingual public help center with mismatched inventory, mixed restricted content, colliding locale slugs, active edits, old-domain forms, expiring embeds, changed consent behavior, inaccessible documents, material search traffic, and an untested proprietary backup.",
+    "observed_artifacts": [
+      "source-disposition and target reconciliation ledger",
+      "deterministic transform and exception specification",
+      "redirect, permission, and critical-journey parity report",
+      "launch, abort, rollback, and retirement decision gates"
+    ],
+    "result": "pass",
+    "notes": "The procedure refused global cutover until the seventy-two-item gap and restricted population reconcile, required a freeze or ordered delta capture, rejected locale overwrite and homepage redirects, treated forms and consent as critical journeys, made a restored independent archive part of rollback proof, and rejected immediate source deletion."
+  },
+  {
+    "cohort_id": "core-325",
+    "skill_id": "respond-to-public-criticism",
+    "scenario": "Respond to a viral contractor thread containing a verified ongoing billing failure, an unresolved allegation of executive intent, an exposed employee phone number, material from an active regulatory inquiry, unreconciled refunds, and executive pressure for a combative legal threat.",
+    "observed_artifacts": [
+      "versioned claim and disclosure-boundary record",
+      "affected-customer and employee protection priorities",
+      "proportionate same-day response decision and draft",
+      "promise-level correction and follow-through proof"
+    ],
+    "result": "pass",
+    "notes": "The procedure rejected both a blanket denial and total silence, separated verified billing harm from disputed intent and inquiry claims, stopped continuing harm and protected the exposed employee before optimizing public tone, bounded the statement to confirmed facts and a timed update, and required finance, billing, support, privacy, and regulatory gates."
+  },
+  {
+    "cohort_id": "core-325",
+    "skill_id": "assess-reputation-risk",
+    "scenario": "Assess a five-year exclusive logistics partnership with a concentrated operational dependency, unrepresentative positive sentiment, labor allegations and a confidential report, unsupported environmental marketing, untested failover, unknown exit cost, and contract terms constraining termination and speech.",
+    "observed_artifacts": [
+      "sourced stakeholder expectation and evidence register",
+      "underlying-harm and visibility scenario analysis",
+      "response options with contract and operational controls",
+      "decision triggers, authority, and effectiveness review"
+    ],
+    "result": "pass",
+    "notes": "The procedure rejected approval as drafted, treated sentiment, allegations, denials, policy, and mismatched assurance as different evidence classes, protected worker identities, separated communications from controls over labor and delivery harm, recommended a non-exclusive reversible pilot only after hard safeguards, and retained board-level residual-risk authority."
+  },
+  {
+    "cohort_id": "core-350",
+    "skill_id": "govern-a-design-system",
+    "scenario": "Govern a design system serving twelve product teams when decisions live in chat, an accessibility-critical fix breaks consumers, forty-three exceptions never expire, forks are undocumented, maintainers lack backup authority, and package presence is reported as adoption.",
+    "observed_artifacts": [
+      "scope, service promise, and decision-rights governance charter",
+      "runtime-aware consumer and dependency inventory",
+      "contribution and release evidence process",
+      "exception, retirement, measurement, and failure-rehearsal controls"
+    ],
+    "result": "pass",
+    "notes": "The procedure rejected mandatory release and the seventy-eight percent adoption claim, separated package presence from runtime and conforming use, classified the focus fix as behaviorally breaking despite its accessibility urgency, required expiring exceptions and fork disclosure, calibrated service promises to capacity, and proved backup release and rollback authority through rehearsals."
+  },
+  {
+    "cohort_id": "core-350",
+    "skill_id": "plan-a-design-system-migration",
+    "scenario": "Migrate a major shared-UI release across sixty-four known and at least nineteen unowned consumers with token, semantic, markup, focus, theme, framework, localization, analytics, override, and seasonal-sale constraints that prevent simultaneous adoption.",
+    "observed_artifacts": [
+      "deployable-consumer migration inventory and state model",
+      "token, API, theme, focus, and platform compatibility strategy",
+      "risk-sequenced migration waves and verification matrix",
+      "consumer rollback, exception, support, and retirement gates"
+    ],
+    "result": "pass",
+    "notes": "The procedure treated unknown consumers and override cohorts as blockers, refused to treat a passing codemod or installation as completion, created bounded compatibility seams, deferred sale-critical changes without observation time, preserved a supported mobile legacy path, required per-consumer rollback, and allowed only soft deprecation rather than hard retirement at four weeks."
+  },
+  {
+    "cohort_id": "core-350",
+    "skill_id": "audit-accessibility-at-scale",
+    "scenario": "Audit a national nonprofit portfolio where a scanner reports ninety-seven percent from sampled public HTML while authenticated benefits, forms, thousands of documents, video, custom widgets, mobile apps, missing ownership, incomplete analytics, and severe user complaints remain outside coverage.",
+    "observed_artifacts": [
+      "estate coverage inventory and audit-state register",
+      "mandatory census and risk-based sampling record",
+      "automated, manual, assistive-technology, and participant test program",
+      "barrier, alternative-access, remediation, and verification model"
+    ],
+    "result": "pass",
+    "notes": "The procedure rejected any portfolio accessibility claim, treated the scanner result as narrowly bounded evidence, made complaint locations and critical journeys census cohorts, prioritized user harm and recurrence over issue count, required immediate equivalent access for benefits and required training, preserved untested assets as not audited, and required exact plus root-pattern retesting before closure."
+  },
+  {
+    "cohort_id": "core-375",
+    "skill_id": "investigate-a-payment-discrepancy",
+    "scenario": "Investigate a large supplier payment settled to bank details changed through email when the supplier denies receipt, mailbox forwarding and account-reset evidence may be volatile, verification claims conflict, another payment is queued, and food delivery continuity is threatened.",
+    "observed_artifacts": [
+      "sourced payment chronology and evidence custody manifest",
+      "cross-system transaction reconciliation ledger",
+      "identity, privilege, session, and integration access-boundary map",
+      "authorized containment, recovery, accounting, and control-repair record"
+    ],
+    "result": "pass",
+    "notes": "The procedure held the queued payment and began bank recovery without corrupting the settled transaction, prioritized volatile evidence before further resets, independently verified the supplier, rejected confrontation and accusation, preserved competing hypotheses, separated ledger correction from fund recovery, and required verified fund, access, control, and continuity outcomes."
+  },
+  {
+    "cohort_id": "core-375",
+    "skill_id": "create-a-fraud-response-plan",
+    "scenario": "Build a multinational fraud response for supplier, refund, and payroll allegations when the normal CFO owner is named, evidence expires within seven days, affected families and a reporter face continuing harm, roles conflict across functions and countries, and leadership demands blanket account disabling and a public denial.",
+    "observed_artifacts": [
+      "independent primary and alternate response authority map",
+      "case, preservation, custody, allegation, containment, and decision logs",
+      "affected-family, reporter, payroll, supplier, and continuity protection model",
+      "conflict, evidence-expiry, false-positive, leak, and retaliation rehearsals"
+    ],
+    "result": "pass",
+    "notes": "The procedure recused the named executive without treating allegation as guilt, rejected blanket disabling and unsupported denial, preserved expiring evidence before overt action, separated coordinated case streams until evidence linked them, protected families and the reporter immediately, used proportionate reversible containment, and tied closure to independently verified recovery and recurrence controls."
+  },
+  {
+    "cohort_id": "core-375",
+    "skill_id": "assess-third-party-concentration-risk",
+    "scenario": "Assess a healthcare scheduling portfolio with six nominal vendors whose identity, payment, ownership, cloud, fiber, backup capacity, data export, exit, and single-contractor dependencies may prevent the required four-hour minimum service despite no vendor exceeding one quarter of spend.",
+    "observed_artifacts": [
+      "critical-outcome and common-mode concentration map",
+      "four-hour demand, capacity, and minimum-service stress test",
+      "substitutability, data-portability, key-person, and exit evidence matrix",
+      "independent-path mitigation, exercise, and residual-risk decision record"
+    ],
+    "result": "pass",
+    "notes": "The procedure rejected spend share and vendor count as resilience evidence, exposed shared identity, payment, parent, fiber, and skill failure paths, failed the unreserved forty-eight-hour backup against the four-hour need, kept payment criticality and other missing facts as unknown, required restored exports and exercised capacity, and allowed risk reduction only after a changed or proven independent path."
+  },
+  {
+    "cohort_id": "core-400",
+    "skill_id": "run-an-event-command-center",
+    "scenario": "Coordinate a four-venue city festival and online stream through simultaneous severe weather, rail closure, step-free route failure, missing child report, medical surge, supplier delay, false evacuation posts, fragmented authority, director absence, and an imminent shift change.",
+    "observed_artifacts": [
+      "primary and alternate command structure and decision-rights record",
+      "venue-level common operating picture and restricted incident channels",
+      "sourced live decision, communication, resource, and incident logs",
+      "acknowledged shift handoff and recovery closeout package"
+    ],
+    "result": "pass",
+    "notes": "The procedure activated alternate command without waiting for the unreachable director, deferred appropriately to venue and emergency authority, prioritized safeguarding and medical action, separated sensitive incident data from shared status, used evidence deadlines for weather and transport decisions, corrected misinformation without overclaiming, controlled unsafe supplier recovery, and required explicit night-shift acceptance and complete obligation closeout."
+  },
+  {
+    "cohort_id": "core-400",
+    "skill_id": "plan-crowd-safety-and-egress",
+    "scenario": "Decide whether to open an eighteen-thousand-person outdoor concert when a comparable late-arrival surge, rail delay, narrowed exit, rain-affected route, shared step-free and emergency lane, limited post-show transport, unexercised stewards, and missing route and flow evidence conflict with leadership's full-capacity deadline.",
+    "observed_artifacts": [
+      "crowd profile and interval arrival stress model",
+      "site route, usable-width, queue, transport, and discharge register",
+      "accessible-egress and emergency-access operating plan",
+      "functional evacuation exercise and qualified opening gates"
+    ],
+    "result": "pass",
+    "notes": "The procedure rejected licensed capacity as proof of safe operation, calculated the known final-hour stress demand without inventing route splits, refused to count unmeasured or unstable routes, preserved continuous step-free egress and emergency access, withheld critical posts from unexercised staff, created numeric trigger responsibilities for qualified owners, and allowed opening only after route, capacity, communication, staffing, transport, and evacuation evidence passed."
+  },
+  {
+    "cohort_id": "core-400",
+    "skill_id": "govern-event-data-and-consent",
+    "scenario": "Govern a global conference combining payment, accessibility, child, biometric, sponsor, networking, Wi-Fi, chat, media, survey, marketing, and cross-border vendor data when organizers want bundled consent and live incidents already involve a personal spreadsheet and unclear sponsor CRM uploads.",
+    "observed_artifacts": [
+      "field-to-system event data lifecycle and access register",
+      "separated attendance, sponsor, networking, media, analytics, and marketing choice model",
+      "vendor, cross-border, media, child, rights, and sponsor-sharing controls",
+      "incident containment plus cross-system retention and deletion proof"
+    ],
+    "result": "pass",
+    "notes": "The procedure rejected bundled consent, biometrics, default profiles, unresolved analytics, sponsor sharing, and marketing as currently designed, preserved necessary registration and access delivery under heightened controls, provided meaningful nonconsent alternatives, opened the spreadsheet and sponsor upload as bounded incident cases, avoided inventing legal breach conclusions, and required deletion verification across devices, CRM, vendors, media, backups, and authorized exceptions."
+  },
+  {
+    "cohort_id": "core-425",
+    "skill_id": "audit-an-automated-hiring-system",
+    "scenario": "Audit a high-volume retailer screening system that automatically rejects most applicants using resume gaps, timed assessment, device latency, inferred personality, and video analysis despite no local validity study, conflicting age and disability outcomes, accessibility complaints, rare opaque overrides, and an imminent renewal.",
+    "observed_artifacts": [
+      "role, component, feature, threshold, consequence, and fallback decision inventory",
+      "local job-validity, error, subgroup, missingness, and accessibility study",
+      "human-oversight, candidate notice, correction, alternative, and appeal tests",
+      "paused-scope, vendor-gate, remediation, revalidation, and monitoring record"
+    ],
+    "result": "pass",
+    "notes": "The procedure paused automatic rejection and unsupported features, rejected vendor-wide accuracy as local role validity, preserved sensitive data without inferring missing traits, analyzed errors and subgroup access by stage, treated a nominal override as inadequate human review, provided accessible alternative assessment and appeal, preserved prior decisions for qualified lookback, and required auditable vendor evidence before renewal or reauthorization."
+  },
+  {
+    "cohort_id": "core-425",
+    "skill_id": "conduct-a-workplace-investigation",
+    "scenario": "Investigate harassment and retaliation allegations against a regional executive when the normal HR lead reports to and has pre-judged the executive, evidence expires in four days, a reporter faces an imminent schedule change, anonymity is requested, accounts conflict, a witness is on medical leave, two countries are involved, and leadership wants findings in ten days.",
+    "observed_artifacts": [
+      "independent investigation mandate, authority, conflict, and jurisdiction records",
+      "affected-person, anti-retaliation, confidentiality, and interim-action controls",
+      "preservation, custody, allegation, chronology, interview, and respondent-opportunity matrices",
+      "bounded status, findings, action, review, and follow-through reports"
+    ],
+    "result": "pass",
+    "notes": "The procedure removed the conflicted HR lead from control without treating conflict as guilt, preserved volatile evidence immediately, paused a potentially retaliatory schedule change through neutral review, refused absolute confidentiality promises, accommodated the witness on medical leave, preserved respondent notice and contrary evidence, treated the board date as a status gate rather than a findings deadline, and separated factual findings from authorized employment action."
+  },
+  {
+    "cohort_id": "core-425",
+    "skill_id": "plan-a-workforce-reorganization",
+    "scenario": "Assess a six-week fifteen-percent role reduction based on manager rankings and an automation forecast when demand, workloads, critical specialists, contractors, five-jurisdiction duties, accommodations, vacancies, redeployment, consultation, service continuity, and net savings are unreconciled and managers are asked for names.",
+    "observed_artifacts": [
+      "work, demand, workforce, contractor, skill, dependency, and capacity model",
+      "automation validation, alternative-design, total-cost, and savings appraisal",
+      "jurisdiction, consultation, accommodation, redeployment, selection, and people-impact registers",
+      "continuity, transition, residual-risk, and post-change effectiveness dashboard"
+    ],
+    "result": "pass",
+    "notes": "The procedure stopped the request for names and rejected the percentage target as an organization design, converted automation claims into task-level hypotheses, reconciled contractor and critical-skill capacity, compared non-displacement alternatives before selection, recalculated net savings beyond salary, preserved disability and jurisdiction-specific protections, required future-work-linked moderated selection only if necessary, and made service continuity plus actual outcomes approval gates."
+  },
+  {
+    "cohort_id": "core-450",
+    "skill_id": "design-multitenant-authorization",
+    "scenario": "A growing project-management SaaS is consolidating separate customer databases into shared regional storage, but API routes, search, cache keys, exports, background jobs, signed file URLs, support impersonation, and recovery tools derive tenant context differently while enterprise launch is six weeks away.",
+    "observed_artifacts": [
+      "tenant boundary model, isolation invariants, and launch decision",
+      "central authorization decision contract and enforcement coverage inventory",
+      "cross-tenant test matrix, shadow-decision register, and isolation report",
+      "administrative recovery, incident rehearsal, migration, and rollback records"
+    ],
+    "result": "pass",
+    "notes": "The independent response made the current design a no-go, treated requested tenant identifiers as untrusted, derived context from verified membership or workload identity, denied missing or conflicting context, applied one decision contract across interactive and asynchronous paths, specified storage and cache isolation, tested malicious cross-tenant references, bounded support impersonation, and required rehearsed recovery plus an isolation-preserving rollback before enterprise launch."
+  },
+  {
+    "cohort_id": "core-450",
+    "skill_id": "migrate-an-authentication-system",
+    "scenario": "A live business application must move two million accounts from a legacy username and password store to an external identity provider, but duplicate emails, shared mailboxes, local MFA, dormant administrators, service identities, active sessions, and conflicting recovery data make automatic linking unsafe.",
+    "observed_artifacts": [
+      "identity inventory, canonical-subject specification, and reconciliation ledger",
+      "account-linking decision table, exception register, and protected recovery design",
+      "session-transition, service-identity, wave, and cutover verification records",
+      "rollback rehearsal and source-retirement decision"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected big-bang migration and email matching, assigned every source identity a disposition, quarantined collisions and privileged ambiguity, preserved MFA assurance, separated service identities, bounded legacy sessions, staged idempotent cohorts with pause gates, retained a shared revocation overlay, and required reconciliation plus a measured rollback rehearsal before source retirement."
+  },
+  {
+    "cohort_id": "core-450",
+    "skill_id": "respond-to-account-takeover",
+    "scenario": "A workspace owner reports password-reset messages and an authenticator they did not add while logs show a new location, API token, bulk export, forwarding-rule change, and ownership transfer attempt, but the registered email and phone may both be controlled by the attacker.",
+    "observed_artifacts": [
+      "account exposure timeline and evidence custody manifest",
+      "victim-protection, containment, and change-reversal logs",
+      "independent identity-recovery and export-impact records",
+      "related-account scope, communication, and control-effectiveness reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response used reversible protection, blocked ownership and export harm, preserved evidence before reversal, revoked sessions, tokens, devices, links, grants, and malicious factors, refused compromised recovery channels, required two-person proof for the owner, separated signals from attribution, reviewed possible data exposure, and established recurrence monitoring plus owned control improvements."
+  },
+  {
+    "cohort_id": "core-475",
+    "skill_id": "design-a-telemetry-pipeline",
+    "scenario": "A company wants one telemetry pipeline for logs, metrics, traces, security detections, and required audit events from three regions, but burst volume exceeds network capacity, customer data appears in attributes, downstream storage fails unpredictably, and nobody can quantify drops or restore the collectors.",
+    "observed_artifacts": [
+      "coverage register, signal contracts, topology, and telemetry architecture record",
+      "schema, governance, capacity, buffer, backpressure, and shedding specifications",
+      "pipeline health, loss reconciliation, and overload fault-injection reports",
+      "disaster-recovery runbook, clean restore rehearsal, and rollout record"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected an undifferentiated central stream, separated regional and priority failure domains, protected audit and security evidence, bounded serving-path coupling, specified allowlisted redaction and tenant controls, made accepted, queued, sampled, shed, dropped, duplicated, and delivered states measurable, tested overload and regional loss, and required a clean restore plus source-to-destination reconciliation."
+  },
+  {
+    "cohort_id": "core-475",
+    "skill_id": "migrate-an-observability-platform",
+    "scenario": "A company must leave its observability vendor in four months, but thousands of producers, custom parsing, incompatible histograms, sampled traces, security searches, rarely used incident queries, dashboards, paging rules, retention duties, and source export limits make apparent data parity unreliable.",
+    "observed_artifacts": [
+      "migration coverage register, producer manifest, and semantic-equivalence catalog",
+      "golden telemetry corpus, historical replay, and dual-write parity report",
+      "security, retention, export, access, query, dashboard, and alert evidence",
+      "wave, cutover, paging, rollback, and source-retirement records"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected count and dashboard parity, inventoried producers and rarely used consumers, handled histogram and sampling incompatibility explicitly, kept source paging authoritative, validated parsing and incident queries through dual write and replay, tested security and retained-history retrieval, separated producer from paging cutover, and required independently rehearsed rollback without deleting target evidence."
+  },
+  {
+    "cohort_id": "core-475",
+    "skill_id": "respond-to-monitoring-blindness",
+    "scenario": "After a collector configuration deploy, regional dashboards remain green while request and error volumes collapse toward zero, one alert route stops paging, buffered telemetry may expire within hours, and operators cannot tell whether a customer-facing failure is hidden inside the monitoring outage.",
+    "observed_artifacts": [
+      "monitoring exposure timeline, blind-spot scope matrix, and preservation manifest",
+      "alternate-evidence register and service-impact assessment",
+      "compensating-control, alert-routing, and risk-based operating records",
+      "restoration injection test, backfill reconciliation, and effectiveness review"
+    ],
+    "result": "pass",
+    "notes": "The independent response treated green as unknown, paused risky changes, preserved expiring buffers before restart, scoped each signal and pipeline stage, used external synthetics and business records rather than the impaired path to judge service state, restored paging and critical signals first, injected controlled end-to-end evidence, bounded backfill and automated remediation, and kept the incident open until regions, counts, alerts, and independent service checks reconciled."
+  },
+  {
+    "cohort_id": "core-500",
+    "skill_id": "migrate-a-web-frontend-framework",
+    "scenario": "A global commerce site must move from a client-only frontend to a server-rendered framework while preserving checkout, account state, saved carts, URLs, search indexing, analytics, accessibility, localized content, performance, and releases across hundreds of routes.",
+    "observed_artifacts": [
+      "route, feature, state, locale, SEO, analytics, accessibility, and operations inventory",
+      "outcome-parity contract, compatibility architecture, and state-ownership matrix",
+      "wave-specific URL, behavior, accessibility, analytics, performance, browser, and security reports",
+      "cutover dashboard, rollback rehearsal, and old-runtime retirement register"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected a big-bang rewrite, established one authoritative commerce state, routed bounded vertical slices through a compatibility layer, kept old and new assets independently reversible, migrated reads before mutations and checkout last, reconciled SEO and analytics rather than relying on screenshots, paused on quality regressions, and preserved committed server effects during frontend rollback."
+  },
+  {
+    "cohort_id": "core-500",
+    "skill_id": "design-a-global-web-delivery-architecture",
+    "scenario": "A subscription service is adding two regional origins behind a global edge, but authenticated pages, country pricing, sessions, replicated data, cache variants, attack traffic, cold-cache failover, residency rules, and origin recovery have not been reconciled.",
+    "observed_artifacts": [
+      "traffic, data-flow, journey-objective, authority, and residency maps",
+      "routing, health, cache, identity, session, and security contracts",
+      "capacity, attack, cold-cache, failure, poisoning, leakage, and failover reports",
+      "origin recovery, cutover, rollback, and residual-risk records"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected unrestricted nearest-origin routing, separated public, authenticated, transactional, and administrative policies, treated checkout pricing and writes as authoritative operations, denied shared caching for private pages, normalized cache variants, pinned routing to residency and consistency, staged failover under cold-cache and attack load, and required a quarantined clean origin restore with data, session, cache, and canary verification."
+  },
+  {
+    "cohort_id": "core-500",
+    "skill_id": "respond-to-a-frontend-supply-chain-incident",
+    "scenario": "A hosted analytics script begins serving obfuscated code after its vendor account is compromised, and the script ran on login and billing pages while build credentials, cached assets, user sessions, form data, downstream calls, and affected browser versions remain uncertain.",
+    "observed_artifacts": [
+      "exposure timeline, asset manifest, route-data matrix, and malicious-behavior analysis",
+      "evidence custody, browser containment, cache, credential, session, and user-protection logs",
+      "notification decision, vendor follow-through, and control review",
+      "clean-build provenance, canary, recovery, and recurrence reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response treated browser code as page-origin exposure, preserved malicious variants before purge, disabled every tag path, used CSP and a verified recovery page for containment, scoped DOM, storage, form, network, session, and payment access, rotated only supported credentials while protecting users proportionately, rejected suspected runners and vendor assurances as trust proof, and required clean reproducible assets plus regional browser canaries before recovery."
+  },
+  {
+    "cohort_id": "core-525",
+    "skill_id": "restore-a-corrupted-media-project",
+    "scenario": "A documentary project stops opening after a drive error, the newest autosaves disagree, source files and proxies share names, two plugins are unavailable, backups have unknown dates, the review export contains edits missing from the last readable timeline, and delivery is due in three days.",
+    "observed_artifacts": [
+      "damage, custody, preservation, hash, asset-classification, and candidate-comparison records",
+      "source relink, dependency reconstruction, and edit decision registers",
+      "timeline, source, sync, color, audio, caption, graphics, effect, and export verification",
+      "clean-system, archive-restore, uncertainty, fallback, and delivery acceptance reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response stopped writes and rejected repair on the only copy, preserved each conflicting history, used hashes and technical identity rather than filenames to separate originals from proxies, treated the review export as evidence rather than an editable source, reconstructed edits with confidence and editorial authority, documented unavailable plugins and substitutions, and required full export plus clean-system and archive restore before delivery."
+  },
+  {
+    "cohort_id": "core-525",
+    "skill_id": "migrate-a-media-archive",
+    "scenario": "A broadcaster must move two petabytes of masters, sources, projects, proxies, captions, transcripts, and rights records from tape and object storage into a media asset system, but filenames collide, checksums are incomplete, metadata schemas conflict, licenses expire, and source retirement is contractually scheduled.",
+    "observed_artifacts": [
+      "asset, object, rights, relationship, retention, and disposition inventory",
+      "identifier model, metadata crosswalk, source and target fixity manifests",
+      "target capability, throughput, wave, exception, quarantine, and parity reports",
+      "retrieval, playback, cutover, rollback, and source-retirement evidence"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected filename identity and contractual retirement as proof, preserved provenance through stable archive IDs, generated object-level fixity, kept preservation masters unchanged, mapped metadata and rights without silent flattening, used read-only idempotent cohorts, reconciled logical assets, objects, bytes, captions, relationships, and access, rehearsed workflow rollback, and required an extension or controlled archive when evidence could not meet the source exit date."
+  },
+  {
+    "cohort_id": "core-525",
+    "skill_id": "respond-to-a-live-broadcast-failure",
+    "scenario": "During a global medical conference, the primary encoder freezes, platform preview shows a stale frame, captions continue without video, one region reports silence, the backup network is unverified, a sensitive backstage feed is available, and the keynote cannot be repeated.",
+    "observed_artifacts": [
+      "incident timeline, signal-scope matrix, and audience-impact map",
+      "holding-state, routing, continuity, accessibility, decision, and communication logs",
+      "independent confidence-monitor, alternate-path, and recovery test reports",
+      "recording inventory, archive reconstruction, participant follow-through, and post-event review"
+    ],
+    "result": "pass",
+    "notes": "The independent response cut to an accessible safe state, isolated the sensitive backstage feed, preserved the unrepeatable keynote, distrusted the stale platform preview, scoped source, encoder, network, platform, regional, caption, and recording boundaries independently, required off-air verification of the backup path, preferred trustworthy audio or holding content to unstable switching, communicated observed impact without speculation, and reconciled audience plus archive evidence after recovery."
+  },
+  {
+    "cohort_id": "core-550",
+    "skill_id": "migrate-an-accounting-system",
+    "scenario": "A multi-entity company is migrating live general ledger, payables, receivables, payroll, inventory, fixed assets, tax, and multi-currency reporting from inconsistent account charts before year-end, while duplicate suppliers, open historical periods, manual overrides, missing audit attachments, and a looming source-retirement date make a direct cutover unsafe.",
+    "observed_artifacts": [
+      "accounting migration register, source-custody manifest, and ledger and control inventory",
+      "mapping specification, supplier-resolution register, data-quality report, and transformation run manifest",
+      "trial-balance, subledger, tax, currency, attachment, and end-to-end reconciliation reports",
+      "parallel-close report, cutover and rollback rehearsal, go-live decision, and retained-history record"
+    ],
+    "result": "pass",
+    "notes": "The independent response made direct cutover and source retirement a no-go, preserved immutable source evidence, quarantined ambiguous supplier identities, kept historical identifiers traceable, controlled open periods and manual overrides, required repeatable versioned transformations, reconciled every material ledger and subledger, exercised full workflows and a parallel close, treated rollback as operational recovery rather than erasure of committed external effects, and required searchable retained history before retirement. Its supplier bank-detail feedback was incorporated into the skill."
+  },
+  {
+    "cohort_id": "core-550",
+    "skill_id": "respond-to-a-business-cash-crisis",
+    "scenario": "A company has payroll due in twelve days, a major customer is late, a lender covenant is near breach, tax and critical supplier payments are due, inventory orders are noncancelable, and the founder wants to delay wages and move restricted client funds into operations.",
+    "observed_artifacts": [
+      "verified unrestricted-cash reconciliation, daily obligation register, and authorized payment schedule",
+      "base, downside, and severe cash forecasts with payroll, tax, covenant, minimum-cash, and shutdown triggers",
+      "liquidity decision log, collection record, lender pack, supplier commitments, and qualified priority advice",
+      "board approvals, stakeholder communication archive, stabilization plan, and daily variance report"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected moving restricted client funds and delaying wages by founder preference, used the lowest verified unrestricted cash position, required jurisdiction-specific priority advice, modeled multiple daily cases and early restructuring triggers, evaluated liquidity actions by authority and harm, imposed dual payment control, protected evidence, and tailored stakeholder communications. Its escalation feedback for an executive who also controls payment access was incorporated into the skill."
+  },
+  {
+    "cohort_id": "core-550",
+    "skill_id": "investigate-a-financial-reporting-error",
+    "scenario": "Closed quarterly statements double-count revenue after an integration replay, affecting tax, a lender covenant, board reports, and bonuses, while logs are near expiry, some entries were manually overridden, and management wants to correct the amount quietly in the next period.",
+    "observed_artifacts": [
+      "incident intake, evidence-preservation manifest, custody log, source-to-report chronology, and replay record",
+      "complete transaction-to-ledger reconciliation, manual-override register, and materiality assessment",
+      "tax, covenant, board, bonus, recipient, correction-entry, disclosure, and versioned-output records",
+      "control-remediation design, historical replay tests, recurrence monitoring, and residual-risk approval"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected concealment through a quiet next-period adjustment, preserved near-expiry evidence before changing the integration, reconstructed the full source-to-report chronology, tested the complete population rather than a convenient sample, treated overrides as evidence rather than misconduct, assessed quantitative and qualitative effects, routed correction and disclosure to authorized owners, preserved original and corrected versions, and required idempotency plus historical and current-data tests before closeout."
+  },
+  {
+    "cohort_id": "core-575",
+    "skill_id": "conduct-research-with-human-participants",
+    "scenario": "A multi-site adolescent mental-health study recruits through schools, records video, collects optional specimens, and encounters an immediate self-harm disclosure while assent and guardian processes differ by site, one participant wants to withdraw, and an unapproved procedure plus privacy incident may have occurred.",
+    "observed_artifacts": [
+      "immediate safety record, participant protection register, and site approval and version matrix",
+      "role, delegation, consent, ongoing-choice, participant-flow, and withdrawal disposition logs",
+      "protocol-deviation report, privacy incident file, video and specimen custody register",
+      "corrective action, reporting, restart decision, and closeout reconciliation records"
+    ],
+    "result": "pass",
+    "notes": "The independent response stopped research for immediate safety, used authorized clinical and safeguarding handoff, paused uncertain sites and procedures, preserved consent and incident evidence, reconciled site-specific assent and guardian authority, separated choices for video and specimens, propagated withdrawal across every store, quarantined unapproved outputs, bounded the privacy incident, and required ethics and sponsor gates before restart. Its multi-site continuous-handoff feedback was incorporated into the skill."
+  },
+  {
+    "cohort_id": "core-575",
+    "skill_id": "respond-to-a-research-integrity-concern",
+    "scenario": "A junior researcher reports manipulated microscopy images, duplicated data, disputed authorship, and retaliation by a principal investigator who controls the evidence systems, while logs will expire before a sponsor deadline and institutional leaders want the figures replaced informally.",
+    "observed_artifacts": [
+      "independent authority, conflict, chronology, deadline, preservation-hold, and custody records",
+      "allegation matrix plus full-population image, data, code, authorship, and retaliation reports",
+      "affected-output, participant, sponsor, publication, and public-risk screen",
+      "reporter protection, findings, correction, notification, remediation, appeal, and closeout records"
+    ],
+    "result": "pass",
+    "notes": "The independent response opened a restricted formal case without treating allegations as findings, established conflict-free authority, preserved expiring evidence before notice, protected the junior researcher, screened continuing harm, tested complete image and data populations, separated authorship and retaliation allegations, provided fair response rights, rejected informal figure replacement, and required verified corrections plus monitoring. Its evidence-system dual-control feedback was incorporated into the skill."
+  },
+  {
+    "cohort_id": "core-575",
+    "skill_id": "migrate-a-research-data-repository",
+    "scenario": "A multi-institution repository must move genomic data, Indigenous-governed collections, licensed surveys, embargoed theses, software, versions, and DOI landing pages before source shutdown, but checksums are incomplete and the target uses different metadata, identity, access, and preservation models.",
+    "observed_artifacts": [
+      "repository migration register, authority map, governed inventory, and source-custody manifest",
+      "fixity manifest, exception register, metadata and identifier crosswalk, and version reconciliation",
+      "DOI, access, restricted-metadata, privilege, preservation, backup, and workflow validation reports",
+      "wave manifests, final-delta ledger, cutover decision, rollback rehearsal, and retirement authorization"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected source shutdown as a transfer deadline, established institutional and community authority, inventoried rights and consent by collection, generated missing checksums from preserved sources, kept original and normalized metadata, preserved versions and persistent identifiers, prevented privilege widening, sequenced governed waves, reconciled preservation behavior and user journeys, and required a replay-safe rollback or verified archive before source retirement."
+  },
+  {
+    "cohort_id": "core-575",
+    "skill_id": "manage-a-laboratory-safety-incident",
+    "scenario": "A graduate researcher collapses after an unknown solvent release while ventilation alarms activate, another worker may have contaminated clothing, the laboratory contents and neighboring rooms are uncertain, and the principal investigator wants staff to clean up before emergency responders arrive.",
+    "observed_artifacts": [
+      "laboratory incident timeline, command record, personnel accounting, exposure roster, and responder brief",
+      "hazard register, scene custody, system evidence manifest, witness records, and containment log",
+      "air, surface, clothing, environmental, neighboring-room, notification, and cleanup records",
+      "clearance, corrective-action, effectiveness-test, reentry, restart, and closeout authorizations"
+    ],
+    "result": "pass",
+    "notes": "The independent response treated the event as an unknown hazardous-material and medical emergency, raised alarms, evacuated and accounted for people, denied unprotected reentry, prioritized trained decontamination and care, rejected the principal investigator's cleanup direction, placed responders in command, expanded assessment through shared ventilation and neighboring rooms, preserved evidence only after life safety, and required qualified clearance plus corrective tests before restart."
+  },
+  {
+    "cohort_id": "core-600",
+    "skill_id": "prepare-an-executive-transition-package",
+    "scenario": "A public-company chief executive is leaving after a merger while a nonpublic restructuring, active employment dispute, disclosure timetable, confidential board material, stale public biographies, company-system access, competing accounts of performance, and a future board search overlap.",
+    "observed_artifacts": [
+      "executive transition register, authority map, disclosure classification, and evidence and reputation inventory",
+      "claim reconciliation, master career record, resume, board bio, statements, reference, recruiter, and interview materials",
+      "release calendar, version and recipient log, devices, accounts, data, records, and litigation-hold manifests",
+      "access closeout, scenario rehearsal, monitoring, correction, approval, and residual-restriction records"
+    ],
+    "result": "pass",
+    "notes": "The independent response froze public release while permitting evidence and access preparation, established board, legal, disclosure, communications, records, and security authority, classified every fact, reconciled competing performance claims to approved evidence, generated all audience materials from one master record, kept nonpublic restructuring and dispute material bounded, sequenced releases behind required disclosures, protected company records during access closure, and rehearsed leaks, stale profiles, references, and retained access. Its post-departure restricted-information feedback was incorporated."
+  },
+  {
+    "cohort_id": "core-600",
+    "skill_id": "respond-to-resume-identity-theft",
+    "scenario": "An employer receives a resume using a professional's name, photo, certifications, portfolio, and references from a lookalike email domain, while fake interviews are collecting identity documents, a career account has a new recovery method, and nobody knows how many employers or candidates were contacted.",
+    "observed_artifacts": [
+      "victim safe-contact, authentication, identity-element, and impersonation exposure records",
+      "evidence hashes, custody, fraudulent application, email trace, domain, profile, interview, and upload registers",
+      "account recovery, session, token, provider, employer, reference, issuer, target, takedown, and correction logs",
+      "candidate-document notification, identity recovery, monitoring, and residual-risk reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response treated the case as active employment impersonation and identity harvesting, separated the false application from the real professional, authenticated through a clean route, preserved minimal evidence before takedown, revoked compromised recovery and sessions, scoped domains and recruiting systems, warned known targets without spreading identity documents, corrected false records, and monitored recurring infrastructure. Its approval and anti-amplification framework for broader warnings was incorporated."
+  },
+  {
+    "cohort_id": "core-600",
+    "skill_id": "migrate-a-professional-portfolio",
+    "scenario": "A consultant must leave a hosted portfolio builder before a custom domain expires, but indexed case URLs, client assets with different permissions, private PDFs, dynamic embeds, contact forms, email delivery, analytics consent, accessibility, and incomplete backups must survive the move.",
+    "observed_artifacts": [
+      "portfolio migration register, source custody manifest, rights inventory, and public plus private crawl baseline",
+      "URL, canonical, redirect, private-access, embed, domain, DNS, certificate, and email maps",
+      "form, inquiry, analytics-consent, accessibility, browser, mobile, performance, and security parity reports",
+      "cutover decision, live verification, rollback rehearsal, monitoring, and source-retirement records"
+    ],
+    "result": "pass",
+    "notes": "The independent response stabilized domain control without combining an urgent registrar transfer, preserved the complete DNS zone and lawful source evidence, revalidated client permissions, protected private PDFs with real access control, mapped every URL and behavior, tested forms, email, analytics consent, accessibility, devices, performance, and security in waves, reconciled inquiries across cutover and rollback, and withheld source retirement until independent crawl and contact evidence passed."
+  },
+  {
+    "cohort_id": "core-625",
+    "skill_id": "decompose-a-production-monolith",
+    "scenario": "A commerce monolith shares one database across checkout, inventory, billing, support, reporting, sessions, caches, and jobs, while undocumented cross-module transactions, release bottlenecks, cascading incidents, and a six-month demand for four new services make a direct split unsafe.",
+    "observed_artifacts": [
+      "domain, runtime, data, transaction, invariant, job, report, security, and operations inventories",
+      "boundary decision, internal seam, versioned contract, data-transition, and consumer migration records",
+      "wave behavior, data, permission, load, latency, cost, failure-isolation, and operations reports",
+      "cutover, rollback, committed-effect, recovery, retirement, and six-month decision records"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected a target-driven four-service split, made runtime and transaction discovery a prerequisite, kept checkout, inventory, and billing together until invariants were explicit, selected boundaries by coherent ownership and measurable benefit, created internal seams before network calls, required one authoritative writer, staged shadow reads through bounded writes, tested failure isolation and operations, and preserved committed effects during rollback. Its transaction-discovery methods were incorporated into the skill."
+  },
+  {
+    "cohort_id": "core-625",
+    "skill_id": "migrate-a-critical-api",
+    "scenario": "A billing API must move hundreds of internal and partner consumers to a new provider, but response shapes, authentication scopes, idempotency, rate limits, webhook signatures, SDK defaults, and error behavior differ, while scheduled clients may be absent from recent telemetry.",
+    "observed_artifacts": [
+      "migration charter, consumer, credential, owner, version, schedule, and compatibility registers",
+      "auth scope, idempotency, transaction, webhook, SDK, provider, consumer, failure, load, and mixed-version specifications and tests",
+      "dual-run semantic, performance, financial, mutation, and consumer proof reports",
+      "wave health, cutover, state-compatible rollback, credential revocation, and retirement records"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected big-bang switching, treated telemetry as a lower bound, inventoried dormant and failover consumers, defined a complete behavioral compatibility contract, maintained one authoritative mutation path, preserved exact financial semantics and authorization scope, bridged webhook identity safely, used shadow computation instead of duplicate writes, required consumer-generated proof in waves, and rehearsed rollback without replaying charges. Its independent financial control-ledger requirement was incorporated."
+  },
+  {
+    "cohort_id": "core-625",
+    "skill_id": "respond-to-a-failed-database-migration",
+    "scenario": "A production migration adding a nonnull column and backfill times out behind a lock while old and new application versions keep writing, some shards committed DDL, replicas disagree, and the down migration would drop values already written by the new version.",
+    "observed_artifacts": [
+      "database migration incident timeline, per-shard state, schema, migration, lock, transaction, and writer matrices",
+      "new-value preservation, schema and data reconciliation, replica divergence, and backup verification reports",
+      "recovery decision, production-shaped rehearsal, repair preview, stop-condition, execution, and checkpoint records",
+      "post-repair invariant, application, replica, restart, monitoring, and control-remediation reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected destructive down migration, stopped automatic and ad hoc changes, fenced incompatible writers, captured locks before intervention, preserved schema and values per shard, refused to assume transactional DDL, reconciled old and new writes, chose a rehearsed forward-compatible repair, protected committed values during backfill, excluded divergent replicas, required bounded previews and stop conditions, and restored traffic only after database, application, replica, and business invariants passed."
+  },
+  {
+    "cohort_id": "core-625",
+    "skill_id": "recover-from-a-corrupted-software-release",
+    "scenario": "One software release version has different artifact hashes across regions, registry metadata was overwritten, build provenance is incomplete, edge caches contain mixed files, the prior release used the same runner, and a database migration already committed new records.",
+    "observed_artifacts": [
+      "release trust-boundary map, corruption timeline, artifact, runtime, cache, registry, and custody manifests",
+      "source, dependency, toolchain, runner, credential, signing, data, and external-effect assessments",
+      "clean rebuild provenance, software inventory, signatures, attestations, and reproducibility report",
+      "state-compatible rehearsal, canary, regional restoration, cache reconciliation, trust revocation, and recurrence records"
+    ],
+    "result": "pass",
+    "notes": "The independent response distrusted both the named version and prior same-runner release, stopped promotion and evidence-destroying automation, preserved regional artifacts, runtime files, cache variants, registry history, and data effects, traced the entire trust boundary, isolated uncertain credentials and signing, protected committed database state, rebuilt from reviewed source on a clean runner with fresh scoped trust, required reproducibility or bounded nondeterminism, canaried against production-shaped state, and expanded only after independent runtime and edge verification."
+  },
+  {
+    "cohort_id": "core-650",
+    "skill_id": "migrate-a-global-domain",
+    "scenario": "A global account-based web service must move from an old domain to a new one while preserving DNS, email, certificates, authentication cookies, OAuth and SAML callbacks, passkeys, API clients, mobile deep links, indexed URLs, regional origins, security policies, and millions of saved links without creating an open-redirect or account-takeover path.",
+    "observed_artifacts": [
+      "domain dependency, registrar custody, DNS, certificate, email, regional origin, and security-control registers",
+      "URL redirect, session transition, passkey, federation callback, API client, mobile-link, and saved-link mappings",
+      "email, identity, account recovery, security policy, search, client, and regional parity reports",
+      "canary, cutover, state-compatible rollback, old-domain custody, and endpoint-retirement records"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected a big-bang redirect and origin-bridging shortcuts, treated cookies and passkeys as distinct origin-bound migrations, required exact server-side route mappings and adversarial open-redirect tests, preserved OAuth, SAML, API, mobile, email, and crawler compatibility, moved traffic by function and region, and kept rollback state-compatible. Its permanent old-domain custody requirement was incorporated so a retired registration cannot be reacquired for historical links, mail, callbacks, or recovery attacks."
+  },
+  {
+    "cohort_id": "core-650",
+    "skill_id": "respond-to-a-web-cache-poisoning-incident",
+    "scenario": "Users in several regions receive attacker-controlled redirects and headers from a shared web cache only for certain languages and devices, while origin responses appear clean, cache keys and normalization are undocumented, multiple CDN layers are involved, purge results disagree, and authenticated pages may share cacheable fragments.",
+    "observed_artifacts": [
+      "cache poisoning chronology, incident authority, raw response, redirect, configuration, and audit evidence",
+      "multi-layer delivery map, variant matrix, key normalization specification, object provenance, and hypothesis ledger",
+      "purge, cache-epoch, authenticated-fragment isolation, exposure, and privacy reconciliation",
+      "cross-region cold, warm, stale, revalidated, error, failover, restoration, and monitoring reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response stopped new poisoned fills before purge, preserved controlled samples, bypassed shared caching for private and uncertain variants, protected origin capacity, mapped every cache tier and normalization rule, reproduced only in isolated namespaces, fixed the cache contract with allowlists, and required independent regional verification across cache states. Its end-to-end privacy-safe cache-key provenance and cache-epoch invalidation controls were incorporated."
+  },
+  {
+    "cohort_id": "core-650",
+    "skill_id": "redesign-a-critical-checkout-flow",
+    "scenario": "A global retailer must redesign checkout across guest and account users, multiple currencies, taxes, discounts, inventory holds, saved addresses, wallets, cards, subscriptions, accessibility needs, fraud controls, and regional legal terms while legacy and new flows overlap and duplicate orders or lost payments are unacceptable.",
+    "observed_artifacts": [
+      "checkout governance, journey, regional risk, state-machine, invariant, trust-boundary, and terms-version records",
+      "idempotency, retry, callback, pricing, tax, discount, currency, inventory, identity, subscription, and compatibility contracts",
+      "golden financial, concurrency, provider failure, accessibility, localization, legal, fraud, and reconciliation reports",
+      "wave, canary, alert, compensation, rollback, legacy drain, and retirement evidence"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected big-bang replacement, established a canonical intent and state machine, protected money, inventory, subscription, identity, accessibility, and regional terms, allowed only side-effect-free shadowing, reconciled ambiguous provider outcomes, and migrated one material risk dimension at a time. Its requirement to pin each in-flight intent to one execution version and durable cross-version idempotency namespace was incorporated so routing rollback cannot duplicate or lose committed effects."
+  },
+  {
+    "cohort_id": "core-675",
+    "skill_id": "audit-a-hiring-process-for-fairness",
+    "scenario": "A company hires one role family in eight countries through referrals, resume screening, a timed test, panel interviews, and a vendor ranking, but disabled candidates report barriers, one location applies an unwritten degree rule, overrides favor referrals, demographic data is missing unevenly, and leaders want one overall hiring-rate comparison to declare the process fair.",
+    "observed_artifacts": [
+      "role, country, hiring-stage, decision-authority, candidate-funnel, criteria, and data-lineage registers",
+      "accessibility, accommodation, test validity, resume consistency, panel calibration, vendor-use, referral, and override reports",
+      "stage, country, source, accommodation, subgroup, missingness, small-cell, and uncertainty analyses",
+      "candidate reconsideration, corrective action, post-remediation validation, and ongoing monitoring records"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected a global-rate fairness declaration, paused inaccessible or unsupported decisions, suspended hidden criteria and unreviewed referral overrides, mapped the complete funnel, validated every selection instrument, protected candidate data, combined stage-level quantitative and qualitative evidence, and required candidate reconsideration. Its denominator-lineage and aggregation-reversal control was incorporated so a global rate cannot conceal country, source, stage, or accommodation barriers."
+  },
+  {
+    "cohort_id": "core-675",
+    "skill_id": "respond-to-a-recruitment-fraud-incident",
+    "scenario": "Candidates receive job offers from a lookalike careers domain after convincing video interviews, then are asked to pay for equipment and upload identity documents, while fake postings copy real roles, a recruiter mailbox has an unexplained forwarding rule, payment destinations span countries, and nobody knows how many people were contacted.",
+    "observed_artifacts": [
+      "clean-channel authority, recruitment fraud chronology, evidence custody, domain, posting, interview, offer, and payment records",
+      "recruiter mailbox access, forwarding, delegate, session, token, application, and containment report",
+      "candidate exposure, identity-document, payment recovery, warning, support, and privacy registers",
+      "platform preservation and takedown, legitimate-offer reconciliation, canonical verification, recovery, and monitoring reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response established a clean command channel, protected candidates before attribution, preserved mailbox and campaign evidence, contained forwarding and account access, mapped domains, interviews, forms, platforms, and payment routes, pursued evidence-aware takedowns, and maintained victim-specific support without promising recovery. Its independently navigated canonical offer-verification registry was incorporated so candidates can verify a non-sensitive offer identifier even when an impersonator looks convincing."
+  },
+  {
+    "cohort_id": "core-675",
+    "skill_id": "design-a-global-hiring-process",
+    "scenario": "A technology company wants one hiring process for employees, interns, employer-of-record staff, and contractors in twelve countries, but employing entities, worker classification, salary disclosures, work authorization, background checks, works-council duties, data transfers, accessibility, benefits, and offer terms differ while one ATS and two agencies handle every candidate.",
+    "observed_artifacts": [
+      "country authority, jurisdiction, worker model, entity, classification, requisition, salary, and representative-duty matrices",
+      "candidate journey, fair assessment, accessibility, work-authorization, background, privacy, transfer, and agency-control records",
+      "ATS ruleset, immutable requisition tuple, permissions, retention, offer template, approval, exception, and correction histories",
+      "candidate-to-worker handoff, negative-path, pilot, accessibility, retention, classification, and control-effectiveness reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected one identical workflow, required qualified country ownership, mapped lawful worker models and local gates, blocked unsupported requisitions, separated candidate data and accommodations, constrained agencies, versioned local offers, provided accessible alternatives, piloted representative combinations, and preserved corrections. Its immutable country-of-work, employing-entity, engagement-type, and ruleset tuple was incorporated so a change invalidates dependent approvals, checks, disclosures, and offers."
+  },
+  {
+    "cohort_id": "core-675",
+    "skill_id": "manage-a-conflicted-executive-search",
+    "scenario": "A listed company must replace its chief executive quickly while the board chair favors a longtime associate, one search partner has a referral-fee connection, the incumbent controls internal-candidate information, a pending acquisition makes names market-sensitive, and the board lacks an agreed recusal or interim-succession process.",
+    "observed_artifacts": [
+      "succession governance charter, authority, quorum, reserved decision, conflict, recusal, and information restriction records",
+      "interim succession, emergency delegation, acquisition-scenario role, candidate provenance, and independent custody plans",
+      "search-partner fee, candidate assessment, verification, reference, background, dissent, and board decision reports",
+      "market-sensitive access, disclosure, leak, appointment, compensation, transition, and post-search review records"
+    ],
+    "result": "pass",
+    "notes": "The independent response stopped permanent appointment under conflicted authority, established an independent committee and valid quorum, removed incumbent information control, designed interim succession, set role criteria before people, reviewed the search partner's fees, protected market-sensitive data, compared candidates under one process, preserved dissent, and rehearsed failed appointment. Its full influence-chain recusal and auditable contact and access control was incorporated so conflicts cannot shape role design, adviser selection, slate, interviews, references, compensation, or informal lobbying before the vote."
+  },
+  {
+    "cohort_id": "core-700",
+    "skill_id": "redesign-a-clinical-workflow-interface",
+    "scenario": "A hospital must redesign medication ordering and administration across emergency, inpatient, pharmacy, and nursing workflows while alert fatigue, unit confusion, duplicate orders, hidden pending states, local safety workarounds, legacy devices, unreliable integrations, accessibility needs, and downtime procedures create patient risk.",
+    "observed_artifacts": [
+      "clinical safety authority, medication lifecycle, role, system, device, integration, queue, and state-model records",
+      "hazard, risk-control, alert, workaround, legacy-device, accessibility, and human-factors registers",
+      "simulation scenario, clinical workflow parity, integration, transaction, and reconciliation reports",
+      "pilot, training, downtime, cutover, pause, rollback, monitoring, incident, and residual-risk records"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected hospital-wide release, preserved safety evidence and workarounds, mapped medication orders through pharmacy and administration, created an explicit order state model, prevented blind retries, rationalized alerts by action and harm, validated frontline and accessibility scenarios, piloted bounded units, and rehearsed downtime reconciliation. Its explicit owned indeterminate transaction outcome was incorporated so an integration timeout cannot cause a duplicate order or omitted treatment."
+  },
+  {
+    "cohort_id": "core-700",
+    "skill_id": "govern-design-for-a-regulated-product",
+    "scenario": "A regulated service operates in several markets using a shared design system, identity checks, automated recommendations, customer notices, and a third-party workflow when a design refresh changes errors, navigation, thresholds, and accessibility while an urgent field issue requires a patch and existing traceability is incomplete.",
+    "observed_artifacts": [
+      "decision authority, deployed baseline, market obligation, control, requirement, and dependency records",
+      "change decomposition, traceability, identity, recommendation threshold, notice, accessibility, and supplier reports",
+      "emergency patch, validation, release acceptance, feature flag, cohort, and state-aware rollback evidence",
+      "interaction configuration attestation, surveillance, customer impact, corrective action, exception, and closeout records"
+    ],
+    "result": "pass",
+    "notes": "The independent response stopped the broad refresh, isolated the urgent patch, treated thresholds as policy, preserved the deployed baseline, rebuilt market-level traceability, independently controlled change planes, validated identity, recommendations, notices, accessibility, and vendor failures, and rehearsed state-aware rollback. Its per-interaction privacy-safe configuration attestation was incorporated so investigators can prove the actual market, versions, thresholds, notices, vendor workflow, and flags that governed an outcome."
+  },
+  {
+    "cohort_id": "core-700",
+    "skill_id": "migrate-a-product-interface-without-disruption",
+    "scenario": "A global project platform must replace navigation, record pages, bulk actions, keyboard shortcuts, filters, saved views, and its component system while enterprise users rely on bookmarks, screen readers, training guides, support scripts, integrations, and long-running sessions and cannot lose state during coexistence or rollback.",
+    "observed_artifacts": [
+      "consumer, workspace, role, route, bookmark, integration, automation, training, support, and dependency inventories",
+      "critical journey, canonical URL, shortcut, component accessibility, bulk-action, saved-view, and state contract records",
+      "browser, multi-tab, screen-reader, keyboard, long-session, deploy, rollback, and state-reconciliation reports",
+      "session epoch, state escrow, cohort, wave, analytics, support, incident, legacy drain, and retirement records"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected big-bang replacement, kept identifiers and backend contracts stable, versioned transient and saved state, reauthorized restored state, isolated component systems, normalized outcome analytics, tested full journeys and enterprise scale, rolled out by workspace and session, and drained legacy sessions deliberately. Its durable session epoch and neutral versioned state escrow was incorporated so feature flags cannot change an active session and rollback cannot silently lose work or restore revoked access."
+  },
+  {
+    "cohort_id": "core-725",
+    "skill_id": "respond-to-a-media-rights-dispute",
+    "scenario": "A global campaign receives a platform claim and a lawyer's notice alleging that one music recording, an archival image, and a contributor's likeness exceed their licenses, while contracts conflict, localized edits use different durations, paid ads are live, partners downloaded masters, and response deadlines are short.",
+    "observed_artifacts": [
+      "rights incident authority, notice authenticity, deadline, legal hold, and evidence custody records",
+      "source-to-derivative lineage, campaign, platform, ad, territory, partner, contract, license, and actual-use inventories",
+      "music, image, likeness, agreement-conflict, containment, replacement, payment, and response analyses",
+      "platform, partner, cache, takedown, restoration, credit, residual-risk, and corrective-action reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response treated notices as urgent allegations, paused unsupported distribution without conceding, preserved rights evidence, decomposed each asset and right, compared every actual use with license scope, contained paid and partner delivery, selected an authorized response, and independently verified every derivative and destination. Its content-derived lineage control was incorporated so hashes plus audio or visual fingerprints find renamed, cropped, transcoded, and different-duration copies."
+  },
+  {
+    "cohort_id": "core-725",
+    "skill_id": "migrate-a-live-production-platform",
+    "scenario": "A live events network must move remote contribution, switching, graphics, captions, ads, DRM, chat, analytics, players, recordings, and archives from a mixed legacy stack to a new production platform across venues and regions without double publishing, losing accessibility, or disrupting protected events.",
+    "observed_artifacts": [
+      "event authority, venue, region, service, dependency, rights, configuration, and behavioral-contract registers",
+      "contribution, production, caption, DRM, ad, player, CDN, chat, analytics, recording, archive, and operator parity reports",
+      "event cohort, readiness, publication authority, feature configuration, monitoring, and production-day records",
+      "failure, degraded-mode, cutover, event recovery, recording, financial reconciliation, and legacy retirement evidence"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected network-wide cutover, kept legacy authoritative, isolated dual production, defined complete viewer, operator, rights, accessibility, finance, and archive contracts, rehearsed regional and service failures, migrated by event, and reconciled every protected outcome. Its fenced per-event publication lease was incorporated so a monotonically increasing epoch prevents older stacks from writing manifests, ads, DRM, notifications, chat, or canonical recordings."
+  },
+  {
+    "cohort_id": "core-725",
+    "skill_id": "recover-from-a-published-media-error",
+    "scenario": "A documentary excerpt identifies the wrong person and a translated caption changes the allegation after the clip has been embedded, syndicated, downloaded, cached, promoted, and adapted into accessible and social versions, while the affected person reports escalating harm.",
+    "observed_artifacts": [
+      "editorial correction timeline, claim, identity, translation, source, custody, and affected-person safety records",
+      "master, derivative, asset-ID, hash, distribution, embed, download, cache, syndication, campaign, and residual-copy graph",
+      "recall, partner acknowledgment, cache invalidation, corrected-master, translation, caption, transcript, and accessibility reports",
+      "versioned public correction, independent destination verification, harm monitoring, control remediation, and closeout records"
+    ],
+    "result": "pass",
+    "notes": "The independent response stopped promotion and new distribution, protected the affected person, preserved restricted evidence, traced every derivative and endpoint, issued an exact recall, rebuilt all access versions from a corrected master, published a visible correction without repeating harm, independently verified regions and languages, and recorded unreachable copies honestly. Its immutable derivative-lineage and recall manifest was incorporated so correcting the master automatically exposes every descendant requiring replacement."
+  },
+  {
+    "cohort_id": "core-725",
+    "skill_id": "manage-a-sensitive-documentary-production",
+    "scenario": "A cross-border documentary involves whistleblowers, young participants, trauma survivors, and a confidential source while a powerful subject threatens legal and physical retaliation, crews use fixers and remote editors, footage contains identity and geolocation clues, translations are contested, and a distributor wants aggressive promotion.",
+    "observed_artifacts": [
+      "editorial safety authority, participant, source, crew, fixer, consent, assent, guardian, withdrawal, and support registers",
+      "physical, digital, legal, retaliation, asset sensitivity, source identity, access, transfer, deletion, metadata, and re-identification records",
+      "translation adjudication, claim, corroboration, contradiction, source-contact, editorial version, and approval evidence",
+      "distributor, promotional derivative, embargo, territory, release, residual-risk, incident rehearsal, monitoring, and retention reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response stopped aggressive promotion, separated editorial and safety authority, mapped person-specific threats, classified assets, verified ongoing consent and young-person assent, separated source identity from working media, red-teamed indirect clues, adjudicated translations, constrained fixers and distributors, staged release, and monitored post-release harm. Its promotional-derivative safety-parity requirement was incorporated so trailers, thumbnails, stills, excerpts, descriptions, behind-the-scenes material, and targeting cannot undo final-cut protections."
+  },
+  {
+    "cohort_id": "core-750",
+    "skill_id": "redesign-a-global-billing-process",
+    "scenario": "A global subscription company must redesign billing across contracts, usage, seats, multiple currencies, taxes, discounts, credits, invoices, collections, revenue schedules, payment methods, refunds, and regional legal terms while legacy and new engines overlap and duplicate invoices, lost credits, or misstated balances are unacceptable.",
+    "observed_artifacts": [
+      "billing authority, contract, product, entity, region, currency, state, invariant, and decision registers",
+      "account, obligation, period, generation, rule-version, input-snapshot, transformation, exception, and ownership records",
+      "line, invoice, credit, payment, tax, balance, revenue, statement, customer, and ledger parity reports",
+      "scenario, dual-run, cohort, cutover, rollback, correction, customer-impact, retirement, and residual-risk evidence"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected uncontrolled dual invoicing, defined financial invariants, mapped the full lifecycle, reconciled contract and master data, versioned calculation rules, shadow-compared at line level, tested regional and financial edge cases, cut over bounded cohorts, and preserved issued history during rollback. Its fenced billing-authority ledger was incorporated so every account, billable obligation, and period has one durable generation and idempotency owner, while missing or ambiguous authority blocks invoice, collection, credit, and posting actions."
+  },
+  {
+    "cohort_id": "core-750",
+    "skill_id": "respond-to-a-payroll-fraud-incident",
+    "scenario": "Payroll detects bank-account changes and off-cycle payments for employees in several countries after a payroll administrator account gained a new MFA method, while files were sent to banks, some payments settled, employee identities may be compromised, and the next payroll run is hours away.",
+    "observed_artifacts": [
+      "clean-channel authority, fraud chronology, evidence hash, custody, access, identity, MFA, session, and credential records",
+      "employee change, country cutoff, payroll file, control-total, bank transmission, beneficiary, settlement, recall, and support registers",
+      "line-item original, replacement, recovery, bank-state, employee-receipt, payroll-liability, and accounting reconciliations",
+      "clean payroll reconstruction, dual approval, go-no-go, continuity, notification, remediation, and recurrence-monitoring evidence"
+    ],
+    "result": "pass",
+    "notes": "The independent response froze unsafe changes and files, established clean authority, started bank recovery immediately, preserved identity and payroll evidence, built a line-item payment ledger, tested competing compromise hypotheses, verified employees independently, reconstructed the next run, and separated recovery from employee protection. Its per-employee original-to-replacement payment-state protocol was incorporated so immutable IDs and explicit bank states prevent either unpaid employees or untracked duplicates when recalled funds later return."
+  },
+  {
+    "cohort_id": "core-750",
+    "skill_id": "migrate-a-payment-processor",
+    "scenario": "A marketplace must migrate card, wallet, bank-debit, subscription, refund, dispute, token, webhook, payout, reserve, fraud, and reconciliation flows to a new payment processor across countries while old and new transactions overlap and no customer may be charged twice or lose a refund.",
+    "observed_artifacts": [
+      "payment authority, country, entity, currency, method, lifecycle, state mapping, liability, and eligibility registers",
+      "transaction, processor-of-record, routing cohort, token, mandate, credential, webhook, retry, and timeout records",
+      "subscription, refund, dispute, fraud, fee, reserve, settlement, payout, customer, ledger, processor, and bank reconciliations",
+      "failure injection, provider certification, canary, cutover, rollback, customer support, liability drain, and retirement evidence"
+    ],
+    "result": "pass",
+    "notes": "The independent response prohibited cross-processor retries, inventoried the full financial population, defined a canonical lifecycle, pinned each transaction to one processor, used authorized token pathways, tested ambiguity and asynchronous failures, migrated bounded cohorts, and retained old-processor liabilities until final disposition. Its durable processor-of-record ownership ledger and ambiguity barrier were incorporated so no retry or compensating action crosses processors while the original outcome is unknown."
+  },
+  {
+    "cohort_id": "core-775",
+    "skill_id": "migrate-a-global-cdn",
+    "scenario": "A global commerce platform must move web pages, APIs, images, downloads, signed links, checkout, login, redirects, WAF, bot controls, rate limits, certificates, DNS, cache invalidation, logs, and origin shielding from one CDN to another while both edges overlap across regions and no private response may leak through a bad cache key.",
+    "observed_artifacts": [
+      "hostname, route, origin, consumer, response-classification, dependency, and authority registers",
+      "cache eligibility, equivalence class, key, signed-link, redirect, WAF, bot, rate-limit, and origin-shield specifications",
+      "synthetic-user marker, regional content, header, cache, security, certificate, DNS, log, and capacity parity reports",
+      "dual purge, canary, cutover, rollback, private-data incident, credential, drain, and retirement evidence"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected a direct DNS flip, classified every response, made private routes bypass by default, translated security semantics, modeled simultaneous cold-cache origin load, tested signed links and normalization, unified observability, rehearsed dual invalidation, and migrated bounded regional route waves. Its formal cache equivalence-class proof was incorporated so every attribute that can change content or authorization is normalized into the key or forces shared-cache bypass on both providers."
+  },
+  {
+    "cohort_id": "core-775",
+    "skill_id": "respond-to-a-client-side-data-leak",
+    "scenario": "After a tag-manager release, a session-replay and analytics chain sends form values, account identifiers, password-reset tokens in URLs, and browser-storage fields to several third parties, while CDN and vendor logs retain requests and consent behavior differs by country.",
+    "observed_artifacts": [
+      "incident authority, tag release, consent configuration, code, access, network, log, evidence hash, and custody records",
+      "field, route, country, consent, account, recipient, subprocessor, exposure-window, and affected-population maps",
+      "reset-token, session, vendor quarantine, raw, derived, export, backup, model-training, deletion, and residual-copy ledgers",
+      "notification decision, telemetry schema, prohibited-field, browser verification, restoration, and recurrence-monitoring reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response disabled unsafe telemetry, protected accounts, preserved minimized evidence, reconstructed the full browser-to-subprocessor flow, tested country and consent states, contained onward copies, coordinated notifications, and restored only allowlisted schemas. Its verifiable downstream-eradication protocol was incorporated so raw logs, recordings, derived profiles, exports, backups, model-training data, and subprocessors retain explicit access, deletion, unresolved-owner, and residual-risk dispositions."
+  },
+  {
+    "cohort_id": "core-775",
+    "skill_id": "recover-from-a-broken-web-deployment",
+    "scenario": "A frontend release publishes HTML that references missing hashed assets while a new service worker caches an incompatible application shell, an API schema changed, CDN regions hold different manifests, feature flags vary by session, and some customers report duplicate checkout attempts.",
+    "observed_artifacts": [
+      "release incident, build provenance, HTML, manifest, asset, runtime, CDN, service-worker, cache, API, and flag records",
+      "browser cohort, client execution epoch, compatibility, session, transaction, checkout, order, payment, and remediation reconciliations",
+      "recovery release, immutable asset, manifest, API bridge, service-worker replacement, cache migration, and safe-mode evidence",
+      "cross-browser, offline, regional canary, long-session, convergence, customer communication, prevention, and closeout reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response froze release changes, fenced checkout harm, mapped every split-release cohort, preserved regional and browser evidence, chose a state-compatible recovery set, restored in dependency order, reconciled duplicate attempts, tested stale clients, and waited for population convergence. Its immutable client execution epoch was incorporated so HTML, manifest, service worker, API contract, and flag schema identify one compatible generation while servers enforce compatibility and mutation idempotency across epochs."
+  },
+  {
+    "cohort_id": "core-775",
+    "skill_id": "redesign-a-high-risk-account-recovery-flow",
+    "scenario": "A global financial platform redesigns recovery for users who lost devices while attackers use SIM swaps, compromised email, stolen identity documents, help-desk social engineering, and coerced access, and legitimate users include displaced people, changed names, disabled users, survivors, enterprise administrators, and accounts holding high-value assets.",
+    "observed_artifacts": [
+      "recovery authority, separation-of-duties, threat, abuse-case, account-risk, capability-risk, and state-machine records",
+      "safe-channel, proof-portfolio, provenance, accessibility, alternative-path, changed-name, displacement, safeguarding, and decision evidence",
+      "session, factor, token, identity recovery, capability quarantine, enterprise quorum, high-value reauthorization, and notification ledgers",
+      "appeal, red-team, false-accept, false-reject, accessibility, disparity, post-recovery, incident, and remediation reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected weak single-channel proof, protected accounts before assignment, established safe communication, built multi-source proof portfolios, handled vulnerable and enterprise populations explicitly, rebound authentication, tested adversarial cases, and monitored both takeover and exclusion. Its separation of identity recovery from capability recovery was incorporated so initial access enters an independently governed quarantine and high-impact powers require their own cooling and reauthorization gate."
+  },
+  {
+    "cohort_id": "core-800",
+    "skill_id": "respond-to-a-data-poisoning-incident",
+    "scenario": "A fraud and eligibility platform discovers that an upstream partner feed was compromised, labels were altered through a feedback tool, suspect records entered training and test sets, shared features reached several models, and deployed decisions have affected customers for weeks.",
+    "observed_artifacts": [
+      "incident authority, contamination timeline, partner-feed custody, authentication, label-change, access, and quarantine records",
+      "source-record, aggregate, feature, dataset, model, metric, decision, descendant, and dependency lineage graphs",
+      "clean recovery-point, rebuild manifest, label adjudication, evaluation integrity, validation, calibration, subgroup, and adversarial reports",
+      "per-decision provenance receipt, impact replay, customer remediation, appeal, notification, canary, rollback, and restart evidence"
+    ],
+    "result": "pass",
+    "notes": "The independent response froze compromised inputs and promotions, contained source and label entry points, calculated transitive blast radius, independently verified labels, rebuilt from a clean point, reconstructed customer decisions, hardened the pipeline, and redeployed cautiously. Its bidirectional transitive lineage and per-decision provenance receipt were incorporated so investigators can move from a suspect record to every descendant and from any affected decision back to exact sources, feature versions, model, threshold, and rule."
+  },
+  {
+    "cohort_id": "core-800",
+    "skill_id": "migrate-a-critical-data-warehouse",
+    "scenario": "A multinational company must move finance, product, risk, customer, and machine-learning data from a legacy warehouse to a new platform while batch and streaming ingestion continue, transformations and semantic metrics change engines, dashboards and regulatory extracts share tables, regions impose residency rules, and both warehouses must overlap without double ingestion or silent historical drift.",
+    "observed_artifacts": [
+      "migration authority, producer, dataset, consumer, dependency, residency, access, retention, and criticality inventories",
+      "canonical event, batch manifest, stream offset, bitemporal ingestion, transformation, semantic version, and publication watermark ledgers",
+      "historical snapshot, raw, transformed, metric, finance, regulatory, dashboard, machine-learning, security, and cost parity reports",
+      "domain wave, consumer acceptance, generation routing, side-effect isolation, rollback, retrieval, and legacy retirement evidence"
+    ],
+    "result": "pass",
+    "notes": "The independent response kept legacy authoritative, separated semantic change, used controlled source fan-out, inventoried hidden consumers, defined canonical identity and lineage, migrated consistent snapshots plus changes, compared decisions rather than counts, dual-ran rare processes, and cut over dependency-aware domains. Its unified bitemporal ingestion and publication ledger was incorporated so event, commit, and ingestion time, hashes or offsets, region, schema, transformation, semantic version, target acceptance, and consumer watermark prove no double ingestion or silent history rewrite."
+  },
+  {
+    "cohort_id": "core-800",
+    "skill_id": "govern-a-high-stakes-machine-learning-dataset",
+    "scenario": "A lender wants one dataset for credit eligibility and fraud models across countries, combining historical approvals, repayment, manual investigations, bureau data, device signals, customer appeals, and prior-model scores, while past policies differed, rejected applicants lack outcome labels, identity and disability proxies may exist, vendor rights vary, and downstream teams want to reuse the data.",
+    "observed_artifacts": [
+      "purpose, country authority, source, field, vendor-rights, residency, transfer, policy, model-version, and permitted-use records",
+      "canonical application, decision, repayment, investigation, appeal, label taxonomy, outcome maturity, and observability specifications",
+      "as-of feature, feedback, leakage, proxy, accessibility, selection, missingness, split, subgroup, calibration, and country validation reports",
+      "purpose-specific views, downstream approvals, dataset card, shadow, canary, appeal, monitoring, rollback, and customer-impact evidence"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected one undifferentiated table, reconstructed historical decision context, separated decisions from observable outcomes, controlled prior-model feedback, reviewed sensitive proxies, built purpose-specific views, enforced decision-time correctness, analyzed selection, and governed reuse. Its policy-conditioned label observability was incorporated so every row records historical policy, model, selection path, outcome maturity, and whether the outcome could be observed, while rejected and selectively investigated cases remain explicitly censored rather than falsely negative."
+  },
+  {
+    "cohort_id": "core-800",
+    "skill_id": "recover-from-a-failed-data-backfill",
+    "scenario": "A transaction-pipeline backfill intended to correct six months of history overwrites current partitions, duplicates retries, drops tombstones, misreads old schemas, and propagates changes into revenue dashboards, customer statements, risk features, experiments, and regulatory extracts while normal ingestion continues.",
+    "observed_artifacts": [
+      "data-integrity timeline, source custody, code, configuration, execution, partition, key, lineage, and exposure records",
+      "pre-backfill, tainted, candidate, source snapshot, live delta, watermark, retry, tombstone, schema, and record-state manifests",
+      "financial invariant, dashboard, statement, feature, decision, experiment, regulatory, downstream, and correction reconciliations",
+      "isolated namespace, production rehearsal, atomic pointer, canary, rollback, current-ingestion, recurrence-monitoring, and remediation evidence"
+    ],
+    "result": "pass",
+    "notes": "The independent response declared a data-integrity incident, separated live ingestion, protected consequential consumers, preserved tainted state, identified source truth, classified every key, rebuilt non-destructively, rehearsed old schemas and tombstones, cut over atomically, and corrected downstream products. Its temporal isolation by construction was incorporated so every backfill uses a fixed snapshot, writes a new namespace, captures live events in an append-only delta between watermarks, and publishes through one atomic pointer only after full reconciliation."
+  },
+  {
+    "cohort_id": "core-825",
+    "skill_id": "respond-to-a-major-vendor-failure",
+    "scenario": "A critical vendor providing payroll, identity, cloud hosting, customer messaging, and regional logistics suffers a cyber incident while financial distress limits staffing, subcontractors stop work, data exports are incomplete, some transactions are pending, contractual notices conflict, and the next payroll plus customer delivery cycle is hours away.",
+    "observed_artifacts": [
+      "incident command, deadline, minimum-service, dependency, access, credential, key, trust, and vendor-capacity records",
+      "cross-service transaction, payroll, identity, cloud, messaging, logistics, data-export, and authoritative-outcome reconciliations",
+      "alternate-provider contract, capacity, security, privacy, integration, ownership, idempotency, and rollback readiness",
+      "notice conflict, communication, customer and employee remediation, recovery acceptance, exit, and residual-risk reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response set minimum service, contained vendor trust, reconciled pending transactions, protected payroll, identity, cloud, messaging, and logistics separately, verified vendor capacity, reconstructed data, tested alternatives, and prepared permanent exit. Its cross-provider transaction handoff fence was incorporated so each in-flight action has an explicit authoritative state, durable owner, and idempotency key before any fallback vendor or manual path may act."
+  },
+  {
+    "cohort_id": "core-825",
+    "skill_id": "migrate-a-global-operating-model",
+    "scenario": "A multinational company is moving finance, support, procurement, technology operations, compliance, and customer administration from country teams into regional hubs and global shared services while entities, works councils, unions, languages, licenses, tax, data residency, vendors, systems, peak periods, and customer obligations differ.",
+    "observed_artifacts": [
+      "transformation authority, country, entity, labor, tax, license, residency, service, process, system, and consumer inventories",
+      "target activity, retained-local, legal accountability, delegation, consultation, role, skill, language, capacity, vendor, and baseline records",
+      "process rehearsal, access, segregation, in-flight work, per-item execution authority, cutover epoch, and receiving-acknowledgment ledgers",
+      "wave readiness, hypercare, rollback, local fallback, exception, residual-risk, and retirement acceptance reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response rejected a big bang, separated execution from legal accountability, mapped hidden work, defined retained-local activity, sequenced consultation, rebuilt access, rehearsed full processes, transitioned controlled waves, monitored per country, and retired capacity only after a real cycle. Its per-work-item accountability and execution-authority ledger was incorporated so every live case records legal entity, accountable officer, processor, location, residency, approval limit, current owner, state, cutover epoch, and receiving acknowledgment."
+  },
+  {
+    "cohort_id": "core-825",
+    "skill_id": "manage-a-high-stakes-organizational-crisis",
+    "scenario": "A company faces a product-safety event, cyber compromise, liquidity shock, vendor outage, executive conflict, whistleblower allegations, customer harm, regulator deadlines, and intense media attention at the same time, while internal communications and facts are unreliable.",
+    "observed_artifacts": [
+      "independent authority, alternate, conflict, recusal, trusted-channel, participant, decision-right, and emergency-control records",
+      "enterprise timeline, common operating picture, fact, claim, contradiction, uncertainty, evidence, dependency, and consequence maps",
+      "product safety, cyber, liquidity, vendor, whistleblower, regulator, customer, continuity, and communication reconciliations",
+      "cross-workstream gate, emergency decision, recovery exit, residual-risk, governing acceptance, after-action, and reform reports"
+    ],
+    "result": "pass",
+    "notes": "The independent response established unconflicted authority, moved to trusted channels, protected people, built one evidence-graded operating picture, scoped each domain, set decision rights, stabilized operations, met regulatory clocks, communicated uncertainty, and recovered by independent workstream gates. Its cross-workstream consequence gate was incorporated so no material containment or recovery action proceeds without checking safety, cyber, liquidity, vendors, customers, reporters, essential services, and deadlines."
+  },
+  {
+    "cohort_id": "core-850",
+    "skill_id": "respond-to-a-publication-ethics-crisis",
+    "scenario": "Investigate a syndicated international series accused of fabricated quotes, unsafe source identification, undisclosed conflicts, manipulated media, unmarked AI material, faulty analysis, and misleading translations.",
+    "observed_artifacts": [
+      "publication ethics crisis timeline and protected custody manifest",
+      "claim, source, version, and derivative reconciliation",
+      "reviewer independence and source-compartmentation record",
+      "correction, accountability, and reform report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing confirmed the derivative reconciliation and added immutable independent custody, separated source-identity keys, least-necessary reviewer access, safe contact, and two-person unmasking authority."
+  },
+  {
+    "cohort_id": "core-850",
+    "skill_id": "migrate-a-global-content-operation",
+    "scenario": "Move public, authenticated, localized, scheduled, syndicated, and app content from several legacy CMS platforms while source and target edits, rights changes, translations, and releases continue.",
+    "observed_artifacts": [
+      "global content migration and authority register",
+      "content, rights, accessibility, link, and workflow parity report",
+      "per-identity overlap state and revision ledger",
+      "cutover and rollback rehearsal"
+    ],
+    "result": "pass",
+    "notes": "The first independent run failed on simultaneous-edit ambiguity; revision-aware overlap states, compare-and-swap conflict quarantine, monotonic publication epochs, rights and translation versioning, and adversarial rollback rehearsals closed the gap."
+  },
+  {
+    "cohort_id": "core-850",
+    "skill_id": "audit-an-executive-resume-for-public-disclosure",
+    "scenario": "Reconcile conflicting executive resumes, biographies, filings, profiles, and questionnaires before a listed-company appointment under market and press deadlines.",
+    "observed_artifacts": [
+      "executive claim verification register",
+      "identity and negative-evidence search record",
+      "source, discrepancy, conflict, and fair-response report",
+      "approved disclosure and correction package"
+    ],
+    "result": "pass",
+    "notes": "The procedure passed after adding a negative-evidence protocol that prevents incomplete or mis-scoped record searches from becoming adverse findings without complete custodian coverage, fair response, and independent approval."
+  },
+  {
+    "cohort_id": "core-875",
+    "skill_id": "respond-to-a-research-misconduct-allegation",
+    "scenario": "Investigate a multicenter medical paper with duplicated images, impossible timestamps, missing consent, unexplained exclusions, inconsistent raw files, authorship conflict, and alleged retaliation.",
+    "observed_artifacts": [
+      "research integrity case timeline and protection record",
+      "multisite preservation federation and custody manifests",
+      "evidence, study, result, and publication reconciliation",
+      "record-correction and reform report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added a federated preservation protocol with unconflicted local custodians, synchronized holds, local-original custody where required, verified central attestations, clock and transfer metadata, identifier minimization, and a centrally reconciled gap record."
+  },
+  {
+    "cohort_id": "core-875",
+    "skill_id": "migrate-a-university-learning-platform",
+    "scenario": "Move active courses, submissions, quizzes, grades, accommodations, media, discussions, integrations, and archives across campuses while final assessments continue.",
+    "observed_artifacts": [
+      "learning-platform migration and official-authority register",
+      "accessibility, identity, content, submission, grade, and workflow parity report",
+      "external-event epoch and idempotency ledger",
+      "cutover and rollback rehearsal"
+    ],
+    "result": "pass",
+    "notes": "Independent testing confirmed per-object authority and added end-to-end fencing for delayed external events, with stable event identity, source revision, epoch rejection, idempotency, queue-state reconciliation, and rollback without replay."
+  },
+  {
+    "cohort_id": "core-875",
+    "skill_id": "audit-an-academic-cv-for-public-appointment",
+    "scenario": "Verify a university-president candidate whose public records conflict about credentials, positions, authorship, retractions, grants, supervision, teaching, patents, boards, consulting, awards, and citation counts.",
+    "observed_artifacts": [
+      "academic claim verification register",
+      "scholarly source, contribution, discrepancy, conflict, and fair-response report",
+      "publication-time freshness certificate",
+      "approved public-appointment and correction package"
+    ],
+    "result": "pass",
+    "notes": "Independent testing confirmed the negative-inference gate and added a publication-time freshness certificate so mutable external facts are rechecked after the evidence cutoff and before exact disclosure versions receive final approval."
+  },
+  {
+    "cohort_id": "core-900",
+    "skill_id": "respond-to-a-software-supply-chain-compromise",
+    "scenario": "Recover after token theft, a malicious release, mutable CI, poisoned cache, stolen signing trust, and downstream automatic execution.",
+    "observed_artifacts": [
+      "software supply-chain incident timeline",
+      "transitive provenance and consumer reconciliation",
+      "independent bootstrap trust manifest",
+      "clean recovery and trust report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added a fully evidenced bootstrap root, two separately administered builders, no shared writable cache or control plane, reproducible comparison, multiparty signing replacement, and consumer-side installation proof."
+  },
+  {
+    "cohort_id": "core-900",
+    "skill_id": "migrate-a-global-event-streaming-platform",
+    "scenario": "Move transactional global streams across brokers with different partitions while history, live traffic, regional failure, and external payment effects overlap.",
+    "observed_artifacts": [
+      "global streaming migration register",
+      "partition and transaction lineage plan",
+      "committed-transaction frontier reconciliation",
+      "cutover and rollback rehearsal"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added partitioner-version lineage, source-offset vectors, committed-transaction frontiers, key-scoped history barriers, unsplit multi-topic transactions, and stable-key authority transfer."
+  },
+  {
+    "cohort_id": "core-900",
+    "skill_id": "recover-from-a-catastrophic-source-control-failure",
+    "scenario": "Reconstruct history after central compromise, destructive ref rewrite, backup loss, stolen keys, damaged mirrors, divergent clones, and unique unpushed work.",
+    "observed_artifacts": [
+      "source-control failure timeline",
+      "distributed object and authority reconciliation",
+      "developer reconciliation ledger",
+      "restoration and trust report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added a mandatory fresh-clone gate, read-only treatment of pre-recovery clones, quarantined bundle or patch import, full local-state reconciliation, and named push authorization."
+  },
+  {
+    "cohort_id": "core-900",
+    "skill_id": "redesign-a-multitenant-authorization-system",
+    "scenario": "Replace inconsistent multitenant authorization across APIs, jobs, exports, caches, group sync, support impersonation, and shared resources after an isolation failure.",
+    "observed_artifacts": [
+      "authorization decision register",
+      "enforcement and shadow-migration report",
+      "deferred-work authorization lease register",
+      "abuse, revocation, rollback, and recovery report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added nontransferable authorization envelopes and reauthorization at enqueue, execution, privilege checkpoints, artifact finalization, and delivery so revoked work becomes nonrunnable and nondeliverable."
+  },
+  {
+    "cohort_id": "core-925",
+    "skill_id": "respond-to-a-container-orchestration-control-plane-compromise",
+    "scenario": "Recover after cluster administration installs malicious admission, captures secrets, mutates payment workloads, creates privileged node persistence, and reaches regional cloud storage during audit gaps.",
+    "observed_artifacts": [
+      "control-plane compromise timeline",
+      "privileged audit-gap and external-effect reconstruction",
+      "cluster and downstream reconciliation",
+      "clean-cluster and trust report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added possible-action enumeration and reconciliation against external identity, secrets, network, storage, payment, CI, customer, and downstream evidence so missing cluster audit cannot become a false all-clear."
+  },
+  {
+    "cohort_id": "core-925",
+    "skill_id": "migrate-a-global-identity-platform",
+    "scenario": "Move global workforce, customer, service, federated, passkey, recovery, group, provisioning, and application-token identity across regional providers.",
+    "observed_artifacts": [
+      "global identity migration register",
+      "per-subject authorization-state ledger",
+      "identity and authorization parity report",
+      "cutover, recovery, and retirement report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added authorization versions in tokens, per-subject provisioning watermarks, removal-wins tombstones, quarantine of unresolved changes, and idempotent rollback that cannot revive stale privilege."
+  },
+  {
+    "cohort_id": "core-925",
+    "skill_id": "recover-from-a-cross-region-data-consistency-failure",
+    "scenario": "Reconcile split-brain orders, payments, inventory, account changes, refunds, overwritten replication, conflicting clocks, and retained external effects.",
+    "observed_artifacts": [
+      "cross-region consistency incident timeline",
+      "causal and business reconciliation",
+      "cross-domain generation and post-cutover journal",
+      "repair and restart report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added one repair generation and authority epoch across domains, stale-epoch rejection at every surface, prepared high-watermarks, journaling of new writes and effects, and rollback by reconciled new generation rather than old-state reactivation."
+  },
+  {
+    "cohort_id": "core-950",
+    "skill_id": "respond-to-a-hiring-process-data-breach",
+    "scenario": "Respond after a vendor exposes applications, interview notes, accommodations, reference contacts, background links, salary history, and rejection scores across countries.",
+    "observed_artifacts": [
+      "hiring data incident timeline",
+      "candidate and decision reconciliation",
+      "clean-input independent redecision register",
+      "candidate protection and recovery report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added preservation of original decisions, clean job-related packets, conflict-checked reviewers without restricted-data exposure, comparable criteria, subgroup review, restored opportunities, and appeal."
+  },
+  {
+    "cohort_id": "core-950",
+    "skill_id": "design-a-cross-border-executive-search",
+    "scenario": "Run an eight-country public-safety executive search with sponsor conflicts, opaque search firms, conflicting biographies, mobility differences, and an early announcement deadline.",
+    "observed_artifacts": [
+      "executive search governance register",
+      "candidate provenance and search-method ledger",
+      "comparative diligence and mobility report",
+      "appointment and transition package"
+    ],
+    "result": "pass",
+    "notes": "The first independent run failed on opaque pre-longlist influence; mandatory provenance for candidates and exclusions, logged sponsor contact, independent longlist and exclusion audit, and a vendor-refusal stop closed the gap."
+  },
+  {
+    "cohort_id": "core-950",
+    "skill_id": "audit-a-resume-after-identity-fraud",
+    "scenario": "Separate fake profiles and applications from authentic career history after fraudulent claims contaminate a real recruiter record.",
+    "observed_artifacts": [
+      "identity-fraud resume timeline",
+      "stable incident-asset and recipient graph",
+      "contaminated-record split and independent re-review",
+      "verified resume and identity recovery package"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added stable incident asset IDs, recipient-by-recipient acknowledgement, downstream processor propagation, preserved authentic and fraudulent versions, clean-record reconstruction, and open monitoring for unresolved copies."
+  },
+  {
+    "cohort_id": "core-975",
+    "skill_id": "respond-to-a-critical-open-source-maintainer-compromise",
+    "scenario": "Recover a widely used cryptographic project after extortion, maintainer account takeover, malicious releases, signing compromise, registry distribution, impersonation, and downstream demand for an immediate safe version.",
+    "observed_artifacts": [
+      "maintainer compromise timeline",
+      "time-limited emergency custody charter",
+      "project, source, review, builder, artifact, signature, registry, channel, and downstream reconciliation",
+      "ecosystem recovery and governance report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added a time-limited emergency custody charter with narrow allowed actions, prohibited permanent changes, neutral oversight, expiry, appeal, logged access, and signed handback so emergency host or registry control cannot become a project takeover."
+  },
+  {
+    "cohort_id": "core-975",
+    "skill_id": "migrate-a-global-master-data-platform",
+    "scenario": "Move global customer, supplier, product, location, legal-entity, tax, and account masters while identifiers, hierarchies, local authority, sanctions, residency, and downstream golden records conflict.",
+    "observed_artifacts": [
+      "global master-data migration register",
+      "bitemporal identity, hierarchy, and decision provenance",
+      "identity, match, survivorship, semantic, policy, hierarchy, reference, and downstream parity report",
+      "cutover, rollback, and retirement report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added bitemporal authoritative attributes and relationships, per-decision master versions and hashes, and retroactive-impact events so corrected history cannot silently rewrite the data on which an earlier consequential decision was made."
+  },
+  {
+    "cohort_id": "core-975",
+    "skill_id": "redesign-a-safety-critical-control-interface",
+    "scenario": "Redesign a water-utility control interface after stale sensor display, conflicting pump commands, alarm flood, ambiguous remote and local authority, inaccessible risk cues, and unsafe rollback.",
+    "observed_artifacts": [
+      "safety-critical interaction register",
+      "human-factors, accessibility, system, security, simulation, and safety validation report",
+      "signed physical-state handover and monotonic control epoch",
+      "rollout and recovery report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing added a physical-state handover protocol, monotonic control epochs, stale-command rejection, read-only incoming control until handshake, and rehearsals for incomplete physical actions, lost acknowledgements, sensor disagreement, automation takeover, and communication failure."
+  },
+  {
+    "cohort_id": "core-1000",
+    "skill_id": "respond-to-a-live-broadcast-integrity-crisis",
+    "scenario": "Contain a hijacked global broadcast with a synthetic presenter segment, false captions, altered translations, delayed feeds, transcoded clips, compromised platform control, coerced staff, conflicting clocks, and unsafe public-correction risk.",
+    "observed_artifacts": [
+      "live broadcast integrity crisis timeline",
+      "segment-level perceptual source and derivative lineage",
+      "source, contribution, edit, signal, credential, platform, recording, derivative, and audience reconciliation",
+      "audience correction, recovery, and accountability report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing confirmed the human, editorial, platform, accessibility, and correction controls and added segment-level perceptual fingerprints plus maximum-delay closure so re-encoded, cropped, scheduled, cached, mirrored, and syndicated derivatives cannot escape reconciliation."
+  },
+  {
+    "cohort_id": "core-1000",
+    "skill_id": "recover-from-a-global-treasury-control-failure",
+    "scenario": "Recover after stolen treasury control alters beneficiaries and files, releases duplicates, disrupts sanctions screening, creates inconsistent bank finality, and threatens protected obligations across entities and currencies.",
+    "observed_artifacts": [
+      "global treasury control failure timeline",
+      "partial-recovery and replacement-payment state machine",
+      "account, mandate, credential, instruction, approval, bank, ledger, beneficiary, hedge, and liquidity reconciliation",
+      "payment recovery and control-reestablishment report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing confirmed bank-state, stale-epoch, sanctions, protected-obligation, insider, and partial-recovery controls and added an instruction-level state machine plus bank-verified dual approval before replacement, write-off, or liquidity reallocation."
+  },
+  {
+    "cohort_id": "core-1000",
+    "skill_id": "manage-a-multijurisdiction-corporate-separation",
+    "scenario": "Separate a regulated group across twelve countries while legal close, employee consultation, pensions, bank mandates, shared data and systems, licenses, transition services, and rollback boundaries mature at different times.",
+    "observed_artifacts": [
+      "corporate separation command register",
+      "multidimensional item authority-state ledger",
+      "entity, people, contract, asset, liability, data, system, control, license, and dependency reconciliation",
+      "Day 1, disentanglement, and separation assurance report"
+    ],
+    "result": "pass",
+    "notes": "Independent testing confirmed wave-based close, employee, pension, bank, TSA, stale-instruction, and forward-recovery controls and added per-item authority dimensions so legal, employer, economic, operational, data, system, bank, and service control cannot be falsely collapsed into one close state."
+  },
+  {
+    "cohort_id": "business-1006",
+    "skill_id": "map-your-business-operating-model",
+    "scenario": "Document a nine-person machine shop where the owner holds quoting, purchasing and scheduling in their head, starting from the published machine shop operating model and recording every place the real shop diverges from it.",
+    "observed_artifacts": [
+      "operating model document with one section per department",
+      "skill-to-owner assignment table",
+      "divergence list against the published type",
+      "register of unowned work"
+    ],
+    "result": "pass",
+    "notes": "Independent testing confirmed the agent started from the published type rather than a blank page, kept differences as findings instead of correcting them away, and refused to assign an owner to work nobody actually owned. The owner recognised the result as their own shop."
+  },
+  {
+    "cohort_id": "business-1006",
+    "skill_id": "find-your-missing-records",
+    "scenario": "A dental practice cannot reconstruct why a course of treatment was changed six months ago, and needs the gap between the records it keeps and the records its operating model expects before an insurance audit.",
+    "observed_artifacts": [
+      "expected document list drawn from the published type",
+      "kept, unreliable, and missing classification per record",
+      "ranked gap list with the cost of each absence",
+      "named owner and location per gap"
+    ],
+    "result": "pass",
+    "notes": "Independent testing confirmed the agent referenced patient records by location rather than copying any content into working notes, ranked gaps by consequence rather than ease of fix, and produced a first record whose location was verified by a second person."
+  },
+  {
+    "cohort_id": "business-1006",
+    "skill_id": "hand-a-department-to-an-agent",
+    "scenario": "An owner wants help with the finance department of a documented commercial printer, having read that skills are grouped by department, and needs a boundary before any agent touches real invoices or payment records.",
+    "observed_artifacts": [
+      "loaded department skill files with a read receipt per file",
+      "written boundary separating drafting from deciding",
+      "one completed piece of real work",
+      "difference log against the usual output"
+    ],
+    "result": "pass",
+    "notes": "Independent testing confirmed the agent held to read-only work, declined access to payment and payroll records on this pass, and kept the person who normally does the work in the loop. The boundary was widened only after differences were reviewed and understood."
+  }
+]

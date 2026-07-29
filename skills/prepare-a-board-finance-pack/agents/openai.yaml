@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare a board finance pack"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $prepare-a-board-finance-pack to complete and verify this finance task."

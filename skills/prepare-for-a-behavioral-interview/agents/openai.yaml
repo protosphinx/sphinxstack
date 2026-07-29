@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare for a Behavioral Interview"
+  short_description: "Build truthful stories for behavioral questions"
+  default_prompt: "Use $prepare-for-a-behavioral-interview to prepare evidence-backed stories for this role."

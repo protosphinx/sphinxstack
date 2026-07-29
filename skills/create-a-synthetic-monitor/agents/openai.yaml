@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Synthetic Monitor"
+  short_description: "Test critical journeys from outside the service"
+  default_prompt: "Use $create-a-synthetic-monitor to build and verify this external journey check."

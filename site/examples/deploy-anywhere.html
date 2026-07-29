@@ -1,0 +1,109 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, first deploy included. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> my project only works on my computer. how do I put it online?</div>
+<div class="cm cm-agent">With a free static host. Three good options: GitHub Pages, Cloudflare
+Pages, Netlify. All free at your scale. Do you already have a GitHub account?</div>
+<div class="cm cm-user cd-hide">yes, from before. but I've never deployed anything and I'm convinced I'll break something</div>
+<div class="cm cm-agent cd-hide">GitHub Pages then, zero new accounts. And there is nothing here
+to break: the worst case is a failed deploy, your machine's copy is untouched, and the
+deploy log names the problem. It's usually a wrong folder or a filename with the wrong
+case.</div>
+<div class="cm cm-user cd-hide">what do you need from me</div>
+<div class="cm cm-agent cd-hide">First a check that the project is truly static: an index.html
+at the root. Then it's repo Settings, then Pages, then deploy from main. You click; I
+narrate each screen in one line.</div>
+<div class="cm cm-user cd-hide">it says my site is live?? that was fast</div>
+<div class="cm cm-agent cd-hide">Open it on your phone to be sure. Then we prove the loop:
+change one visible word, commit, push, and watch the live page update. Once you've
+seen that with your own eyes, you own deploys.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Never deployed anything before?</h2>
+<p>Then the word probably sounds bigger than the act. For a static site, deploying
+means a host copies your files and serves them at a URL, and this skill has you pick
+one host, ship on it, and move on. No comparing hosts for a week: all three options
+are free at this scale, switching later is cheap, and a failed deploy costs nothing
+but the minute it takes to read the log. Projects that are one deploy away from being
+real:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/real-site/"><img src="/assets/project-img/real-site.jpg" alt=""><span>A real site, shipped</span></a>
+<a class="mini" href="/ideas/start-page/"><img src="/assets/project-img/start-page.jpg" alt=""><span>Your own browser start page</span></a>
+<a class="mini" href="/ideas/qr-one-pager/"><img src="/assets/project-img/qr-one-pager.jpg" alt=""><span>A one-pager behind a QR code</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A URL, and proof that pushing updates it. The whole loop fits on one screen:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example deploy log for a first static site deploy">
+<div class="sheet-tag">Example</div>
+<pre>
+$ git push                       <span class="anno-badge">1</span>
+Enumerating objects: 5, done.
+To github.com:username/weather-diary.git
+   e7c21aa..b3f90d2  main -> main
+
+pages build and deployment       <span class="anno-badge">2</span>
+  build     ok        41s
+  deploy    ok
+  live at:  username.github.io/weather-diary/
+
+phone check: loads, readable     <span class="anno-badge">3</span>
+</pre>
+</div>
+<ol class="anno-notes">
+<li><b>Push is the trigger.</b> On every host here, the deploy starts when the repo
+changes. There is no separate upload step to remember, which is exactly why the loop
+sticks.</li>
+<li><b>The log is where answers live.</b> When a deploy fails, this section names the
+reason, and the skill has you read it together instead of guessing. Wrong output
+folder and case-sensitive filenames cover most first failures.</li>
+<li><b>Done means opened on a phone.</b> A URL you have only seen on your own laptop
+isn't verified. The skill also has you write the URL down somewhere you'll find it
+again.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is hosting really free?</summary>
+<p>At personal-site scale, yes, with no expiry: GitHub Pages is free, Cloudflare Pages
+has a generous free tier, and Netlify's free tier covers a site like this comfortably.
+The paid tiers of those services exist for traffic and features a first site doesn't
+have.</p></details>
+<details class="faq"><summary>Which host should I pick?</summary>
+<p>If you've done ship-on-github, GitHub Pages, because it needs zero new accounts.
+Cloudflare Pages is a good pick if you may want its free analytics later, and Netlify
+can take a drag-and-drop folder if you want a no-git one-off. The skill's actual rule
+is stronger than any of that: pick one, ship, move on.</p></details>
+<details class="faq"><summary>What if the deploy fails?</summary>
+<p>You read the deploy log, which names the problem. In practice a first failure is
+almost always a wrong build-output folder or a filename whose case differs from the
+link pointing at it. Your files are untouched either way; fix and push again.</p></details>
+<details class="faq"><summary>My project has a build step. Does that change things?</summary>
+<p>Only slightly: the host asks for the build command and the output folder, and you
+give it both. For plain HTML you leave the command blank and point at the root. The
+skill checks which case you're in before wiring anything.</p></details>
+<details class="faq"><summary>Can I host a backend or database this way?</summary>
+<p>No, and the skill is honest about the boundary: these hosts serve static files.
+When your project needs a server or shared data, backend-basics and database-basics
+are the next skills up; everything you learned here still applies to the front
+half.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is hosting really free?","acceptedAnswer":{"@type":"Answer","text":"At personal-site scale, yes: GitHub Pages is free and Cloudflare Pages and Netlify have free tiers that cover a site like this comfortably."}},
+{"@type":"Question","name":"Which host should I pick?","acceptedAnswer":{"@type":"Answer","text":"GitHub Pages if you've done ship-on-github; Cloudflare Pages if you may want its free analytics; Netlify for a drag-and-drop one-off. Pick one, ship, move on."}},
+{"@type":"Question","name":"What if the deploy fails?","acceptedAnswer":{"@type":"Answer","text":"Read the deploy log; it names the problem. Usually a wrong output folder or a case-sensitive filename. Your files are untouched; fix and push again."}},
+{"@type":"Question","name":"My project has a build step. Does that change things?","acceptedAnswer":{"@type":"Answer","text":"Only slightly: the host asks for the build command and output folder. Plain HTML needs neither."}},
+{"@type":"Question","name":"Can I host a backend or database this way?","acceptedAnswer":{"@type":"Answer","text":"No, these hosts serve static files. backend-basics and database-basics pick up when your project needs a server or shared data."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Site live at a URL?</b> Make the URL earn more:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/custom-domain/"><img src="/assets/skill-img/custom-domain.jpg" alt=""><span>Your own domain</span></a>
+<a class="mini" href="/skills/add-analytics/"><img src="/assets/skill-img/add-analytics.jpg" alt=""><span>See who visits</span></a>
+<a class="mini" href="/skills/make-it-fast/"><img src="/assets/skill-img/make-it-fast.jpg" alt=""><span>Make it fast</span></a>
+</div>

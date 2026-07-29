@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Basics"
+  short_description: "Apply core design principles to a real artifact"
+  default_prompt: "Use $design-basics to help me complete this workflow with verified evidence."

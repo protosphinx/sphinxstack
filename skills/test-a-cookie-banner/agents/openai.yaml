@@ -1,0 +1,4 @@
+interface:
+  display_name: "test a cookie banner"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $test-a-cookie-banner to complete and verify this web task."

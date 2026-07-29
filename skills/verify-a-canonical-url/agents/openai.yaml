@@ -1,0 +1,4 @@
+interface:
+  display_name: "verify a canonical url"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $verify-a-canonical-url to complete and verify this web task."

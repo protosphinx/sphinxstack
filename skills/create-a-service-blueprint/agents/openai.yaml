@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Service Blueprint"
+  short_description: "Map user actions to operations and service evidence"
+  default_prompt: "Use $create-a-service-blueprint to map this service journey, backstage work, dependencies, and failures."

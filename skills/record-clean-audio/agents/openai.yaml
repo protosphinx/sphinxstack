@@ -1,0 +1,4 @@
+interface:
+  display_name: "Record Clean Audio"
+  short_description: "Capture clean, safe, and usable audio"
+  default_prompt: "Use $record-clean-audio to help me complete this workflow with verified evidence."

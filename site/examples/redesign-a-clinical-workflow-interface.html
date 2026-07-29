@@ -1,0 +1,34 @@
+<h2>Worked case: redesign medication workflows without hiding hazards</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A hospital must redesign medication ordering and administration across emergency, inpatient, pharmacy, and nursing workflows while alert fatigue, unit confusion, duplicate orders, hidden pending states, local safety workarounds, legacy devices, unreliable integrations, accessibility needs, and downtime procedures create patient risk.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Can we remove every local workaround?</div>
+<div class="cm cm-agent">Not until observation shows which adaptations prevent harm and which create it.</div>
+<div class="cm cm-user cd-hide">Are cleaner screens enough validation?</div>
+<div class="cm cm-agent cd-hide">No. Simulate critical tasks, interruptions, integrations, accessibility needs, and downstream clinical effects.</div>
+<div class="cm cm-user cd-hide">Can rollback restore the old UI after new orders exist?</div>
+<div class="cm cm-agent cd-hide">Only if authoritative orders, administration, results, and documentation remain reconciled.</div>
+<div class="cm cm-user">What blocks a unit from launch?</div>
+<div class="cm cm-agent">Any severe unresolved hazard, missing representative validation, unsafe downtime path, or absent safety monitoring.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">The real workflow extends beyond the screen.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The clinical redesign evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>Clinical workflow and hazard register</td><td>Users, contexts, tasks, data, workarounds, hazards, controls, verification, residual risk, and authority</td><td>Every severe hazard has an owned disposition</td></tr>
+<tr><td>Simulated-use and safety validation report</td><td>Critical tasks, human factors, accessibility, calculations, integrations, audit, workload, recovery, and limits</td><td>Representative users complete realistic safe outcomes</td></tr>
+<tr><td>Cutover, downtime, and recovery rehearsal</td><td>Waves, training, compatibility, clinical-state reconciliation, stop authority, monitoring, rollback, and retirement</td><td>No clinical record or order is lost or duplicated</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A pharmacy interface times out after accepting an order while the nursing view still shows pending. Expansion stops, the authoritative order and audit state are reconciled, the approved downtime workflow protects care, and the integration plus status design is retested before the unit returns.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can policy documents replace observation?</summary><p>No. Compare prescribed work with actual safe and unsafe adaptations.</p></details>
+<details class="faq"><summary>Should every alert remain?</summary><p>No. Each alert needs a defined hazard, action, priority, and effectiveness.</p></details>
+<details class="faq"><summary>Who accepts residual risk?</summary><p>The named qualified clinical and governance authority, not the interface team alone.</p></details>
+<details class="faq"><summary>Can a low-risk unit prove all settings?</summary><p>No. Each material role, patient risk, device, and care context needs appropriate evidence.</p></details>
+<details class="faq"><summary>When can the old workflow retire?</summary><p>After training, devices, integrations, records, support, and safety gates have verified dispositions.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can policy documents replace observation?","acceptedAnswer":{"@type":"Answer","text":"No. Observe real work."}},{"@type":"Question","name":"Should every alert remain?","acceptedAnswer":{"@type":"Answer","text":"No. Validate purpose and effectiveness."}},{"@type":"Question","name":"Who accepts residual risk?","acceptedAnswer":{"@type":"Answer","text":"Named qualified authority."}},{"@type":"Question","name":"Can a low-risk unit prove all settings?","acceptedAnswer":{"@type":"Answer","text":"No. Validate each material context."}},{"@type":"Question","name":"When can the old workflow retire?","acceptedAnswer":{"@type":"Answer","text":"After every safety gate passes."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Map service dependencies with <a href="/skills/map-critical-service-dependencies/">Map critical service dependencies</a>,
+test real interaction with <a href="/skills/prototype-an-interaction/">Prototype an interaction</a>, and
+prepare recovery with <a href="/skills/design-a-disaster-recovery-plan/">Design a disaster recovery plan</a>.</p>

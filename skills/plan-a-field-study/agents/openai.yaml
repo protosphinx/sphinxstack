@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Field Study"
+  short_description: "Plan ethical fieldwork, logistics, and evidence"
+  default_prompt: "Use $plan-a-field-study to plan this field research safely and rigorously."

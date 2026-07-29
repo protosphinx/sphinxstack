@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement Idempotency"
+  short_description: "Make retries safe across partial failures"
+  default_prompt: "Use $implement-idempotency to make this operation safely repeatable."

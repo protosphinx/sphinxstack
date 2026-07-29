@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ship On GitHub"
+  short_description: "Publish a working project through GitHub"
+  default_prompt: "Use $ship-on-github to help me complete this workflow with verified evidence."

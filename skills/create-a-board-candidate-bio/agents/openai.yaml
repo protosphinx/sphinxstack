@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Board Candidate Bio"
+  short_description: "Present governance fit, independence, and evidence"
+  default_prompt: "Use $create-a-board-candidate-bio to prepare an accurate board candidacy profile."

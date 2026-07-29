@@ -1,0 +1,4 @@
+interface:
+  display_name: "analyze product margin"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $analyze-product-margin to complete and verify this finance task."

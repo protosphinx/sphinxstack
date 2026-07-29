@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-configuration-distribution-system"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $design-a-configuration-distribution-system to complete and verify this task."

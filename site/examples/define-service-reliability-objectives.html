@@ -1,0 +1,41 @@
+<h2>Worked case: define checkout reliability</h2>
+<p class="case-trigger"><strong>Trigger:</strong> Teams want a ninety-nine-point-nine availability target, but retries, partial checkout failures, low traffic, maintenance, telemetry gaps, and contract language make the convenient metric misleading.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Our API returned a successful status, so can that be the availability indicator?</div>
+<div class="cm cm-agent">Not by itself. I will start with the checkout journey and define a valid event, a good outcome, observation point, exclusions, and telemetry limits.</div>
+<div class="cm cm-user cd-hide">Can we exclude planned maintenance and all third-party failures?</div>
+<div class="cm cm-agent cd-hide">Only through a narrow, pre-approved rule that matches user impact. Dependencies and maintenance can still make checkout unavailable to users.</div>
+<div class="cm cm-user cd-hide">Then set ninety-nine-point-nine and alert on it.</div>
+<div class="cm cm-agent cd-hide">First I will backtest candidate targets, reconcile incidents and low-volume periods, then rehearse burn alerts and the decisions a breach should trigger.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">A convenient component metric is not a user outcome.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The reliability evidence package</h2>
+<table class="plain-table">
+<thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead>
+<tbody>
+<tr><td>Versioned indicator definition</td><td>Journey, event, numerator, denominator, filters, units, source, owner, and blind spots</td><td>A second analyst can reproduce the result</td></tr>
+<tr><td>Historical backtest</td><td>Known incidents, normal traffic, partial failure, retries, maintenance, low volume, and telemetry loss</td><td>The indicator agrees with user harm or explains divergence</td></tr>
+<tr><td>Alert and breach rehearsal</td><td>Burn windows, thresholds, routing, decision authority, exception, recovery, and evidence</td><td>Alerts fire early enough to support a useful action</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>The metric reports full availability while a payment dependency rejects half of completed carts and telemetry
+drops the failed events. The team treats the gap as unknown rather than good, repairs the denominator, reruns the
+historical backtest, and repeats the alert and breach rehearsal before approving the objective.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>What is the difference between an indicator and an objective?</summary><p>The indicator measures a defined user outcome; the objective sets an approved target and window for that measure.</p></details>
+<details class="faq"><summary>Can planned maintenance be excluded?</summary><p>Only through a predeclared and justified rule that does not hide material user harm or conflict with commitments.</p></details>
+<details class="faq"><summary>How should low traffic be handled?</summary><p>Document minimum-event behavior and supplement sparse ratios with carefully governed journey checks or longer windows.</p></details>
+<details class="faq"><summary>What happens when telemetry is missing?</summary><p>Mark the measure incomplete or unknown according to policy; do not silently count unobserved outcomes as good.</p></details>
+<details class="faq"><summary>Who approves the target?</summary><p>Service and risk owners should approve it with the people responsible for user, business, and contractual consequences.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between an indicator and an objective?","acceptedAnswer":{"@type":"Answer","text":"An indicator measures a user outcome and an objective sets its approved target and window."}},{"@type":"Question","name":"Can planned maintenance be excluded?","acceptedAnswer":{"@type":"Answer","text":"Only through a predeclared rule that does not hide material user harm."}},{"@type":"Question","name":"How should low traffic be handled?","acceptedAnswer":{"@type":"Answer","text":"Document sparse-event behavior and use governed supplemental evidence."}},{"@type":"Question","name":"What happens when telemetry is missing?","acceptedAnswer":{"@type":"Answer","text":"Treat the measure as incomplete or unknown, not silently good."}},{"@type":"Question","name":"Who approves the target?","acceptedAnswer":{"@type":"Answer","text":"Accountable service and risk owners approve the target and consequences."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Govern consequences with <a href="/skills/create-an-error-budget-policy/">Create an error budget policy</a>,
+map failure paths with <a href="/skills/map-critical-service-dependencies/">Map critical service dependencies</a>, and
+build signals with <a href="/skills/design-observability/">Design observability</a>.</p>

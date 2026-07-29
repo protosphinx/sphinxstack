@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prevent Citation Errors"
+  short_description: "Verify that citations support the claims attached to them"
+  default_prompt: "Use $prevent-citation-errors to audit this draft at the claim and citation level."

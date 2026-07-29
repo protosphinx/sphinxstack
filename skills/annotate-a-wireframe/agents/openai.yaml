@@ -1,0 +1,4 @@
+interface:
+  display_name: "annotate a wireframe"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $annotate-a-wireframe to complete and verify this design task."

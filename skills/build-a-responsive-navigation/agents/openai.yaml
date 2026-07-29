@@ -1,0 +1,4 @@
+interface:
+  display_name: "build a responsive navigation"
+  short_description: "Run this web workflow with verified evidence"
+  default_prompt: "Use $build-a-responsive-navigation to complete and verify this web task."

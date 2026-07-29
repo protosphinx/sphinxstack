@@ -1,0 +1,34 @@
+<h2>Worked case: repair a backfill without overwriting valid concurrent data</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A transaction-pipeline backfill intended to correct six months of history overwrites current partitions, duplicates retries, drops tombstones, misreads old schemas, and propagates changes into revenue dashboards, customer statements, risk features, experiments, and regulatory extracts while normal ingestion continues.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Should we restore the affected partitions from backup?</div>
+<div class="cm cm-agent">Only if that does not discard valid concurrent writes; otherwise repair into a new isolated generation.</div>
+<div class="cm cm-user cd-hide">Can we rerun with fixed code?</div>
+<div class="cm cm-agent cd-hide">First fence the failed generation and prove source versions, keys, ranges, schemas, descendants, and idempotency.</div>
+<div class="cm cm-user cd-hide">What about published reports?</div>
+<div class="cm cm-agent cd-hide">Preserve prior evidence, identify affected decisions, restate through accountable owners, and link corrections.</div>
+<div class="cm cm-user">What proves recovery?</div>
+<div class="cm cm-agent">Source-to-output parity, current-ingestion correctness, downstream reconciliation, bounded canaries, and tested prevention gates.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Repair through a versioned generation when rollback would erase truth.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The failed backfill evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>failed backfill incident timeline</td><td>Authority, inputs, code, ranges, runs, retries, writes, propagation, containment, and decisions</td><td>Every mutation belongs to an identified generation</td></tr>
+<tr><td>source-to-output and consumer reconciliation</td><td>Keys, partitions, versions, missing, duplicate, overwritten, deleted, concurrent, and downstream state</td><td>Every affected record and consumer has a disposition</td></tr>
+<tr><td>recovery and recurrence report</td><td>Isolated repair, idempotency, concurrent writes, canaries, corrections, current ingestion, and gates</td><td>History and current processing both reconcile</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>The source snapshot needed for one month no longer exists. The team does not fabricate exact history, marks affected outputs unavailable or qualified, identifies decisions that relied on them, restores only provable periods, and records the residual gap plus source-retention fix.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can a table restore undo the incident?</summary><p>Not if valid concurrent writes or downstream actions occurred after the restore point.</p></details>
+<details class="faq"><summary>Should bad rows be deleted first?</summary><p>Preserve evidence and establish authoritative replacements before mutation.</p></details>
+<details class="faq"><summary>Can corrected dashboards close the issue?</summary><p>No. Reconcile exports, features, models, reports, statements, alerts, and decisions too.</p></details>
+<details class="faq"><summary>How are late arrivals handled?</summary><p>Keep normal ingestion authoritative and merge through stable identity and version rules.</p></details>
+<details class="faq"><summary>What blocks expansion?</summary><p>Unexplained differences, missing source truth, non-idempotent writes, unsafe capacity, or unresolved consumers.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a table restore undo the incident?","acceptedAnswer":{"@type":"Answer","text":"Not when valid later state exists."}},{"@type":"Question","name":"Should bad rows be deleted first?","acceptedAnswer":{"@type":"Answer","text":"No. Preserve evidence first."}},{"@type":"Question","name":"Can corrected dashboards close the issue?","acceptedAnswer":{"@type":"Answer","text":"No. Reconcile all descendants."}},{"@type":"Question","name":"How are late arrivals handled?","acceptedAnswer":{"@type":"Answer","text":"Merge by stable identity and version."}},{"@type":"Question","name":"What blocks expansion?","acceptedAnswer":{"@type":"Answer","text":"Any unresolved integrity or safety gate."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Test backfills with <a href="/skills/test-a-data-pipeline-backfill/">Test a data pipeline backfill</a>,
+reconcile stores with <a href="/skills/reconcile-source-and-warehouse-records/">Reconcile source and warehouse records</a>, and
+trace impact with <a href="/skills/implement-data-lineage/">Implement data lineage</a>.</p>

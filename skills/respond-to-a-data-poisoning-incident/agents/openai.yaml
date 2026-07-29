@@ -1,0 +1,4 @@
+interface:
+  display_name: "respond to a data poisoning incident"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $respond-to-a-data-poisoning-incident to complete and verify this data task."

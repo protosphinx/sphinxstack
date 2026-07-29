@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage-a-regulatory-remediation-program"
+  short_description: "Manage provable regulatory remediation"
+  default_prompt: "Use $manage-a-regulatory-remediation-program to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Slide Deck"
+  short_description: "Create a clear slide deck for a specific audience"
+  default_prompt: "Use $slide-deck to help me complete this workflow with verified evidence."

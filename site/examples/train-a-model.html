@@ -1,0 +1,130 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the part everyone is afraid of. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> i want to learn ML but i'm assuming it needs a PhD and a GPU i don't have</div>
+<div class="cm cm-agent">It needs a few hundred rows and a free notebook. What data do you
+actually have? Things you collected yourself work best: study hours, game results,
+photos you took.</div>
+<div class="cm cm-user cd-hide">i've logged about 300 games of my rec league with stats. could i
+predict whether we win?</div>
+<div class="cm cm-agent cd-hide">Yes, and since you collected it, we're allowed to use it. Before any
+model trains, we compute the dumbest possible predictor: always guess the most common
+outcome. Every number after that gets reported next to it.</div>
+<div class="cm cm-user cd-hide">why start with a predictor that dumb?</div>
+<div class="cm cm-agent cd-hide">Because "the model is 74% accurate" means nothing on its own. If
+always guessing a win already gets 63%, the model earned eleven points, and that's the
+honest sentence. The baseline is what keeps the claim from being marketing.</div>
+<div class="cm cm-user cd-hide">and i really don't need to pay for a GPU or an API?</div>
+<div class="cm cm-agent cd-hide">No. scikit-learn on your machine, or a free Colab notebook if your
+laptop struggles. A classifier you can inspect is the right first model; fine-tuning
+giant models is a different sport and out of scope here.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Doesn't machine learning need a PhD?</h2>
+<p>A first honest model needs arithmetic and discipline. The model itself is a few
+lines of scikit-learn; the real work is the part no degree gates: splitting off test
+data before you touch anything, computing a baseline before training, and describing
+the result in words that don't oversell it. A few hundred rows you collected yourself
+teach everything the lesson requires. These projects are all first models of exactly
+that size:</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/camera-roll-classifier/"><img src="/assets/project-img/camera-roll-classifier.jpg" alt=""><span>Camera roll classifier</span></a>
+<a class="mini" href="/ideas/taste-predictor/"><img src="/assets/project-img/taste-predictor.jpg" alt=""><span>Taste predictor</span></a>
+<a class="mini" href="/ideas/personal-recommender/"><img src="/assets/project-img/personal-recommender.jpg" alt=""><span>Personal recommender</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A trained model in a repo, a demo someone else can try, and an evaluation you can
+defend. The README's table is the heart of it.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example evaluation table with baseline">
+<div class="rz-h">EVALUATION (60 HELD-OUT GAMES OF 300, SPLIT BEFORE TRAINING)</div>
+<div class="sheet-tag">Example</div>
+<pre>predictor                      accuracy
+always guess "win" (baseline)  0.63
+logistic regression            0.71
++ rest-days feature            0.74</pre>
+<div class="rz-h">THE README SENTENCE</div>
+<pre>On my 300 logged games it was right 74% of
+the time; always guessing a win gets 63%.</pre>
+<div class="rz-h">LIMITATIONS (ALSO IN THE README)</div>
+<pre>Trained on one season of one league. Next
+season's teams, or anyone else's league,
+would likely score worse. Rest-days helped;
+opponent strength isn't in the data at all.</pre>
+</div>
+<ol class="anno-notes">
+<li><b>The baseline row is non-negotiable.</b> Without 0.63 on the page, 0.74 sounds
+either amazing or terrible. Next to it, it's exactly what it is.</li>
+<li><b>The extra feature came from error analysis.</b> You look at the games the model
+got wrong, one at a time, notice a pattern, add one feature, re-evaluate the same
+way. One round, then stop; the loop matters more than the score.</li>
+<li><b>The test set was used once.</b> Sixty games went in a drawer at the start and
+came out at the end. That's what makes the numbers mean something.</li>
+</ol>
+</div>
+
+<h2>Anatomy of an honest accuracy claim</h2>
+<p>The skill drills one sentence shape, because most accuracy claims in the wild are
+missing at least two of these parts:</p>
+<div class="anatomy">
+<div class="an-line"><span class="an-seg an-a">right 74% of the time</span> ·
+<span class="an-seg an-b">on my 300 logged games</span> ·
+<span class="an-seg an-c">baseline gets 63%</span> ·
+<span class="an-seg an-d">tested on games the model never saw</span></div>
+<ul class="an-legend">
+<li><span class="an-key an-a">A</span> The number, plainly. Never "the AI knows".</li>
+<li><span class="an-key an-b">B</span> The dataset and its size, right beside the number.</li>
+<li><span class="an-key an-c">C</span> The dumb baseline, so the reader can see what the model actually earned.</li>
+<li><span class="an-key an-d">D</span> Held-out test data, used once. Without this the number is a rehearsal, and it doesn't count.</li>
+</ul>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Do I need the math?</summary>
+<p>To use logistic regression or a small tree honestly, no. You need to understand
+your own evaluation: what the split is, what the baseline is, and what could still
+make the number misleading. The skill makes you able to explain all three in your own
+words, which is more than many accuracy claims online can offer.</p></details>
+<details class="faq"><summary>Do I need a GPU or a paid API?</summary>
+<p>No. scikit-learn runs on any laptop, and a free Colab notebook covers you if yours
+struggles. Nothing in the skill costs money, and fine-tuning large models is
+deliberately out of scope.</p></details>
+<details class="faq"><summary>Where do I get data?</summary>
+<p>The best source is your own life: things you logged, games you played, photos you
+took. Otherwise an open dataset whose license you actually read. The skill rules out
+scraping people's content and anything containing personal information about
+others.</p></details>
+<details class="faq"><summary>Is 74% accuracy good?</summary>
+<p>Alone, unanswerable; that's the lesson. Next to a 63% baseline on 300 examples,
+it's a real improvement stated honestly. A model at 91% against a 90% baseline gets
+described exactly that way too.</p></details>
+<details class="faq"><summary>Can this go on my resume?</summary>
+<p>Yes, with the honest numbers as written, and it reads well precisely because it's
+verifiable: repo, README, baseline, limitations. The build-resume skill turns it into
+a line a screener can check.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do I need the math?","acceptedAnswer":{"@type":"Answer","text":"Not to use a simple model honestly. You need to understand your own evaluation: the split, the baseline, and what could make the number misleading."}},
+{"@type":"Question","name":"Do I need a GPU or a paid API?","acceptedAnswer":{"@type":"Answer","text":"No. scikit-learn on any laptop, or a free Colab notebook. Fine-tuning large models is deliberately out of scope."}},
+{"@type":"Question","name":"Where do I get data?","acceptedAnswer":{"@type":"Answer","text":"Your own logs, games, or photos, or an open dataset whose license you read. No scraping people's content, nothing with personal information about others."}},
+{"@type":"Question","name":"Is 74% accuracy good?","acceptedAnswer":{"@type":"Answer","text":"Alone, unanswerable. Next to a 63% baseline on 300 examples it is a real, honestly stated improvement."}},
+{"@type":"Question","name":"Can this go on my resume?","acceptedAnswer":{"@type":"Answer","text":"Yes, with the honest numbers as written. It reads well because a screener can verify the repo, README, baseline, and limitations."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>More first models with data you can legitimately use:</b></p>
+<div class="cardrow">
+<a class="mini" href="/ideas/feeder-counter/"><img src="/assets/project-img/feeder-counter.jpg" alt=""><span>Bird feeder counter</span></a>
+<a class="mini" href="/ideas/beat-the-forecast/"><img src="/assets/project-img/beat-the-forecast.jpg" alt=""><span>Beat the forecast</span></a>
+<a class="mini" href="/ideas/predict-the-season/"><img src="/assets/project-img/predict-the-season.jpg" alt=""><span>Predict the season</span></a>
+</div>
+<p><b>Make round two possible:</b></p>
+<div class="cardrow">
+<a class="mini" href="/skills/automate-a-task/"><img src="/assets/skill-img/automate-a-task.jpg" alt=""><span>Automate a task: keep collecting data</span></a>
+<a class="mini" href="/skills/clean-a-dataset/"><img src="/assets/skill-img/clean-a-dataset.jpg" alt=""><span>Clean a dataset</span></a>
+<a class="mini" href="/skills/build-resume/"><img src="/assets/skill-img/build-resume.jpg" alt=""><span>Build your resume with the honest numbers</span></a>
+</div>

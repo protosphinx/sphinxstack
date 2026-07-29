@@ -1,0 +1,34 @@
+<h2>Worked case: contain a browser data leak across third parties</h2>
+<p class="case-trigger"><strong>Trigger:</strong> After a tag-manager release, a session-replay and analytics chain sends form values, account identifiers, password-reset tokens in URLs, and browser-storage fields to several third parties, while CDN and vendor logs retain requests and consent behavior differs by country.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Should we just remove the replay tag?</div>
+<div class="cm cm-agent">Stop unsafe collection, but preserve deployed code and trace every field, recipient, log, cache, and downstream copy.</div>
+<div class="cm cm-user cd-hide">Do URL tokens make the incident broader?</div>
+<div class="cm cm-agent cd-hide">Yes. Check browser history, referrers, analytics, CDN logs, vendor logs, support tools, and caches.</div>
+<div class="cm cm-user cd-hide">Can a vendor deletion promise close it?</div>
+<div class="cm cm-agent cd-hide">Require scoped evidence for stored copies and downstream recipients, then record any residual exposure honestly.</div>
+<div class="cm cm-user">What protects users now?</div>
+<div class="cm cm-agent">Contain collection, rotate or invalidate exposed secrets, restrict recipient access, support affected people, and communicate from verified facts.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Trace data from the interface through every recipient.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The client-side incident evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>client-side data leak timeline</td><td>Releases, access, tags, requests, recipients, containment, decisions, and custody</td><td>Material events have source and timestamp</td></tr>
+<tr><td>data flow and affected-record reconciliation</td><td>Fields, users, routes, consent, recipients, storage, access, deletion, and unresolved copies</td><td>Every plausible data path has a disposition</td></tr>
+<tr><td>containment, notification, and remediation report</td><td>User protection, credentials, vendors, duties, technical controls, region tests, and monitoring</td><td>Collection is stopped and recurrence controls pass</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A vendor can restrict access but cannot prove deletion from backups. Responders preserve that limitation, continue contractual and privacy handling, protect affected accounts, state residual risk accurately, and monitor for misuse rather than closing the incident on a verbal assurance.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Can payload samples be copied into a ticket?</summary><p>Use minimized restricted evidence; do not reproduce sensitive fields unnecessarily.</p></details>
+<details class="faq"><summary>Should every session be revoked?</summary><p>Base protection on exposed secrets, affected users, misuse risk, and qualified incident judgment.</p></details>
+<details class="faq"><summary>Does consent make secret leakage acceptable?</summary><p>No. Consent does not authorize unrelated or insecure exposure.</p></details>
+<details class="faq"><summary>Can disabling analytics end the incident?</summary><p>No. Stored copies, downstream sharing, logs, user harm, and root cause remain.</p></details>
+<details class="faq"><summary>When is scope complete?</summary><p>When fields, populations, time, recipients, copies, access, deletion, and uncertainty reconcile.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can payload samples be copied into a ticket?","acceptedAnswer":{"@type":"Answer","text":"Use minimized restricted evidence."}},{"@type":"Question","name":"Should every session be revoked?","acceptedAnswer":{"@type":"Answer","text":"Use evidence-based user protection."}},{"@type":"Question","name":"Does consent make secret leakage acceptable?","acceptedAnswer":{"@type":"Answer","text":"No."}},{"@type":"Question","name":"Can disabling analytics end the incident?","acceptedAnswer":{"@type":"Answer","text":"No. Downstream exposure remains."}},{"@type":"Question","name":"When is scope complete?","acceptedAnswer":{"@type":"Answer","text":"After all paths and uncertainty reconcile."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Audit collection with <a href="/skills/audit-a-web-analytics-implementation/">Audit web analytics implementation</a>,
+govern scripts with <a href="/skills/audit-third-party-scripts/">Audit third-party scripts</a>, and
+manage identity impact with <a href="/skills/respond-to-account-takeover/">Respond to account takeover</a>.</p>

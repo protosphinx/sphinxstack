@@ -1,0 +1,4 @@
+interface:
+  display_name: "evaluate a merchant services contract"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $evaluate-a-merchant-services-contract to complete and verify this finance task."

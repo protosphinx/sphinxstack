@@ -1,0 +1,4 @@
+interface:
+  display_name: "Edit A Short"
+  short_description: "Edit and publish a concise short-form video"
+  default_prompt: "Use $edit-a-short to help me complete this workflow with verified evidence."

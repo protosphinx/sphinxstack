@@ -1,0 +1,4 @@
+interface:
+  display_name: "Export Social Video"
+  short_description: "Export platform-ready video variants"
+  default_prompt: "Use $export-social-video to prepare and verify these social video exports."

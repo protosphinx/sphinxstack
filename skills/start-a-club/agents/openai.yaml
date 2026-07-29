@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start A Club"
+  short_description: "Plan and launch a club with real members"
+  default_prompt: "Use $start-a-club to help me complete this workflow with verified evidence."

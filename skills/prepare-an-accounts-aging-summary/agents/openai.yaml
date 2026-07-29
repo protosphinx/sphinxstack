@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare an Accounts Aging Summary"
+  short_description: "Classify overdue balances and collection risk"
+  default_prompt: "Use $prepare-an-accounts-aging-summary to prepare and verify this aging report."

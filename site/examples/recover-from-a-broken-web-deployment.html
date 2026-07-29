@@ -1,0 +1,34 @@
+<h2>Worked case: recover users trapped between incompatible releases</h2>
+<p class="case-trigger"><strong>Trigger:</strong> A frontend release publishes HTML that references missing hashed assets while a new service worker caches an incompatible application shell, an API schema changed, CDN regions hold different manifests, feature flags vary by session, and some customers report duplicate checkout attempts.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Should we redeploy the last frontend commit?</div>
+<div class="cm cm-agent">Only if APIs, data, schemas, flags, service workers, and in-flight user state remain backward compatible.</div>
+<div class="cm cm-user cd-hide">Can we tell customers to clear cache?</div>
+<div class="cm cm-agent cd-hide">That is not a recovery plan. Publish a compatible path that reaches stale and clean clients.</div>
+<div class="cm cm-user cd-hide">Should a timed-out checkout retry?</div>
+<div class="cm cm-agent cd-hide">Not until the authoritative server state resolves the original transaction outcome.</div>
+<div class="cm cm-user">What is the unit of diagnosis?</div>
+<div class="cm cm-agent">The user's full version stack: HTML, assets, worker, cache, API, schema, flags, locale, session, and transaction.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">A release is a distributed state across user and server layers.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The deployment recovery evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>deployment incident timeline</td><td>Commits, builds, assets, manifests, caches, APIs, flags, impact, containment, and decisions</td><td>Every relevant release change is time aligned</td></tr>
+<tr><td>release version and user-state reconciliation</td><td>HTML, assets, worker, cache, API, schema, configuration, cohort, session, and transaction</td><td>Each affected population has a compatible disposition</td></tr>
+<tr><td>recovery and prevention report</td><td>Repair or rollback, journey tests, reconciliation, stabilization, cause, and release controls</td><td>Stale and clean clients complete critical journeys safely</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>The prior frontend cannot read records written under the new API schema. The team blocks unsafe rollback, publishes a forward compatibility repair with immutable assets and a new worker epoch, routes new sessions safely, reconciles checkout intents, and verifies long-lived plus offline clients before restoring the action.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Does a green deployment prove recovery?</summary><p>No. Verify the actual user version populations and critical journeys.</p></details>
+<details class="faq"><summary>Should every cache be purged?</summary><p>Only through a scoped plan that preserves evidence and does not amplify origin failure.</p></details>
+<details class="faq"><summary>Can a service worker activate immediately?</summary><p>Only with proven compatibility, client coordination, and recoverable cache transitions.</p></details>
+<details class="faq"><summary>What if no safe version exists?</summary><p>Disable the affected action and communicate status while building a safe recovery path.</p></details>
+<details class="faq"><summary>When is the incident closed?</summary><p>After all version populations stabilize, user and financial state reconcile, and recurrence controls pass.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does a green deployment prove recovery?","acceptedAnswer":{"@type":"Answer","text":"No. Verify user-visible state."}},{"@type":"Question","name":"Should every cache be purged?","acceptedAnswer":{"@type":"Answer","text":"Use a scoped evidence-preserving plan."}},{"@type":"Question","name":"Can a service worker activate immediately?","acceptedAnswer":{"@type":"Answer","text":"Only with compatible state transitions."}},{"@type":"Question","name":"What if no safe version exists?","acceptedAnswer":{"@type":"Answer","text":"Disable the unsafe action."}},{"@type":"Question","name":"When is the incident closed?","acceptedAnswer":{"@type":"Answer","text":"After stabilization, reconciliation, and prevention tests."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Inspect workers with <a href="/skills/inspect-a-service-worker/">Inspect a service worker</a>,
+prepare releases with <a href="/skills/run-a-release-candidate-test/">Run a release candidate test</a>, and
+plan fallback with <a href="/skills/prepare-a-rollback-plan/">Prepare a rollback plan</a>.</p>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coordinate an Event Load-In"
+  short_description: "Sequence safe venue access, setup, and acceptance"
+  default_prompt: "Use $coordinate-an-event-load-in to plan safe supplier arrivals, setup, checks, and handoff."

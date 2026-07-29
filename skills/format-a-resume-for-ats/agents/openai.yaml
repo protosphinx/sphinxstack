@@ -1,0 +1,4 @@
+interface:
+  display_name: "Format a Resume for ATS"
+  short_description: "Create a readable and parseable resume layout"
+  default_prompt: "Use $format-a-resume-for-ats to make this resume accessible and parseable."

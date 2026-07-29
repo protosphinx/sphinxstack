@@ -1,0 +1,4 @@
+interface:
+  display_name: "conduct-an-archival-research-project"
+  short_description: "Run a verified conduct an archival research project workflow"
+  default_prompt: "Use $conduct-an-archival-research-project to complete and verify this task."

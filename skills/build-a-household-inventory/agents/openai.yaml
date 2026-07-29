@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build A Household Inventory"
+  short_description: "Record household property with useful recovery evidence"
+  default_prompt: "Use $build-a-household-inventory to create a secure, evidence-backed property inventory."

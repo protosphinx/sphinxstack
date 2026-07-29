@@ -1,0 +1,4 @@
+interface:
+  display_name: "prototype an interaction"
+  short_description: "Run this design workflow with verified evidence"
+  default_prompt: "Use $prototype-an-interaction to complete and verify this design task."

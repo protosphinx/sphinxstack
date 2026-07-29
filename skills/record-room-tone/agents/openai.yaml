@@ -1,0 +1,4 @@
+interface:
+  display_name: "record room tone"
+  short_description: "Run this media workflow with verified evidence"
+  default_prompt: "Use $record-room-tone to complete and verify this media task."

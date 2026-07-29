@@ -1,0 +1,4 @@
+interface:
+  display_name: "design a portfolio review"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $design-a-portfolio-review to complete and verify this operations task."

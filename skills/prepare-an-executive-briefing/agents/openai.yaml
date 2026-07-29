@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare an Executive Briefing"
+  short_description: "Turn complex work into a decision-ready briefing"
+  default_prompt: "Use $prepare-an-executive-briefing to prepare this evidence-backed leadership briefing."

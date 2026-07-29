@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a Search Interface"
+  short_description: "Design findable queries, results, and recovery"
+  default_prompt: "Use $design-a-search-interface to design and test this search experience."

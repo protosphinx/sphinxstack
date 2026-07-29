@@ -1,0 +1,4 @@
+interface:
+  display_name: "Delegate a Workstream"
+  short_description: "Transfer outcomes, authority, context, and accountability"
+  default_prompt: "Use $delegate-a-workstream to delegate this workstream with clear guardrails."

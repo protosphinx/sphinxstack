@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create An Emergency Information File"
+  short_description: "Prepare a secure, usable emergency reference file"
+  default_prompt: "Use $create-an-emergency-information-file to prepare a safe, tested household handoff."

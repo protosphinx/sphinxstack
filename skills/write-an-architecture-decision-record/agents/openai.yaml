@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write an Architecture Decision Record"
+  short_description: "Record a consequential technical choice and trade-offs"
+  default_prompt: "Use $write-an-architecture-decision-record to document this decision and its reopening conditions."

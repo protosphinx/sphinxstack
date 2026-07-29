@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document a Service Dependency"
+  short_description: "Record dependency contracts and failure behavior"
+  default_prompt: "Use $document-a-service-dependency to create an operational dependency record."

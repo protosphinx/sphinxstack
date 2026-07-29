@@ -1,0 +1,147 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, starting from the README everyone actually has. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user">​<span class="cm-paste">(pastes the skill)</span> my repo README literally
+says "my project" and then "## Installation: TODO". I want to put it on my resume and it's embarrassing</div>
+<div class="cm cm-agent">Standard starting point. Before we write anything, I'm reading the
+repo so the README matches reality. While I do: what does this thing do, in one sentence a
+non-user understands?</div>
+<div class="cm cm-user cd-hide">it's a comprehensive platform for real-time transit data
+visualization and analysis</div>
+<div class="cm cm-agent cd-hide">The code I'm reading tracks one bus line and draws it on a
+map. Which is good! Say what it does, plainly: what would you tell a friend it does?</div>
+<div class="cm cm-user cd-hide">ok fine. it shows where the 42 bus actually is right now, on a
+map, so you know if you can still make it to the stop</div>
+<div class="cm cm-agent cd-hide">That's your one-liner, keep every word. Next, the
+highest-value item on the whole page: a screenshot or GIF of the map. Capture one now, not
+later. Then the real test: clone your own repo fresh and run your install steps, top to bottom.</div>
+<div class="cm cm-user cd-hide">...the install steps fail. it needs an API key I never
+mentioned anywhere</div>
+<div class="cm cm-agent cd-hide">Every repo has one of these, and finding it now is the point:
+a README whose steps fail is worse than none. Add the key step with a link to where they get
+one, re-run from clean, then we write the why-it-exists paragraph in your words and push.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Is my project even big enough to deserve a README?</h2>
+<p>If a stranger might ever see the repo, yes. Recruiters, teachers, and other developers
+judge the project by its README before reading a line of code, and a small project with a
+short, true README reads as competence. The skill sizes the page to the project: if the
+project is small, the README is short. What it never does is inflate; honest scope is the
+selling point, because a stranger can smell overclaiming. No repo yet? Any of these gives
+you one worth writing up.</p>
+<div class="cardrow">
+<a class="mini" href="/ideas/discord-server-bot/"><img src="/assets/project-img/discord-server-bot.jpg" alt=""><span>Discord bot your server uses</span></a>
+<a class="mini" href="/ideas/real-folder-repo/"><img src="/assets/project-img/real-folder-repo.jpg" alt=""><span>Turn a real folder into a repo</span></a>
+<a class="mini" href="/ideas/repo-action/"><img src="/assets/project-img/repo-action.jpg" alt=""><span>Add an action to a repo</span></a>
+</div>
+
+<h2>What you end up with</h2>
+<p>A README a visitor gets in ten seconds, pushed before the session ends. Same project,
+before and after.</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example README, before and after">
+<div class="sheet-tag">Example</div>
+<div class="rz-h">BEFORE <span class="anno-badge">1</span></div>
+<div class="skilltext"><pre># my project
+
+A comprehensive platform for real-time transit data
+visualization and analysis.
+
+## Installation
+
+TODO</pre></div>
+<div class="rz-h">AFTER <span class="anno-badge">2</span></div>
+<div class="skilltext"><pre># bus42
+
+Shows where the 42 bus actually is right now, so you
+know if you can still make it to the stop.
+
+![live map](docs/map.gif)
+
+I built this because the posted schedule at my stop
+is wrong more often than it is right.
+
+## Run it
+
+    git clone https://github.com/mayatorres/bus42
+    cd bus42 && npm install
+    cp .env.example .env   # add a free transit API key
+    npm start
+
+## What's real
+
+- Works: live position for line 42, arrival guess
+- Rough: arrival guess is off at rush hour
+- Planned: any line, not just mine</pre></div>
+</div>
+<ol class="anno-notes">
+<li><b>The before overclaims and under-delivers.</b> "Comprehensive platform" describes
+nothing a visitor can check, and "Installation: TODO" tells them the author gave up. This
+combination is the default state of most student repos, which is exactly why fixing it
+stands out.</li>
+<li><b>The after answers the visitor's questions in order.</b> What it does in plain words,
+a GIF that proves it, why it exists in the author's real voice, install steps that were
+re-run from a clean clone in the session, and an honest works / rough / planned list.
+No badge wall, no boilerplate Contributing section, no license essay.</li>
+</ol>
+</div>
+
+<h2>Anatomy of the one-liner</h2>
+<p>The first sentence under the project name decides whether anyone scrolls. The skill
+builds it to this shape:</p>
+<div class="anatomy">
+<div class="an-line"><span class="an-seg an-a">Shows where the 42 bus actually is right now</span>,
+<span class="an-seg an-b">so you know if you can still make it to the stop</span>.</div>
+<ul class="an-legend">
+<li><span class="an-key an-a">A</span> What it does, with a verb a friend would use. Scope stated honestly: one bus line, and that's fine.</li>
+<li><span class="an-key an-b">B</span> Why a person would want that, concretely. This clause is where "platform for visualization" goes to die.</li>
+</ul>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is this free?</summary>
+<p>The skill is free, no account, no catch. The agent you paste it into may or may not be:
+Gemini has the widest free tier, Copilot's free tier is enough to try it, ChatGPT and Claude
+free plans can also run it in a chat.</p></details>
+<details class="faq"><summary>Will my README sound like AI wrote it?</summary>
+<p>The language pass exists to prevent exactly that. Unverifiable adjectives like "powerful",
+"seamless", and "blazing" get cut, along with rhythmic feature lists and "it's a platform"
+inflation. The why-it-exists section is your story in your words, and the agent writes down
+what you said, so the page keeps your voice.</p></details>
+<details class="faq"><summary>Does it work if my project is half-finished?</summary>
+<p>Yes, and it says so on the page instead of hiding it. The works / rough / planned section
+is part of the format because honest scope reads as competence. What the skill won't do is
+describe features that don't exist yet as if they do.</p></details>
+<details class="faq"><summary>What if my install steps don't work?</summary>
+<p>That's usually discovered mid-session, because you re-run them yourself from a fresh
+clone before shipping. Then you fix the README, or the code, until the steps just work.
+This step is the single most common thing the skill catches.</p></details>
+<details class="faq"><summary>How do I know the new README lands?</summary>
+<p>The skill ends with a real test: send the repo link to one person who has never seen the
+project and ask what they think it does. If their answer misses, the one-liner gets another
+pass. Checking how it renders on GitHub, image and links included, is part of shipping.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this free?","acceptedAnswer":{"@type":"Answer","text":"The skill is free, no account. The agent you paste it into may have a free tier; Gemini's is the widest."}},
+{"@type":"Question","name":"Will my README sound like AI wrote it?","acceptedAnswer":{"@type":"Answer","text":"The language pass cuts unverifiable adjectives and inflation, and the why-it-exists section is your story in your words."}},
+{"@type":"Question","name":"Does it work if my project is half-finished?","acceptedAnswer":{"@type":"Answer","text":"Yes. The works / rough / planned section states honest scope instead of hiding it, and nothing unbuilt is described as built."}},
+{"@type":"Question","name":"What if my install steps don't work?","acceptedAnswer":{"@type":"Answer","text":"You re-run them from a fresh clone in the session and fix the README or the code until they just work."}},
+{"@type":"Question","name":"How do I know the new README lands?","acceptedAnswer":{"@type":"Answer","text":"Send the repo link to someone who has never seen the project and ask what they think it does. If they miss, the one-liner gets another pass."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>README pushed?</b> Put the repo to work:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/build-resume/"><img src="/assets/skill-img/build-resume.jpg" alt=""><span>Build your resume</span></a>
+<a class="mini" href="/skills/social-post/"><img src="/assets/skill-img/social-post.jpg" alt=""><span>Announce it without cringe</span></a>
+<a class="mini" href="/skills/portfolio-page/"><img src="/assets/skill-img/portfolio-page.jpg" alt=""><span>Portfolio page</span></a>
+</div>
+<p><b>Want the repo itself in better shape?</b></p>
+<div class="cardrow">
+<a class="mini" href="/skills/ship-on-github/"><img src="/assets/skill-img/ship-on-github.jpg" alt=""><span>Ship on GitHub</span></a>
+<a class="mini" href="/skills/contribute-to-open-source/"><img src="/assets/skill-img/contribute-to-open-source.jpg" alt=""><span>Contribute to open source</span></a>
+<a class="mini" href="/skills/write-clearly/"><img src="/assets/skill-img/write-clearly.jpg" alt=""><span>Write clearly</span></a>
+</div>

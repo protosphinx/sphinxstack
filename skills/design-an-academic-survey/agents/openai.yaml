@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design an Academic Survey"
+  short_description: "Build valid questions, sampling, and analysis rules"
+  default_prompt: "Use $design-an-academic-survey to design and test this research survey."

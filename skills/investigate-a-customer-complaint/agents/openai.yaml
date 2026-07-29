@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investigate a Customer Complaint"
+  short_description: "Establish facts and recommend a fair resolution"
+  default_prompt: "Use $investigate-a-customer-complaint to help me complete this workflow with verifiable evidence."

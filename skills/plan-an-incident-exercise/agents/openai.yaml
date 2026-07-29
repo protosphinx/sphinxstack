@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan an Incident Exercise"
+  short_description: "Design a safe exercise with objectives and evidence"
+  default_prompt: "Use $plan-an-incident-exercise to create a realistic and measurable incident exercise."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "build-a-working-capital-dashboard"
+  short_description: "Build a governed working capital dashboard"
+  default_prompt: "Use $build-a-working-capital-dashboard to complete and verify this task."

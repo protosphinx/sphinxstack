@@ -1,0 +1,4 @@
+interface:
+  display_name: "check a dataset date range"
+  short_description: "Run this data workflow with verified evidence"
+  default_prompt: "Use $check-a-dataset-date-range to complete and verify this data task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to a Research Integrity Concern"
+  short_description: "Protect evidence and handle allegations fairly"
+  default_prompt: "Use $respond-to-a-research-integrity-concern to plan a fair evidence-preserving response."

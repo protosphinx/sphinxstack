@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Budget Variance"
+  short_description: "Explain budget gaps with reconciled drivers"
+  default_prompt: "Use $analyze-budget-variance to explain these actual-versus-budget differences."

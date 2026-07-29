@@ -1,0 +1,4 @@
+interface:
+  display_name: "create a simple risk register"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $create-a-simple-risk-register to complete and verify this operations task."

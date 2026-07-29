@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reconcile a Purchase Order"
+  short_description: "Match orders, receipts, and invoices safely"
+  default_prompt: "Use $reconcile-a-purchase-order to investigate and reconcile this purchasing mismatch."

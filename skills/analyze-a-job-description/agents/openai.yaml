@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze a Job Description"
+  short_description: "Separate real requirements from hiring signals"
+  default_prompt: "Use $analyze-a-job-description to map this posting to evidence, gaps, and questions."

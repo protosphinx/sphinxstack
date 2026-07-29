@@ -1,0 +1,4 @@
+interface:
+  display_name: "Organize Important Documents"
+  short_description: "Build a secure index for important personal records"
+  default_prompt: "Use $organize-important-documents to create a secure, retrievable document index."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Define an Audience"
+  short_description: "Define a specific audience from evidence and context"
+  default_prompt: "Use $define-an-audience to identify the audience this work should serve and what remains unknown."

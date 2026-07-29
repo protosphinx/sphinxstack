@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Product Announcement"
+  short_description: "Announce a verified change with useful next actions"
+  default_prompt: "Use $write-a-product-announcement to explain this release accurately to the right audience."

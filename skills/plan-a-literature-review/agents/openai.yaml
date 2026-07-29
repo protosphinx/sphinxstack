@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Literature Review"
+  short_description: "Build a transparent scholarly search and synthesis plan"
+  default_prompt: "Use $plan-a-literature-review to define the question, search protocol, and evidence table."

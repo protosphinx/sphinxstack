@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document Software Architecture"
+  short_description: "Explain system boundaries decisions and change"
+  default_prompt: "Use $document-a-software-architecture to help me complete this workflow with verifiable evidence."

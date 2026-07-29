@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create an Event Registration Form"
+  short_description: "Collect only the details needed to attend safely"
+  default_prompt: "Use $create-an-event-registration-form to design a concise and accessible registration form."

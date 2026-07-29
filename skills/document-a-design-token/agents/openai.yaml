@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document a Design Token"
+  short_description: "Document a design decision as a reusable token"
+  default_prompt: "Use $document-a-design-token to specify this token, its semantics, usage, and validation."

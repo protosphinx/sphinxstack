@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage a conflicted executive search"
+  short_description: "Run this hiring workflow with verified evidence"
+  default_prompt: "Use $manage-a-conflicted-executive-search to complete and verify this hiring task."

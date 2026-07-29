@@ -1,0 +1,4 @@
+interface:
+  display_name: "Upgrade a Dependency Safely"
+  short_description: "Upgrade a dependency with compatibility and rollback proof"
+  default_prompt: "Use $upgrade-a-dependency-safely to plan, implement, and verify this dependency upgrade."

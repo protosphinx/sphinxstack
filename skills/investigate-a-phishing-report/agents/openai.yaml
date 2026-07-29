@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investigate a Phishing Report"
+  short_description: "Investigate suspicious messages without increasing exposure"
+  default_prompt: "Use $investigate-a-phishing-report to assess this report and coordinate safe containment."

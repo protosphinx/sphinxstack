@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run A Survey"
+  short_description: "Design, run, and analyze a responsible survey"
+  default_prompt: "Use $run-a-survey to help me complete this workflow with verified evidence."

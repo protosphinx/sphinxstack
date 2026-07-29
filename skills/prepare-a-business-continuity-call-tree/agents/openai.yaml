@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare-a-business-continuity-call-tree"
+  short_description: "Prepare and verify a continuity call tree"
+  default_prompt: "Use $prepare-a-business-continuity-call-tree to complete and verify this task."

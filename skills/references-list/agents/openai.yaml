@@ -1,0 +1,4 @@
+interface:
+  display_name: "References List"
+  short_description: "Prepare an accurate professional references list"
+  default_prompt: "Use $references-list to help me complete this workflow with verified evidence."

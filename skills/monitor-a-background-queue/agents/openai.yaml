@@ -1,0 +1,4 @@
+interface:
+  display_name: "Monitor a Background Queue"
+  short_description: "Detect queue delay, failure, and stuck work"
+  default_prompt: "Use $monitor-a-background-queue to design monitoring for this asynchronous workload."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recruit Research Participants"
+  short_description: "Recruit fairly with consent and privacy controls"
+  default_prompt: "Use $recruit-research-participants to plan ethical recruitment for this study."

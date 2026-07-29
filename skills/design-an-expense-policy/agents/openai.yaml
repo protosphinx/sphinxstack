@@ -1,0 +1,4 @@
+interface:
+  display_name: "design an expense policy"
+  short_description: "Run this finance workflow with verified evidence"
+  default_prompt: "Use $design-an-expense-policy to complete and verify this finance task."

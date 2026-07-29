@@ -1,0 +1,4 @@
+interface:
+  display_name: "Classify Data Sensitivity"
+  short_description: "Classify information by harm, handling, and access needs"
+  default_prompt: "Use $classify-data-sensitivity to classify this information and define its handling requirements."

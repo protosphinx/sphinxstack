@@ -1,0 +1,45 @@
+<h2>Worked case: replace laptop deployments</h2>
+<p class="case-trigger"><strong>Trigger:</strong> Our app deploys from a laptop and we need a repeatable path to production.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Only one engineer knows the production deploy command.</div>
+<div class="cm cm-agent">We will first record the current path, credentials, artifact, health check, and rollback. Which parts change data or cannot be reversed?</div>
+<div class="cm cm-user cd-hide">The app is reversible. Database migrations run automatically during startup.</div>
+<div class="cm cm-agent cd-hide">That couples a reversible release to an unreviewed data change. We will separate and gate migrations before automating promotion.</div>
+<div class="cm cm-user cd-hide">Can each environment build from the same commit?</div>
+<div class="cm cm-agent cd-hide">Build once instead. The same verified artifact should move through staging and production with an integrity digest.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">A pipeline begins by making the current release path visible.</span></p>
+</div>
+
+<div class="advanced-case">
+<h2>The promotion record</h2>
+<table class="plain-table">
+<tbody>
+<tr><th>Source</th><td>commit 8f21, reviewed pull request 418</td></tr>
+<tr><th>Artifact</th><td>app:2026.07.22, digest sha256:71b...</td></tr>
+<tr><th>Gates</th><td>tests, secret scan, schema compatibility, staging journey</td></tr>
+<tr><th>Production</th><td>10 percent canary, then full promotion after health window</td></tr>
+</tbody>
+</table>
+<h3>Evidence set</h3>
+<ul>
+<li><strong>Pipeline run:</strong> source, tests, artifact digest, approval, environment, and result.</li>
+<li><strong>Rollback rehearsal:</strong> known-bad canary returns to the last good artifact in four minutes.</li>
+<li><strong>Release record:</strong> change summary, deployment evidence, health window, and outcome.</li>
+</ul>
+</div>
+
+<h2>Failure rehearsal</h2>
+<p>The canary passes process health but checkout errors exceed the user-facing threshold. Promotion
+stops automatically, the previous digest is restored, and the checkout journey must pass before the
+pipeline reports recovery. The failed artifact remains retained for investigation.</p>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Why build only once?</summary><p>Rebuilding can change dependencies or bytes. Promotion should move the exact artifact that passed review and tests.</p></details>
+<details class="faq"><summary>How many pipeline stages are necessary?</summary><p>Only stages that detect a defined risk or support a release decision. More stages without purpose add delay and false confidence.</p></details>
+<details class="faq"><summary>Should production deploy automatically?</summary><p>Automation and approval are separate choices. High-risk releases may require an authorized promotion after automated evidence is ready.</p></details>
+<details class="faq"><summary>Where should secrets live?</summary><p>In the deployment platform or secret manager with narrow environment access. They must not enter source, artifacts, or logs.</p></details>
+<details class="faq"><summary>What is a successful rollback test?</summary><p>The real mechanism restores a known-good release and the critical user journey passes within the recovery objective.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why build only once?","acceptedAnswer":{"@type":"Answer","text":"Promotion should move the exact artifact that passed review and tests."}},{"@type":"Question","name":"How many pipeline stages are necessary?","acceptedAnswer":{"@type":"Answer","text":"Only stages that detect a risk or support a decision."}},{"@type":"Question","name":"Should production deploy automatically?","acceptedAnswer":{"@type":"Answer","text":"Automation and approval are separate choices based on risk."}},{"@type":"Question","name":"Where should secrets live?","acceptedAnswer":{"@type":"Answer","text":"In a secret manager or deployment platform with narrow access."}},{"@type":"Question","name":"What is a successful rollback test?","acceptedAnswer":{"@type":"Answer","text":"The real mechanism restores a known-good release and verifies the critical journey."}}]}</script>
+
+<h2>Where to go from here</h2>
+<p>Choose release signals with <a href="/skills/design-observability/">Design observability</a>, handle schema changes with <a href="/skills/migrate-a-database/">Migrate a database</a>, and rehearse response with <a href="/skills/debug-a-production-incident/">Debug a production incident</a>.</p>

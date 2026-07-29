@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage a Grant Budget"
+  short_description: "Track restricted funds and supporting evidence"
+  default_prompt: "Use $manage-a-grant-budget to set up compliant tracking for this funded program."

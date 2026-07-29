@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run a Vendor Selection"
+  short_description: "Select a vendor through a fair evidence process"
+  default_prompt: "Use $run-a-vendor-selection to run a defensible vendor evaluation and decision."

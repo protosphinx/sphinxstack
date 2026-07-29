@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document Work Accomplishments"
+  short_description: "Capture credible evidence of work and impact"
+  default_prompt: "Use $document-work-accomplishments to turn my work history into a sourced achievement record."

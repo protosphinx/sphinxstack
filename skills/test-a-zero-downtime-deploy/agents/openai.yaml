@@ -1,0 +1,4 @@
+interface:
+  display_name: "test-a-zero-downtime-deploy"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $test-a-zero-downtime-deploy to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Research Proposal"
+  short_description: "Connect a research gap to a feasible study"
+  default_prompt: "Use $write-a-research-proposal to draft and verify this research proposal."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write An Annotated Bibliography"
+  short_description: "Summarize and evaluate sources for a research project"
+  default_prompt: "Use $write-an-annotated-bibliography to create consistent, evidence-aware source annotations."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reduce Observability Cost"
+  short_description: "Control telemetry cost without losing coverage"
+  default_prompt: "Use $reduce-observability-cost to reduce spend while preserving operational evidence."

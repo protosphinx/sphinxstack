@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-data-contract-registry"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $design-a-data-contract-registry to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write a Team Charter"
+  short_description: "Define a team's purpose, boundaries, and working agreements"
+  default_prompt: "Use $write-a-team-charter to create a practical charter for this team."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "prepare-for-an-executive-interview"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $prepare-for-an-executive-interview to complete and verify this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conduct a Workplace Investigation"
+  short_description: "Plan a fair, protected, evidence-led inquiry"
+  default_prompt: "Use $conduct-a-workplace-investigation to structure this workplace inquiry with proper authority and safeguards."

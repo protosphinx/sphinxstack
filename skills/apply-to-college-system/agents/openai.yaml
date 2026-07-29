@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply to College System"
+  short_description: "Track every college application requirement and deadline"
+  default_prompt: "Use $apply-to-college-system to help me complete this workflow with verified evidence."

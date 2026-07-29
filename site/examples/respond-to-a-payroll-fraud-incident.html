@@ -1,0 +1,34 @@
+<h2>Worked case: protect employees during a cross-border payroll attack</h2>
+<p class="case-trigger"><strong>Trigger:</strong> Payroll detects bank-account changes and off-cycle payments for employees in several countries after a payroll administrator account gained a new MFA method, while files were sent to banks, some payments settled, employee identities may be compromised, and the next payroll run is hours away.</p>
+<div class="chatdemo">
+<div class="cm cm-user">Should we reset the administrator first?</div>
+<div class="cm cm-agent">Preserve volatile identity and payroll evidence where safe, then contain through a clean authorized channel.</div>
+<div class="cm cm-user cd-hide">Can HR call the number in the payroll record?</div>
+<div class="cm cm-agent cd-hide">Not if it changed during the incident. Use an independently sourced contact path.</div>
+<div class="cm cm-user cd-hide">Should we resend the whole bank file?</div>
+<div class="cm cm-agent cd-hide">No. Reconcile each beneficiary and bank outcome before issuing unique controlled replacements.</div>
+<div class="cm cm-user">What protects the next payroll?</div>
+<div class="cm cm-agent">Clean administration, restricted changes, dual control, verified beneficiaries, unique IDs, and independent bank-to-employee reconciliation.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button><span class="cm-note">Employee pay and safety come before attribution.</span></p>
+</div>
+<div class="advanced-case">
+<h2>The payroll fraud evidence package</h2>
+<table class="plain-table"><thead><tr><th>Artifact</th><th>Required contents</th><th>Quality gate</th></tr></thead><tbody>
+<tr><td>payroll fraud incident timeline</td><td>Access, MFA, sessions, files, changes, approvals, bank events, containment, decisions, and custody</td><td>Every material event has source and timestamp</td></tr>
+<tr><td>employee, payment, and access reconciliation</td><td>Roster, gross-to-net, beneficiary, instruction, bank outcome, receipt, replacement, recovery, and ledger state</td><td>Every affected employee and payment has one explicit disposition</td></tr>
+<tr><td>containment, recovery, and control-effectiveness report</td><td>Clean administration, employee support, next-run controls, notifications, financial recovery, and remediation tests</td><td>The next run is independently proven trustworthy</td></tr>
+</tbody></table>
+</div>
+<h2>Failure rehearsal</h2>
+<p>A bank cannot recall several settled transfers and the stored employee phone numbers may be attacker-controlled. Responders keep those payments unresolved, contact employees through independently verified managers and prior records, provide controlled replacement pay, reconcile recoveries separately, and do not weaken identity checks to meet the next deadline.</p>
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Should affected employees wait for bank recovery?</summary><p>No. Use the approved employee-protection and replacement-pay process while recovery continues.</p></details>
+<details class="faq"><summary>Can the payroll team investigate itself?</summary><p>Use independent incident, access, banking, and review authority to preserve trust and segregation.</p></details>
+<details class="faq"><summary>What if transaction status is unknown?</summary><p>Keep it indeterminate, trace it with the bank, and do not issue an uncontrolled duplicate.</p></details>
+<details class="faq"><summary>Should every employee be notified?</summary><p>Follow the scoped facts, risk, jurisdiction, and qualified privacy and employment advice.</p></details>
+<details class="faq"><summary>When is the incident closed?</summary><p>After people are protected, money and access reconcile, duties are met, and remediation tests pass.</p></details>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should affected employees wait for bank recovery?","acceptedAnswer":{"@type":"Answer","text":"No. Protect pay while recovery continues."}},{"@type":"Question","name":"Can the payroll team investigate itself?","acceptedAnswer":{"@type":"Answer","text":"Use independent authority and review."}},{"@type":"Question","name":"What if transaction status is unknown?","acceptedAnswer":{"@type":"Answer","text":"Keep it indeterminate and do not duplicate it."}},{"@type":"Question","name":"Should every employee be notified?","acceptedAnswer":{"@type":"Answer","text":"Follow scoped facts and applicable duties."}},{"@type":"Question","name":"When is the incident closed?","acceptedAnswer":{"@type":"Answer","text":"After protection, reconciliation, obligations, and remediation are verified."}}]}</script>
+<h2>Where to go from here</h2>
+<p>Investigate identity with <a href="/skills/respond-to-account-takeover/">Respond to account takeover</a>,
+review financial evidence with <a href="/skills/investigate-a-financial-reporting-error/">Investigate a financial reporting error</a>, and
+prepare continuity with <a href="/skills/design-a-disaster-recovery-plan/">Design a disaster recovery plan</a>.</p>

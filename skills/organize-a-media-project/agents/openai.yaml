@@ -1,0 +1,4 @@
+interface:
+  display_name: "Organize a Media Project"
+  short_description: "Structure media files, versions, and handoffs"
+  default_prompt: "Use $organize-a-media-project to organize this production safely and clearly."

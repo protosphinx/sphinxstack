@@ -1,0 +1,4 @@
+interface:
+  display_name: "Request an Informational Interview"
+  short_description: "Ask for a bounded career conversation respectfully"
+  default_prompt: "Use $request-an-informational-interview to write a specific and respectful outreach message."

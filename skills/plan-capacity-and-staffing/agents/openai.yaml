@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Capacity and Staffing"
+  short_description: "Model demand, capacity, constraints, and staffing scenarios"
+  default_prompt: "Use $plan-capacity-and-staffing to create a responsible capacity plan."

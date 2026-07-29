@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-a-multiregion-failover"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $design-a-multiregion-failover to complete and verify this task."

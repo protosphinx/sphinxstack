@@ -1,0 +1,104 @@
+<h2>Watch the first two minutes</h2>
+<p>This is how a session goes, including the honest talk about small numbers. Click through it.</p>
+<div class="chatdemo" data-step="2">
+<div class="cm cm-user"><span class="cm-paste">(pastes the skill)</span> is anyone actually visiting my site?</div>
+<div class="cm cm-agent">Right now you genuinely can't tell, and one script tag fixes that.
+First the promise this skill makes: we count visits to your site and it stops there.
+No cookies, no fingerprinting, no tracking anyone across other sites.</div>
+<div class="cm cm-user cd-hide">I thought analytics meant those cookie consent banners</div>
+<div class="cm cm-agent cd-hide">The heavy kind does, which is why we skip Google Analytics on
+purpose. Your options: Cloudflare Web Analytics or GoatCounter. Both free, both
+cookie-free, so your site stays banner-free. Which appeals?</div>
+<div class="cm cm-user cd-hide">ok. will the numbers be embarrassing though</div>
+<div class="cm cm-agent cd-hide">Maybe small, and small is normal: a personal site getting 5 to
+50 visits a week is doing fine. We'll also exclude your own device so you aren't
+counting yourself, which inflates everything.</div>
+<div class="cm cm-user cd-hide">how do I know the counter is even working</div>
+<div class="cm cm-agent cd-hide">We verify for real. You create the account, I add the script
+tag before the closing body tag on every page, we push, then you visit the live site
+and watch your own visit appear on the dashboard. Until you've seen yourself counted,
+it isn't done.</div>
+<p class="cd-controls"><button class="copybtn cd-next">Next &rarr;</button>
+<span class="cm-note">Scripted example of a real session.</span></p>
+</div>
+
+<h2>Worried analytics means spying on people?</h2>
+<p>Most of the industry earns that reputation, and this skill draws the line early:
+you measure traffic on your own site, and nothing more. The counters it offers use no
+cookies and do no fingerprinting, so visitors owe you no consent banner and you owe
+them no apology. Google Analytics gets skipped deliberately: for a personal site it is
+heavy, it collects far more than a visit count needs, and in much of the world it
+drags a consent banner onto a site that never needed one.</p>
+
+<h2>What you end up with</h2>
+<p>A dashboard you check weekly, and the vocabulary to read it. A normal week on a
+personal site looks like this:</p>
+<div class="example-wrap">
+<div class="sheet" aria-label="Example analytics dashboard for a small personal site">
+<div class="sheet-tag">Example</div>
+<pre>
+example.com               last 7 days
+
+pageviews        61       <span class="anno-badge">1</span>
+visitors         24
+
+top pages        /              41
+                 /projects/     13
+                 /about/         7
+
+referrers        direct         12   <span class="anno-badge">2</span>
+                 search          8
+                 link in bio     4
+
+your device      excluded       <span class="anno-badge">3</span>
+</pre>
+</div>
+<ol class="anno-notes">
+<li><b>Pageviews count loads; visitors roughly dedupe to people.</b> 61 loads by 24
+people is a healthy ratio for a small site, and both numbers being modest is
+normal.</li>
+<li><b>Referrers answer the interesting question.</b> "Did anyone come from the link I
+posted?" beats staring at totals. The skill sets a weekly check-in cadence for exactly
+this kind of question.</li>
+<li><b>You don't count yourself.</b> Your own visits inflate everything, so excluding
+your device is part of setup, before you read any numbers.</li>
+</ol>
+</div>
+
+<h2>Questions people actually ask</h2>
+<details class="faq"><summary>Is this free?</summary>
+<p>Yes. Cloudflare Web Analytics is free, and GoatCounter is free for personal sites
+and open source, so you could self-host it someday. The skill avoids options that
+would push you toward a paid tier for a simple visit count.</p></details>
+<details class="faq"><summary>Why not Google Analytics?</summary>
+<p>For a personal site it is the wrong size: heavy on the page, collecting more than a
+visit count needs, and in much of the world it obliges a consent banner. The two
+counters this skill offers answer "did anyone visit?" without any of that.</p></details>
+<details class="faq"><summary>Do I need a cookie banner now?</summary>
+<p>No, and that is by design. The counters here work without cookies, so there is
+nothing to ask consent for and your site stays banner-free.</p></details>
+<details class="faq"><summary>What if the numbers are tiny?</summary>
+<p>They probably will be, and the skill says so before you look: 5 to 50 visits a week
+is normal for a personal site. Small honest numbers you understand beat big vague
+ones, and if you want more visitors, seo-basics is the honest next step.</p></details>
+<details class="faq"><summary>Will the script slow my site down?</summary>
+<p>Not noticeably. Both options are a single small script tag, a fraction of the
+weight of one image. If you later run make-it-fast, the counter won't be what the
+report flags.</p></details>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Cloudflare Web Analytics is free, and GoatCounter is free for personal sites and open source."}},
+{"@type":"Question","name":"Why not Google Analytics?","acceptedAnswer":{"@type":"Answer","text":"For a personal site it is heavy, collects more than a visit count needs, and in much of the world obliges a consent banner."}},
+{"@type":"Question","name":"Do I need a cookie banner now?","acceptedAnswer":{"@type":"Answer","text":"No. The counters here work without cookies, so there is nothing to ask consent for."}},
+{"@type":"Question","name":"What if the numbers are tiny?","acceptedAnswer":{"@type":"Answer","text":"5 to 50 visits a week is normal for a personal site, and the skill says so before you look. seo-basics is the honest next step if you want more."}},
+{"@type":"Question","name":"Will the script slow my site down?","acceptedAnswer":{"@type":"Answer","text":"Not noticeably. Both options are a single small script tag, a fraction of the weight of one image."}}
+]}
+</script>
+
+<h2>Where to go from here</h2>
+<p><b>Counter running?</b> Now the numbers can drive decisions:</p>
+<div class="cardrow">
+<a class="mini" href="/skills/seo-basics/"><img src="/assets/skill-img/seo-basics.jpg" alt=""><span>Get found by name</span></a>
+<a class="mini" href="/skills/make-it-fast/"><img src="/assets/skill-img/make-it-fast.jpg" alt=""><span>Make it fast</span></a>
+<a class="mini" href="/skills/build-resume/"><img src="/assets/skill-img/build-resume.jpg" alt=""><span>Turn traffic into a resume line</span></a>
+</div>

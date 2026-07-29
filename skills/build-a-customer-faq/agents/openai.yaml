@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a Customer FAQ"
+  short_description: "Create evidence-based answers to recurring questions"
+  default_prompt: "Use $build-a-customer-faq to help me complete this workflow with verifiable evidence."

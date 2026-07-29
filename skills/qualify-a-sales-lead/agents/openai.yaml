@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qualify a Sales Lead"
+  short_description: "Assess fit and next action using explicit evidence"
+  default_prompt: "Use $qualify-a-sales-lead to help me complete this workflow with verifiable evidence."

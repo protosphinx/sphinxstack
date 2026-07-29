@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate a Data Migration"
+  short_description: "Reconcile migrated records and behavior"
+  default_prompt: "Use $validate-a-data-migration to verify this migration with control totals."

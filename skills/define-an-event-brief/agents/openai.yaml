@@ -1,0 +1,4 @@
+interface:
+  display_name: "Define an Event Brief"
+  short_description: "Turn event intent into a bounded delivery brief"
+  default_prompt: "Use $define-an-event-brief to turn this event idea into an outcome-led brief."

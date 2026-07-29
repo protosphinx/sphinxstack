@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan A Household Move"
+  short_description: "Coordinate a household move with owners and acceptance checks"
+  default_prompt: "Use $plan-a-household-move to coordinate this move and its dependencies."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design an Empty State"
+  short_description: "Help users understand and progress from an empty view"
+  default_prompt: "Use $design-an-empty-state to create an accurate and useful state for this empty condition."

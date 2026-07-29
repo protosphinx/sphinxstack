@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Application Tracker"
+  short_description: "Track applications, evidence, and follow-up dates"
+  default_prompt: "Use $job-application-tracker to help me complete this workflow with verified evidence."

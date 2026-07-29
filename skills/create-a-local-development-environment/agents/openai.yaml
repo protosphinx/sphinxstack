@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Local Development Environment"
+  short_description: "Make local setup reproducible and isolated"
+  default_prompt: "Use $create-a-local-development-environment to build a reproducible setup."

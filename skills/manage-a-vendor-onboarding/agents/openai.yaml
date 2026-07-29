@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Vendor Onboarding"
+  short_description: "Bring a vendor into service with owned controls"
+  default_prompt: "Use $manage-a-vendor-onboarding to plan this vendor launch from contract to accepted service."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit a Resume for Bias"
+  short_description: "Remove avoidable bias without erasing identity"
+  default_prompt: "Use $audit-a-resume-for-bias to review this resume for avoidable bias and distortion."

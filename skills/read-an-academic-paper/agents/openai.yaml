@@ -1,0 +1,4 @@
+interface:
+  display_name: "Read an Academic Paper"
+  short_description: "Evaluate a paper from question to evidence"
+  default_prompt: "Use $read-an-academic-paper to read and evaluate this academic paper."

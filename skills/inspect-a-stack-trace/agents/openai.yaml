@@ -1,0 +1,4 @@
+interface:
+  display_name: "inspect-a-stack-trace"
+  short_description: "Run this workflow with verified evidence"
+  default_prompt: "Use $inspect-a-stack-trace to complete and verify this task."

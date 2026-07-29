@@ -1,0 +1,4 @@
+interface:
+  display_name: "manage a high stakes organizational crisis"
+  short_description: "Run this operations workflow with verified evidence"
+  default_prompt: "Use $manage-a-high-stakes-organizational-crisis to complete and verify this operations task."

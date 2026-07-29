@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to a Business Cash Crisis"
+  short_description: "Protect payroll and stabilize liquidity"
+  default_prompt: "Use $respond-to-a-business-cash-crisis to assess and stabilize this liquidity crisis."

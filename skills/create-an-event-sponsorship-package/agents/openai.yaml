@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create an Event Sponsorship Package"
+  short_description: "Offer bounded sponsor value with clear evidence"
+  default_prompt: "Use $create-an-event-sponsorship-package to create transparent sponsorship options for this event."
