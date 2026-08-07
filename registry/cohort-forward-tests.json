@@ -1493,5 +1493,44 @@
     ],
     "result": "pass",
     "notes": "Independent testing confirmed the agent held to read-only work, declined access to payment and payroll records on this pass, and kept the person who normally does the work in the loop. The boundary was widened only after differences were reviewed and understood."
+  },
+  {
+    "cohort_id": "partmode-1009",
+    "skill_id": "connect-partmode-to-an-agent",
+    "scenario": "Connect a designer's Codex client to PartMode for a one-hour browser-approved read-and-edit session without exposing the agent key, enabling headless access, or connecting to the wrong open project.",
+    "observed_artifacts": [
+      "secret-backed Streamable HTTP MCP configuration",
+      "live resources, tools, and capability discovery record",
+      "visible bounded Studio approval with revision and expiry",
+      "disconnected verification session and revoked throwaway key"
+    ],
+    "result": "pass",
+    "notes": "Independent testing first exposed underspecified session and project verification. After revision, the procedure kept the bearer token out of chat, shell history, and tracked files; distinguished authentication from project authority; verified status, expiry, visible project identity, and exact document evidence; and closed the session without granting headless access."
+  },
+  {
+    "cohort_id": "partmode-1009",
+    "skill_id": "edit-cad-in-partmode",
+    "scenario": "Move a mounting plate's hole pattern and change its extrusion while another session advances the source revision, then prove the accepted preview was committed without changing unrelated geometry or blindly retrying a stale transaction.",
+    "observed_artifacts": [
+      "revision-bound document inspection and persistent entity identifiers",
+      "live-supported transaction and accepted preview identity",
+      "stale-revision recovery through reinspection and a new preview",
+      "settled revision with exact topology, dimension, and mass-property evidence"
+    ],
+    "result": "pass",
+    "notes": "Independent testing confirmed the procedure rejected guessed operations, halted for overlapping concurrent changes, preserved non-overlapping changes through reinspection, defined preview acceptance and unrelated-geometry invariants, and used exact post-commit document evidence instead of screenshots, DOM state, or mesh counts."
+  },
+  {
+    "cohort_id": "partmode-1009",
+    "skill_id": "export-cad-from-partmode",
+    "scenario": "Deliver an exact STEP file from a durable headless project and a drawing artifact from a visible Studio, verify both against their source revisions, and refuse an unsupported attempt to create the drawing through a headless-only export path.",
+    "observed_artifacts": [
+      "source revision, scope, format, unit, and destination contract",
+      "live capability record selecting the browser and headless export tools",
+      "saved artifacts with byte counts and independently computed SHA-256 digests",
+      "parse results and delivery manifests tied to inspected source revisions"
+    ],
+    "result": "pass",
+    "notes": "Independent testing confirmed the procedure chose export tools from live capabilities, refused to substitute unsupported headless drawing output, reinspected the source after export, matched saved bytes to PartMode checksums and revisions, and required independent parsing before calling either artifact complete."
   }
 ]

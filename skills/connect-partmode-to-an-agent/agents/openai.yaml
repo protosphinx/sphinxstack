@@ -1,0 +1,4 @@
+interface:
+  display_name: "Connect PartMode to an Agent"
+  short_description: "Connect an MCP client to PartMode safely"
+  default_prompt: "Use $connect-partmode-to-an-agent to connect my agent to PartMode and verify the session."

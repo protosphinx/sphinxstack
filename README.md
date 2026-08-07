@@ -4,7 +4,7 @@
 
 **Everything is a skill. Including the resume.**
 
-1,006 skills · 153 project briefs · plain markdown · any agent · MIT
+1,009 skills · 153 project briefs · plain markdown · any agent · MIT
 
 [**sphinxstack.com**](https://sphinxstack.com) · [skills](https://sphinxstack.com/skills/) · [projects](https://sphinxstack.com/ideas/) · [brain](https://sphinxstack.com/brain/) · [about](https://sphinxstack.com/about/) · [smbwiki](https://smbwiki.com)
 
@@ -64,7 +64,7 @@ npx skills add protosphinx/sphinxstack -s build-resume -g -y
 
 | category | skills | for example |
 |---|---:|---|
-| code | 170 | `respond-to-a-critical-open-source-maintainer-compromise` · `build-a-durable-idempotency-store` · `test-a-zero-downtime-deploy` |
+| code | 173 | `connect-partmode-to-an-agent` · `edit-cad-in-partmode` · `export-cad-from-partmode` |
 | data | 110 | `migrate-a-global-master-data-platform` · `audit-a-feature-store` · `build-a-change-data-capture-pipeline` |
 | web | 100 | `test-a-multiregion-web-failover` · `migrate-a-headless-cms` · `audit-a-third-party-web-script` |
 | get-hired | 80 | `respond-to-a-hiring-process-data-breach` · `design-a-cross-border-executive-search` · `prepare-for-an-executive-interview` |
@@ -77,17 +77,17 @@ npx skills add protosphinx/sphinxstack -s build-resume -g -y
 | money | 80 | `recover-from-a-global-treasury-control-failure` · `design-a-refund-control-process` · `build-a-working-capital-dashboard` |
 
 Each skill is leveled by the judgment its procedure requires:
-**320 starter** (one bounded artifact, a short feedback loop),
-**570 working** (an existing project, several connected decisions),
+**321 starter** (one bounded artifact, a short feedback loop),
+**578 working** (an existing project, several connected decisions),
 **110 advanced** (production risk, an explicit failure plan, an
 evidence package).
 
-## The road to 1,006
+## The road to 1,009
 
 The catalog grows in reviewed cohorts of at most 25 skills. The
-[skill roadmap](registry/skill-roadmap.json) allocates exactly 1,006
+[skill roadmap](registry/skill-roadmap.json) allocates exactly 1,009
 slots across the twelve subjects and records the 150, 250, 500, 750,
-1,000, and 1,006-skill milestones. `npm test` rejects a completed
+1,000, 1,006, and 1,009-skill milestones. `npm test` rejects a completed
 cohort whose skills, capacity targets, or quality metadata are
 incomplete.
 

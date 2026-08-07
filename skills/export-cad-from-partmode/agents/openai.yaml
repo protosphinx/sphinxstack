@@ -1,0 +1,4 @@
+interface:
+  display_name: "Export CAD from PartMode"
+  short_description: "Export PartMode CAD with exact artifact evidence"
+  default_prompt: "Use $export-cad-from-partmode to export this PartMode project and verify the artifact."

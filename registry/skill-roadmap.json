@@ -1,12 +1,12 @@
 {
-  "target_skill_count": 1006,
+  "target_skill_count": 1009,
   "max_editorial_batch": 25,
   "category_targets": {
     "resume": 60,
     "get-hired": 80,
     "start": 90,
     "web": 100,
-    "code": 170,
+    "code": 173,
     "write": 90,
     "design": 80,
     "media": 70,
@@ -16,8 +16,8 @@
     "business": 6
   },
   "level_targets": {
-    "starter": 320,
-    "working": 576,
+    "starter": 321,
+    "working": 578,
     "advanced": 110
   },
   "cohort_targets": [
@@ -56,7 +56,8 @@
     950,
     975,
     1000,
-    1006
+    1006,
+    1009
   ],
   "milestones": [
     {
@@ -116,6 +117,16 @@
       "themes": [
         "running a business from a documented operating model",
         "connecting the library to the smbwiki corpus"
+      ]
+    },
+    {
+      "skill_count": 1009,
+      "status": "complete",
+      "label": "PartMode agent CAD workflows",
+      "themes": [
+        "connecting an MCP-capable agent to PartMode",
+        "revision-bound CAD editing with exact evidence",
+        "verified CAD artifact export and delivery"
       ]
     }
   ],
@@ -1259,6 +1270,16 @@
         "choose-what-to-measure",
         "pick-your-business-software",
         "hand-a-department-to-an-agent"
+      ]
+    },
+    {
+      "id": "partmode-1009",
+      "status": "complete",
+      "target_skill_count": 1009,
+      "skill_ids": [
+        "connect-partmode-to-an-agent",
+        "edit-cad-in-partmode",
+        "export-cad-from-partmode"
       ]
     }
   ]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Edit CAD in PartMode"
+  short_description: "Inspect, preview, and verify PartMode CAD edits"
+  default_prompt: "Use $edit-cad-in-partmode to make this CAD change in PartMode with exact verification."

@@ -42,7 +42,7 @@ around the builder's actual life — write them concrete, not generic.
 npm test
 ```
 
-runs the catalog and 1,000-skill roadmap validators, plus the skill,
+runs the catalog and 1,009-skill roadmap validators, plus the skill,
 advanced-skill, worked-example, and SEO lints. Everything must pass before
 a change lands. `npm run build` renders the site into `site/dist/` if
 you want to see your skill's page.

@@ -1,0 +1,174 @@
+<h1>What a graph does to a skill</h1>
+<p class="payoff">A skill file records a procedure: the steps, the rules, and what
+done means. It deliberately says nothing about where it sits. This page is about
+what happens when you give it that context. A graph changes what a skill means,
+makes properties of it measurable that no amount of reading can reveal, and
+introduces costs that lone files never pay. The evidence comes from two live
+corpora that share one file format and made opposite choices.</p>
+
+<h2>A skill by itself</h2>
+<p>This library holds {{SKILL_COUNT}} skills as standalone markdown files. Each one
+states when to use it, the steps in order, the rules that must hold, and what must
+be true at the end. The file is context-free on purpose: it loads into any agent,
+travels between projects, and survives a change of tools, because nothing in it
+refers to anything outside it.</p>
+<p>That portability has a price. The file cannot say who should run the work, what
+upstream work feeds it, where its output goes, or how the surrounding operation
+judges the result. A skill's <em>Use when</em> line gives a trigger, and a trigger
+answers only the question of when. Who, from what, and for what happens next are
+questions a lone file cannot hold.</p>
+
+<h2>A skill in a graph</h2>
+<p>The sister project <a href="https://smbwiki.com">smbwiki</a> made the other
+choice. It models 125 business types as one graph in which each skill is a shared
+node, and each business that runs the skill binds it: which roles own it, which
+records go in and out, which metric judges it, which software category runs it.
+The skill's process text is a single file. Its meaning is assembled per business,
+from the edges.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three businesses binding one shared skill node with different roles and records">
+  <g font-size="13" fill="var(--ink)">
+    <rect x="20" y="18" width="168" height="34" fill="#fff" stroke="var(--hair)"/>
+    <text x="104" y="39" text-anchor="middle">Machine shop</text>
+    <rect x="20" y="86" width="168" height="34" fill="#fff" stroke="var(--hair)"/>
+    <text x="104" y="107" text-anchor="middle">Pizzeria</text>
+    <rect x="20" y="154" width="168" height="34" fill="#fff" stroke="var(--hair)"/>
+    <text x="104" y="175" text-anchor="middle">Law firm</text>
+    <rect x="428" y="86" width="190" height="38" fill="#f8f9fa" stroke="var(--ink)"/>
+    <text x="523" y="110" text-anchor="middle">Accounts payable</text>
+  </g>
+  <g stroke="var(--muted)" fill="none">
+    <path d="M188 35 L424 98"/>
+    <path d="M188 103 L424 105"/>
+    <path d="M188 171 L424 112"/>
+  </g>
+  <g font-size="11" fill="var(--muted)">
+    <text x="300" y="48">owner: office manager</text>
+    <text x="300" y="163">records: supplier invoice, payment record</text>
+  </g>
+</svg>
+<figcaption>Accounts payable as one node with many parents. Each business supplies its own binding: the
+owner, the records, the judging metric. The process text is identical in all of
+them.</figcaption>
+</figure>
+
+<h2>Situation</h2>
+<p>The first thing the graph adds is an address. The file says how the work is
+done. The edges say who owns it in this operation, which record arrives to start
+it, which record it must produce, and which number the operation watches to judge
+it. An agent holding the lone file can perform the procedure. An agent holding the
+neighborhood also knows what to ask for before starting and where the result is
+supposed to go, which is most of the difference between completing a task and
+participating in an operation.</p>
+
+<h2>Generality becomes a measurement</h2>
+<p>Read <a href="https://smbwiki.com/skill/accounts-payable/">accounts payable</a>
+and try to determine from the text whether it is universal or niche. You cannot.
+The prose of a general skill and the prose of a specialist skill look the same.
+The graph answers the question empirically: accounts payable runs in 108 of
+smbwiki's 125 business types, while 173 of its 227 skills run in exactly one.
+Generality turns out to be a property the corpus assigns to the skill, visible as
+the node's in-degree, and invisible in the file. The distribution has a
+characteristic shape: a small spine of back-office skills nearly every operation
+shares, and a long tail of trade work that identifies a single business. Any
+sufficiently large skill library almost certainly has the same shape. Without a
+graph over it, nobody can see it.</p>
+
+<h2>Identity moves into the wiring</h2>
+<p>The strongest measurement on smbwiki is this one: 88 of its 125 business types
+run no skill that some other type does not also run. Their entire skill set is
+shared parts. What makes a caterer different from a pizzeria is which skills are
+present together and how records pass between them: quoting produces the quote
+that invoicing consumes, invoicing produces the customer invoice that accounts
+receivable chases, and the chain of documents is the actual structure of the
+operation. A business relates to its skills the way a product relates to its
+parts, and the parts are mostly standard. The other sister project,
+<a href="https://bomwiki.com">BOMwiki</a>, makes the identical argument for
+hardware: the same ball bearing appears in an espresso machine and an excavator,
+and the product's identity lives in the assembly.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A chain of skills connected by the documents they produce and consume">
+  <g font-size="12.5" fill="var(--ink)">
+    <rect x="14" y="42" width="112" height="34" fill="#f8f9fa" stroke="var(--ink)"/>
+    <text x="70" y="63" text-anchor="middle">Quoting</text>
+    <rect x="264" y="42" width="112" height="34" fill="#f8f9fa" stroke="var(--ink)"/>
+    <text x="320" y="63" text-anchor="middle">Invoicing</text>
+    <rect x="514" y="42" width="112" height="34" fill="#f8f9fa" stroke="var(--ink)"/>
+    <text x="570" y="60" text-anchor="middle">Accounts</text>
+    <text x="570" y="73" text-anchor="middle">receivable</text>
+  </g>
+  <g stroke="var(--muted)" fill="none">
+    <path d="M126 59 L260 59"/>
+    <path d="M376 59 L510 59"/>
+  </g>
+  <g font-size="11" fill="var(--muted)">
+    <text x="193" y="50" text-anchor="middle">quote</text>
+    <text x="443" y="50" text-anchor="middle">customer invoice</text>
+  </g>
+</svg>
+<figcaption>Documents are the wiring. One skill's output record is the next
+skill's input, and the flow of records is the dependency structure of the
+business.</figcaption>
+</figure>
+
+<h2>Claims become checkable</h2>
+<p>A lone file can name any record, any role, and any measure, and nothing pushes
+back. In a graph, every name a skill uses must resolve to a node that exists, and
+smbwiki's build fails on a single broken reference. This gate is narrower than it
+sounds and stronger than it sounds at the same time. It cannot judge whether the
+procedure is wise. What it can do is force every noun in a
+thousand-file corpus to be a real, shared, inspectable thing, and that is the
+precondition for any deeper form of checking. The machinery is documented at
+<a href="https://smbwiki.com/graph/">how the graph is built</a>.</p>
+
+<h2>Corrections travel</h2>
+<p>When 108 businesses each keep their own copy of a procedure, the copies diverge
+one small edit at a time, and no one notices until two of them disagree in front
+of a customer. When they share a node, one correction lands on every page that
+uses it, immediately. The same property is the graph's largest cost: an edit to a
+shared node touches 108 operations at once, so a shared corpus needs review
+machinery, stable identifiers, and a tolerance for slower editing that a folder of
+lone files never demands. Portability and shared structure trade off against each
+other, and the two corpora simply picked different points: this library keeps
+skills portable and pays by carrying no situation; smbwiki situates skills and
+pays in curation. Because both use the same plain-text format, a skill can cross
+between them, and what survives the crossing is the process text.</p>
+
+<h2>Open questions</h2>
+<p>These are the questions this pair of corpora makes askable, in roughly the
+order they could be answered.</p>
+<ul>
+<li><strong>Binding prediction.</strong> If 88 of 125 business types assemble
+entirely from shared skills, then predicting which skills a new business type
+needs looks learnable. The known trap is degree bias: a ranker that always
+predicts the popular skill scores well for the wrong reason.
+<a href="https://bomwiki.com/research">BOMwiki's benchmark work</a> found exactly
+this failure on product graphs, and any skill-graph benchmark inherits the
+lesson.</li>
+<li><strong>The value of the neighborhood.</strong> Take one task. Run an agent
+with the lone skill file, then with the file plus its bindings and adjacent
+skills. Score the completions. Nobody has published that number for business
+skills, and it is the direct test of everything this page claims.</li>
+<li><strong>A curriculum from document flow.</strong> This library labels skills
+starter, working, or advanced, which orders them by judgment required. Document
+flow suggests a stronger structure: if one skill's output is another's input,
+that is a prerequisite edge, and enough of them turn a catalog into a curriculum
+a learner can walk.</li>
+<li><strong>The guardrail budget.</strong> smbwiki's definitions are model
+generated and held consistent by its build gates. Its
+<a href="https://smbwiki.com/about/">stated goal</a> is to find out how much
+guardrail that consistency takes. The answer, once measured, applies to any
+generated skill corpus, including this one.</li>
+</ul>
+
+<h2>Where to look</h2>
+<ul>
+<li><a href="https://smbwiki.com/graph/">smbwiki: how the graph is built</a>, the
+validation and inheritance machinery behind the numbers quoted here.</li>
+<li><a href="https://smbwiki.com/research/">smbwiki: research</a>, the live corpus
+statistics; counts on this page are from its July 2026 release.</li>
+<li><a href="/brain/">The brain guide</a>, where skills sit inside a configured
+agent, next to identity, memory, and reflexes.</li>
+<li><a href="/skills/">The catalog</a>, {{SKILL_COUNT}} portable skills, each one
+a worked example of the file format both corpora share.</li>
+</ul>

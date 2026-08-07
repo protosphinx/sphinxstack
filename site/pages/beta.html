@@ -1,0 +1,169 @@
+<section class="beta-intro" aria-labelledby="beta-title">
+  <div class="beta-intro-copy">
+    <p class="beta-kicker">Early beta · paid participation</p>
+    <h1 id="beta-title">Help shape what we build next.</h1>
+    <p class="beta-deck">We’re looking for a small group of early beta users who
+    actively build with coding agents. You’ll get early access and work directly
+    with us through practical, candid feedback.</p>
+    <p>This is a paid beta program. Compensation will be agreed upfront and
+    matched to your time and level of involvement, with Codex Max, OpenRouter
+    credits, and cash compensation available as part of the package.</p>
+  </div>
+  <aside class="beta-terms" aria-labelledby="beta-terms-title">
+    <h2 id="beta-terms-title">What to expect</h2>
+    <dl>
+      <div><dt>Access</dt><dd>Early product access and a direct line to the team.</dd></div>
+      <div><dt>Involvement</dt><dd>Focused product use and occasional feedback.</dd></div>
+      <div><dt>Compensation</dt><dd>Agreed with you before participation begins.</dd></div>
+    </dl>
+  </aside>
+</section>
+
+<form
+  class="beta-form"
+  method="post"
+  data-beta-form
+  data-endpoint="{{BETA_FORM_ENDPOINT}}"
+  novalidate
+>
+  <input type="hidden" name="quiz_answers" data-quiz-answers>
+  <input type="hidden" name="quiz_duration_seconds" data-quiz-duration>
+  <input type="hidden" name="quiz_tab_switches" data-quiz-tab-switches>
+  <input type="hidden" name="quiz_version" value="2026-07-31">
+
+  <section class="beta-form-section" aria-labelledby="builder-heading">
+    <div class="beta-section-heading">
+      <span>1</span>
+      <div>
+        <h2 id="builder-heading">About you</h2>
+        <p>Four short fields. Links are reviewed by a person.</p>
+      </div>
+    </div>
+
+    <div class="beta-field-grid">
+      <div class="beta-field">
+        <label for="beta-name">Name</label>
+        <input id="beta-name" name="name" autocomplete="name" required>
+      </div>
+      <div class="beta-field">
+        <label for="beta-email">Email</label>
+        <input id="beta-email" name="email" type="email" autocomplete="email" required>
+      </div>
+    </div>
+
+    <div class="beta-field">
+      <label for="beta-link">GitHub, project, or profile link</label>
+      <input
+        id="beta-link"
+        name="work_url"
+        type="url"
+        inputmode="url"
+        autocomplete="url"
+        placeholder="https://"
+        required
+      >
+    </div>
+
+    <div class="beta-field">
+      <label for="beta-building">What are you building right now?</label>
+      <textarea
+        id="beta-building"
+        name="current_build"
+        rows="4"
+        maxlength="600"
+        aria-describedby="beta-building-help"
+        required
+      ></textarea>
+      <p class="beta-help" id="beta-building-help">A few direct sentences are enough.</p>
+    </div>
+
+    <fieldset class="beta-tools">
+      <legend>Tools you actively use</legend>
+      <div class="beta-check-grid">
+        <label><input type="checkbox" name="tools" value="codex"> Codex</label>
+        <label><input type="checkbox" name="tools" value="claude-code"> Claude Code</label>
+        <label><input type="checkbox" name="tools" value="opencode"> OpenCode</label>
+        <label><input type="checkbox" name="tools" value="hermes"> Hermes</label>
+        <label><input type="checkbox" name="tools" value="other"> Something else</label>
+      </div>
+    </fieldset>
+
+    <label class="beta-internship">
+      <input type="checkbox" name="internship_interest" value="yes">
+      <span>
+        <strong>I’m also interested in an internship.</strong>
+        Internships use a separate application, interview, and evaluation
+        process. We’ll send the details after reviewing this form.
+      </span>
+    </label>
+  </section>
+
+  <section class="beta-form-section" aria-labelledby="quiz-heading">
+    <div class="beta-section-heading">
+      <span>2</span>
+      <div>
+        <h2 id="quiz-heading">Quick tooling check</h2>
+        <p>Five questions · 60 seconds · one pass</p>
+      </div>
+    </div>
+
+    <div class="beta-quiz" data-quiz>
+      <div class="beta-quiz-ready" data-quiz-ready>
+        <div class="beta-quiz-brief">
+          <p>This checks familiarity with the tools around the beta. Questions
+          appear one at a time, choices are randomized, and you cannot return to
+          a previous question.</p>
+          <p class="beta-quiz-note">The timer starts when you press the button.
+          Leaving the tab during the quiz is recorded for review.</p>
+        </div>
+        <button class="beta-button beta-button-primary" type="button" data-quiz-start>
+          Start 60-second check
+        </button>
+      </div>
+
+      <div class="beta-quiz-live" data-quiz-live hidden>
+        <div class="beta-quiz-status">
+          <span data-quiz-progress>Question 1 of 5</span>
+          <strong data-quiz-timer aria-live="polite">1:00</strong>
+        </div>
+        <div class="beta-quiz-meter" aria-hidden="true">
+          <span data-quiz-meter></span>
+        </div>
+        <fieldset class="beta-quiz-question" data-quiz-question>
+          <legend tabindex="-1" data-quiz-prompt></legend>
+          <div class="beta-quiz-choices" data-quiz-choices></div>
+        </fieldset>
+        <p class="beta-error" data-quiz-error hidden>Choose an answer to continue.</p>
+        <button class="beta-button beta-button-primary" type="button" data-quiz-next>
+          Next question
+        </button>
+      </div>
+
+      <div class="beta-quiz-complete" data-quiz-complete hidden tabindex="-1">
+        <span class="beta-complete-mark" aria-hidden="true">✓</span>
+        <div>
+          <h3>Tooling check complete</h3>
+          <p data-quiz-summary>Your answers are attached to the application.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="beta-form-section beta-submit-section" aria-labelledby="submit-heading">
+    <div class="beta-section-heading">
+      <span>3</span>
+      <div>
+        <h2 id="submit-heading">Send your application</h2>
+        <p>We’ll only use these details to review and contact you about this program.</p>
+      </div>
+    </div>
+    <label class="beta-consent">
+      <input type="checkbox" name="contact_consent" value="yes" required>
+      <span>You may contact me about the beta and, if selected above, the separate internship process.</span>
+    </label>
+    <p class="beta-form-error" data-form-error hidden></p>
+    <button class="beta-button beta-submit" type="submit">Send application</button>
+  </section>
+</form>
+
+<script src="/assets/beta-application.js" defer></script>

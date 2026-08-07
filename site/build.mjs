@@ -176,6 +176,14 @@ document.addEventListener("click", (e) => {
 </script>`;
 
 const SITE_URL = "https://sphinxstack.com";
+const BETA_FORM_ENDPOINT = (process.env.SPHINXSTACK_BETA_ENDPOINT ?? "").trim();
+if (
+  BETA_FORM_ENDPOINT
+  && !BETA_FORM_ENDPOINT.startsWith("/")
+  && !BETA_FORM_ENDPOINT.startsWith("https://")
+) {
+  throw new Error("SPHINXSTACK_BETA_ENDPOINT must be a root-relative path or an https URL");
+}
 const SEARCH_TITLE_MAX = 60;
 const META_DESCRIPTION_MAX = 160;
 const CSS_HASH = createHash("sha256").update(readFileSync(join(SITE, "style.css"))).digest("hex").slice(0, 10);
@@ -501,7 +509,7 @@ function page({
 <link rel="stylesheet" href="/style.css?v=${CSS_HASH}">
 ${jsonLd(schema)}
 </head>
-<body${path === "." ? ' class="home-page"' : path.startsWith("skills/") ? ' class="skill-page"' : ""}>
+<body${path === "." ? ' class="home-page"' : path === "beta" ? ' class="beta-page"' : path.startsWith("skills/") ? ' class="skill-page"' : ""}>
 <header><div class="wrap">
 <a class="wordmark" href="/"><span class="tile">sx</span>sphinxstack</a>
 <nav><a href="/skills/">skills</a> <a href="/ideas/">projects</a> <a href="/brain/">brain</a> <a href="/setup/">use a skill</a> <a href="/about/">about</a></nav>
@@ -515,6 +523,7 @@ ${content}
 </main>
 <footer><div class="wrap">
 sphinxstack · skills for your agent · <a href="/about/">about</a> ·
+<a href="/graph/">skills and graphs</a> ·
 <a href="https://github.com/protosphinx/sphinxstack">source</a>
 </div></footer>
 ${COPY_JS}
@@ -605,6 +614,9 @@ const TITLE_OVERRIDES = {
   "sell-online-basics": "Sell something online",
   "ask-for-recommendation": "Ask for a recommendation",
   "tailor-resume": "Tailor your resume",
+  "connect-partmode-to-an-agent": "Connect PartMode to an agent",
+  "edit-cad-in-partmode": "Edit CAD in PartMode",
+  "export-cad-from-partmode": "Export CAD from PartMode",
 };
 function titleOf(id) {
   if (TITLE_OVERRIDES[id]) return TITLE_OVERRIDES[id];
@@ -612,6 +624,9 @@ function titleOf(id) {
   return t.charAt(0).toUpperCase() + t.slice(1);
 }
 const SKILL_QUERY_OVERRIDES = {
+  "connect-partmode-to-an-agent": "how to connect PartMode MCP to an AI agent",
+  "edit-cad-in-partmode": "how to edit CAD with PartMode MCP",
+  "export-cad-from-partmode": "how to export STEP and CAD files from PartMode",
   "accessibility-pass": "website accessibility audit with AI",
   "add-analytics": "how to add analytics to a website",
   "add-search-to-a-site": "how to add search to a website",
@@ -2542,6 +2557,37 @@ file or URL.</p>
 </ul>`,
 });
 
+// paid early beta application
+page({
+  wide: true,
+  title: "Early beta — sphinxstack",
+  metaTitle: "Paid early beta program | sphinxstack",
+  desc: "Apply to join a small paid beta group, work directly with the team, and help shape what sphinxstack builds next.",
+  path: "beta",
+  indexable: false,
+  pageType: "WebPage",
+  breadcrumbs: [
+    { name: "Home", path: "/" },
+    { name: "Early beta", path: "/beta/" },
+  ],
+  crumb: `<a href="/">Home</a> / Early beta`,
+  shareLabel: "share this application",
+  shareTitle: "Join the sphinxstack early beta",
+  ogImage: renderOg("beta", {
+    tab: "BETA",
+    kind: "PAID PROGRAM",
+    eyebrow: "A small group of active builders",
+    title: "Build with us",
+    summary: "Get early access, work directly with the team, and shape what comes next.",
+    panelTitle: "Application",
+    panelItems: ["A short builder profile", "A 60-second tooling check", "Separate internship route"],
+    footer: "EARLY ACCESS · DIRECT FEEDBACK",
+  }),
+  ogImageAlt: "Apply to join the paid sphinxstack early beta program",
+  content: readFileSync(join(SITE, "pages", "beta.html"), "utf8")
+    .replaceAll("{{BETA_FORM_ENDPOINT}}", escAttr(BETA_FORM_ENDPOINT)),
+});
+
 // the brain guide
 page({
   title: "How to set up your brain — sphinxstack",
@@ -2562,6 +2608,36 @@ page({
   }),
   ogImageAlt: "How to set up an AI agent brain with identity, memory, skills, and reflexes",
   content: readFileSync(join(SITE, "pages", "brain.html"), "utf8"),
+});
+
+// skills and graphs: what context does to a procedure
+page({
+  title: "What a graph does to a skill — sphinxstack",
+  metaTitle: "Skills and graphs: what context does to a skill",
+  desc: "How a graph changes a skill: situation, measurable generality, identity in the wiring, checkable claims, and the maintenance tradeoff, measured on two live corpora.",
+  path: "graph",
+  targetQuery: "skills and graphs",
+  pageType: "TechArticle",
+  breadcrumbs: [
+    { name: "Home", path: "/" },
+    { name: "What a graph does to a skill", path: "/graph/" },
+  ],
+  crumb: `<a href="/">Home</a> / Graph`,
+  shareLabel: "share this page",
+  shareTitle: "What a graph does to a skill",
+  ogImage: renderOg("graph", {
+    tab: "GRAPH",
+    kind: "FIELD NOTES",
+    eyebrow: "Skills in context",
+    title: "What a graph does to a skill",
+    summary: "Situation, measurable generality, and identity in the wiring, on two live corpora.",
+    panelTitle: "Measured",
+    panelItems: ["108 of 125 run accounts payable", "173 of 227 skills run in one type", "88 of 125 types share every skill"],
+    footer: "ONE FILE FORMAT · TWO CORPORA",
+  }),
+  ogImageAlt: "What a graph does to a skill: context, generality, and composition for AI agent skills",
+  content: readFileSync(join(SITE, "pages", "graph.html"), "utf8")
+    .replaceAll("{{SKILL_COUNT}}", skills.length.toLocaleString("en-US")),
 });
 
 // about Sphinx and the reason for the library
@@ -2720,11 +2796,11 @@ page({
   wide: true,
   title: "sphinxstack — skills for your agent",
   metaTitle: "Free AI agent skills for Claude, Codex & ChatGPT",
-  desc: "Browse 1,006 reviewed, agent-loadable skills. Each skill defines a repeatable method, guardrails, and checkable evidence.",
+  desc: "Browse 1,009 reviewed, agent-loadable skills. Each skill defines a repeatable method, guardrails, and checkable evidence.",
   path: ".",
   targetQuery: "AI agent skills",
   pageType: "CollectionPage",
-  ogImageAlt: "1,006 reviewed skills for Codex, Claude, Copilot, Gemini, and Cursor.",
+  ogImageAlt: "1,009 reviewed skills for Codex, Claude, Copilot, Gemini, and Cursor.",
   content: `
 <section class="wiki-home-lead">
   <div class="wiki-home-intro" data-home-rotator>

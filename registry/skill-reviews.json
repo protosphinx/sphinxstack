@@ -1,6 +1,6 @@
 {
-  "reviewed_on": "2026-07-28",
-  "review_scope": "The 2026-07-22 full-library review remains the baseline; every skill added in the 2026-07-27 and 2026-07-28 cohorts through core-1000 was read as an executable procedure and forward-tested where representative.",
+  "reviewed_on": "2026-08-07",
+  "review_scope": "The 2026-07-22 full-library review remains the baseline; every skill added through partmode-1009 was read as an executable procedure and forward-tested where representative, including credential, concurrent-revision, and unsupported-export failure cases for the PartMode cohort.",
   "rubric": [
     "clear trigger in frontmatter",
     "specific artifact or observable result",
@@ -164,6 +164,7 @@
     "conduct-an-archival-research-project",
     "conduct-research-with-human-participants",
     "conduct-user-interviews",
+    "connect-partmode-to-an-agent",
     "configure-a-content-security-policy",
     "configure-secure-cookies",
     "consolidate-multiple-resume-versions",
@@ -391,6 +392,7 @@
     "edit-a-multiauthor-report",
     "edit-a-podcast-interview",
     "edit-a-short",
+    "edit-cad-in-partmode",
     "edit-your-own-writing",
     "email-a-professor",
     "evaluate-a-business-loan-offer",
@@ -407,6 +409,7 @@
     "evaluate-source-credibility",
     "exam-prep-plan",
     "explain-an-employment-gap",
+    "export-cad-from-partmode",
     "export-design-assets",
     "export-social-video",
     "facilitate-a-decision-meeting",
