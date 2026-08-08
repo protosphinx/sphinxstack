@@ -6,7 +6,8 @@
     changes against a known revision, and export artifacts with evidence
     another person can verify.</p>
     <div class="partmode-actions">
-      <a class="partmode-primary" href="#learn">Start learning PartMode</a>
+      <a class="partmode-primary" href="#start">Connect PartMode</a>
+      <a href="#learn">Browse the learning skills</a>
       <a href="https://partmode.com/help#mcp-reference">Read the MCP reference</a>
       <a href="https://partmode.com/">Open PartMode</a>
       <a href="https://partmode.com/account">Create an agent key</a>
@@ -27,7 +28,8 @@
   </div>
   <p class="partmode-section-intro">Start with no CAD experience, follow one
   bounded procedure at a time, and keep an editable model plus evidence you can
-  check. Read a guide yourself or give its Markdown URL to an agent.</p>
+  check. Read a guide yourself or give its Markdown URL to an agent after the
+  PartMode connection below is working.</p>
   <div class="partmode-learning-grid">
     <article class="partmode-learning-card">
       <span>01 · Orientation</span>
@@ -107,21 +109,45 @@
 <section class="partmode-section" id="start">
   <div class="partmode-section-head">
     <p class="partmode-step-label">Start here</p>
-    <h2>Connect without exposing the key</h2>
+    <h2>Create an account, agent key, and MCP connection</h2>
   </div>
+  <p class="partmode-section-intro"><strong>Current production status:</strong>
+  Google sign-in is not configured. Use the PartMode account-name and passphrase
+  forms. The CAD editor remains available without an account; the account is
+  required only to create revocable agent keys.</p>
   <ol class="partmode-steps">
-    <li><strong>Open PartMode.</strong> Sign in, open the intended CAD project,
-    and create the least-powerful suitable agent key.</li>
-    <li><strong>Store the key as a secret.</strong> Put it in OS or client secret
+    <li><strong>Create or sign in to the account.</strong> Open
+    <a href="https://partmode.com/account">PartMode Agent access</a>. Create an
+    account with an account name and a passphrase of at least 12 characters, or
+    sign in with an existing account name and passphrase.</li>
+    <li><strong>Create the least-powerful suitable key.</strong> In the signed-in
+    dashboard, give the key a label and choose <em>Read only</em> or
+    <em>Edit after approval</em>. Leave <em>Allow headless server sessions</em>
+    off for a project that stays in the browser. Enable it only on an edit key
+    when unattended server execution and durable server-side project storage
+    are deliberately required.</li>
+    <li><strong>Copy the one-time key.</strong> PartMode shows the raw key once.
+    Store it in OS or client secret
     storage exposed as <code>PARTMODE_AGENT_KEY</code>. Never paste it into a
-    chat, URL, repository, or tracked configuration file.</li>
-    <li><strong>Add the MCP server.</strong> In Codex, run the command below;
+    chat, URL, shell command, repository, skill, or tracked configuration file.
+    If it is lost, revoke it and create another.</li>
+    <li><strong>Add the MCP server.</strong> In Codex, run the command below
+    after the secret environment variable is available to the Codex process;
     other Streamable HTTP MCP clients use the same URL and bearer token.</li>
-    <li><strong>Approve one bounded session.</strong> Prefer visible approval in
-    the intended PartMode tab. Confirm session status, project identity,
-    permissions, expiry, and commit budget before any CAD work.</li>
+    <li><strong>Restart and verify.</strong> Start a new agent session. The client
+    must initialize <code>https://partmode.com/mcp</code>, list PartMode
+    resources and tools, and read the live MCP reference. A skill file by itself
+    is not a connection.</li>
+    <li><strong>Authorize one CAD session.</strong> For a browser-local project,
+    keep the intended project open in a signed-in PartMode tab and approve the
+    visible, bounded request. For headless work, use only a key created with the
+    explicit headless grant. Confirm project identity, permissions, expiry,
+    commit budget, and current revision before any CAD work.</li>
   </ol>
   <pre class="partmode-command"><code>codex mcp add partmode --url https://partmode.com/mcp --bearer-token-env-var PARTMODE_AGENT_KEY</code></pre>
+  <p class="partmode-note">If the agent cannot list PartMode MCP tools, stop at
+  setup. Do not let it simulate the workflow from prose or claim that a CAD
+  operation completed.</p>
 </section>
 
 <section class="partmode-section" id="skills">

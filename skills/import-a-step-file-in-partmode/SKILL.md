@@ -9,6 +9,25 @@ description: Open a STEP file in PartMode, verify imported exact bodies and hier
 Bring external exact geometry into PartMode without inventing vendor-native
 features, mates, or manufacturing metadata.
 
+## Required connection
+
+This skill is operating guidance, not a PartMode login or tool connection.
+Before an agent continues, confirm that it can list PartMode MCP resources and
+tools. If it cannot, stop and use `$connect-partmode-to-an-agent`: create or
+sign in to an account at https://partmode.com/account with an account name and
+passphrase, create the least-powerful suitable agent key, store the one-time
+secret as `PARTMODE_AGENT_KEY`, and configure Codex with:
+
+```sh
+codex mcp add partmode --url https://partmode.com/mcp --bearer-token-env-var PARTMODE_AGENT_KEY
+```
+
+Restart the agent after adding the server. A browser-local project also requires
+a signed-in PartMode tab and visible approval; server-headless work requires an
+edit key created with the explicit headless grant. Never simulate CAD work from
+these instructions or claim completion without exact settled evidence returned
+by the connected PartMode tools.
+
 ## Boundaries
 
 - Preserve the original STEP file and record its byte count and SHA-256 before import.

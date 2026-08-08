@@ -26,14 +26,20 @@ authority for the running release.
 
 ## Procedure
 
-1. Read the public MCP reference with the person. Confirm their client supports
-   Streamable HTTP MCP and secret environment variables.
-2. Choose the least powerful key: read-only or edit, with headless server access
-   disabled unless the planned workflow requires it.
-3. Put the key in OS or client secret storage exposed to the agent as an
-   environment variable such as `PARTMODE_AGENT_KEY`. Use a non-echoing input
-   path rather than typing the value into a shell command. Check that shell
-   history, project files, logs, and git status do not expose its value.
+1. Open https://partmode.com/account. On the current production deployment,
+   Google sign-in is not configured; create or sign in to a PartMode account
+   with an account name and passphrase. Read the public MCP reference with the
+   person and confirm their client supports Streamable HTTP MCP and secret
+   environment variables.
+2. In the signed-in dashboard, create a labeled key with the least power needed:
+   read-only or edit, with headless server access disabled unless the planned
+   workflow deliberately requires server execution and durable server-side
+   project storage. PartMode shows the raw key once; if it is lost, revoke it
+   and create another.
+3. Put that one-time key in OS or client secret storage exposed to the agent as
+   an environment variable such as `PARTMODE_AGENT_KEY`. Use a non-echoing
+   input path rather than typing the value into a shell command. Check that
+   shell history, project files, logs, and git status do not expose its value.
 4. Configure the client with endpoint `https://partmode.com/mcp` and bearer
    authentication from that environment variable. For Codex, use:
 

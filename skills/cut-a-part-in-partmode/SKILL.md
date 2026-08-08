@@ -10,6 +10,25 @@ Create one bounded subtractive model feature and prove it removed material from
 the intended body. Use the Hole Wizard only when its live options match the required
 hole definition; otherwise use an explicit sketch and Cut.
 
+## Required connection
+
+This skill is operating guidance, not a PartMode login or tool connection.
+Before an agent continues, confirm that it can list PartMode MCP resources and
+tools. If it cannot, stop and use `$connect-partmode-to-an-agent`: create or
+sign in to an account at https://partmode.com/account with an account name and
+passphrase, create the least-powerful suitable agent key, store the one-time
+secret as `PARTMODE_AGENT_KEY`, and configure Codex with:
+
+```sh
+codex mcp add partmode --url https://partmode.com/mcp --bearer-token-env-var PARTMODE_AGENT_KEY
+```
+
+Restart the agent after adding the server. A browser-local project also requires
+a signed-in PartMode tab and visible approval; server-headless work requires an
+edit key created with the explicit headless grant. Never simulate CAD work from
+these instructions or claim completion without exact settled evidence returned
+by the connected PartMode tools.
+
 ## Boundaries
 
 - Identify exactly one target body and the face or plane supporting the profile.

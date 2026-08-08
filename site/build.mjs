@@ -2202,6 +2202,8 @@ ${links}
 // skill pages
 for (const s of skills) {
   const skillText = fullText(s.path);
+  const requiresPartModeConnection =
+    s.id.includes("partmode") && s.id !== "connect-partmode-to-an-agent";
   const catLabel = Object.fromEntries(CATEGORY_META)[s.category] ?? s.category;
   const levelLabel = Object.fromEntries(LEVEL_META)[s.level] ?? s.level;
   const body = bodyOf(s.path);
@@ -2271,6 +2273,18 @@ ${md(section.contents)}
 <p class="skill-summary">${esc(skillSummary)}</p>
 </div>
 ${(() => {
+  if (requiresPartModeConnection) {
+    return `<aside class="skill-use" aria-labelledby="skill-use-title">
+<h2 id="skill-use-title">Connect PartMode first</h2>
+<p>This skill is operating guidance, not an authenticated PartMode connection. Set up the account, agent key, and MCP endpoint before asking an agent to run it.</p>
+<ul>
+<li><a href="/partmode/#start">Set up account and key</a><span>required</span></li>
+<li><a href="/skills/connect-partmode-to-an-agent/">Connect PartMode to an agent</a><span>MCP guide</span></li>
+<li><button class="skill-copy-link" type="button" data-copy="skill-${s.id}">Copy skill text</button><span>after connection</span></li>
+</ul>
+<a class="skill-raw-link" href="/skills/${s.id}.md" rel="nofollow">Read the raw SKILL.md</a>
+</aside>`;
+  }
   const prefill = encodeURIComponent(`Read ${SITE_URL}/skills/${s.id}.md and follow it. Then: ${sayPhrase}.`);
   return `<aside class="skill-use" aria-labelledby="skill-use-title">
 <h2 id="skill-use-title">Use this skill</h2>
