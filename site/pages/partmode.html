@@ -1,0 +1,137 @@
+<section class="partmode-hero">
+  <div class="partmode-hero-copy">
+    <p class="partmode-kicker">PartMode MCP · public operating guide</p>
+    <h1>Operate PartMode with an AI agent</h1>
+    <p class="partmode-lede">One page for connecting an agent, choosing the
+    right operating skill, making revision-bound CAD changes, and delivering
+    artifacts another person can verify.</p>
+    <div class="partmode-actions">
+      <a class="partmode-primary" href="https://partmode.com/help#mcp-reference">Read the MCP reference</a>
+      <a href="https://partmode.com/">Open PartMode</a>
+      <a href="https://partmode.com/account">Create an agent key</a>
+    </div>
+  </div>
+  <aside class="partmode-endpoint" aria-label="PartMode hosted MCP endpoint">
+    <span>Hosted Streamable HTTP endpoint</span>
+    <code>https://partmode.com/mcp</code>
+    <p>People read the public reference. MCP clients send authenticated JSON-RPC
+    requests to the endpoint.</p>
+  </aside>
+</section>
+
+<section class="partmode-section" id="start">
+  <div class="partmode-section-head">
+    <p class="partmode-step-label">Start here</p>
+    <h2>Connect without exposing the key</h2>
+  </div>
+  <ol class="partmode-steps">
+    <li><strong>Open PartMode.</strong> Sign in, open the intended CAD project,
+    and create the least-powerful suitable agent key.</li>
+    <li><strong>Store the key as a secret.</strong> Put it in OS or client secret
+    storage exposed as <code>PARTMODE_AGENT_KEY</code>. Never paste it into a
+    chat, URL, repository, or tracked configuration file.</li>
+    <li><strong>Add the MCP server.</strong> In Codex, run the command below;
+    other Streamable HTTP MCP clients use the same URL and bearer token.</li>
+    <li><strong>Approve one bounded session.</strong> Prefer visible approval in
+    the intended PartMode tab. Confirm session status, project identity,
+    permissions, expiry, and commit budget before any CAD work.</li>
+  </ol>
+  <pre class="partmode-command"><code>codex mcp add partmode --url https://partmode.com/mcp --bearer-token-env-var PARTMODE_AGENT_KEY</code></pre>
+</section>
+
+<section class="partmode-section" id="skills">
+  <div class="partmode-section-head">
+    <p class="partmode-step-label">Choose a procedure</p>
+    <h2>Three skills cover the operating loop</h2>
+  </div>
+  <div class="partmode-skill-grid">
+    <article class="partmode-skill-card">
+      <span>01 · Connect</span>
+      <h3><a href="/skills/connect-partmode-to-an-agent/">Connect PartMode to an agent</a></h3>
+      <p>Configure the hosted MCP server, verify live resources and tools, bind
+      the session to the intended project, and disconnect cleanly.</p>
+      <div><a href="/skills/connect-partmode-to-an-agent/">Read the guide</a><a href="/skills/connect-partmode-to-an-agent.md">Agent-ready Markdown</a></div>
+    </article>
+    <article class="partmode-skill-card">
+      <span>02 · Edit</span>
+      <h3><a href="/skills/edit-cad-in-partmode/">Edit CAD in PartMode</a></h3>
+      <p>Inspect exact state, build only live-supported operations, preview the
+      bounded change, commit against one revision, and verify settled evidence.</p>
+      <div><a href="/skills/edit-cad-in-partmode/">Read the guide</a><a href="/skills/edit-cad-in-partmode.md">Agent-ready Markdown</a></div>
+    </article>
+    <article class="partmode-skill-card">
+      <span>03 · Export</span>
+      <h3><a href="/skills/export-cad-from-partmode/">Export CAD from PartMode</a></h3>
+      <p>Choose a live-supported format, save to an approved destination, check
+      bytes and SHA-256, parse the artifact, and bind it to its source revision.</p>
+      <div><a href="/skills/export-cad-from-partmode/">Read the guide</a><a href="/skills/export-cad-from-partmode.md">Agent-ready Markdown</a></div>
+    </article>
+  </div>
+</section>
+
+<section class="partmode-section partmode-prompt-section" id="prompt">
+  <div class="partmode-section-head">
+    <p class="partmode-step-label">Give this to the agent</p>
+    <h2>One prompt to begin</h2>
+  </div>
+  <pre class="partmode-prompt"><code>Read https://sphinxstack.com/skills/connect-partmode-to-an-agent.md and follow it.
+Then read the edit or export PartMode skill linked from https://sphinxstack.com/partmode/ that matches my task.
+Do not ask me to paste a key. Work only in the project I approve, preview every mutation, and report exact revision-bound evidence.
+
+My task: [describe the CAD change or artifact here]</code></pre>
+</section>
+
+<section class="partmode-section" id="authority">
+  <div class="partmode-section-head">
+    <p class="partmode-step-label">Keep authority bounded</p>
+    <h2>Choose one session model</h2>
+  </div>
+  <div class="partmode-path-grid">
+    <article>
+      <h3>Browser-approved project <em>recommended</em></h3>
+      <p>The key authenticates the agent, but it does not grant access to an
+      open CAD project. The person selects the intended PartMode tab and visibly
+      approves the requested permissions, duration, and commit budget.</p>
+    </article>
+    <article>
+      <h3>Server-headless project</h3>
+      <p>Use only when the key was explicitly created with headless access.
+      Open a stable project ID, keep duration and commits bounded, and use the
+      dedicated headless STEP export path when exact STEP output is required.</p>
+    </article>
+  </div>
+</section>
+
+<section class="partmode-section" id="proof">
+  <div class="partmode-section-head">
+    <p class="partmode-step-label">Finish with proof</p>
+    <h2>What a completed operation reports</h2>
+  </div>
+  <ul class="partmode-proof-list">
+    <li><strong>Connection:</strong> session path, mode, permissions, expiry,
+    remaining commit budget, project evidence, and disconnect result.</li>
+    <li><strong>Edit:</strong> source revision, accepted preview identity,
+    committed revision, persistent entities, exact dimensions or topology, and
+    an invariant manifest for unrelated geometry.</li>
+    <li><strong>Export:</strong> source revision, format, scope, units, byte
+    count, independently computed SHA-256, parse result, and destination.</li>
+  </ul>
+  <p class="partmode-note">Screenshots, DOM rows, mesh counts, filenames, and
+  success messages can help explain a result; they are not exact CAD completion
+  evidence by themselves.</p>
+</section>
+
+<section class="partmode-section" id="troubleshooting">
+  <div class="partmode-section-head">
+    <p class="partmode-step-label">Troubleshooting</p>
+    <h2>Common stopping points</h2>
+  </div>
+  <dl class="partmode-faq">
+    <div><dt>The MCP URL does not look like an app</dt><dd>That URL is a protocol endpoint. Use <a href="https://partmode.com/help#mcp-reference">the public MCP reference</a> in a browser and configure the endpoint in an MCP client.</dd></div>
+    <div><dt>No browser Studio is available</dt><dd>Open the intended signed-in PartMode project, list Studios again, request a bounded connection, and approve it visibly in that tab.</dd></div>
+    <div><dt>The document revision is stale</dt><dd>Do not retry the old mutation. Inspect the new revision, classify concurrent changes, refresh invariants, and create a new preview.</dd></div>
+    <div><dt>An export format is unavailable</dt><dd>Follow live capabilities. Do not silently substitute a screenshot, mesh, or nearby file type; ask the person to choose an advertised alternative.</dd></div>
+  </dl>
+</section>
+
+<p class="partmode-final-links"><a href="https://partmode.com/help#mcp-reference">PartMode MCP reference</a> · <a href="https://partmode.com/help">PartMode Help</a> · <a href="/skills/connect-partmode-to-an-agent/">Connection skill</a> · <a href="/skills/edit-cad-in-partmode/">Editing skill</a> · <a href="/skills/export-cad-from-partmode/">Export skill</a></p>

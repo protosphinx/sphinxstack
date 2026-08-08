@@ -509,7 +509,7 @@ function page({
 <link rel="stylesheet" href="/style.css?v=${CSS_HASH}">
 ${jsonLd(schema)}
 </head>
-<body${path === "." ? ' class="home-page"' : path === "beta" ? ' class="beta-page"' : path.startsWith("skills/") ? ' class="skill-page"' : ""}>
+<body${path === "." ? ' class="home-page"' : path === "beta" ? ' class="beta-page"' : path === "partmode" ? ' class="partmode-page"' : path.startsWith("skills/") ? ' class="skill-page"' : ""}>
 <header><div class="wrap">
 <a class="wordmark" href="/"><span class="tile">sx</span>sphinxstack</a>
 <nav><a href="/skills/">skills</a> <a href="/ideas/">projects</a> <a href="/brain/">brain</a> <a href="/setup/">use a skill</a> <a href="/about/">about</a></nav>
@@ -524,6 +524,7 @@ ${content}
 <footer><div class="wrap">
 sphinxstack · skills for your agent · <a href="/about/">about</a> ·
 <a href="/graph/">skills and graphs</a> ·
+<a href="/partmode/">PartMode MCP</a> ·
 <a href="https://github.com/protosphinx/sphinxstack">source</a>
 </div></footer>
 ${COPY_JS}
@@ -2554,7 +2555,38 @@ file or URL.</p>
 <li><a href="/skills/automate-a-task/">Automate a task</a></li>
 <li><a href="/skills/deploy-anywhere/">Deploy anywhere</a></li>
 <li><a href="/skills/ship-on-github/">Ship on GitHub</a></li>
+<li><a href="/partmode/">Operate PartMode with an AI agent</a></li>
 </ul>`,
+});
+
+// PartMode MCP operating guide and skill hub
+page({
+  wide: true,
+  title: "PartMode MCP — operate CAD with an AI agent",
+  metaTitle: "PartMode MCP — operate CAD with an AI agent",
+  desc: "Connect an AI agent to PartMode MCP, choose the right CAD skill, keep project authority bounded, and verify edits and exports with exact evidence.",
+  path: "partmode",
+  targetQuery: "PartMode MCP",
+  pageType: "TechArticle",
+  breadcrumbs: [
+    { name: "Home", path: "/" },
+    { name: "PartMode MCP", path: "/partmode/" },
+  ],
+  crumb: `<a href="/">Home</a> / PartMode MCP`,
+  shareLabel: "share this guide",
+  shareTitle: "Operate PartMode with an AI agent",
+  ogImage: renderOg("partmode", {
+    tab: "PARTMODE",
+    kind: "MCP OPERATING GUIDE",
+    eyebrow: "Exact CAD for people and agents",
+    title: "Operate PartMode with an AI agent",
+    summary: "Connect safely, edit against a known revision, and export evidence-bound CAD artifacts.",
+    panelTitle: "Three skills",
+    panelItems: ["Connect the agent", "Preview and verify CAD edits", "Export exact artifacts"],
+    footer: "CONNECT · EDIT · EXPORT",
+  }),
+  ogImageAlt: "PartMode MCP operating guide for connecting an agent, editing CAD, and exporting verified artifacts",
+  content: readFileSync(join(SITE, "pages", "partmode.html"), "utf8"),
 });
 
 // paid early beta application
@@ -2842,6 +2874,7 @@ page({
       <li><a href="#worked-example">See a skill at work</a></li>
       <li><a href="/ideas/">Pick a project brief</a></li>
       <li><a href="/brain/">Set up the rest of your brain</a></li>
+      <li><a href="/partmode/">Operate CAD through PartMode MCP</a></li>
     </ul>
   </div>
 

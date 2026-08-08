@@ -2304,3 +2304,218 @@ details.faq p { margin: 0.5rem 0 0.3rem; color: var(--soft); }
 @media (prefers-reduced-motion: reduce) {
   .beta-quiz-meter span { transition: none; }
 }
+
+/* PartMode MCP operating guide */
+.partmode-page main.wrap { padding-top: 1.1rem; }
+.partmode-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(17rem, 0.75fr);
+  gap: 3rem;
+  align-items: end;
+  padding: 3.2rem 0 3.5rem;
+  border-bottom: 1px solid var(--hair);
+}
+.partmode-kicker,
+.partmode-step-label {
+  margin: 0;
+  color: var(--muted);
+  font: 700 0.72rem/1.4 var(--mono);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.partmode-hero h1 {
+  max-width: 48rem;
+  margin: 0.5rem 0 0.9rem;
+  padding: 0;
+  border: 0;
+  font: 400 clamp(2.5rem, 6vw, 4.8rem)/0.98 Georgia, "Times New Roman", serif;
+  letter-spacing: -0.035em;
+}
+.partmode-lede {
+  max-width: 43rem;
+  color: var(--soft);
+  font-size: 1.05rem;
+}
+.partmode-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.1rem;
+  align-items: center;
+  margin-top: 1.35rem;
+}
+.partmode-actions a { font-weight: 600; }
+.partmode-actions .partmode-primary {
+  padding: 0.62rem 0.85rem;
+  border: 1px solid var(--blue);
+  background: var(--blue);
+  color: #fff;
+}
+.partmode-actions .partmode-primary:visited { color: #fff; }
+.partmode-actions .partmode-primary:hover { background: #043b91; text-decoration: none; }
+.partmode-endpoint {
+  padding: 1.15rem;
+  border: 1px solid var(--hair);
+  border-top: 4px solid var(--ink);
+  background: #f8f9fa;
+}
+.partmode-endpoint span {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--muted);
+  font: 700 0.69rem/1.3 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.partmode-endpoint code {
+  display: block;
+  overflow-wrap: anywhere;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+.partmode-endpoint p { margin: 0.8rem 0 0; color: var(--soft); font-size: 0.85rem; }
+.partmode-section { padding: 2.7rem 0 3rem; border-bottom: 1px solid var(--hair); }
+.partmode-section-head {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: baseline;
+  margin-bottom: 1.45rem;
+}
+.partmode-section-head h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: 400 clamp(1.65rem, 3vw, 2.45rem)/1.08 Georgia, "Times New Roman", serif;
+}
+.partmode-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: partmode-step;
+  border-top: 1px solid var(--hair);
+}
+.partmode-steps li {
+  min-width: 0;
+  margin: 0;
+  padding: 0.95rem 1.1rem 1rem 0;
+  border-right: 1px solid var(--hair-lt);
+  counter-increment: partmode-step;
+  font-size: 0.88rem;
+}
+.partmode-steps li + li { padding-left: 1.1rem; }
+.partmode-steps li:last-child { border-right: 0; }
+.partmode-steps li::before {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: var(--muted);
+  content: "0" counter(partmode-step);
+  font: 700 0.7rem/1 var(--mono);
+}
+.partmode-command,
+.partmode-prompt {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1.25rem 0 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--hair);
+  background: #f8f9fa;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.partmode-command code,
+.partmode-prompt code { padding: 0; border: 0; background: transparent; }
+.partmode-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid var(--hair);
+}
+.partmode-skill-card { min-width: 0; padding: 1.2rem; }
+.partmode-skill-card + .partmode-skill-card { border-left: 1px solid var(--hair); }
+.partmode-skill-card > span {
+  color: var(--muted);
+  font: 700 0.7rem/1.3 var(--mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.partmode-skill-card h3 { margin: 0.55rem 0 0.7rem; font-size: 1.05rem; }
+.partmode-skill-card p { min-height: 6rem; color: var(--soft); font-size: 0.88rem; }
+.partmode-skill-card > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--hair-lt);
+  font-size: 0.8rem;
+}
+.partmode-prompt-section { background: linear-gradient(90deg, #f8f9fa, #fff); }
+.partmode-prompt { max-width: 58rem; margin-left: auto; margin-right: auto; background: #fff; }
+.partmode-path-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.partmode-path-grid article { padding: 1.15rem; border: 1px solid var(--hair); }
+.partmode-path-grid h3 { margin-top: 0; }
+.partmode-path-grid h3 em {
+  margin-left: 0.35rem;
+  color: var(--muted);
+  font: 600 0.68rem/1 var(--mono);
+  text-transform: uppercase;
+}
+.partmode-path-grid p { color: var(--soft); }
+.partmode-proof-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.partmode-proof-list li { margin: 0; padding-top: 0.75rem; border-top: 3px solid var(--ink); }
+.partmode-note {
+  max-width: 52rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 0 0.75rem 0.9rem;
+  border-left: 3px solid var(--hair);
+  color: var(--soft);
+  font-size: 0.88rem;
+}
+.partmode-faq { margin: 0; }
+.partmode-faq > div {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.7fr) minmax(0, 1.6fr);
+  gap: 1.3rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--hair-lt);
+}
+.partmode-faq > div:first-child { border-top-color: var(--hair); }
+.partmode-faq dt { font-weight: 700; }
+.partmode-faq dd { margin: 0; color: var(--soft); }
+.partmode-final-links { padding-top: 1rem; font-size: 0.85rem; }
+
+@media (max-width: 780px) {
+  .partmode-hero { grid-template-columns: 1fr; gap: 1.6rem; padding: 2.2rem 0 2.5rem; }
+  .partmode-section-head { grid-template-columns: 1fr; gap: 0.35rem; }
+  .partmode-steps { grid-template-columns: 1fr 1fr; }
+  .partmode-steps li:nth-child(2) { border-right: 0; }
+  .partmode-steps li:nth-child(3) { padding-left: 0; border-top: 1px solid var(--hair-lt); }
+  .partmode-steps li:nth-child(4) { border-top: 1px solid var(--hair-lt); }
+  .partmode-skill-grid,
+  .partmode-proof-list { grid-template-columns: 1fr; }
+  .partmode-skill-card + .partmode-skill-card { border-left: 0; border-top: 1px solid var(--hair); }
+  .partmode-skill-card p { min-height: 0; }
+}
+
+@media (max-width: 560px) {
+  .partmode-hero h1 { font-size: 2.65rem; }
+  .partmode-steps,
+  .partmode-path-grid { grid-template-columns: 1fr; }
+  .partmode-steps li,
+  .partmode-steps li + li,
+  .partmode-steps li:nth-child(3) { padding-left: 0; border-right: 0; border-top: 1px solid var(--hair-lt); }
+  .partmode-steps li:first-child { border-top: 0; }
+  .partmode-faq > div { grid-template-columns: 1fr; gap: 0.25rem; }
+}
