@@ -4,7 +4,7 @@
 
 **Everything is a skill. Including the resume.**
 
-1,009 skills · 153 project briefs · plain markdown · any agent · MIT
+1,021 skills · 153 project briefs · plain markdown · any agent · MIT
 
 [**sphinxstack.com**](https://sphinxstack.com) · [skills](https://sphinxstack.com/skills/) · [projects](https://sphinxstack.com/ideas/) · [brain](https://sphinxstack.com/brain/) · [about](https://sphinxstack.com/about/) · [smbwiki](https://smbwiki.com)
 
@@ -69,7 +69,7 @@ npx skills add protosphinx/sphinxstack -s build-resume -g -y
 | web | 100 | `test-a-multiregion-web-failover` · `migrate-a-headless-cms` · `audit-a-third-party-web-script` |
 | get-hired | 80 | `respond-to-a-hiring-process-data-breach` · `design-a-cross-border-executive-search` · `prepare-for-an-executive-interview` |
 | resume | 60 | `audit-a-resume-after-identity-fraud` · `write-a-resume-for-public-sector-role` · `consolidate-multiple-resume-versions` |
-| design | 80 | `redesign-a-safety-critical-control-interface` · `govern-a-multibrand-design-system` · `audit-a-complex-form` |
+| design | 92 | `get-started-with-partmode` · `sketch-and-dimension-in-partmode` · `prepare-a-part-for-3d-printing-in-partmode` |
 | start | 90 | `manage-a-multijurisdiction-corporate-separation` · `plan-a-business-unit-carve-out` · `manage-a-regulatory-remediation-program` |
 | school | 70 | `respond-to-a-research-misconduct-allegation` · `migrate-a-university-learning-platform` · `design-a-mixed-methods-study` |
 | write | 90 | `respond-to-a-publication-ethics-crisis` · `migrate-a-global-content-operation` · `write-a-technical-case-study` |
@@ -77,17 +77,17 @@ npx skills add protosphinx/sphinxstack -s build-resume -g -y
 | money | 80 | `recover-from-a-global-treasury-control-failure` · `design-a-refund-control-process` · `build-a-working-capital-dashboard` |
 
 Each skill is leveled by the judgment its procedure requires:
-**321 starter** (one bounded artifact, a short feedback loop),
-**578 working** (an existing project, several connected decisions),
+**328 starter** (one bounded artifact, a short feedback loop),
+**583 working** (an existing project, several connected decisions),
 **110 advanced** (production risk, an explicit failure plan, an
 evidence package).
 
-## The road to 1,009
+## The road to 1,021
 
 The catalog grows in reviewed cohorts of at most 25 skills. The
-[skill roadmap](registry/skill-roadmap.json) allocates exactly 1,009
+[skill roadmap](registry/skill-roadmap.json) allocates exactly 1,021
 slots across the twelve subjects and records the 150, 250, 500, 750,
-1,000, 1,006, and 1,009-skill milestones. `npm test` rejects a completed
+1,000, 1,006, 1,009, and 1,021-skill milestones. `npm test` rejects a completed
 cohort whose skills, capacity targets, or quality metadata are
 incomplete.
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Use Parameters in PartMode"
+  short_description: "Drive CAD dimensions with equations and units"
+  default_prompt: "Use $use-parameters-in-partmode to help me build linked PartMode dimensions."

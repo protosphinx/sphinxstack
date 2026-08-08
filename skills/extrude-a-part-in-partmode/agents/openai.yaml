@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extrude a Part in PartMode"
+  short_description: "Turn a closed sketch into an exact solid"
+  default_prompt: "Use $extrude-a-part-in-partmode to help me extrude my first PartMode solid."

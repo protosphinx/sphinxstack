@@ -1,10 +1,10 @@
 {
   "latest_skills": [
-    "connect-partmode-to-an-agent",
-    "edit-cad-in-partmode",
-    "export-cad-from-partmode",
-    "respond-to-a-live-broadcast-integrity-crisis",
-    "recover-from-a-global-treasury-control-failure",
-    "manage-a-multijurisdiction-corporate-separation"
+    "get-started-with-partmode",
+    "sketch-and-dimension-in-partmode",
+    "extrude-a-part-in-partmode",
+    "use-parameters-in-partmode",
+    "create-a-drawing-in-partmode",
+    "prepare-a-part-for-3d-printing-in-partmode"
   ]
 }

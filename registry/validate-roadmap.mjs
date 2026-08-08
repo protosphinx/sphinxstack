@@ -15,8 +15,8 @@ const skillIds = new Set(catalog.skills.map((skill) => skill.id));
 const categories = [...new Set(catalog.skills.map((skill) => skill.category))].sort();
 const target = roadmap.target_skill_count;
 
-if (!Number.isSafeInteger(target) || target !== 1009) {
-  errors.push("target_skill_count must be exactly 1009");
+if (!Number.isSafeInteger(target) || target !== 1021) {
+  errors.push("target_skill_count must be exactly 1021");
 }
 if (!Number.isSafeInteger(roadmap.max_editorial_batch) || roadmap.max_editorial_batch < 1 || roadmap.max_editorial_batch > 25) {
   errors.push("max_editorial_batch must be an integer from 1 through 25");

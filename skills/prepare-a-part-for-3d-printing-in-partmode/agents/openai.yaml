@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare a Part for 3D Printing"
+  short_description: "Verify and export a printable mesh artifact"
+  default_prompt: "Use $prepare-a-part-for-3d-printing-in-partmode to help me export a verified 3D-print file."

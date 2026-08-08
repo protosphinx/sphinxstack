@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assign Material and Check Mass"
+  short_description: "Calculate revision-bound CAD mass properties"
+  default_prompt: "Use $assign-material-and-check-mass-in-partmode to help me check PartMode mass properties."

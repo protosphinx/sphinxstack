@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspect and Measure in PartMode"
+  short_description: "Check exact geometry, dimensions, and health"
+  default_prompt: "Use $inspect-and-measure-in-partmode to help me verify my PartMode model."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sketch and Dimension in PartMode"
+  short_description: "Create a closed, dimensioned CAD sketch"
+  default_prompt: "Use $sketch-and-dimension-in-partmode to help me create an exact PartMode sketch."

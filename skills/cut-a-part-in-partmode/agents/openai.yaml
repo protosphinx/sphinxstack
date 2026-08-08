@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cut a Part in PartMode"
+  short_description: "Remove exact material with a sketch cut"
+  default_prompt: "Use $cut-a-part-in-partmode to help me cut a hole or pocket in my PartMode part."

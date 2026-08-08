@@ -1,0 +1,4 @@
+interface:
+  display_name: "Import a STEP File in PartMode"
+  short_description: "Open and verify imported exact CAD bodies"
+  default_prompt: "Use $import-a-step-file-in-partmode to help me import and inspect a STEP model."

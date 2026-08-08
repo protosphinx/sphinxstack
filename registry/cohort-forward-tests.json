@@ -1532,5 +1532,57 @@
     ],
     "result": "pass",
     "notes": "Independent testing confirmed the procedure chose export tools from live capabilities, refused to substitute unsupported headless drawing output, reinspected the source after export, matched saved bytes to PartMode checksums and revisions, and required independent parsing before calling either artifact complete."
+  },
+  {
+    "cohort_id": "partmode-learning-1021",
+    "skill_id": "get-started-with-partmode",
+    "scenario": "Guide a person who has never used CAD from PartMode's first screen to a named millimetre project, one dimensioned closed sketch, one exact extruded solid, and a downloaded editable project without requiring an account or treating the shaded viewport as completion evidence.",
+    "observed_artifacts": [
+      "bounded first-part goal and chosen units",
+      "closed constrained sketch with solver diagnostics checked",
+      "settled extrusion with exact body and dimension evidence",
+      "non-empty editable PartMode project download"
+    ],
+    "result": "pass",
+    "notes": "A procedure walkthrough against the current PartMode help, navigation contract, and UI registry confirmed the beginner path uses the shipped Blank sketch, History, Bodies, Parameters, CFG, Inspector, Sketch, Extrude, and Save project file surfaces; it stops on sketch or rebuild diagnostics and keeps exact document evidence separate from the viewport."
+  },
+  {
+    "cohort_id": "partmode-learning-1021",
+    "skill_id": "use-parameters-in-partmode",
+    "scenario": "Convert a fixed mounting plate into small, medium, and large named variants by replacing repeated dimensions with unit-aware parameters, rejecting a circular expression, and proving every configuration rebuilds to its intended exact dimensions.",
+    "observed_artifacts": [
+      "named parameter table with units and expressions",
+      "rejected circular-dependency diagnostic",
+      "three configuration override sets",
+      "per-configuration settled dimension and health checks"
+    ],
+    "result": "pass",
+    "notes": "A procedure walkthrough against the parameter and configuration documentation plus current Manage and CFG controls confirmed that expressions remain explicit, cycles stop the workflow, overrides are changed one variable at a time, and every named variant must be reselected and reinspected before completion."
+  },
+  {
+    "cohort_id": "partmode-learning-1021",
+    "skill_id": "import-a-step-file-in-partmode",
+    "scenario": "Open a supplier STEP enclosure, preserve the source checksum, inspect healing and exact body evidence, assign material for a mass check, and create a projected PDF drawing without claiming that vendor feature history or manufacturing certification was recovered.",
+    "observed_artifacts": [
+      "source STEP filename, byte count, and SHA-256",
+      "settled imported B-rep body and healing diagnostics",
+      "material-density basis and exact mass properties",
+      "parsed non-empty PDF drawing tied to the active configuration"
+    ],
+    "result": "pass",
+    "notes": "A procedure walkthrough against the STEP import, material inspection, and drawing documentation confirmed that PartMode retains an independent exact B-rep after import, reports healing instead of hiding it, and keeps drawing output bounded to the settled source configuration without inventing source construction history."
+  },
+  {
+    "cohort_id": "partmode-learning-1021",
+    "skill_id": "prepare-a-part-for-3d-printing-in-partmode",
+    "scenario": "Prepare a two-body prototype for a millimetre-based slicer, prefer 3MF so body names and units survive, compare the exported bounds with the exact model, and refuse to call an STL verified when the slicer's assumed units were not recorded.",
+    "observed_artifacts": [
+      "settled exact-solid health and intended body scope",
+      "3MF artifact with explicit millimetre units and named bodies",
+      "independent archive or slicer parse with bounds comparison",
+      "source-to-artifact manifest with byte count and SHA-256"
+    ],
+    "result": "pass",
+    "notes": "A procedure walkthrough against current export documentation confirmed the 3MF preference for explicit millimetres and body names, preserves STL's missing-units caveat, requires an independent parse, and reports mesh suitability as an export check rather than proof of the exact source CAD."
   }
 ]

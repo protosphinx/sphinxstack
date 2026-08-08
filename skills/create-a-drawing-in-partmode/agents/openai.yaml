@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create a Drawing in PartMode"
+  short_description: "Generate an exact projected drawing sheet"
+  default_prompt: "Use $create-a-drawing-in-partmode to help me create and verify a PartMode drawing."

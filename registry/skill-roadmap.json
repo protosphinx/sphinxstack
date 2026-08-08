@@ -1,5 +1,5 @@
 {
-  "target_skill_count": 1009,
+  "target_skill_count": 1021,
   "max_editorial_batch": 25,
   "category_targets": {
     "resume": 60,
@@ -8,7 +8,7 @@
     "web": 100,
     "code": 173,
     "write": 90,
-    "design": 80,
+    "design": 92,
     "media": 70,
     "data": 110,
     "money": 80,
@@ -16,8 +16,8 @@
     "business": 6
   },
   "level_targets": {
-    "starter": 321,
-    "working": 578,
+    "starter": 328,
+    "working": 583,
     "advanced": 110
   },
   "cohort_targets": [
@@ -57,7 +57,8 @@
     975,
     1000,
     1006,
-    1009
+    1009,
+    1021
   ],
   "milestones": [
     {
@@ -127,6 +128,16 @@
         "connecting an MCP-capable agent to PartMode",
         "revision-bound CAD editing with exact evidence",
         "verified CAD artifact export and delivery"
+      ]
+    },
+    {
+      "skill_count": 1021,
+      "status": "complete",
+      "label": "PartMode learning workflows",
+      "themes": [
+        "beginner CAD orientation and first-part modeling",
+        "parameters, configurations, inspection, and mass properties",
+        "verified drawings, STEP exchange, and 3D-print artifacts"
       ]
     }
   ],
@@ -1280,6 +1291,25 @@
         "connect-partmode-to-an-agent",
         "edit-cad-in-partmode",
         "export-cad-from-partmode"
+      ]
+    },
+    {
+      "id": "partmode-learning-1021",
+      "status": "complete",
+      "target_skill_count": 1021,
+      "skill_ids": [
+        "get-started-with-partmode",
+        "sketch-and-dimension-in-partmode",
+        "extrude-a-part-in-partmode",
+        "cut-a-part-in-partmode",
+        "revolve-a-part-in-partmode",
+        "use-parameters-in-partmode",
+        "inspect-and-measure-in-partmode",
+        "assign-material-and-check-mass-in-partmode",
+        "create-configurations-in-partmode",
+        "create-a-drawing-in-partmode",
+        "import-a-step-file-in-partmode",
+        "prepare-a-part-for-3d-printing-in-partmode"
       ]
     }
   ]

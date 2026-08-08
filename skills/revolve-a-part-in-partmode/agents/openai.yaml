@@ -1,0 +1,4 @@
+interface:
+  display_name: "Revolve a Part in PartMode"
+  short_description: "Build a rotational solid from a profile"
+  default_prompt: "Use $revolve-a-part-in-partmode to help me create a revolved PartMode part."

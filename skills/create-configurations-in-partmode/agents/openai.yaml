@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Configurations in PartMode"
+  short_description: "Build and verify reusable part variants"
+  default_prompt: "Use $create-configurations-in-partmode to help me create PartMode part configurations."

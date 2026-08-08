@@ -1,0 +1,4 @@
+interface:
+  display_name: "Get Started with PartMode"
+  short_description: "Create and save a first PartMode project"
+  default_prompt: "Use $get-started-with-partmode to guide me through my first PartMode project."
