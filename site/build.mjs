@@ -185,6 +185,7 @@ if (
   throw new Error("SPHINXSTACK_BETA_ENDPOINT must be a root-relative path or an https URL");
 }
 const SEARCH_TITLE_MAX = 60;
+const META_DESCRIPTION_MIN = 100;
 const META_DESCRIPTION_MAX = 160;
 const CSS_HASH = createHash("sha256").update(readFileSync(join(SITE, "style.css"))).digest("hex").slice(0, 10);
 const assetHashCache = new Map();
@@ -208,12 +209,25 @@ function searchDescription(text) {
   if (withoutTrigger.length >= 70 && withoutTrigger.length <= META_DESCRIPTION_MAX) return withoutTrigger;
   return clipSearchText(withoutTrigger, META_DESCRIPTION_MAX);
 }
+function ensureSearchDescription(text, tails) {
+  const clean = searchDescription(text);
+  if (clean.length >= META_DESCRIPTION_MIN) return clean;
+  const candidates = tails
+    .map((tail) => `${clean} ${tail}`)
+    .filter((candidate) => candidate.length >= META_DESCRIPTION_MIN)
+    .sort((a, b) => a.length - b.length);
+  const candidate = candidates[0] ?? clean;
+  return candidate.length <= META_DESCRIPTION_MAX
+    ? candidate
+    : clipSearchText(candidate, META_DESCRIPTION_MAX);
+}
 function jsonLd(data) {
   return `<script type="application/ld+json">${JSON.stringify(data).replaceAll("<", "\\u003c")}</script>`;
 }
 function pageSchema({ canonical, title, desc, pageType, breadcrumbs, mainEntity, image }) {
   const pageId = `${canonical}#webpage`;
   const websiteId = `${SITE_URL}/#website`;
+  const isArticle = pageType === "Article" || pageType === "TechArticle";
   const graph = [
     {
       "@type": "WebSite",
@@ -224,7 +238,7 @@ function pageSchema({ canonical, title, desc, pageType, breadcrumbs, mainEntity,
       inLanguage: "en",
     },
     {
-      "@type": pageType,
+      "@type": isArticle ? "WebPage" : pageType,
       "@id": pageId,
       url: canonical,
       name: title,
@@ -234,6 +248,22 @@ function pageSchema({ canonical, title, desc, pageType, breadcrumbs, mainEntity,
       ...(image ? { primaryImageOfPage: { "@type": "ImageObject", url: image } } : {}),
     },
   ];
+  if (isArticle) {
+    const articleId = `${canonical}#article`;
+    graph[1].mainEntity = { "@id": articleId };
+    graph.push({
+      "@type": pageType,
+      "@id": articleId,
+      url: canonical,
+      headline: title,
+      name: title,
+      description: desc,
+      isPartOf: { "@id": websiteId },
+      mainEntityOfPage: { "@id": pageId },
+      inLanguage: "en",
+      ...(image ? { image: { "@type": "ImageObject", url: image } } : {}),
+    });
+  }
   if (breadcrumbs?.length) {
     const breadcrumbId = `${canonical}#breadcrumb`;
     graph[1].breadcrumb = { "@id": breadcrumbId };
@@ -512,7 +542,7 @@ ${jsonLd(schema)}
 <body${path === "." ? ' class="home-page"' : path === "beta" ? ' class="beta-page"' : path === "partmode" ? ' class="partmode-page"' : path.startsWith("skills/") ? ' class="skill-page"' : ""}>
 <header><div class="wrap">
 <a class="wordmark" href="/"><span class="tile">sx</span>sphinxstack</a>
-<nav><a href="/skills/">skills</a> <a href="/ideas/">projects</a> <a href="/brain/">brain</a> <a href="/setup/">use a skill</a> <a href="/about/">about</a></nav>
+<nav><a href="/what-is-a-skill/">what is a skill</a> <a href="/skills/">skills</a> <a href="/ideas/">projects</a> <a href="/brain/">brain</a> <a href="/setup/">use a skill</a> <a href="/about/">about</a></nav>
 </div></header>
 <main class="wrap${wide ? "" : " article"}">
 ${crumb || shareLabel ? `<div class="page-meta">
@@ -522,7 +552,8 @@ ${shareLabel ? `<button class="share-link" type="button" data-share data-share-t
 ${content}
 </main>
 <footer><div class="wrap">
-sphinxstack · skills for your agent · <a href="/about/">about</a> ·
+sphinxstack · skills for your agent · <a href="/what-is-a-skill/">what is a skill</a> ·
+<a href="/about/">about</a> ·
 <a href="/graph/">skills and graphs</a> ·
 <a href="/partmode/">PartMode MCP</a> ·
 <a href="https://github.com/protosphinx/sphinxstack">source</a>
@@ -2202,8 +2233,6 @@ ${links}
 // skill pages
 for (const s of skills) {
   const skillText = fullText(s.path);
-  const requiresPartModeConnection =
-    s.id.includes("partmode") && s.id !== "connect-partmode-to-an-agent";
   const catLabel = Object.fromEntries(CATEGORY_META)[s.category] ?? s.category;
   const levelLabel = Object.fromEntries(LEVEL_META)[s.level] ?? s.level;
   const body = bodyOf(s.path);
@@ -2229,7 +2258,10 @@ ${md(section.contents)}
     wide: true,
     title: `${titleOf(s.id)} — sphinxstack`,
     metaTitle: skillSearchTitle(s.id),
-    desc: s.description,
+    desc: ensureSearchDescription(s.description, [
+      "Includes clear steps, checks, and a verifiable finish.",
+      "Includes a practical AI-agent workflow with clear steps, checks, and a verifiable finish.",
+    ]),
     path: `skills/${s.id}`,
     targetQuery: skillTargetQuery(s.id),
     breadcrumbs: [
@@ -2273,18 +2305,6 @@ ${md(section.contents)}
 <p class="skill-summary">${esc(skillSummary)}</p>
 </div>
 ${(() => {
-  if (requiresPartModeConnection) {
-    return `<aside class="skill-use" aria-labelledby="skill-use-title">
-<h2 id="skill-use-title">Connect PartMode first</h2>
-<p>This skill is operating guidance, not an authenticated PartMode connection. Set up the account, agent key, and MCP endpoint before asking an agent to run it.</p>
-<ul>
-<li><a href="/partmode/#start">Set up account and key</a><span>required</span></li>
-<li><a href="/skills/connect-partmode-to-an-agent/">Connect PartMode to an agent</a><span>MCP guide</span></li>
-<li><button class="skill-copy-link" type="button" data-copy="skill-${s.id}">Copy skill text</button><span>after connection</span></li>
-</ul>
-<a class="skill-raw-link" href="/skills/${s.id}.md" rel="nofollow">Read the raw SKILL.md</a>
-</aside>`;
-  }
   const prefill = encodeURIComponent(`Read ${SITE_URL}/skills/${s.id}.md and follow it. Then: ${sayPhrase}.`);
   return `<aside class="skill-use" aria-labelledby="skill-use-title">
 <h2 id="skill-use-title">Use this skill</h2>
@@ -2294,7 +2314,7 @@ ${(() => {
 <li><a href="https://claude.ai/new?q=${prefill}" target="_blank" rel="noopener">Open in Claude</a><span>new chat</span></li>
 <li><button class="skill-copy-link" type="button" data-copy="skill-${s.id}">Copy skill text</button><span>any agent</span></li>
 </ul>
-<a class="skill-raw-link" href="/skills/${s.id}.md" rel="nofollow">Read the raw SKILL.md</a>
+<a class="skill-raw-link" href="/skills/${s.id}.md">Read the raw SKILL.md</a>
 </aside>`;
 })()}
 </section>
@@ -2307,7 +2327,7 @@ ${relatedSkillLinks(s)}
 <aside class="skill-outcome" aria-labelledby="skill-outcome-title">
 <h2 id="skill-outcome-title">At the end</h2>
 ${doneSection ? md(doneSection.contents) : "<p>The skill keeps working until its stated finish line is true.</p>"}
-<a class="skill-outcome-source" href="/skills/${s.id}.md" rel="nofollow">Read the exact SKILL.md</a>
+<a class="skill-outcome-source" href="/skills/${s.id}.md">Read the exact SKILL.md</a>
 </aside>
 </div>
 <pre id="skill-${s.id}" hidden>${esc(skillText)}</pre>
@@ -2320,7 +2340,7 @@ page({
   wide: true,
   title: "Skills — sphinxstack",
   metaTitle: "Free AI skills library for ChatGPT, Claude & Codex",
-  desc: "The sphinxstack skill catalog: take a skill, load it into your agent, do the thing.",
+  desc: "Browse the sphinxstack catalog of free AI agent skills for ChatGPT, Claude, Codex, Gemini, Cursor, and Copilot, with complete reusable workflows.",
   path: "skills",
   targetQuery: "free AI skills library",
   pageType: "CollectionPage",
@@ -2354,7 +2374,8 @@ page({
 <h1>Skills</h1>
 <p class="lede">Each skill gives an agent a reusable method, boundaries, and a checkable
 finish. The levels describe how much system context and operational judgment the procedure
-requires. They are not ratings of the person using it.</p>
+requires. They are not ratings of the person using it. If the idea is new to you,
+<a href="/what-is-a-skill/">what is a skill?</a> explains it in plain language.</p>
 ${catalogActivitySummary()}
 <p><strong>${skills.length} of ${skillRoadmap.target_skill_count} skills published.</strong>
 The library grows in reviewed cohorts of at most ${skillRoadmap.max_editorial_batch};
@@ -2387,7 +2408,10 @@ for (const p of projects) {
   page({
     title: `${p.name} — sphinxstack ideas`,
     metaTitle: projectSearchTitle(p),
-    desc: projectSummary,
+    desc: ensureSearchDescription(projectSummary, [
+      "Includes concrete milestones and evidence you can show.",
+      "Build it with defined constraints, concrete milestones, and evidence you can show when it is complete.",
+    ]),
     path: `ideas/${p.id}`,
     targetQuery: projectTargetQuery(p),
     breadcrumbs: [
@@ -2426,7 +2450,7 @@ for (const p of projects) {
     crumb: `<a href="/ideas/">Projects</a> / ${esc(p.name)}`,
     content: `
 <div class="pagehead">
-${existsSync(join(SITE, "assets", "project-img", `${p.id}.jpg`)) ? `<img class="pageimg" src="/assets/project-img/${p.id}.jpg" alt="">` : ""}
+${existsSync(join(SITE, "assets", "project-img", `${p.id}.jpg`)) ? `<img class="pageimg" src="/assets/project-img/${p.id}.jpg" alt="${escAttr(`${p.name} project idea illustration`)}">` : ""}
 <h1>${esc(p.name)}</h1>
 <p class="payoff">${p.level === 3 ? "Level 3: a month or more, real users. " : p.level === 2 ? "Level 2: two to three weeks, real architecture. " : ""}Use with: ${withSkills}. Resume line when done:
 <em>${esc(p.resume_line.job)}</em></p>
@@ -2558,7 +2582,7 @@ ${projScript}`,
 page({
   title: "Use a skill — sphinxstack",
   metaTitle: "How to use AI agent skills | sphinxstack",
-  desc: "Load a sphinxstack SKILL.md file into the agent you already use, then let the skill drive the work.",
+  desc: "Load a sphinxstack SKILL.md file into the agent you already use, then follow its complete workflow through an evidence-backed finish.",
   path: "setup",
   targetQuery: "how to use AI agent skills",
   pageType: "TechArticle",
@@ -2577,7 +2601,8 @@ page({
 <h1>Use a skill</h1>
 <p>sphinxstack skills are plain <code>SKILL.md</code> files. They work with Codex,
 Claude Code, Cursor, Copilot, Gemini, ChatGPT, and any other agent that can read a
-file or URL.</p>
+file or URL. If you are not sure what a skill is yet, start with
+<a href="/what-is-a-skill/">the plain-language explanation</a>.</p>
 
 <h2>The short path</h2>
 <ol>
@@ -2707,6 +2732,36 @@ page({
   }),
   ogImageAlt: "What a graph does to a skill: context, generality, and composition for AI agent skills",
   content: readFileSync(join(SITE, "pages", "graph.html"), "utf8")
+    .replaceAll("{{SKILL_COUNT}}", skills.length.toLocaleString("en-US")),
+});
+
+// plain-language explainer for readers new to AI
+page({
+  title: "What is a skill? — sphinxstack",
+  metaTitle: "What is an AI agent skill? | sphinxstack",
+  desc: "AI agent skills explained from the ground up: what the file contains, real examples, how to load one, how to write your own, and how skills combine.",
+  path: "what-is-a-skill",
+  targetQuery: "what is an AI agent skill",
+  pageType: "Article",
+  breadcrumbs: [
+    { name: "Home", path: "/" },
+    { name: "What is a skill?", path: "/what-is-a-skill/" },
+  ],
+  crumb: `<a href="/">Home</a> / What is a skill?`,
+  shareLabel: "share this page",
+  shareTitle: "What is a skill?",
+  ogImage: renderOg("what-is-a-skill", {
+    tab: "WHAT",
+    kind: "PLAIN-LANGUAGE GUIDE",
+    eyebrow: "From zero to writing your own",
+    title: "What is a skill?",
+    summary: "An instruction sheet an AI assistant follows to do one task well.",
+    panelTitle: "Three parts",
+    panelItems: ["Part 1: the idea", "Part 2: the file", "Part 3: writing your own"],
+    footer: "A RECIPE CARD FOR WORK",
+  }),
+  ogImageAlt: "What an AI agent skill is, explained from beginner to advanced",
+  content: readFileSync(join(SITE, "pages", "what-is-a-skill.html"), "utf8")
     .replaceAll("{{SKILL_COUNT}}", skills.length.toLocaleString("en-US")),
 });
 
@@ -2903,7 +2958,8 @@ page({
     agent's brain.</p>
     <p class="wiki-home-thesis">A skill tells the agent where to start, which
     steps to follow, which rules apply, and what must be true before the work is
-    complete.</p>
+    complete. New to the idea? <a href="/what-is-a-skill/">What is a skill?</a>
+    explains it from zero.</p>
     <p class="wiki-home-review-note">Every skill enters the catalog in a reviewed
     cohort of at most ${skillRoadmap.max_editorial_batch}, with an explicit finish
     and evidence another person can check.</p>
@@ -3255,12 +3311,10 @@ ${sitemapGroups.map(([name]) => `  <sitemap><loc>${SITE_URL}/sitemaps/${name}.xm
 writeFileSync(
   join(DIST, "robots.txt"),
   `User-agent: Googlebot
-Disallow: /*.md$
 Disallow: /events/
 Disallow: /stats/
 
 User-agent: Bingbot
-Disallow: /*.md$
 Disallow: /events/
 Disallow: /stats/
 

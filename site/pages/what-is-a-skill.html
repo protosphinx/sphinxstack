@@ -1,0 +1,427 @@
+<h1>What is a skill?</h1>
+<p class="payoff">A skill is a short instruction sheet, written in ordinary
+English, that you give to an AI assistant before it starts a task. It records
+how the task should be done: when the instructions apply, the steps in order,
+the rules that must hold, and what must be true at the end. This page starts
+from zero and ends at writing your own; each part assumes a little more than
+the one before.</p>
+
+<h2>Part 1: the idea</h2>
+<p>This part assumes nothing. If you already use an AI assistant, the first
+section will be familiar.</p>
+
+<h3>First, the assistant</h3>
+<p>Programs such as ChatGPT and Claude are called AI assistants. You type a
+request in plain language, such as "write me a cover letter" or "explain
+this bill", and the program answers the same way. The newer ones can also
+carry out work over many steps, such as reading a folder of files or
+building a simple website. When an assistant works through steps on its own
+like that, people call it an AI agent. For this page the difference does not
+matter; "assistant" covers both.</p>
+
+<h3>The problem</h3>
+<p>An assistant will attempt almost anything you ask, immediately, whether or
+not it knows how you want the task done. Ask one to "write my cover letter"
+and you get a finished letter in seconds. It reads smoothly. It is also
+generic: enthusiastic about a company you never mentioned, and padded with
+claims about you that the assistant made up to fill the page. Nothing in
+your one-line request told it what a good cover letter requires, so it
+guessed.</p>
+
+<h3>A recipe card, for work</h3>
+<p>A recipe card does not cook anything. It records how a dish is made by
+someone who has made it well: what goes in, the steps in order, the warnings
+("do not open the oven door early"), and the test for done ("a skewer comes
+out clean"). Hand the card to a capable cook who has never made the dish, and
+the dish comes out the way it is supposed to.</p>
+<p>A skill is a recipe card for a piece of work. Someone who has done the
+task well writes their method down in a file. You hand that file to the
+assistant before it starts, and it follows the method instead of improvising
+one.</p>
+
+<h3>The same idea, in places you already know it</h3>
+<p>Written-down method is not an AI invention. Once you see the shape, it is
+everywhere:</p>
+<p><strong>A pilot's checklist.</strong> Airline pilots have thousands of
+hours of training and still read a printed checklist before every takeoff,
+because under pressure even an expert skips a step. The checklist does not
+fly the plane; it makes sure the flying happens in the right order. A
+skill's steps do the same for the assistant.</p>
+<p><strong>Sheet music.</strong> A good musician can improvise something
+pleasant on any tune. Sheet music is for when you want the piece as the
+composer meant it, the same way at every performance. A skill is the sheet
+music for a task.</p>
+<p><strong>A franchise operations manual.</strong> Thousands of restaurants
+serve the same dish at the same standard while the staff changes constantly,
+because the method is on paper and the paper stays when people leave. A
+skill is that manual for one task, and the assistant is the new staff
+member who actually reads it.</p>
+<p><strong>A trained hand.</strong> This is where the word comes from. A
+carpenter's skill lives in trained hands: years of practice compressed into
+movements that come out right without deliberation. An assistant arrives
+strong but untrained, like a powerful arm that has never held a chisel. The
+file is the training, written down and handed over whole.</p>
+
+<h3>A real example</h3>
+<p>Here is an actual skill from this library:
+<a href="/skills/cover-letter/">cover-letter</a>, for writing a cover letter
+for one specific job posting. The whole file is about a page of written
+English. Among its instructions:</p>
+<ul>
+<li>Do not start without the actual job posting. A letter addressed to nobody
+says nothing, so the assistant must first ask the person to paste the posting
+in.</li>
+<li>The person writes every sentence that makes a claim about themselves. The
+assistant may ask questions, suggest a structure, and offer line edits, but
+it may not write the letter for them.</li>
+<li>Nothing invented: no enthusiasm the person does not feel, and no skills
+their resume cannot back up.</li>
+<li>The letter is finished when it is under 250 words, every claim in it is
+true, and it is saved as a file named for the company.</li>
+</ul>
+<p>Ask an assistant for a cover letter with this file loaded and the
+experience changes. First it asks for the posting, and which of the job's
+requirements you can honestly meet. Then it waits for you to draft, and
+points at any sentence a stranger could not verify. The letter that comes out
+sounds like you and contains nothing you could not defend in an interview,
+because the file ruled out the shortcuts the assistant would otherwise have
+taken.</p>
+
+<h3>Two more, from different corners of life</h3>
+<p>Skills are not only for job applications. Two more files from the same
+library show the range.</p>
+<p><a href="/skills/plan-a-household-move/">plan-a-household-move</a> treats
+a move as a set of chains that each have to hold: the housing, the keys and
+access windows, the people, the possessions, the utilities, the records,
+the pets. Its steps include building an inventory of what to keep, sell,
+donate, or store; comparing movers on written scope and exclusions rather
+than the quoted price; and recording meter readings at both properties.
+Its rules are the kind you learn from a bad move: never put medication,
+critical documents, or irreplaceable items in the moving truck, and never
+assume a quote includes packing, stairs, or waiting time. Its definition of
+done reaches past the truck being unloaded: the essentials box got people
+through the first night, and the deposits, bills, and keys are all settled.</p>
+<p><a href="/skills/ask-for-a-raise/">ask-for-a-raise</a> prepares a
+conversation instead of a document. The steps: document what your role has
+actually become, research pay with sources labeled by geography and level,
+choose a specific request with a fallback, and rehearse — including the
+questions about budget, timing, and who actually decides. The rules
+protect you from the tempting versions: never invent a competing offer,
+and weigh the risk of retaliation before escalating. Its done section asks
+for evidence: a written brief, a rehearsed ask, and the outcome recorded
+with a dated next step.</p>
+<h3>A shelf of real skills</h3>
+<p>To make the range concrete, here is a sampler from the catalog, grouped
+by the part of life it serves. Every name links to the page with the full
+file.</p>
+<p><strong>Money and home</strong></p>
+<ul>
+<li><a href="/skills/budget-basics/">budget-basics</a> — build a budget from
+your real income and spending, in a spreadsheet with a monthly review.</li>
+<li><a href="/skills/audit-recurring-subscriptions/">audit-recurring-subscriptions</a>
+— find every recurring charge on your statements and decide which ones
+survive.</li>
+<li><a href="/skills/build-a-household-inventory/">build-a-household-inventory</a>
+— record what you own, with photos and evidence, for insurance or loss
+recovery.</li>
+<li><a href="/skills/check-a-vendor-invoice/">check-a-vendor-invoice</a> —
+check an invoice against the contract, the rates, and duplicates before
+paying it.</li>
+</ul>
+<p><strong>Getting hired</strong></p>
+<ul>
+<li><a href="/skills/build-resume/">build-resume</a> — a one-page resume
+from what you have actually done, nothing invented, printed to PDF.</li>
+<li><a href="/skills/analyze-a-job-description/">analyze-a-job-description</a>
+— take a posting apart into what they want, what evidence you need, and
+what to ask.</li>
+<li><a href="/skills/build-an-interview-story-bank/">build-an-interview-story-bank</a>
+— a reusable bank of truthful interview examples, mapped to the questions
+they answer.</li>
+</ul>
+<p><strong>Working life</strong></p>
+<ul>
+<li><a href="/skills/ask-for-feedback-at-work/">ask-for-feedback-at-work</a>
+— request feedback specific enough to act on, then turn it into a tested
+change.</li>
+<li><a href="/skills/recover-from-a-work-mistake/">recover-from-a-work-mistake</a>
+— contain, disclose, and repair a workplace error without hiding facts.</li>
+<li><a href="/skills/plan-a-career-pivot/">plan-a-career-pivot</a> — test a
+new direction with small experiments before betting the job on it.</li>
+</ul>
+<p><strong>Writing, media, and design</strong></p>
+<ul>
+<li><a href="/skills/blog-post/">blog-post</a> — write and publish one post
+on something you know, live at a URL by the end of the sitting.</li>
+<li><a href="/skills/start-a-newsletter/">start-a-newsletter</a> — niche
+chosen, platform set up, issue one written and sent.</li>
+<li><a href="/skills/captions-and-subtitles/">captions-and-subtitles</a> —
+accurate captions on your video, every line checked by hand.</li>
+<li><a href="/skills/brand-kit/">brand-kit</a> — your colors, fonts, and
+usage rules on one page, proven by restyling one real artifact.</li>
+</ul>
+<p><strong>School</strong></p>
+<ul>
+<li><a href="/skills/plan-a-semester-workload/">plan-a-semester-workload</a>
+— map deadlines, effort, and recovery time before the semester maps them
+for you.</li>
+<li><a href="/skills/check-a-citation-format/">check-a-citation-format</a> —
+check every citation against the named style, down to the edition and page
+numbers.</li>
+</ul>
+<p><strong>Building software and using data</strong></p>
+<ul>
+<li><a href="/skills/build-website/">build-website</a> — a real site for a
+person, club, or business that exists, live in the first session.</li>
+<li><a href="/skills/use-an-api/">use-an-api</a> — call a real public API
+from your project, with the key kept out of the code history.</li>
+<li><a href="/skills/automate-a-task/">automate-a-task</a> — a script for a
+repetitive task you actually do, with dry runs, logs, and a safe off
+switch.</li>
+<li><a href="/skills/first-sql/">first-sql</a> — learn SQL on your own
+data: a spreadsheet into a database, then real questions answered.</li>
+<li><a href="/skills/chart-the-truth/">chart-the-truth</a> — one chart that
+says something true: honest axes, the right chart type, labels that carry
+the point.</li>
+</ul>
+<p><strong>The advanced shelf</strong></p>
+<ul>
+<li><a href="/skills/design-a-disaster-recovery-plan/">design-a-disaster-recovery-plan</a>
+— design how a service survives severe infrastructure or data loss, with
+explicit objectives and authority.</li>
+<li><a href="/skills/recover-from-a-broken-web-deployment/">recover-from-a-broken-web-deployment</a>
+— contain user impact, roll back or repair forward, and reconcile what
+shipped.</li>
+<li><a href="/skills/plan-a-change-freeze/">plan-a-change-freeze</a> — a
+bounded quiet period around a peak event, with explicit scope, exceptions,
+and an exit.</li>
+</ul>
+<p>Every one of these is the same shape as the cover-letter file: a
+trigger, steps, rules, and a definition of done. The know-how inside is
+what changes.</p>
+
+<h3>Just a text file</h3>
+<p>A skill is a plain text file. You can open it and read every line before
+you use it, the way you would read a recipe before cooking from it. There is
+nothing to install and no account to create. If a rule does not fit your
+situation, you edit the file. Because it is ordinary written language, the
+same file works in any assistant. That is the whole idea: written-down
+know-how, in a form an AI assistant can follow. The rest of this page is
+about what is inside the file and what becomes possible once you have many
+of them.</p>
+
+<h2>Part 2: the file, and how to use one</h2>
+<p>This part opens the file up. It assumes nothing beyond part 1.</p>
+
+<h3>What is inside</h3>
+<p>Every skill in this library is one file, named <code>SKILL.md</code>.
+Strip away the details and the shape is always the same:</p>
+<pre># name-of-the-skill
+Use when: the words you would naturally say when this task comes up.
+
+Steps:
+1. First thing, concretely.
+2. Second thing.
+3. ...
+
+Rules:
+- The constraint that must hold even when it is inconvenient.
+- What the assistant never does, even if asked casually.
+
+Done:
+- A condition a stranger could check.
+- The thing that must exist at the end: a file, a page, a record.</pre>
+<p>Each part exists because of a specific way tasks go wrong without it.</p>
+<p><strong>The trigger.</strong> The "use when" line is phrased as the words a
+person would actually say, because that is how the skill gets found. An
+assistant can hold many skills at once; when you say "help me with a cover
+letter", it matches your words against the trigger lines and loads the one
+that fits. A trigger that reads "assists with employment-related
+correspondence" matches nothing anyone says.</p>
+<p><strong>The steps.</strong> Ordered and concrete, and the first ones are
+usually about looking before doing: get the posting, read the existing file,
+ask what the person needs. Most botched tasks are botched in the first
+minute, when the assistant starts producing before it understands the
+situation.</p>
+<p><strong>The rules.</strong> These are the lines that begin with "never"
+and "do not". They exist for a predictable moment: partway through the work,
+cutting a corner starts to look attractive — inventing a plausible detail,
+skipping a check, sending something without reading it back. An instruction
+you typed into the chat two hours ago has scrolled out of sight by then. A
+rule in the loaded file is still in force.</p>
+<p><strong>Done.</strong> Without a definition of done, a task ends when the
+output looks finished, which is a judgment about appearance. With one, it
+ends when stated conditions hold: the letter is under 250 words, every claim
+is true, the file is saved and named for the company. Done conditions are
+written so that a stranger could check them.</p>
+
+<h3>How to load one</h3>
+<p>There is no installation. Using a skill means getting its text in front of
+the assistant at the start of the task, and any of these works:</p>
+<ul>
+<li>Copy the file into the chat, then describe your task.</li>
+<li>Give the assistant the file's web address. Every skill here is published
+as a plain-text link an assistant can fetch on its own.</li>
+<li>In a coding tool such as Claude Code, Codex, or Cursor, save the file in
+the project's skills folder. These tools read the trigger lines themselves
+and load a skill when a task matches it.</li>
+</ul>
+<p>Then describe the real task in your own words and keep the skill loaded
+until its definition of done is satisfied. The skill supplies the process.
+The facts of your situation, and the decisions along the way, still come
+from you.</p>
+
+<h3>How a skill differs from a prompt</h3>
+<p>A prompt asks for a result: "write my cover letter, and make it
+professional." Everything beyond that one line, the assistant fills in by
+guessing. A skill records the process used to produce and check the result.
+The practical differences follow from its being a file. A prompt is typed
+fresh each time and disappears with the chat. A skill can be read before
+use, corrected after a failure, kept with a project, handed to another
+person, and loaded into a different assistant next year.</p>
+<p>Most advice about writing better prompts amounts to packing more of the
+process into the request. A skill is where that packing ends up once you
+stop retyping it.</p>
+
+<h3>When a skill is worth writing down</h3>
+<p>Not every task needs one. A question with a factual answer, or a rough
+draft you intend to rework entirely, needs no procedure. A skill pays for
+itself when the task repeats, when the result has a standard someone will
+hold it to, or when the ways it can go wrong are known and expensive. A
+cover letter qualifies on all three counts: people write many of them, a
+hiring manager judges the result, and the known failure is a generic letter
+full of invented claims.</p>
+<p>The working rule, from this site's <a href="/brain/">guide to configuring
+an agent</a>: the moment you catch yourself explaining the same thing to an
+assistant for the second time, stop and write it into a skill. A correction
+that lives in a file does not have to be made again.</p>
+
+<h3>Skills improve by editing</h3>
+<p>The first version of a skill is rarely right, and it gets better the same
+way a recipe card does: something goes wrong, the missing warning gets
+found, a line gets added. When a run produces a bad result with a skill
+loaded, the useful question is which line was missing or wrong. Maybe the
+steps never said to confirm the company name, so the letter went out with
+last week's company in it; now the file says to check it twice. The next
+run starts from the corrected version. Over months, this is the difference
+between an assistant that keeps making an error and one that made it
+once.</p>
+
+<h3>Easier ones and harder ones</h3>
+<p>Skills differ in how much judgment they expect from the person running
+them, and this library grades every skill on a three-step scale:</p>
+<ul>
+<li><strong>Starter:</strong> one bounded piece of work with a short feedback
+loop. It ends in a finished artifact you can check directly. The
+cover-letter skill is a starter.</li>
+<li><strong>Working:</strong> assumes an existing project and several
+connected decisions. It ends in a working change, checks that cross more
+than one part of the project, and a handoff someone else could pick up.</li>
+<li><strong>Advanced:</strong> work where real damage is possible:
+production systems, security, reliability, data integrity. These skills
+require a record of the decisions made, a rehearsal of what failure would
+look like, and evidence that recovery works, because "it seems fine" is not
+an acceptable end state for this kind of work.</li>
+</ul>
+
+<h2>Part 3: writing your own, and what comes after</h2>
+<p>This part is for the reader who wants to make skills rather than only use
+them.</p>
+
+<h3>Writing a skill</h3>
+<p>Start from a task you have done well at least once. A skill is a record
+of a method that worked; it is not a place to speculate about how a task
+might be done. Then:</p>
+<ul>
+<li>Keep one procedure per file. When a file covers two, the trigger becomes
+ambiguous and the wrong half loads.</li>
+<li>Phrase the trigger as the words someone would say when the task shows
+up, in their vocabulary rather than yours.</li>
+<li>Write the steps as direct instructions: "get the posting first." A
+persona paragraph ("you are a helpful career coach") tells the assistant how
+to sound and leaves what to do unstated.</li>
+<li>Write rules that survive pressure. The test: does the rule still hold
+when the person casually asks to skip it? "Nothing invented" holds. "Try to
+be accurate" bends.</li>
+<li>End with a done section a stranger could verify, naming the artifact
+that must exist when the work is over.</li>
+</ul>
+<p>Most of this can be checked mechanically. Every file in this library
+passes an automated review before it is published, which rejects, among
+other things: a description that never says when to use the skill, a
+procedure without ordered steps, a file that names no concrete artifact or
+observable result, a file with no boundary line (no "never", no permission
+rule, no scope limit), a done section with fewer than two evidence-based
+checks, instructions written as roleplay, and any file longer than 500
+lines.</p>
+
+<h3>Skills that use other skills</h3>
+<p>A skill can end by pointing at another one. The last line of the
+cover-letter skill says: if this letter is going out with a resume, run the
+<a href="/skills/tailor-resume/">tailor-resume</a> skill on that resume
+against the same posting first, so the two documents use the same
+vocabulary. That single line chains two procedures into a longer one, and
+chains like it are how a library of small skills covers large jobs. The
+<a href="/ideas/">project briefs</a> on this site approach the same fact
+from the other side: each brief describes a piece of work sized from a week
+to a month or more, and names the skills needed to complete it.</p>
+
+<h3>Where skills sit in a full setup</h3>
+<p>A skill answers one kind of question: how to do something. An assistant
+you work with daily accumulates other kinds of knowledge too, and the
+<a href="/brain/">brain guide</a> on this site sorts all of it with one
+test. Is it taste, tone, or a standing rule that applies to everything? That
+is identity, stated once where the assistant always reads it. Is it a fact
+or a past decision? That is memory, stored with a date, because facts go
+stale. Is it how to do something? That is a skill. Must it happen every
+time with no judgment involved? That is a reflex, pushed into automation
+where the tools allow it. The sorting matters because misfiled knowledge
+stops working: a procedure stored as a memory gets recalled as trivia
+instead of executed as steps.</p>
+
+<h3>A skill alone, and a skill in a system</h3>
+<p>Everything above treats the skill as a lone file, and that is a design
+choice. A file that refers to nothing outside itself loads into any agent,
+travels between projects, and survives a change of tools. The cost is that
+the file cannot say who should run the work, what upstream work feeds it,
+or where its output goes.</p>
+<p>The sister project <a href="https://smbwiki.com">smbwiki</a> makes the
+opposite choice. It models 125 types of small business as one graph in
+which each skill is a shared node, and each business binds the skill to its
+own situation: which role owns it, which records go in and out, which
+number judges the result. Connecting skills this way makes new facts
+visible. From the text of a skill you cannot tell whether it is universal
+or niche; in the graph you can count. Accounts payable runs in 108 of the
+125 business types, while 173 of smbwiki's 227 skills run in exactly one.
+The essay <a href="/graph/">what a graph does to a skill</a> works through
+the rest of what changes, including what the shared structure costs in
+upkeep.</p>
+
+<h3>The mistakes to avoid</h3>
+<p>Skill files fail in recurring ways, most of them visible on a first
+read:</p>
+<ul>
+<li>Two procedures in one file, so the trigger is ambiguous and half the
+instructions never apply.</li>
+<li>A trigger written as a category ("assists with career documents")
+instead of the words a person says.</li>
+<li>Rules phrased as suggestions. "Try to keep it short" bends under
+pressure; "under 250 words" holds.</li>
+<li>No definition of done, so the procedure ends whenever the output looks
+polished.</li>
+<li>Content that belongs in another layer: facts about the person, taste
+about tone. A skill carrying those applies them only when that one skill
+runs, which is why they belong in memory or identity instead.</li>
+</ul>
+
+<h2>Where to look next</h2>
+<ul>
+<li><a href="/skills/">The catalog</a>: {{SKILL_COUNT}} skills, each page
+showing the complete file, a worked example, and common questions.</li>
+<li><a href="/setup/">Use a skill</a>: loading a skill into the assistant
+you already use.</li>
+<li><a href="/brain/">The brain guide</a>: the full method for configuring
+an agent, where skills sit next to identity, memory, and reflexes.</li>
+<li><a href="/graph/">Skills and graphs</a>: what happens to a skill when
+it is connected to an operation.</li>
+</ul>

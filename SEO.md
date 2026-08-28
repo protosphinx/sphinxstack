@@ -28,6 +28,7 @@ operating goal is stronger:
 | Skill page | Complete one task with an agent | `[task] with AI` |
 | Projects index | Browse things worth building | `project ideas to build with AI` |
 | Project brief | Find one concrete build idea | `[project] project idea` |
+| What-is-a-skill guide | Define the concept for newcomers | `what is an AI agent skill` |
 | Brain guide | Configure a durable agent setup | `how to build an AI agent brain` |
 | Setup guide | Load and run a skill | `how to use AI agent skills` |
 | About | Brand and trust | `sphinxstack` |
@@ -103,15 +104,18 @@ The generator must keep these conditions true:
 - the sitemap index splits skills, ideas, and site pages so coverage can be
   measured by family;
 - only canonical, indexable HTML pages appear in sitemaps;
-- raw Markdown remains available to agents but is not submitted as a search
-  result;
+- raw Markdown remains available to agents, stays out of sitemaps, and declares
+  its matching HTML guide through an HTTP canonical header;
+- crawlers may fetch raw Markdown so they can process that canonical header;
+- `www.sphinxstack.com` permanently redirects to `sphinxstack.com`;
 - internal stats, vote events, and attribution-only pages do not compete for
   search demand.
 
-The production server should also return an `X-Robots-Tag: noindex, follow`
-header, or an HTTP `Link` canonical header, on raw `.md` responses. That server
-rule is stronger than relying on crawler-specific `robots.txt` exclusions while
-keeping the files available to agents.
+The production server returns an HTTP `Link` canonical header on raw `.md`
+responses, pointing each file to its matching HTML guide. Do not block those
+files in `robots.txt`: crawlers must fetch the response before they can process
+its canonical header. Raw files are normal internal links because the canonical
+response rule, rather than `nofollow`, owns search consolidation.
 
 ## Content bar
 

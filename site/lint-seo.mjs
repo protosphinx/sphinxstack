@@ -9,6 +9,7 @@ import { fileURLToPath } from "node:url";
 const SITE = dirname(fileURLToPath(import.meta.url));
 const DIST = join(SITE, "dist");
 const SITE_URL = "https://sphinxstack.com";
+const META_DESCRIPTION_MIN = 100;
 const errors = [];
 
 function* walk(dir) {
@@ -20,6 +21,14 @@ function* walk(dir) {
 }
 function attr(html, pattern) {
   return html.match(pattern)?.[1] ?? "";
+}
+function decodeHtmlText(text) {
+  return text
+    .replaceAll("&amp;", "&")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#39;", "'")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">");
 }
 function anchorText(html) {
   return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
@@ -50,6 +59,7 @@ for (const file of htmlFiles) {
   const html = readFileSync(file, "utf8");
   const title = attr(html, /<title>([^<]+)<\/title>/);
   const description = attr(html, /<meta name="description" content="([^"]*)">/);
+  const descriptionLength = decodeHtmlText(description).length;
   const canonical = attr(html, /<link rel="canonical" href="([^"]+)">/);
   const ogUrl = attr(html, /<meta property="og:url" content="([^"]+)">/);
   const robots = attr(html, /<meta name="robots" content="([^"]+)">/);
@@ -65,7 +75,10 @@ for (const file of htmlFiles) {
   if (!title) errors.push(`${path}: missing title`);
   if (title.length > 60) errors.push(`${path}: title is ${title.length} characters`);
   if (!description) errors.push(`${path}: missing meta description`);
-  if (description.length > 160) errors.push(`${path}: meta description is ${description.length} characters`);
+  if (robots.startsWith("index,") && descriptionLength < META_DESCRIPTION_MIN) {
+    errors.push(`${path}: meta description is only ${descriptionLength} characters`);
+  }
+  if (descriptionLength > 160) errors.push(`${path}: meta description is ${descriptionLength} characters`);
   if (!canonical.startsWith(`${SITE_URL}/`)) errors.push(`${path}: invalid canonical '${canonical}'`);
   if (ogUrl !== canonical) errors.push(`${path}: og:url does not match canonical`);
   if (h1Count !== 1) errors.push(`${path}: expected one h1, found ${h1Count}`);
@@ -81,6 +94,13 @@ for (const file of htmlFiles) {
   }
   const graph = parsedSchemas.find((schema) => Array.isArray(schema["@graph"]))?.["@graph"] ?? [];
   if (!graph.some((node) => node["@type"] === "WebSite")) errors.push(`${path}: JSON-LD graph has no WebSite`);
+  for (const node of graph.filter((item) => item["@type"] === "Article" || item["@type"] === "TechArticle")) {
+    if (node.primaryImageOfPage) errors.push(`${path}: ${node["@type"]} incorrectly owns primaryImageOfPage`);
+    if (node.breadcrumb) errors.push(`${path}: ${node["@type"]} incorrectly owns breadcrumb`);
+    if (node.mainEntityOfPage?.["@id"] !== `${canonical}#webpage`) {
+      errors.push(`${path}: ${node["@type"]} is not attached to the WebPage entity`);
+    }
+  }
   if (canonical.includes("/skills/") && canonical !== `${SITE_URL}/skills/`) {
     const howTo = graph.find((node) => node["@type"] === "HowTo");
     if (!howTo) errors.push(`${path}: skill page has no HowTo entity`);
@@ -93,6 +113,12 @@ for (const file of htmlFiles) {
   }
 
   pages.push({ path, title, description, canonical, robots });
+
+  for (const match of html.matchAll(/<a\b(?=[^>]*\bhref="([^"]+)")(?=[^>]*\brel="([^"]*)")[^>]*>/gi)) {
+    if (match[1].startsWith("/") && match[2].split(/\s+/).includes("nofollow")) {
+      errors.push(`${path}: internal link '${match[1]}' must not use nofollow`);
+    }
+  }
 }
 
 for (const { from, href } of localLinks) {
@@ -201,7 +227,7 @@ if (actualCanonicals.some((url) => url.endsWith(".md"))) errors.push("raw Markdo
 
 const robots = readFileSync(join(DIST, "robots.txt"), "utf8");
 if (!robots.includes(`Sitemap: ${SITE_URL}/sitemap.xml`)) errors.push("robots.txt has no sitemap");
-if (!robots.includes("User-agent: Googlebot\nDisallow: /*.md$")) errors.push("robots.txt does not protect raw Markdown from Googlebot");
+if (robots.includes("Disallow: /*.md$")) errors.push("robots.txt blocks crawlers from seeing raw Markdown canonical headers");
 if (!robots.includes("User-agent: *\nAllow: /")) errors.push("robots.txt does not allow general crawling");
 
 if (errors.length) {
