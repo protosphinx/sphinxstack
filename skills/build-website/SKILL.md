@@ -17,8 +17,8 @@ content, and something they are proud to send to people.
   If content does not exist yet, get it from them in conversation —
   they know it, you type it into shape.
 - Deploy first, polish second. An ugly page with a URL beats a
-  beautiful page on localhost. Get GitHub Pages (or their host)
-  serving within the first hour, then iterate on the live thing.
+  beautiful page on localhost. Get GitHub Pages, build.host, or their
+  host serving within the first hour, then iterate on the live thing.
 - Keep the stack boring: static HTML/CSS (a little JS if needed). No
   frameworks unless they already know one. They should be able to
   read every file in their own site.
@@ -32,7 +32,8 @@ content, and something they are proud to send to people.
    must a visitor be able to do or learn, what exists already (text,
    photos, links), what should it feel like.
 2. Repo + one-page skeleton + deploy. Live URL exists now. (Use the
-   ship-on-github skill if present.)
+   ship-on-github skill if present, or deploy-anywhere; on build.host
+   the agent deploys the folder itself.)
 3. Structure: the 1–3 pages the answers actually demand. Navigation.
    Real content in.
 4. Mobile pass: readable and tappable on a phone — most visitors will

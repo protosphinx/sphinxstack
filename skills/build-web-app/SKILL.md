@@ -24,7 +24,7 @@ handles bad input, and it is live at a URL.
   features into the README as "later".
 - Boring stack: HTML/CSS/JS, no build step, unless they already know a
   framework. Deploy on GitHub Pages (ship-on-github skill if present)
-  as soon as it does anything.
+  or build.host (deploy-anywhere) as soon as it does anything.
 - Work with them, not instead of them. Model the data out loud
   together before code ("what is one entry? what are its fields?").
   Implement in visible steps; explain each in a sentence. Their
